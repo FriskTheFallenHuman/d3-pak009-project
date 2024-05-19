@@ -1,0 +1,1032 @@
+
+
+/***********************************************************************
+
+ moveable objects
+
+***********************************************************************/
+
+entityDef moveable_base {
+	"editor_color"						"0 .5 .8"
+	"editor_mins"						"?"
+	"editor_maxs"						"?"
+	"editor_rotatable"					"1"
+
+	"editor_usage2"		"Moveable object. Drops to floor and rests until activated. Model set by 'model' key can be used for collision detection if it's not too complex."
+	//"editor_usage3"	""
+	//"editor_usage4"	""
+	"editor_usage3"		"max vertices = 32"
+	"editor_usage4"		"max edges = 32"
+	"editor_usage5"		"max polygons = 16"
+	"editor_usage6"		"max edges per polygon = 16"
+	//"editor_usage7"	"If model doesn't meet these requirements, it can be contained in a simpler model specified by 'clipmodel' key."
+	//"editor_usage10"	""
+	//"editor_usage11"	""
+	//"editor_usage12"	""
+	//"editor_usage13"	""
+
+	"editor_var density"			"Volume of the object times the density is the mass (default is 0.5)."
+	"editor_var friction"			"Friction with contacting surfaces. Value range is [0-1] where 0 is no friction (default is 0.05)."
+	"editor_var bouncyness"			"How much the object bounces. Value range is [0-1] where 0 is no bounce (default is 0.6)."
+	"editor_var mass"			"Mass of the object (overrides density)."
+	"editor_model clipmodel"		"name of func_clipmodel to use for collision detection if current model is too complex. Collision model must be an enclosed hull. Dangling polygons or edges aren't allowed."
+	"editor_var clipshrink"			"Shrink the visual model with an epsilon and use it as a clip model."
+	"editor_var allowStep"			"If set to 0. this will prevent monsters from ever walking over this object (default is 1)."
+	"editor_var nonsolid"			"If set to 1, object will be non-solid."
+	"editor_var snd_bounce"			"sound object will make when it collides."
+	"editor_bool nodrop"			"If set to 1, object will not drop to the floor."
+	"editor_bool noimpact"			"If set to 1, object cannot be activated by the impact of other objects."
+	"editor_bool notpushable"		"If set to 1, object cannot be pushed."
+	"editor_bool unbindondeath"		"If set to 1, unbind entity when health drops down to or below zero."
+	"editor_var health"			"If set to 1, model changes to 'broken' when the health drops down to or below zero."
+	"editor_model broken"			"Model to use when the health drops down to or below zero."
+	"editor_bool explode"			"If set to 1, the object explodes and is removed when the health drops down to or below zero."
+	"editor_var init_velocity"		"Initial linear velocity set when activated."
+	"editor_var init_avelocity"		"Initial angular velocity set when activated."
+	"editor_var init_velocityDelay"		"Delay in seconds before the initial linear velocity is set after being activated."
+	"editor_var init_avelocityDelay"	"Delay in seconds before the initial angular velocity is set after being activated."
+	"editor_var initialSplineTime"		"Number of milliseconds the moveable should follow the initial spline path."
+	"editor_var damage"			"Damage definition to use if object damages things it collides with"
+	"editor_var damageWhenActive"		"If set to 1, only damage when active (currently used for the vagary and influence stuff)"
+	"editor_var fx_collide"			"FX to play at impact position when object collides."
+
+	"spawnclass"						"idMoveable"
+
+	"density"						"0.5"
+	"friction"						"0.05"
+	"bouncyness"						"0.6"
+	"explode"						"0"
+	"unbindondeath"						"0"
+	"health"						"0"
+	"nodrop"						"0"
+	"noimpact"						"0"
+	"notPushable"						"0"
+	"clipshrink"						"0"
+	"allowStep"						"1"
+	"snd_bounce"						"smallpanel_impact"
+}
+
+entityDef moveable_barrel2 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/fuel_barrel/p_barrel.ase"
+	"density"					"0.005"
+	"friction"					"0.1"
+	"bouncyness"				"0.2"
+	"snd_bounce"				"metal_barrel_impact"
+	"editor_usage"					"Round gas canister w/hoses on top"
+}
+
+entityDef moveable_barrel3 {
+	"inherit"					"moveable_base_barrel"
+	"model"						"models/mapobjects/fuel_barrel/exp_barrel.lwo"
+	"density"					"0.005"
+	"friction"					"0.2"
+	"bouncyness"				"0.2"
+	"networksync"				"1"
+
+	"snd_bounce"				"metal_barrel_impact"
+	"editor_usage"					"Yellow 45-Gal drum w/caution sign"
+
+}
+
+entityDef moveable_base_barrel {
+	"inherit"				"moveable_base"
+	"editor_color"				"1 .5 0"
+	"editor_mins"				"-8 -8 -8"
+	"editor_maxs"				"8 8 8"
+
+	"editor_usage"			"Generic barrel. Assign a model."
+	//"editor_usage1"			"Works just like a moveable_base but has special handling to make it appear rounder."
+
+	"spawnclass"				"idBarrel"
+
+	"density"				"0.02"
+	"friction"				"0.2"
+	"bouncyness"				"0.4"
+	"snd_bounce"				"barrel_impact"
+}
+
+entityDef moveable_base_brick {
+	"inherit"					"moveable_base"
+	"density"					"0.05"
+	"friction"					"0.2"
+	"bouncyness"				"0"
+	"snd_bounce"				"stone_impact"
+	"editor_usage"				"Brick physics only. No model assigned"
+}
+
+entityDef moveable_base_fixed {
+	"inherit"					"moveable_base"
+	"editor_color"				"1 .5 0"
+	"editor_mins"				"-8 -8 -8"
+	"editor_maxs"				"8 8 8"
+	"editor_usage"				"Parent entity class. Do not use in maps."
+}
+
+entityDef moveable_blaptop {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/lab/Blaptop/blaptop.lwo"
+	"density"					"0.02"
+	"friction"					"0.2"
+	"bouncyness"				"0.2"
+	"snd_bounce"				"book_impact"
+	"editor_usage"				"Grey metal carry case"
+}
+
+entityDef moveable_bottle1 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/lab/bottle1/bottle1.lwo"
+	"density"					"0.2"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"nonsolid"					"1"
+	"snd_bounce"				"small_plastic"
+	"editor_usage"				"White plastic squirt bottle"
+}
+
+entityDef moveable_burger {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/burgereat.lwo"
+	"density"					"0.2"
+	"friction"					"0.2"
+	"bouncyness"				"0.01"
+	"snd_bounce"				"burger_impact"
+	"nonsolid"					"1"
+	"editor_usage"				"Billygoat burger"
+}
+
+entityDef moveable_burgerboxclose {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/burgerboxclose.lwo"
+	"density"					"0.1"
+	"friction"					"0.1"
+	"bouncyness"				"0.1"
+	"snd_bounce"				"smallbox"
+	"editor_usage"				"Closed Billygoat burger box"
+}
+
+entityDef moveable_burgerboxopen {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/burgerboxopen.lwo"
+	"density"					"0.1"
+	"friction"					"0.1"
+	"bouncyness"				"0.1"
+	"snd_bounce"				"smallbox"
+	"editor_usage"				"Open, empty Billygoat burger box"
+}
+
+entityDef moveable_burningbarrel {
+	"editor_color"				"0 .5 .8"
+	"editor_mins"				"-16 -16 0"
+	"editor_maxs"				"16 16 48"
+	"editor_rotatable"			"1"
+
+	"editor_usage"			"Moveable yellow 45-Gal drum. Catches fire and explodes when damaged or triggered."
+	"editor_usage1"			"Works just like a moveable_base but has special handling to make it appear rounder."
+	//"editor_usage2"			"Only add model, model_detonate or model_burn or health to override defaults"
+	"editor_var burn"		"number of seconds to burn before exploding (default is 2.5)."
+	"editor_model model_damage"	"model to leave after explosion (will fade out after a few seconds)."
+	"editor_model model_detonate"	"particle effect to use for explosion."
+	"editor_model model_burn"	"particle effect to use for when on fire."
+	"editor_var def_debris"		"add as many as you like, debris1, debris2, etc."
+	"editor_var health"		"how much damage it must be inflicted before catching on fire (default is 15)."
+	"editor_var respawn"		"number of seconds after exploding before respawning (default is 0 = never respawn)"
+	"editor_var respawn_range"	"barrel will not respawn if player is within this range of where it exploded (default is 256). Barrel always respawns in original spot regardless of where it exploded."
+	"editor_var respawn_again"	"number of seconds to wait before trying to respawn if player is within range (default is 10)."
+	"editor_var triggerTargets"	"if set to 1, barrel will trigger its targets when it explodes."
+	"editor_mat mtr_lightExplode"	"light shader to use for explosion"
+	"editor_mat mtr_lightBurn"	"light shader to use for burning"
+	"editor_mat mtr_burnmark"	"shader to use for burn decal"
+	//"editor_var triggerOnRespawn"	"if set to a non-zero value, barrel will trigger targets this many seconds after being killed."
+
+	"spawnclass"				"idExplodingBarrel"
+
+	"density"				"0.02"
+	"friction"				"0.2"
+	"bouncyness"				"0.4"
+	"def_splash_damage"			"damage_explodingbarrel"
+	"debris_count"				"6"
+	"model"					"models/mapobjects/fuel_barrel/exp_barrel.lwo"
+	"model_burn"				"barrelfire.prt"
+	"def_debris"				"debris_barreltop"
+	"def_debris1"				"debris_barrelpiece"
+	"def_debris2"				"debris_barrelpiece"
+	"def_debris3"				"debris_barrelpiece"
+	"model_detonate"			"barrelexplosion.prt"
+	"burn"					"2.5"
+	"health"				"15"
+	"snd_explode"				"barrel_explosions"
+	"mtr_lightexplode"			"lights/impflash"
+	"mtr_burnmark"				"textures/decals/ballburn01"
+	"light_radius"				"300"
+	"snd_bounce"				"metal_barrel_impact"
+}
+
+entityDef moveable_burningtank {
+	"editor_color"				"0 .5 .8"
+	"editor_mins"				"-8 -8 0"
+	"editor_maxs"				"8 8 48"
+	"editor_rotatable"			"1"
+
+	"editor_usage"			"Moveable grey gas cylinder. Catches fire and explodes when damaged or triggered."
+	"editor_usage1"			"Works just like a moveable_base but has special handling to make it appear rounder."
+	//"editor_usage2"			"Only add model, model_detonate or model_burn or health to override defaults"
+	"editor_var burn"		"number of seconds to burn before exploding (default is 2.5)."
+	"editor_model model_damage"	"model to leave after explosion (will fade out after a few seconds)."
+	"editor_model model_detonate"	"particle effect to use for explosion."
+	"editor_model model_burn"	"particle effect to use for when on fire."
+	"editor_var def_debris"		"add as many as you like, debris1, debris2, etc."
+	"editor_var health"		"how much damage it must be inflicted before catching on fire (default is 15)."
+	"editor_var respawn"		"number of seconds after exploding before respawning (default is 0 = never respawn)"
+	"editor_var respawn_range"	"cylinder will not respawn if player is within this range of where it exploded (default is 256). Cylinder always respawns in original spot regardless of where it exploded."
+	"editor_var respawn_again"	"number of seconds to wait before trying to respawn if player is within range (default is 10)."
+	"editor_var triggerTargets"	"if set to 1, cylinder will trigger its targets when it explodes."
+	"editor_mat mtr_lightExplode"	"light shader to use for explosion"
+	"editor_mat mtr_lightBurn"	"light shader to use for burning"
+	"editor_mat mtr_burnmark"	"shader to use for burn decal"
+	//"editor_var triggerOnRespawn"	"if set to no zero will trigger targets this many seconds after being killed"
+
+	"spawnclass"				"idExplodingBarrel"
+
+	"density"					"0.02"
+	"friction"					"0.2"
+	"bouncyness"				"0.4"
+	"debris_count"				"6"
+	"def_debris"				"projectile_debris"
+	"def_shrapnel"				"projectile_shrapnel"
+	"model"					"models/mapobjects/washroom/airtank.lwo"
+	"model_detonate"			"airtankexplosion.prt"
+	"model_burn"				"tankfire.prt"
+	"skin"					"skins/airtank_grey"
+	"mtr_burnmark"				"textures/decals/ballburn01"
+	"burn"					"2.5"
+	"health"				"15"
+	"snd_explode"				"barrel_explosions"
+}
+
+entityDef moveable_cannister {
+	"inherit"					"moveable_base_barrel"
+	"model"						"models/mapobjects/cannister/cannister.ase"
+	"density"					"0.02"
+	"friction"					"0.2"
+	"bouncyness"				"0.3"
+	"editor_usage"				"White canister with silver lid and green stripes"
+}
+
+entityDef moveable_cartonbox1 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/tbox1.ase"
+	"density"					"0.005"
+	"friction"					"0.2"
+	"bouncyness"				"0.2"
+	"snd_bounce"				"smallbox"
+	"editor_usage"				"Plain brown square carton box"
+}
+
+entityDef moveable_cartonbox2 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/tbox2.ase"
+	"density"					"0.01"
+	"friction"					"0.2"
+	"bouncyness"				"0.2"
+	"snd_bounce"				"smallbox"
+	"editor_usage"				"Small orange and white carton box"
+}
+
+entityDef moveable_cartonbox3 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/tbox3.ase"
+	"density"					"0.002"
+	"friction"					"0.2"
+	"bouncyness"				"0.2"
+	"snd_bounce"				"smallbox"
+	"editor_usage"				"Tall brown carton box with UAC logo"
+}
+
+entityDef moveable_cartonbox4 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/tbox4.ase"
+	"density"					"0.007"
+	"friction"					"0.2"
+	"bouncyness"				"0.2"
+	"snd_bounce"				"smallbox"
+	"editor_usage"				"White document storage UAC carton box"
+}
+
+entityDef moveable_cartonbox5 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/tbox5.ase"
+	"density"					"0.01"
+	"friction"					"0.2"
+	"bouncyness"				"0.2"
+	"snd_bounce"				"smallbox"
+	"editor_usage"				"White and blue document storage EXE carton box"
+}
+
+entityDef moveable_cartonbox6 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/tbox6.ase"
+	"density"					"0.01"
+	"friction"					"0.2"
+	"bouncyness"				"0.2"
+	"snd_bounce"				"smallbox"
+	"editor_usage"				"White and green w/side openings carton box"
+}
+
+entityDef moveable_cartonbox7 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/tbox7.ase"
+	"density"					"0.007"
+	"friction"					"0.2"
+	"bouncyness"				"0.2"
+	"snd_bounce"				"smallbox"
+	"editor_usage"				"Brown 'Foam Cups' carton box"
+}
+
+entityDef moveable_cartonbox8 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/tbox8.ase"
+	"density"					"0.01"
+	"friction"					"0.2"
+	"bouncyness"				"0.2"
+	"snd_bounce"				"smallbox"
+	"editor_usage"				"Small white and green SOTOXL carton box"
+}
+
+entityDef moveable_chair1 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/base/chairs/chair1.lwo"
+	"density"					"0.01"
+	"friction"					"0.2"
+	"bouncyness"				"0.3"
+	"editor_usage"				"Control room high back armchair"
+}
+
+entityDef moveable_chair2 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/base/chairs/chair2.ase"
+	"density"					"0.01"
+	"friction"					"0.2"
+	"bouncyness"				"0.3"
+	"editor_usage"				"Cushy grey desk chair"
+}
+
+entityDef moveable_chair5 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/base/chairs/chair5.ase"
+	"density"					"0.01"
+	"friction"					"0.2"
+	"bouncyness"				"0.3"
+	"editor_usage"				"Common black desk chair"
+}
+
+entityDef moveable_cokecan {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/cola1.lwo"
+	"broken"					"models/mapobjects/filler/cola2.lwo"
+	"health"					"20"
+	"density"					"0.5"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"nonsolid"					"1"
+	"snd_bounce"				"tincan"
+	"editor_usage"				"Can of Diet Robo cola"
+}
+
+entityDef moveable_compcart {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/lab/compcart/compcart.lwo"
+	"density"					"0.02"
+	"friction"					"0.2"
+	"bouncyness"				"0.2"
+	"snd_bounce"				"barrel_impact"
+	"editor_usage"				"Green computer on cart w/casters"
+	"editor_gui gui"			"name of GUI to display on model's left side screen"
+	"editor_gui gui2"			"name of GUI to display on model's right side screen"
+}
+
+entityDef moveable_computer {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/mcity/deskcomp/deskcomp.lwo"
+	"density"					"0.05"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"editor_usage"				"Small blue computer w/LCD screen"
+	"editor_gui gui"			"name of GUI to display on model's screen"
+}
+
+entityDef moveable_cone {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/cone.ASE"
+	"density"					"0.01"
+	"friction"					"0.2"
+	"bouncyness"				"0.2"
+	"snd_bounce"				"hollow_plastic"
+	"editor_usage"				"Orange and black plastic traffic cone"
+}
+
+entityDef moveable_desklamp {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/lamps/desklamp.lwo"
+	"density"					"0.05"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"editor_usage"				"Green desk lamp"
+}
+
+entityDef moveable_diamondbox {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/lab/diamondbox/diamondbox.lwo"
+	"density"					"0.005"
+	"friction"					"0.2"
+	"bouncyness"				"0.2"
+	"snd_bounce"				"barrel_impact"
+	"editor_usage"				"Yellow diamond shaped crate w/grey sides"
+}
+
+entityDef moveable_diamondbox_sm {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/lab/diamondbox/diamondbox_sm.lwo"
+	"density"					"0.01"
+	"friction"					"0.2"
+	"bouncyness"				"0.2"
+	"snd_bounce"				"barrel_impact"
+	"networkSync"				"1"
+	"editor_usage"				"Small yellow diamond shaped crate w/grey sides"
+}
+
+entityDef moveable_explodingbarrel {
+	"editor_color"				"0 .5 .8"
+	"editor_mins"				"-16 -16 0"
+	"editor_maxs"				"16 16 48"
+	"editor_rotatable"			"1"
+
+
+	"editor_usage"			"Moveable red 45-Gal drum. Catches fire and explodes when damaged or triggered."
+	"editor_usage1"			"Works just like a moveable_base but has special handling to make it appear rounder."
+	//"editor_usage2"			"Only add model, model_detonate or model_burn or health to override defaults"
+	"editor_var burn"		"number of seconds to burn before exploding (default is 0, explodes immediately)."
+	"editor_model model_damage"	"model to leave after explosion (will fade out after a few seconds)."
+	"editor_model model_detonate"	"particle effect to use for explosion."
+	"editor_model model_burn"	"particle effect to use for when on fire (no default assigned)."
+	"editor_var def_debris"		"add as many as you like, debris1, debris2, etc."
+	"editor_var health"		"how much damage it must be inflicted before catching on fire (default is 25)."
+	"editor_var respawn"		"number of seconds after exploding before respawning (default is 0 = never respawn)"
+	"editor_var respawn_range"	"barrel will not respawn if player is within this range of where it exploded (default is 256). Barrel always respawns in original spot regardless of where it exploded."
+	"editor_var respawn_again"	"number of seconds to wait before trying to respawn if player is within range (default is 10)."
+	"editor_var triggerTargets"	"if set to 1, barrel will trigger its targets when it explodes."
+	"editor_mat mtr_lightExplode"	"light shader to use for explosion"
+	"editor_mat mtr_lightBurn"	"light shader to use for burning"
+	"editor_mat mtr_burnmark"	"shader to use for burn decal"
+	//"editor_var triggerOnRespawn"	"if set to a non-zero value, barrel will trigger targets this many seconds after being killed."
+
+	"spawnclass"				"idExplodingBarrel"
+
+	"density"				"0.02"
+	"friction"				"0.2"
+	"bouncyness"				"0.4"
+	"def_splash_damage"			"damage_explodingbarrel"
+	"model"					"models/mapobjects/fuel_barrel/exp_barrel.lwo"
+	"def_debris"				"debris_barreltop2"
+	"def_debris1"				"debris_barrelpiece2"
+	"def_debris2"				"debris_barrelpiece2"
+	"def_debris3"				"debris_barrelpiece2"
+	"model_detonate"			"barrelexplosion.prt"
+	"skin"					"skins/exp_barrel_red"
+	"mtr_lightexplode"			"lights/impflash"
+	"mtr_burnmark"				"textures/decals/ballburn01"
+	"light_radius"				"300"
+	"health"				"25"
+	"snd_explode"				"barrel_explosions"
+	"snd_bounce"				"metal_barrel_impact"
+
+}
+
+entityDef moveable_explodingtank {
+	"editor_color"				"0 .5 .8"
+	"editor_mins"				"-8 -8 0"
+	"editor_maxs"				"8 8 48"
+	"editor_rotatable"			"1"
+
+	"editor_usage"			"Moveable orange gas cylinder. Catches fire and explodes when damaged or triggered."
+	"editor_usage1"			"Works just like a moveable_base but has special handling to make it appear rounder."
+	//"editor_usage2"			"Only add model, model_detonate or model_burn or health to override defaults"
+	"editor_var burn"		"number of seconds to burn before exploding (default is 0, explodes immediately)."
+	"editor_model model_damage"	"model to leave after explosion (will fade out after a few seconds)."
+	"editor_model model_detonate"	"particle effect to use for explosion."
+	"editor_model model_burn"	"particle effect to use for when on fire."
+	"editor_var def_debris"		"add as many as you like, debris1, debris2, etc."
+	"editor_var health"		"how much damage it must be inflicted before catching on fire (default is 25)."
+	"editor_var respawn"		"number of seconds after exploding before respawning (default is 0 = never respawn)"
+	"editor_var respawn_range"	"cylinder will not respawn if player is within this range of where it exploded (default is 256). Cylinder always respawns in original spot regardless of where it exploded."
+	"editor_var respawn_again"	"number of seconds to wait before trying to respawn if player is within range (default is 10)."
+	"editor_var triggerTargets"	"if set to 1, cylinder will trigger its targets when it explodes."
+	"editor_mat mtr_lightExplode"	"light shader to use for explosion"
+	"editor_mat mtr_lightBurn"	"light shader to use for burning"
+	"editor_mat mtr_burnmark"	"shader to use for burn decal"
+	//"editor_var triggerOnRespawn"	"if set to no zero will trigger targets this many seconds after being killed"
+
+	"spawnclass"				"idExplodingBarrel"
+
+	"density"				"0.02"
+	"friction"				"0.2"
+	"bouncyness"				"0.4"
+	"debris_count"				"6"
+	"def_debris"				"projectile_debris"
+	"def_shrapnel"				"projectile_shrapnel"
+	"model"					"models/mapobjects/washroom/airtank.lwo"
+	"model_detonate"			"airtankexplosion.prt"
+	"model_burn"				"tankfire.prt"
+	"mtr_burnmark"				"textures/decals/ballburn01"
+	"health"				"25"
+	"snd_explode"				"barrel_explosions"
+
+}
+
+entityDef moveable_filecabinet1 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/lab/filecabinet1/filecabinet1.lwo"
+	"density"					"0.02"
+	"friction"					"0.2"
+	"bouncyness"				"0.2"
+	"snd_bounce"				"barrel_impact"
+	"editor_usage"				"Green file cabinet"
+}
+
+entityDef moveable_fireext {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/base/misc/fireext.ase"
+	"density"					"0.01"
+	"friction"					"0.2"
+	"bouncyness"				"0.2"
+	"editor_usage"				"Red fire extinguisher"
+}
+
+entityDef moveable_foamcup {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/foamcup.lwo"
+	"density"					"1"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"nonsolid"					"1"
+	"snd_bounce"				"small_plastic"
+	"editor_usage"				"White styrofoam cup"
+}
+
+entityDef moveable_gizmo1 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/lab/gizmo1/gizmo1.lwo"
+	"density"					"0.05"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"snd_bounce"				"book_impact"
+	"editor_usage"				"Square electronic lab instrument"
+}
+
+entityDef moveable_gizmo2 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/lab/gizmo2/gizmo2.lwo"
+	"density"					"0.05"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"snd_bounce"				"book_impact"
+	"editor_usage"				"Small flat electronic lab instrument"
+}
+
+entityDef moveable_gizmo3 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/lab/gizmo3/gizmo3.lwo"
+	"density"					"0.05"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"snd_bounce"				"book_impact"
+	"editor_usage"				"Protruding display electronic lab instrument"
+}
+
+entityDef moveable_guardian_brick {
+	"inherit"					"moveable_base_brick"
+	"density"					"0.001"
+	"friction"					"0.2"
+	"bouncyness"				"0"
+	"snd_bounce"				"caverns2_boulder"
+	"editor_usage"				"Brick physics only. No model assigned"
+}
+
+entityDef moveable_hangingmonitor {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/monitors/hangingmonitor.lwo"
+	"density"					"0.01"
+	"friction"					"0.2"
+	"bouncyness"				"0.3"
+	"editor_usage"				"Grey slanted wall-mount type CRT monitor"
+	"editor_gui gui"			"name of GUI to display on model's screen"
+}
+
+entityDef moveable_infusion {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/lab/infusion/infusion.lwo"
+	"density"					"0.02"
+	"friction"					"0.2"
+	"bouncyness"				"0.2"
+	"editor_usage"				"Intraveinous stand, bottle and tubes"
+}
+
+entityDef moveable_keyboard1 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/mkeyboard.lwo"
+	"density"					"0.05"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"nonsolid"					"1"
+	"snd_bounce"				"book_impact"
+	"editor_usage"				"Computer keyboard with UAC logo"
+}
+
+entityDef moveable_kitchenchair {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/chairs/kitchenchair/kitchenchair.lwo"
+	"density"					"0.01"
+	"friction"					"0.2"
+	"bouncyness"				"0.3"
+	"editor_usage"				"White kitchen chair (assign a color)"
+	"editor_color _color"			"color to assign to chair's seat and backrest"
+}
+
+entityDef moveable_ktable {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/ktable.lwo"
+	"density"					"0.01"
+	"friction"					"0.2"
+	"bouncyness"				"0.3"
+	"editor_usage"				"Square grey kitchen table"
+}
+
+entityDef moveable_laptop {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/laptop.lwo"
+	"density"					"0.05"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"snd_bounce"				"book_impact"
+	"editor_usage"				"Grey laptop computer"
+	"editor_gui gui"			"name of GUI to display on model's screen"
+}
+
+entityDef moveable_metalbox1 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/boxes/metalbox1.lwo"
+	"density"					"0.01"
+	"friction"					"0.2"
+	"bouncyness"				"0.2"
+	"snd_bounce"				"barrel_impact"
+	"editor_usage"				"Grey metal case w/hinged lid and sidehandles"
+}
+
+entityDef moveable_microscope {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/lab/microscope/microscope.lwo"
+	"density"					"0.1"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"snd_bounce"				"book_impact"
+	"editor_usage"				"Grey metal lab microscope"
+}
+
+entityDef moveable_monitor {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/monitor.ase"
+	"density"					"0.05"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"editor_usage"				"Small blue monitor w/left side stand"
+}
+
+entityDef moveable_monitorflip {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/monitorflip.lwo"
+	"density"					"0.05"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"editor_usage"				"Small blue monitor w/right side stand"
+	"editor_gui gui"			"name of GUI to display on model's screen"
+}
+
+entityDef moveable_mop {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/washroom/mop.lwo"
+	"density"					"0.1"
+	"friction"					"0.2"
+	"bouncyness"				"0.3"
+	"snd_bounce"				"book_impact"
+	"editor_usage"				"Floor mop w/red handle"
+}
+
+entityDef moveable_mopbucket {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/washroom/mopbucket.lwo"
+	"density"					"0.01"
+	"friction"					"0.2"
+	"bouncyness"				"0.3"
+	"snd_bounce"				"large_plastic"
+	"editor_usage"				"Yellow mop strainer bucket"
+}
+
+/*
+entityDef moveable_normchair {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/base/chairs/normchair.lwo"
+	"density"					"0.01"
+	"friction"					"0.2"
+	"bouncyness"				"0.3"
+}
+*/
+
+entityDef moveable_paperwad {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/paperwad1.lwo"
+	"density"					"0.1"
+	"friction"					"0.1"
+	"bouncyness"				"0.1"
+	"snd_bounce"				"paper_impact"
+	"nonsolid"					"1"
+	"editor_usage"				"Crumpled white paper sheet"
+}
+
+entityDef moveable_pc1 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/pc1.ase"
+	"density"					"0.05"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"snd_bounce"				"book_impact"
+	"editor_usage"				"Grey micro-tower PC"
+}
+
+entityDef moveable_phone {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/filler/phone.ase"
+	"density"					"0.05"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"snd_bounce"				"book_impact"
+	"editor_usage"				"Dark grey office phone"
+}
+
+entityDef moveable_plasticbin {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/lab/plasticbin/plasticbin.lwo"
+	"density"					"0.02"
+	"friction"					"0.2"
+	"bouncyness"				"0.2"
+	"snd_bounce"				"small_plastic"
+	"editor_usage"				"White plastic bin w/orange lid"
+}
+
+entityDef moveable_plasticbinmini {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/lab/plasticbinmini/plasticbinmini.lwo"
+	"density"					"0.02"
+	"friction"					"0.2"
+	"bouncyness"				"0.2"
+	"nonsolid"					"1"
+	"snd_bounce"				"small_plastic"
+	"editor_usage"				"Small white plastic bin w/blue lid"
+}
+
+entityDef moveable_plasticjar1 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/lab/plasticjar1/plasticjar1.lwo"
+	"density"					"0.2"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"nonsolid"					"1"
+	"snd_bounce"				"small_plastic"
+	"editor_usage"				"White plastic jar w/orange lid"
+}
+
+entityDef moveable_plasticjar2 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/lab/plasticjar2/plasticjar2.lwo"
+	"density"					"0.1"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"nonsolid"					"1"
+	"snd_bounce"				"small_plastic"
+	"editor_usage"				"Square white plastic jar w/yellow label"
+}
+
+entityDef moveable_spigotcan {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/lab/spigotcan/spigotcan.lwo"
+	"density"					"0.02"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"snd_bounce"				"plastic_jar_impact"
+	"editor_usage"				"Blue plastic spigot can"
+}
+
+entityDef moveable_tablecart1 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/lab/tablecart1/tablecart1.lwo"
+	"density"					"0.01"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"editor_usage"				"Grey tablecart w/shelf on casters"
+}
+
+entityDef moveable_tablecart2 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/lab/tablecart2/tablecart2.lwo"
+	"density"					"0.01"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"editor_usage"				"Green tablecart w/drawers on casters"
+}
+
+entityDef moveable_trashcan01 {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/washroom/trashcan01.ase"
+	"density"					"0.02"
+	"friction"					"0.2"
+	"bouncyness"				"0.3"
+	"snd_bounce"				"hollow_plastic"
+	"editor_usage"				"Small grey trashcan w/plastic bag inside"
+}
+
+entityDef moveable_tray {
+	"inherit"					"moveable_base_fixed"
+	"model"						"models/mapobjects/lab/tray/tray.lwo"
+	"density"					"0.05"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"snd_bounce"				"tray_impact"
+	"editor_usage"				"Square grey metal tray"
+}
+
+entityDef moveable_wrench {
+	"inherit"					"moveable_base"
+	"model"						"models/mapobjects/filler/monkeywrench.lwo"
+	"density"					"0.05"
+	"friction"					"0.1"
+	"bouncyness"				"0.3"
+	"nonsolid"					"1"
+
+	"editor_color"				"1 .5 0"
+	"editor_mins"				"-8 -8 -8"
+	"editor_maxs"				"8 8 8"
+	"editor_usage"				"Pipewrench. Non-solid by default."
+	"editor_var nonsolid"			"set this to 0 to make object solid and moveable (default is 1)."
+}
+
+/***********************************************************************
+
+ Exploding barrel debris physics
+
+***********************************************************************/
+
+
+entityDef debris_barrelpiece {
+	"spawnclass"		"idDebris"
+	"mins"			"-3 -3 -3"
+	"maxs"			"3 3 3"
+
+	"model" 		"models/mapobjects/fuel_barrel/exp_barrel2b.lwo"
+
+	"health"		"0"		// amount of damage projectile can take if damaged (0 means it can't be destroyed)
+	"velocity"		"0 0 0"		// how fast the projectile leaves the gun (or distance if fuse is 0)
+	"random_velocity"	"1"
+	"angular_velocity"	"1 -1 1"	// how the projectile is rotating when it leaves the gun
+	"thrust"		"0"		// the rate of acceleration (always in the direction of the projectiles model)
+	"thrust_start"		"0"		// when to start accelerating
+	"thrust_end"		"0"		// when to stop accelerating
+	"linear_friction"	"0.8"		// "air" friction
+	"angular_friction"	"1.1"
+	"contact_friction"	"0.9"
+	"bounce"		"0.1"	// how much speed projectile retains when it bounces off objects (coefficient of restitution). 0 means no bounce.
+	"mass"			"40"
+	"gravity"		"1066"	// how much gravity affects the trajectory. Gravity direction is same as the entity that fired it.
+	"fuse"			"5"	// how long before the projectile is removed or self-detonates. Use 0 for beam weapons (velocity == distance).
+
+	"detonate_on_fuse"	"1"	// whether projectile should detonate when it's fuse runs out
+	"detonate_on_death"	"0"	// whether projectile should detonate when it's "killed" (health runs out)
+	"detonate_on_world"	"0"	// whether projectile should detonate when it hits an obstacle
+	"detonate_on_actor"	"0"	// whether projectile should detonate when it hits a character in the game
+
+	"smoke_fly"		"debristrail.prt"	// particle effect while in the air
+
+	// parametric particles -- temp
+	"model_detonate"			""
+	"smoke_detonate"			""	// particle effect when detonates
+	"smoke_fuse"				""
+	"smoke_bounce"				""
+}
+
+entityDef debris_barrelpiece2 {
+	"spawnclass"		"idDebris"
+	"mins"			"-3 -3 -3"
+	"maxs"			"3 3 3"
+
+	"model" 		"models/mapobjects/fuel_barrel/exp_barrel2b.lwo"
+	"skin"			"skins/exp_barrel_red"
+
+	"health"		"0"		// amount of damage projectile can take if damaged (0 means it can't be destroyed)
+	"velocity"		"0 0 0"		// how fast the projectile leaves the gun (or distance if fuse is 0)
+	"random_velocity"	"1"
+	"angular_velocity"	"1 -1 1"	// how the projectile is rotating when it leaves the gun
+	"thrust"		"0"		// the rate of acceleration (always in the direction of the projectiles model)
+	"thrust_start"		"0"		// when to start accelerating
+	"thrust_end"		"0"		// when to stop accelerating
+	"linear_friction"	"0.8"		// "air" friction
+	"angular_friction"	"1.1"
+	"contact_friction"	"0.9"
+	"bounce"		"0.1"	// how much speed projectile retains when it bounces off objects (coefficient of restitution). 0 means no bounce.
+	"mass"			"40"
+	"gravity"		"1066"	// how much gravity affects the trajectory. Gravity direction is same as the entity that fired it.
+	"fuse"			"5"	// how long before the projectile is removed or self-detonates. Use 0 for beam weapons (velocity == distance).
+
+	"detonate_on_fuse"	"1"	// whether projectile should detonate when it's fuse runs out
+	"detonate_on_death"	"0"	// whether projectile should detonate when it's "killed" (health runs out)
+	"detonate_on_world"	"0"	// whether projectile should detonate when it hits an obstacle
+	"detonate_on_actor"	"0"	// whether projectile should detonate when it hits a character in the game
+
+	"smoke_fly"		"debristrail.prt"	// particle effect while in the air
+
+	// parametric particles -- temp
+	"model_detonate"			""
+	"smoke_detonate"			""	// particle effect when detonates
+	"smoke_fuse"				""
+	"smoke_bounce"				""
+}
+
+entityDef debris_barreltop {
+	"spawnclass"		"idDebris"
+	"mins"			"-3 -3 -3"
+	"maxs"			"3 3 3"
+
+	"model" 		"models/mapobjects/fuel_barrel/exp_barrel2c.lwo"
+
+	"health"		"0"		// amount of damage projectile can take if damaged (0 means it can't be destroyed)
+	"velocity"		"1 1 450"	// how fast the projectile leaves the gun (or distance if fuse is 0)
+	"random_velocity"	"1"
+	"angular_velocity"	"105 215 10"	// how the projectile is rotating when it leaves the gun
+	"thrust"		"0"		// the rate of acceleration (always in the direction of the projectiles model)
+	"thrust_start"		"0"		// when to start accelerating
+	"thrust_end"		"0"		// when to stop accelerating
+	"linear_friction"	"1.0"		// "air" friction
+	"angular_friction"	"0.1"
+	"contact_friction"	"0.9"
+	"bounce"		"0.1"	// how much speed projectile retains when it bounces off of objects (coefficient of restitution). 0 means no bounce.
+	"mass"			"50"
+	"gravity"		"1066"	// how much gravity affects the trajectory. Gravity direction is same as the entity that fired it.
+	"fuse"			"5"	// how long before the projectile is removed or self-detonates. Use 0 for beam weapons (velocity == distance).
+
+	"detonate_on_fuse"	"1"	// whether projectile should detonate when it's fuse runs out
+	"detonate_on_death"	"0"	// whether projectile should detonate when it's "killed" (health runs out)
+	"detonate_on_world"	"0"	// whether projectile should detonate when it hits an obstacle
+	"detonate_on_actor"	"0"	// whether projectile should detonate when it hits a character in the game
+
+	"smoke_fly"		"debristrail.prt"	// particle effect while in the air
+
+	// parametric particles -- temp
+	"model_detonate"			""
+	"smoke_detonate"			""	// particle effect when detonates
+	"smoke_fuse"				""
+	"smoke_bounce"				""
+}
+
+entityDef debris_barreltop2 {
+	"spawnclass"		"idDebris"
+	"mins"			"-3 -3 -3"
+	"maxs"			"3 3 3"
+
+	"model" 		"models/mapobjects/fuel_barrel/exp_barrel2c.lwo"
+	"skin"			"skins/exp_barrel_red"
+
+	"health"		"0"		// amount of damage projectile can take if damaged (0 means it can't be destroyed)
+	"velocity"		"1 1 450"	// how fast the projectile leaves the gun (or distance if fuse is 0)
+	"random_velocity"	"1"
+	"angular_velocity"	"105 215 10"	// how the projectile is rotating when it leaves the gun
+	"thrust"		"0"		// the rate of acceleration (always in the direction of the projectiles model)
+	"thrust_start"		"0"		// when to start accelerating
+	"thrust_end"		"0"		// when to stop accelerating
+	"linear_friction"	"1.0"		// "air" friction
+	"angular_friction"	"0.1"
+	"contact_friction"	"0.9"
+	"bounce"		"0.1"	// how much speed projectile retains when it bounces off objects (coefficient of restitution). 0 means no bounce.
+	"mass"			"50"
+	"gravity"		"1066"	// how much gravity affects the trajectory. Gravity direction is same as the entity that fired it.
+	"fuse"			"5"	// how long before the projectile is removed or self-detonates. Use 0 for beam weapons (velocity == distance).
+
+	"detonate_on_fuse"	"1"	// whether projectile should detonate when it's fuse runs out
+	"detonate_on_death"	"0"	// whether projectile should detonate when it's "killed" (health runs out)
+	"detonate_on_world"	"0"	// whether projectile should detonate when it hits an obstacle
+	"detonate_on_actor"	"0"	// whether projectile should detonate when it hits a character in the game
+
+	"smoke_fly"		"debristrail.prt"	// particle effect while in the air
+
+	// parametric particles -- temp
+	"model_detonate"			""
+	"smoke_detonate"			""	// particle effect when detonates
+	"smoke_fuse"				""
+	"smoke_bounce"				""
+}

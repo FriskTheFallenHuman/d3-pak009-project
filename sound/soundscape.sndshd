@@ -1,0 +1,8 @@
+deep_01
+{
+	minDistance	10
+	maxDistance	30
+	omnidirectional
+	looping
+	sound/soundscape/loop_deep_01.wav
+}

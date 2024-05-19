@@ -1,0 +1,11 @@
+//CINEMATICS
+model maledict_world {
+	mesh					models/md5/cinematics/maledict/world.md5mesh
+	anim idle				models/md5/cinematics/maledict/worldfallidle.md5anim
+	anim fall				models/md5/cinematics/maledict/worldfall.md5anim
+}
+
+model maledict_debris1 {
+	mesh					models/md5/cinematics/maledict/debris1.md5mesh
+	anim break				models/md5/cinematics/maledict/debris1.md5anim
+}

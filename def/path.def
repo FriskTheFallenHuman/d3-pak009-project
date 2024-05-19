@@ -1,0 +1,362 @@
+/***********************************************************************
+
+ path
+
+***********************************************************************/
+
+entityDef path_default {
+	"editor_color"			".7 .3 1"
+	"editor_mins"			"-8 -8 -8"
+	"editor_maxs"			"8 8 8"
+
+	"editor_usage"		"Parent class for path entities. Do not use in maps."
+	"editor_var target"	"point to next path entity in chain."
+	"editor_var trigger"	"point to entity to trigger when character reaches path corner or completes path action."
+	"editor_var no_cower"	"if set to 1, character won't cower when he hears a projectile weapon being fired until it reaches path corner or completes path action."
+	"editor_var skip"	"if set to 1, character will skip to next path if prompted to talk by player or hears a projectile weapon being fired."
+
+	"spawnclass"			"idPathCorner"
+}
+
+entityDef path_corner {
+	"inherit"		"path_default"
+	"editor_mins"		"-24 -24 0"
+	"editor_maxs"		"24 24 82"
+
+	"editor_usage"		"Path location node for characters to walk to. Targeted by character or previous path entity in chain."
+	"editor_var target"	"point to next path entity in chain. By default, characters will walk back to first path corner of chain after reaching the last one and repeat its walk cycle. Monsters however, will stop on last path corner of chain."
+}
+
+entityDef path_anim {
+	"inherit"			"path_default"
+	"editor_showangle"		"1"
+	"editor_rotatable"		"1"
+
+	"editor_usage"		"Path action node for characters. Targeted by character or previous path entity in chain."
+	"editor_usage1"		"Character will play animation upon reaching path corner that precedes this in the chain."
+	"editor_usage2"		"Set angles to direction for character to face during animation."
+	"editor_var target"	"point to next path entity in chain."
+	"editor_var anim"	"character animation to play."
+	"editor_var blend_in"	"# of frames to blend in to anim (default is 4)."
+	"editor_var blend_out"	"# of frames to blend out of anim (default is 4)."
+	"editor_var head_anim"	"if set to 1, waits for head animation to finish, instead of the body animation."
+	"editor_var no_talk"	"set to 1 to disable character from being prompted to talk by player until it completes path action."
+
+	"blend_in"				"4"
+	"blend_out"				"4"
+}
+
+entityDef path_cycleanim {
+	"inherit"			"path_default"
+	"editor_showangle"		"1"
+	"editor_rotatable"		"1"
+
+	"editor_usage"		"Path action node for characters. Targeted by character or previous path entity in chain."
+	"editor_usage1"		"Character will loop animation upon reaching path corner that precedes this in the chain and wait until triggered, or until time specified by 'wait' has elapsed."
+	"editor_usage2"		"Set angles to direction for character to face during animation."
+	"editor_var anim"	"character animation to loop."
+	"editor_var blend_in"	"# of frames to blend in to anim (default is 4)."
+	"editor_var blend_out"	"# of frames to blend out of anim (default is 4)."
+	"editor_var wait"	"time in seconds to loop the animation before moving on to next path entity. If set to 0 (default), character will wait until it's triggered before moving on."
+	"editor_var no_talk"	"set to 1 to disable character from being prompted to talk by player until it completes path action."
+
+	"blend_in"				"4"
+	"blend_out"				"4"
+}
+
+entityDef path_turn {
+	"inherit"			"path_default"
+	"editor_showangle"		"1"
+	"editor_rotatable"		"1"
+
+	"editor_usage"		"Path action node for characters. Targeted by character or previous path entity in chain."
+	"editor_usage1"		"Character will turn to the direction specified by angles upon reaching path corner that precedes this in the chain."
+	"editor_var no_talk"	"set to 1 to disable character from being prompted to talk by player until it completes path action."
+}
+
+entityDef path_wait {
+	"inherit"			"path_default"
+
+	"editor_usage"		"Path action node for characters. Targeted by character or previous path entity in chain."
+	"editor_usage1"		"Character will wait specified amount of time before continuing on path."
+	"editor_var wait"	"how long to wait in seconds (default is 2)."
+	"editor_var no_talk"	"set to 1 to disable character from being prompted to talk by player until it completes path action."
+
+	"wait"			"2"
+}
+
+entityDef path_waitfortrigger {
+	"inherit"			"path_default"
+
+	"editor_usage"		"Path action node for characters. Targeted by character or previous path entity in chain."
+	"editor_usage1"		"Character will wait until they're triggered again before continuing on path."
+	"editor_var no_talk"	"set to 1 to disable character from being prompted to talk by player until it completes path action."
+}
+
+entityDef path_conversation {
+	"inherit"			"path_default"
+
+	"editor_usage"		"Path conversation node for characters. Targeted by character or previous path entity in chain."
+	//"editor_usage1"		"Character speaks a line of dialog while looking at a specific entity."
+	"editor_usage1"		"When finished, character will tell all listening characters to go to their next conversation node."
+	"editor_usage2"		"When talked to, conversation ends for all characters listening and they move on to path entities after all conversation nodes."
+	"editor_snd snd_dialog"	"Name of sound shader to play."
+	"editor_var anim"	"Name of animation to play while speaker talks."
+	"editor_var focus"	"Name of entity for speaker to look at."
+	"editor_var blend_in"	"# of frames to blend in to anim (default is 4)."
+	"editor_var blend_out"	"# of frames to blend out of anim (default is 4)."
+	"editor_var no_talk"	"set to 1 to disable character from being prompted to talk by player until it completes path conversation."
+
+	"blend_in"				"4"
+	"blend_out"				"4"
+}
+
+entityDef path_conversation_listen {
+	"inherit"			"path_default"
+
+	"editor_usage"		"Path conversation node for characters. Targeted by character or previous path entity in chain."
+	"editor_usage1"		"Character listens to talking character specified by the 'focus' key and waits for him to finish."
+	"editor_var anim"	"Name of animation to play while speaker talks."
+	"editor_var focus"	"Name of character that's speaking.  Goes to next path when character is done speaking."
+	"editor_var no_look"	"If set, character doesn't look at the speaker."
+	"editor_var blend_in"	"# of frames to blend in to anim (default is 4)."
+	"editor_var blend_out"	"# of frames to blend out of anim (default is 4)."
+	"editor_var no_talk"	"set to 1 to disable character from being prompted to talk by player until it completes path conversation."
+
+	"blend_in"				"4"
+	"blend_out"				"4"
+}
+
+entityDef path_lookat {
+	"inherit"			"path_default"
+
+	"editor_usage"		"Path action node for characters. Targeted by character or previous path entity in chain."
+	"editor_usage1"		"Causes character to look at an entity for a certain length of time or until triggered."
+	"editor_var anim"	"Name of animation to play while looking."
+	"editor_var blend_in"	"# of frames to blend in to anim (default is 4)."
+	"editor_var blend_out"	"# of frames to blend out of anim (default is 4)."
+	"editor_var focus"	"Name of entity to look at."
+	"editor_var wait"	"time in seconds to loop the animation before moving on to next path entity. If set to 0 (default), character will wait until it's triggered before moving on."
+	"editor_var no_talk"	"set to 1 to disable character from being prompted to talk by player until it completes path action."
+
+	"blend_in"				"4"
+	"blend_out"				"4"
+
+}
+
+entityDef path_hide {
+	"inherit"			"path_default"
+	"editor_showangle"		"1"
+	"editor_rotatable"		"1"
+
+	"editor_usage"		"Path action node for characters. Targeted by character or previous path entity in chain."
+	"editor_usage1"		"Makes the character stop on previous path corner and become invisible and non-solid. Once used, character can only be made visible again by script command."
+}
+
+/*
+entityDef path_show {
+	"inherit"			"path_default"
+	"editor_showangle"		"1"
+	"editor_rotatable"		"1"
+
+	"editor_usage"		"Makes the character visible and solid."
+	"editor_usage1"		"Entity is buggy to the point of being unusable. Never used in Id's maps so commented out"
+}
+*/
+
+entityDef path_jump {
+	"inherit"			"path_default"
+
+	"editor_usage"		"Path action node for characters. Targeted by character or previous path entity in chain."
+	"editor_usage1"		"Character will jump to the next path entity (regardless of type). Will cause game error if character doesn't have jumping ability. If jump is failing, you can manually specify velocity of the jump using 'up' and 'forward'."
+	"editor_var up"		"How much upward velocity the character will jump with."
+	"editor_var forward"	"How much forward velocity the character will jump with."
+	"editor_var no_talk"	"set to 1 to disable character from being prompted to talk by player until it completes path action."
+}
+
+entityDef path_attack {
+	"inherit"			"path_default"
+
+	"editor_usage"		"Path action node for characters. Targeted by character or previous path entity in chain."
+	"editor_usage1"		"Character will attack the character specified by 'enemy' key. Character will move on to next path when enemy dies or when activated."
+	"editor_var enemy"	"Character to attack."
+	"editor_var no_talk"	"set to 1 to disable character from being prompted to talk by player until it completes path action."
+}
+
+entityDef path_headanim {
+	"inherit"			"path_default"
+
+	"editor_usage"		"Path action node for characters. Targeted by character or previous path entity in chain."
+	"editor_usage1"		"Starts playing an animation on the head and immediately goes to next path. Used for playing talk anims while character is walking."
+	"editor_var anim"	"Name of head animation to play."
+	"editor_var blend_in"	"# of frames to blend in to anim (default is 2)."
+	"editor_var blend_out"	"# of frames to blend out of anim (default is 2)."
+	"editor_var no_talk"	"set to 1 to disable character from being prompted to talk by player until it completes path action."
+
+	"blend_in"				"2"
+	"blend_out"				"2"
+
+}
+
+entityDef path_waitforheadanim {
+	"inherit"			"path_default"
+	"editor_usage"		"Path action node for characters. Targeted by character or previous path entity in chain."
+	"editor_usage1"		"Waits for animation on the head from path_headanim to finish."
+	"editor_var focus"	"Name of entity to look at."
+	"editor_var no_talk"	"set to 1 to disable character from being prompted to talk by player until it completes path action."
+}
+
+entityDef path_talk {
+	"inherit"			"path_default"
+	"editor_usage"		"Path conversation node for characters. Targeted by character or previous path entity in chain."
+	"editor_usage1"		"Forces character to talk to the player each time node is executed, then resumes path. Says primary talk phrase first time, then secondary talk phrases in turn over and over."
+}
+
+entityDef path_talk_triggered {
+	"inherit"			"path_default"
+	"editor_usage"		"Path conversation node for characters. Targeted by character or previous path entity in chain."
+	"editor_usage1"		"Forces character to say his triggered talk phrase to the player each time node is executed, then resumes path."
+}
+
+entityDef path_talk_primary {
+	"inherit"			"path_default"
+	"editor_usage"		"Path conversation node for characters. Targeted by character or previous path entity in chain."
+	"editor_usage1"		"Forces character to say his primary talk phrase to the player each time node is executed, then resumes path."
+}
+
+entityDef path_talk_secondary {
+	"inherit"			"path_default"
+	"editor_usage"		"Path conversation node for characters. Targeted by character or previous path entity in chain."
+	"editor_usage1"		"Forces character to say his secondary talk phrases in turn to the player each time node is executed, then resumes path."
+}
+
+/***********************************************************************
+
+ combat nodes
+
+***********************************************************************/
+
+entityDef ai_attackcone {
+	"editor_color"			".5 .3  0"
+	"editor_mins"			"-24 -24 0"
+	"editor_maxs"			"24 24 82"
+	"editor_combatnode"		"1"
+
+	"editor_usage"			"Attack cone where monster stands in place and uses normal range attack (if it has one)."
+	"editor_var fov"		"Angle width of the cone"
+	"editor_var min"		"Minimum distance player can be from node"
+	"editor_var max"		"Maximum distance player can be from node"
+	"editor_var offset"		"Vector amount to offset cone from origin of entity"
+	"editor_var min_wait"		"Minimum amount of time to wait between attacks"
+	"editor_var max_wait"		"Maximum amount of time to wait between attacks"
+	"editor_var anim"		"Animation prefix for attack type"
+	"editor_var num_shots"		"Max number of shots to fire per attack"
+	"editor_var start_off"		"Disables entity until triggered."
+	"editor_var use_once"		"When set, node is disabled after it's used."
+
+	"editor_copy1"			"fov"
+	"editor_copy2"			"min"
+	"editor_copy3"			"max"
+	"editor_copy4"			"height"
+	"editor_copy5"			"offset"
+
+	"spawnclass"			"idCombatNode"
+	"min_wait"				"2"
+	"max_wait"				"4"
+	"wait_anim"				"idle"
+	"use_once"				"0"
+	"num_shots"				"5"
+	"offset"				"0"
+
+	"fov"					"60"
+	"min"					"0"
+	"max"					"512"
+	"height"				"256"
+}
+
+entityDef ai_attackcone_once {
+	"editor_color"			".5 .3  0"
+	"editor_mins"			"-24 -24 0"
+	"editor_maxs"			"24 24 82"
+	"editor_combatnode"		"1"
+
+	"editor_usage"		"Attack cone where monster stands in place and uses normal range attack (if it has one)."
+	"editor_var fov"	"Angle width of the cone"
+	"editor_var min"	"Minimum distance player can be from node"
+	"editor_var max"	"Maximum distance player can be from node"
+	"editor_var offset"	"Vector amount to offset cone from origin of entity"
+	"editor_var height"	"Specifies the Z height of the cone centered around the origin of the entity. This means it goes down half the height and up half the height."
+	"editor_var anim"	"Animation prefix for attack type"
+	"editor_var num_shots"	"Max number of shots to fire per attack"
+	"editor_var min_wait"	"Minimum amount of time to wait between attacks"
+	"editor_var max_wait"	"Maximum amount of time to wait between attacks"
+	"editor_var start_off"	"Disables entity until triggered."
+	"editor_var use_once"	"When set, node is disabled after it's used."
+
+	"editor_copy1"			"fov"
+	"editor_copy2"			"min"
+	"editor_copy3"			"max"
+	"editor_copy4"			"height"
+	"editor_copy5"			"offset"
+
+	"spawnclass"			"idCombatNode"
+	"min_wait"				"2"
+	"max_wait"				"4"
+	"wait_anim"				"idle"
+	"use_once"				"1"
+	"num_shots"				"5"
+	"offset"				"0"
+
+	"fov"					"60"
+	"min"					"0"
+	"max"					"512"
+	"height"				"256"
+}
+
+entityDef ai_attackcone_turret {
+	"editor_color"			".5 .3  0"
+	"editor_mins"			"-24 -24 0"
+	"editor_maxs"			"24 24 82"
+	"editor_combatnode"		"1"
+
+	"editor_usage"		"Attack cone where monster stands in place and uses normal range attack (if it has one)."
+	"editor_var fov"	"Angle width of the cone"
+	"editor_var min"	"Minimum distance player can be from node"
+	"editor_var max"	"Maximum distance player can be from node"
+	"editor_var offset"	"Vector amount to offset cone from origin of entity"
+	"editor_var height"	"Specifies the Z height of the cone centered around the origin of the entity. This means it goes down half the height and up half the height."
+	"editor_var num_shots"	"Max number of shots to fire per attack"
+	"editor_var min_wait"	"Minimum amount of time to wait between attacks"
+	"editor_var max_wait"	"Maximum amount of time to wait between attacks"
+	"editor_var start_off"	"Disables entity until triggered."
+	"editor_var use_once"	"When set, node is disabled after it's used."
+
+	"editor_copy1"			"fov"
+	"editor_copy2"			"min"
+	"editor_copy3"			"max"
+	"editor_copy4"			"height"
+	"editor_copy5"			"offset"
+
+	"spawnclass"			"idCombatNode"
+	"min_wait"				"0.3"
+	"max_wait"				"1"
+	"use_once"				"0"
+	"num_shots"				"1"
+	"offset"				"0"
+
+	"fov"					"90"
+	"min"					"0"
+	"max"					"512"
+	"height"				"256"
+}
+
+entityDef ai_lostcombat {
+	"editor_color"			".5 .3  0"
+	"editor_mins"			"-24 -24 0"
+	"editor_maxs"			"24 24 82"
+	"editor_showangle"		"1"
+
+	"editor_usage"			"Lost combat node. Monster will retreat to this position when he can no longer reach the player."
+
+	"spawnclass"			"idSpawnableEntity"
+}

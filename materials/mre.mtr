@@ -1,0 +1,18 @@
+/*
+maps/rr2do2/bftopview
+{
+	qer_editorimage maps/mre/wakeisland_doom_d.tga
+
+	diffusemap maps/mre/wakeisland_doom_d.tga
+	bumpmap maps/mre/wakeisland_doom_local.tga
+
+	//noselfShadow
+	//renderbump  -size 512 512 -aa 2 -colorMap maps/mre/wakeisland_doom_local.tga maps/mre/wakeisland_doom_hi.lwo
+	//renderbump  -size 256 256 -colorMap maps/mre/wakeisland_doom_local.tga maps/mre/wakeisland_doom_hi.lwo
+
+	//bumpmap addnormals (maps/mre/wakeisland_doom_local.tga, heightmap (maps/mre/wakeisland_doom_local.tga, 2) )
+	//specularmap maps/mre/wakeisland_doom_s.tga
+}
+*/
+
+//Verified good complete by Eutectic - Nov 23-04

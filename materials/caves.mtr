@@ -1,0 +1,1045 @@
+//================textures/caves shader stats================
+//
+// Total # of shaders : 98
+// Working shaders: 75
+// Broken/CommentedOut shaders: 23
+//================================================================
+
+
+
+//textures/caves/a_cavfgirder2_d01
+//{
+//	qer_editorimage textures/caves/a_cavfgirder2_d01.tga
+//        diffusemap	textures/caves/a_cavfgirder2_d01.tga    
+//	specularmap	textures/caves/a_cavfgirder2_s01.tga         
+//        bumpmap 	addnormals (textures/caves/a_cavfgirder1_local.tga, heightmap (textures/caves/a_cavfgirder2_b01.tga, 2 )) 
+//
+//       
+//}
+
+textures/caves/a_cavfgirder2_d02
+{
+	qer_editorimage textures/caves/a_cavfgirder2_d02.tga
+        diffusemap	textures/caves/a_cavfgirder2_d02.tga    
+	specularmap	textures/caves/a_cavfgirder2_s02.tga         
+        bumpmap 	addnormals (textures/caves/a_cavfgirder1_local.tga, heightmap (textures/caves/a_cavfgirder2_b02.tga, 2 )) 
+
+       
+}
+
+textures/caves/a_cavfgirder2_d02b
+{
+	qer_editorimage textures/caves/a_cavfgirder2_d02b.tga
+        diffusemap	textures/caves/a_cavfgirder2_d02b.tga    
+	specularmap	textures/caves/a_cavfgirder2_s02b.tga         
+        bumpmap 	addnormals (textures/caves/a_cavfgirder1_local.tga, heightmap (textures/caves/a_cavfgirder2_b02b.tga, 2 )) 
+
+       
+}
+
+textures/caves/a_cavfgirder2_d03
+{
+	qer_editorimage textures/caves/a_cavfgirder2_d03.tga
+        diffusemap	textures/caves/a_cavfgirder2_d03.tga    
+	specularmap	textures/caves/a_cavfgirder2_s03.tga         
+        bumpmap 	addnormals (textures/caves/a_cavfgirder1_local.tga, heightmap (textures/caves/a_cavfgirder2_b03.tga, 2 )) 
+
+       
+}
+
+textures/caves/a_cavfgirder2_d03b
+{
+	qer_editorimage textures/caves/a_cavfgirder2_d03b.tga
+        diffusemap	textures/caves/a_cavfgirder2_d03b.tga    
+	specularmap	textures/caves/a_cavfgirder2_s03b.tga         
+        bumpmap 	addnormals (textures/caves/a_cavfgirder1_local.tga, heightmap (textures/caves/a_cavfgirder2_b03b.tga, 2 )) 
+
+       
+}
+
+textures/caves/a_cavfgirder2_d04
+{
+	qer_editorimage textures/caves/a_cavfgirder2_d04.tga
+        diffusemap	textures/caves/a_cavfgirder2_d04.tga    
+	specularmap	textures/caves/a_cavfgirder2_s04.tga         
+        bumpmap 	addnormals (textures/caves/a_cavfgirder1_local02.tga, heightmap (textures/caves/a_cavfgirder2_b04.tga, 2 )) 
+
+       
+}
+
+//textures/caves/a_cavfgirder2red_d01
+//{
+//	qer_editorimage   textures/caves/a_cavfgirder2red_d01.tga
+//      diffusemap	      textures/caves/a_cavfgirder2red_d01.tga    
+//	specularmap	      textures/caves/a_cavfgirder2red_s01.tga         
+//      bumpmap 	      textures/caves/a_cavfgirder1_local.tga
+//
+//       
+//}
+
+
+textures/caves/a_diamondstairs_d01i
+{
+	qer_editorimage textures/caves/a_diamondstairs_d01i.tga
+        diffusemap	textures/caves/a_diamondstairs_d01k.tga    
+	specularmap	textures/caves/a_diamondstairs_s01i.tga         
+        bumpmap 	addnormals (textures/caves/a_diamondstairs_local03.tga, heightmap (textures/caves/a_diamondstairs_b01i.tga, 2 )) 
+
+       
+}
+
+textures/caves/a_diamondstairs_d01l
+{
+	qer_editorimage textures/caves/a_diamondstairs_d01l.tga
+        diffusemap	textures/caves/a_diamondstairs_d01l.tga    
+	specularmap	textures/caves/a_diamondstairs_s01l.tga         
+        bumpmap 	addnormals (textures/caves/a_diamondstairs_local03.tga, heightmap (textures/caves/a_diamondstairs_b01l.tga, 2 )) 
+
+       
+}
+
+textures/caves/a_diamondstairs_d01h
+{
+	qer_editorimage textures/caves/a_diamondstairs_d01h.tga
+        diffusemap	textures/caves/a_diamondstairs_d01h.tga    
+	specularmap	textures/caves/a_diamondstairs_s01h.tga         
+        bumpmap 	addnormals (textures/caves/a_diamondstairs_local03.tga, heightmap (textures/caves/a_diamondstairs_b01h.tga, 2 )) 
+
+       
+}
+
+
+
+//*****************************************************Moved from andy.mtr - start*****************************************
+
+
+textures/caves/cavsolarmap
+{
+	qer_editorimage		textures/caves/cavsolarmap_d.tga
+	bumpmap			addnormals (textures/caves/cavsolarmap_local.tga, heightmap (textures/caves/cavsolarmap_bmp.tga, 3 ))
+	diffusemap		textures/caves/cavsolarmap_d.tga
+	specularmap		textures/caves/cavsolarmap_s.tga
+	{
+		blend 	add
+		map		textures/caves/cavsolarmap_add.tga
+		colored
+	}
+}
+
+//textures/caves/swirltile
+//{
+//	qer_editorimage		textures/caves/swirltile_local.tga
+//	bumpmap			textures/caves/swirltile_local.tga
+//	diffusemap		textures/caves/swirltile_d.tga
+//	specularmap		textures/caves/swirltile_s.tga
+//}
+//
+//textures/caves/swirltile2
+//{
+//	qer_editorimage		textures/caves/swirltile2_bmp.tga
+//	bumpmap			addnormals (textures/caves/swirltile2_local.tga, heightmap (textures/caves/swirltile2_bmp.tga, 3 ))
+//	diffusemap		textures/caves/swirltile_d.tga
+//	specularmap		textures/caves/swirltile_s.tga
+//}
+
+textures/caves/metalswatch1
+{
+	qer_editorimage		textures/caves/metalswatch1_d.tga
+	bumpmap 		addnormals (textures/caves/metalswatch1_local.tga, heightmap (textures/caves/metalswatch1_bmp.tga, 3 ))
+	diffusemap		textures/caves/metalswatch1_d.tga
+	specularmap		textures/caves/metalswatch1_s.tga
+}
+
+//textures/caves/metalswatch2
+//{
+//	qer_editorimage		textures/caves/metalswatch2_d.tga
+//	bumpmap 		addnormals (textures/caves/metalswatch1_local.tga, heightmap (textures/caves/metalswatch1_bmp.tga, 3 ))
+//	diffusemap		textures/caves/metalswatch2_d.tga
+//	specularmap		textures/caves/metalswatch2_s.tga
+//}
+
+textures/caves/metalswatch3
+{
+	qer_editorimage		textures/caves/metalswatch3.tga
+	bumpmap 		addnormals (textures/caves/metalswatch1_local.tga, heightmap (textures/caves/metalswatch1_bmp.tga, 3 ))
+	diffusemap		textures/caves/metalswatch3.tga
+	specularmap		textures/caves/metalswatch3_s.tga
+}
+
+textures/caves/warshutter1
+{
+	qer_editorimage		textures/caves/warshutter1_d.tga
+	bumpmap 		addnormals (textures/caves/warshutter1_local.tga, heightmap (textures/caves/warshutter1_bmp.tga, 3 ))
+	diffusemap		textures/caves/warshutter1_d.tga
+	specularmap		textures/caves/warshutter1_s.tga
+}
+
+textures/caves/wardoortrim
+{
+	qer_editorimage		textures/caves/wardoortrim_d.tga
+	bumpmap 		addnormals (textures/caves/wardoortrim_local.tga, heightmap (textures/caves/warshutter1_bmp.tga, 3 ))
+	diffusemap		textures/caves/wardoortrim_d.tga
+	specularmap		textures/caves/wardoortrim_s.tga
+}
+
+textures/caves/wardoortrim2
+{
+	qer_editorimage		textures/editor/wardoortrim2.tga
+	bumpmap 		addnormals (textures/caves/wardoortrim2_local.tga, heightmap (textures/caves/warshutter1_bmp.tga, 3 ))
+	diffusemap		textures/caves/wardoortrim2_d.tga
+	specularmap		textures/caves/wardoortrim2_s.tga
+}
+
+textures/caves/cavslashtrim
+{
+	qer_editorimage		textures/caves/cavslashtrim_d.tga
+	bumpmap 		addnormals (textures/caves/cavslashtrim_local.tga, heightmap (textures/caves/cavslashtrim_bmp.tga, 3 ))
+	diffusemap		textures/caves/cavslashtrim_d.tga
+	specularmap		textures/caves/cavslashtrim_s.tga
+}
+
+//textures/caves/temteeth1
+//{
+//	qer_editorimage		textures/caves/temteeth1_bmp.tga
+//	bumpmap 		addnormals (textures/caves/temteeth1_local.tga, heightmap (textures/caves/temteeth1_bmp.tga, 3 ))
+//	diffusemap		textures/caves/temteeth1_d.tga
+//	specularmap		textures/caves/temteeth1_s.tga
+//}
+
+//textures/caves/temfloor1
+//{
+//	qer_editorimage		textures/caves/temfloor1_local.tga
+//	bumpmap 		addnormals (textures/caves/temfloor1_local.tga, heightmap (textures/caves/temfloor1_bmp.tga, 3 ))
+//	diffusemap		textures/caves/temfloor1_d.tga
+//	specularmap		textures/caves/temfloor1_s.tga
+//}
+
+textures/caves/temfloortrim1
+{
+	qer_editorimage		textures/editor/temfloortrim1.tga
+	bumpmap 		textures/caves/temfloortrim1_local.tga
+	diffusemap		textures/caves/temfloortrim1_d.tga
+	specularmap		textures/caves/temfloortrim1_s.tga
+}
+
+//textures/caves/tembrickrib1
+//{
+//	qer_editorimage		textures/caves/tembrickrib1_local.tga
+//	bumpmap 		addnormals (textures/caves/tembrickrib1_local.tga, heightmap (textures/caves/tembrickrib1_bmp.tga, 5 ))
+//	diffusemap		textures/caves/tembrickrib1_d.tga
+//	specularmap		textures/caves/tembrickrib1_s.tga
+//}
+
+//textures/caves/tembrick1ridges
+//{
+//	qer_editorimage		textures/caves/tembrick1ridges_bmp.tga
+//	bumpmap 		addnormals (textures/caves/tembrick1crum_local.tga, heightmap (textures/caves/tembrick1ridges_bmp.tga, 5 ))
+//	diffusemap		textures/caves/tembrick1ridges_d.tga
+//	specularmap		textures/caves/tembrick1ridges_s.tga
+//}
+
+//textures/caves/tembrick1
+//{
+//	qer_editorimage		textures/caves/tembrick1_bmp.tga
+//	bumpmap 		addnormals (textures/caves/tembrick1crum_local.tga, heightmap (textures/caves/tembrick1_bmp.tga, 3 ))
+//	diffusemap		textures/caves/tembrick1_d.tga
+//	specularmap		textures/caves/tembrick1_s.tga
+//}
+
+textures/caves/tembrick2
+{
+	qer_editorimage		textures/caves/tembrick2_d.tga
+	bumpmap 		addnormals (textures/caves/tembrick2_local.tga, heightmap (textures/caves/tembrick2_bmp.tga, 3 ))
+	diffusemap		textures/caves/tembrick2_d.tga
+	specularmap		textures/caves/tembrick2_s.tga	
+}
+
+textures/caves/tembrick2door
+{
+	qer_editorimage		textures/editor/tembrick2door.tga
+	bumpmap 		addnormals (textures/caves/tembrick2_local.tga, heightmap (textures/caves/tembrick2_bmp.tga, 3 ))
+	diffusemap		textures/caves/tembrick2_d.tga
+	specularmap		textures/caves/tembrick2_s.tga
+	{
+		blend 	add
+		map		textures/caves/tembrick2_add.tga
+		colored
+	}
+}
+
+//textures/caves/tembrick6
+//{
+//	qer_editorimage		textures/caves/tembrick6_local.tga
+//	bumpmap 		addnormals (textures/caves/tembrick6_local.tga, heightmap (textures/caves/tembrick6_bmp.tga, 3 ))
+//	diffusemap		textures/caves/tembrick6_d.tga
+//	specularmap		textures/caves/tembrick6_s.tga
+//}
+//
+//textures/caves/tembrick4marble
+//{
+//	qer_editorimage		textures/caves/tembrick4marble_local.tga
+//	bumpmap 		addnormals (textures/caves/tembrick4marble_local.tga, heightmap (textures/caves/tembrick4marble_bmp.tga, 3 ))
+//	diffusemap		textures/caves/tembrick4marble_d.tga
+//	specularmap		textures/caves/tembrick4marble_s.tga
+//}
+
+textures/caves/tembrick1crum
+{
+	qer_editorimage		textures/caves/tembrick1crum.tga
+	bumpmap 		addnormals (textures/caves/tembrick1crum_local.tga, heightmap (textures/caves/tembrick1crum_bmp.tga, 3 ))
+	diffusemap		textures/caves/tembrick1crum_d.tga
+	specularmap		textures/caves/tembrick1crum_s.tga
+}
+
+
+textures/caves/temtablet1
+{
+	qer_editorimage		textures/caves/temtablet1_d.tga
+	bumpmap 		addnormals (textures/caves/temtablet1_local.tga, heightmap (textures/caves/temtablet1_bmp.tga, 6 ))
+	diffusemap		textures/caves/temtablet1_d.tga
+	specularmap		textures/caves/tembrick1crum_s.tga
+}
+
+textures/caves/temtablet2
+{
+	qer_editorimage		textures/caves/temtablet2_d.tga
+	bumpmap 		addnormals (textures/caves/temtablet2_local.tga, heightmap (textures/caves/temtablet2_bmp.tga, 6 ))
+	diffusemap		textures/caves/temtablet2_d.tga
+	specularmap		textures/caves/tembrick1crum_s.tga
+}
+
+//textures/caves/tembrick1smoo
+//{
+//	qer_editorimage		textures/caves/tembrick1smoo.tga
+//	bumpmap 		textures/caves/tembrick1crum_local.tga
+//	diffusemap		textures/caves/tembrick1smoo_d.tga
+//	specularmap		textures/caves/tembrick1crum_s.tga
+//}
+
+textures/caves/tembrick2smoo
+{
+	qer_editorimage		textures/caves/tembrick2smoo.tga
+	{
+		blend			bumpmap 		
+		map				addnormals (textures/caves/tembrick1crum_local.tga, heightmap (textures/caves/tembrick2smoo_bmp.tga, 4) ) 
+	}
+	diffusemap			textures/caves/tembrick2smoo_d.tga
+	specularmap			textures/caves/tembrick2smoo_s.tga
+}
+
+//textures/caves/egy_brick1
+//{
+//	qer_editorimage		textures/caves/egy_brick1_bmp.tga
+//	bumpmap 		addnormals (textures/caves/egy_brick1_local.tga, heightmap (textures/caves/egy_brick1_bmp.tga, 1 ))
+//	diffusemap		textures/caves/egy_brick1_d.tga
+//	specularmap		textures/caves/egy_brick1_s.tga
+//}
+
+//textures/caves/temwalltest1
+//{
+//	qer_editorimage		textures/caves/temwalltest1_local.tga
+//	bumpmap 		addnormals (textures/caves/temwalltest1_local.tga, heightmap (textures/caves/temwalltest1_bmp.tga, 1 ))
+//	diffusemap		textures/caves/temwalltest1_d.tga
+//	specularmap		textures/caves/temwalltest1_s.tga
+//}
+
+//textures/caves/temlongwall1
+//{
+//	qer_editorimage		textures/caves/temlongwall1_local.tga
+//	bumpmap 		addnormals (textures/caves/temlongwall1_local.tga, heightmap (textures/caves/temlongwall1_bmp.tga, 1 ))
+//	diffusemap		textures/caves/temlongwall1_d.tga
+//	specularmap		textures/caves/temlongwall1_s.tga
+//}
+
+//textures/caves/cavhexcement1
+//{
+//	qer_editorimage		textures/caves/cavhexcement1.tga
+//	bumpmap 		addnormals (textures/caves/cavhexcement1_local.tga, heightmap (textures/caves/cavhexcement1_bmp.tga, 3 ))
+//	diffusemap		textures/caves/cavhexcement1_d.tga
+//	specularmap		textures/caves/cavhexcement1_s.tga
+//}
+
+
+textures/caves/cavhexrubber1
+{
+	qer_editorimage		textures/caves/cavhexrubber1_d.tga
+	bumpmap 		addnormals (textures/caves/cavhexrubber1_local.tga, heightmap (textures/caves/cavhexrubber1_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavhexrubber1_d.tga
+	specularmap		textures/caves/cavhexrubber1_s.tga
+}
+
+textures/caves/cavhexfloor2
+{
+	qer_editorimage		textures/caves/cavhexfloor2_d.tga
+	bumpmap 		addnormals (textures/caves/cavhexrubber1_local.tga, heightmap (textures/caves/cavhexrubber1_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavhexfloor2_d.tga
+	specularmap		textures/caves/cavhexfloor2_s.tga
+}
+
+//textures/caves/cavtrfloor1
+//{
+//	qer_editorimage		textures/caves/cavtrfloor1.tga
+//	bumpmap 		addnormals (textures/caves/cavtrfloor1.tga, heightmap (textures/caves/cavtrfloor1_bmp.tga, 1 ))
+//	diffusemap		textures/caves/cavtrfloor1_d.tga
+//	specularmap		textures/caves/cavtrfloor1_s.tga
+//}
+
+textures/caves/cavfloorflat1yel
+{
+	qer_editorimage		textures/caves/cavfloorflat1yel_d.tga
+	bumpmap 		addnormals (textures/caves/cavfloorflat1_local.tga, heightmap (textures/caves/cavfloorflat1grip_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavfloorflat1yel_d.tga
+	specularmap		textures/caves/cavfloorflat1yel_s.tga
+}
+
+textures/caves/cavfloorflat1
+{
+	qer_editorimage		textures/editor/cavfloorflat1.tga
+	bumpmap 		addnormals (textures/caves/cavfloorflat1_local.tga, heightmap (textures/caves/cavfloorflat1_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavfloorflat1_d.tga
+	specularmap		textures/caves/cavfloorflat1_s.tga
+}
+
+textures/caves/cavtrfloor1dust
+{
+	qer_editorimage		textures/caves/cavtrfloor1dust_d.tga
+	bumpmap 		addnormals (textures/caves/cavtrfloor1_local.tga, heightmap (textures/caves/cavtrfloor1_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavtrfloor1dust_d.tga
+	specularmap		textures/caves/cavtrfloor1dust_s.tga
+}
+
+textures/caves/cavtrfloor2dust
+{
+	qer_editorimage		textures/caves/cavtrfloor2dust.tga
+	bumpmap 		addnormals (textures/caves/cavtrfloor2_local.tga, heightmap (textures/caves/cavtrfloor2_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavtrfloor2dust_d.tga
+	specularmap		textures/caves/cavtrfloor2dust_s.tga
+}
+
+textures/caves/cavwafpanel1sqr
+{
+	qer_editorimage		textures/caves/cavwafpanel1sqr.tga
+	bumpmap 		textures/caves/cavwafpanel1sqr_local.tga
+	diffusemap		textures/caves/cavwafpanel1sqr_d.tga
+	specularmap		textures/caves/cavwafpanel1sqr_s.tga
+}
+
+
+textures/caves/cavwafpanel1
+{
+	qer_editorimage		textures/caves/cavwafpanel1.tga
+	bumpmap 		addnormals (textures/caves/cavwafpanel1_local.tga, heightmap (textures/caves/cavwafpanel1_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavwafpanel1_d.tga
+	specularmap		textures/caves/cavwafpanel1_s.tga
+}
+
+textures/caves/cavwafpanel2
+{
+	qer_editorimage		textures/caves/cavwafpanel2.tga
+	bumpmap 		addnormals (textures/caves/cavwafpanel2_local.tga, heightmap (textures/caves/cavwafpanel2_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavwafpanel2_d.tga
+	specularmap		textures/caves/cavwafpanel2_s.tga
+}
+
+textures/caves/cavwafpanel3
+{
+	qer_editorimage		textures/caves/cavwafpanel3.tga
+	bumpmap 		addnormals (textures/caves/cavwafpanel3_local.tga, heightmap (textures/caves/cavwafpanel3_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavwafpanel3_d.tga
+	specularmap		textures/caves/cavwafpanel3_s.tga
+}
+
+textures/caves/cavwafpanel3win
+{
+	qer_editorimage		textures/caves/cavwafpanel3win.tga
+	bumpmap 		addnormals (textures/caves/cavwafpanel3win_local.tga, heightmap (textures/caves/cavwafpanel3_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavwafpanel3win_d.tga
+	specularmap		textures/caves/cavwafpanel3win_s.tga
+}
+
+textures/caves/cavwafpanel1win
+{
+	qer_editorimage		textures/caves/cavwafpanel1win.tga
+	bumpmap 		addnormals (textures/caves/cavwafpanel1win_local.tga, heightmap (textures/caves/cavwafpanel1win_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavwafpanel1win_d.tga
+	specularmap		textures/caves/cavwafpanel1win_s.tga
+}
+
+textures/caves/cavpanel1
+{
+	qer_editorimage		textures/caves/cavpanel1.tga
+	bumpmap			addnormals (textures/caves/cavpanel1_local.tga, heightmap (textures/caves/cavpanel1_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavpanel1_d.tga
+	specularmap		textures/caves/cavpanel1_s.tga
+}
+
+//textures/caves/cavpanel1_yel
+//{
+//	qer_editorimage		textures/caves/cavpanel1_yel.tga
+//	bumpmap			addnormals (textures/caves/cavpanel1_local.tga, heightmap (textures/caves/cavpanel1_bmp.tga, 1 ))
+//	diffusemap		textures/caves/cavpanel1_yel_d.tga
+//	specularmap		textures/caves/cavpanel1_s.tga
+//}
+
+textures/caves/cavwarcol1
+{
+	qer_editorimage		textures/editor/cavwarcol1.tga
+	bumpmap			addnormals (textures/caves/cavwarcol1_local.tga, heightmap (textures/caves/cavwarcol1_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavwarcol1_d.tga
+	specularmap		textures/caves/cavwarcol1_s.tga
+}
+
+textures/caves/cavwarcol2
+{
+	qer_editorimage		textures/editor/cavwarcol2.tga
+	bumpmap			textures/caves/cavwarcol2_local.tga
+	diffusemap		textures/caves/cavwarcol1_d.tga
+	specularmap		textures/caves/cavwarcol1_s.tga
+}
+
+textures/caves/cavwarhaz1
+{
+	qer_editorimage		textures/caves/cavwarhaz1_d.tga
+	bumpmap			addnormals (textures/caves/cavwarhaz1_local.tga, heightmap (textures/caves/cavwarhaz1_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavwarhaz1_d.tga
+	specularmap		textures/caves/cavwarhaz1_s.tga
+}
+
+textures/caves/cavwall1
+{
+	qer_editorimage		textures/caves/cavwall1.tga
+	bumpmap			textures/caves/cavwall1_local.tga
+	diffusemap		textures/caves/cavwall1_d.tga
+	specularmap		textures/caves/cavwall1_s.tga
+}
+
+textures/caves/cavwall2
+{
+	qer_editorimage		textures/caves/cavwall2.tga
+	bumpmap			addnormals (textures/caves/cavwall2_local.tga, heightmap (textures/caves/cavwall2_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavwall2_d.tga
+	specularmap		textures/caves/cavwall2_s.tga
+}
+
+textures/caves/cavwall2_yel
+{
+	qer_editorimage		textures/caves/cavwall2_yel.tga
+	bumpmap			addnormals (textures/caves/cavwall2_local.tga, heightmap (textures/caves/cavwall2_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavwall2_yel_d.tga
+	specularmap		textures/caves/cavwall2_s.tga
+}
+
+textures/caves/cavwall4
+{
+	qer_editorimage		textures/caves/cavwall4.tga
+	bumpmap			addnormals (textures/caves/cavwall4_local.tga, heightmap (textures/caves/cavwall4_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavwall4_d.tga
+	specularmap		textures/caves/cavwall4_s.tga
+}
+
+textures/caves/cavwall4b
+{
+	qer_editorimage		textures/caves/cavwall4b_d.tga
+	bumpmap			addnormals (textures/caves/cavwall4_local.tga, heightmap (textures/caves/cavwall4_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavwall4b_d.tga
+	specularmap		textures/caves/cavwall4_s.tga
+}
+
+//textures/caves/cavvac1a
+//{
+//	qer_editorimage		textures/caves/cavvac1_local.tga
+//	bumpmap 		addnormals (textures/caves/cavvac1_local.tga, heightmap (textures/caves/cavvac1_bmp.tga, 1 ))
+//	diffusemap		textures/caves/cavvac1a_d.tga
+//	specularmap		textures/caves/cavvac1_s.tga
+//}
+
+textures/caves/cavvac1
+{
+	qer_editorimage		textures/caves/cavvac1.tga
+	bumpmap 		addnormals (textures/caves/cavvac1_local.tga, heightmap (textures/caves/cavvac1_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavvac1_d.tga
+	specularmap		textures/caves/cavvac1_s.tga
+}
+
+textures/caves/cavvac1b
+{
+	qer_editorimage		textures/caves/cavvac1b_d.tga
+	bumpmap 		addnormals (textures/caves/cavvac1_local.tga, heightmap (textures/caves/cavvac1b_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavvac1b_d.tga
+	specularmap		textures/caves/cavvac1_s.tga
+}
+
+textures/caves/cavvac2
+{
+	qer_editorimage		textures/caves/cavvac2.tga
+	bumpmap 		addnormals (textures/caves/cavvac2_local.tga, heightmap (textures/caves/cavvac2_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavvac2_d.tga
+	specularmap		textures/caves/cavvac2_s.tga
+}
+
+textures/caves/cavvac3
+{
+	qer_editorimage		textures/caves/cavvac3.tga
+	bumpmap 		addnormals (textures/caves/cavvac3_local.tga, heightmap (textures/caves/cavvac3_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavvac3_d.tga
+	specularmap		textures/caves/cavvac3_s.tga
+}
+
+textures/caves/cavvac4
+{
+	qer_editorimage		textures/caves/cavvac4_d.tga
+	bumpmap 		addnormals (textures/caves/cavvac4_local.tga, heightmap (textures/caves/cavvac3_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavvac4_d.tga
+	specularmap		textures/caves/cavvac4_s.tga
+}
+
+textures/caves/cavvac2_yel
+{
+	qer_editorimage		textures/caves/cavvac2_yel.tga
+	bumpmap 		addnormals (textures/caves/cavvac2_local.tga, heightmap (textures/caves/cavvac2_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavvac2_yel_d.tga
+	specularmap		textures/caves/cavvac2_s.tga
+}
+
+textures/caves/cavfgirder1
+{
+	qer_editorimage		textures/caves/cavfgirder1.tga
+	bumpmap 		addnormals (textures/caves/cavfgirder1_local.tga, heightmap (textures/caves/cavfgirder1_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavfgirder1_d.tga
+	specularmap		textures/caves/cavfgirder1_s.tga
+}
+
+textures/caves/cavfgirder2
+{
+	qer_editorimage		textures/caves/cavfgirder2_d.tga
+	bumpmap 		addnormals (textures/caves/cavfgirder1_local.tga, heightmap (textures/caves/cavfgirder1_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavfgirder2_d.tga
+	specularmap		textures/caves/cavfgirder1_s.tga
+}
+
+textures/caves/cavgrate1
+{
+	qer_editorimage		textures/caves/cavgrate1.tga
+	bumpmap 		addnormals (textures/caves/cavgrate1_local.tga, heightmap (textures/caves/cavgrate1_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavgrate1_d.tga
+	specularmap		textures/caves/cavgrate1_s.tga
+}
+
+textures/caves/cavgrate1dust
+{
+	qer_editorimage		textures/caves/cavgrate1dust_d.tga
+	bumpmap 		addnormals (textures/caves/cavgrate1_local.tga, heightmap (textures/caves/cavgrate1_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavgrate1dust_d.tga
+	specularmap		textures/caves/cavgrate1dust_s.tga
+}
+
+textures/caves/cavgrate1dust_trans
+{
+	twoSided
+	qer_editorimage		textures/caves/cavgrate1dust_trans.tga
+	bumpmap 		addnormals (textures/caves/cavgrate1_local.tga, heightmap (textures/caves/cavgrate1_bmp.tga, 1 ))
+	{       
+      	 blend	diffuseMap
+	 map			textures/caves/cavgrate1dust_trans_d.tga
+	 alphaTest 0.5
+	}
+	specularmap		textures/caves/cavgrate1dust_s.tga
+}
+
+textures/caves/cavflpanel1
+{
+	qer_editorimage		textures/editor/cavflpanel1.tga
+	bumpmap 		addnormals (textures/caves/cavflpanel1_local.tga, heightmap (textures/caves/cavflpanel1_bmp.tga, 1 ))
+	diffusemap		textures/caves/cavflpanel1_d.tga
+	specularmap		textures/caves/cavflpanel1_s.tga
+}
+
+
+//*****************************************************Moved from andy.mtr - end*****************************************
+
+
+
+//*****************************************************Moved from senetemp.mtr - start*****************************************
+
+
+//textures/caves/tembrick2_spectrum
+//{
+//	qer_editorimage textures/caves/tembrick2_spectrum.tga
+//	DECAL_MACRO
+//	noShadows
+//	nonsolid
+//	noimpact
+//	translucent
+//	spectrum 2
+//	{       
+//      	blend	diffusemap
+//		map		textures/caves/tembrick2_spectrum.tga
+//	}
+//}
+
+textures/caves/s_egg2
+{
+	qer_editorimage		textures/editor/s_egg2
+	noshadows
+	ricochet
+	bumpmap				textures/caves/s_egg2_local
+	{
+		blend			diffusemap	
+		map				textures/caves/s_egg2
+		alphatest		.5
+	}
+	specularmap			textures/caves/s_egg2_s
+}
+
+textures/caves/s_egg
+{
+	qer_editorimage		textures/caves/s_egg
+	ricochet
+	{
+		blend			bumpmap				
+		map				addnormals (textures/caves/s_egg_local, heightmap (textures/caves/s_egg_bmp.tga, 4) ) 
+	}
+	diffusemap			textures/caves/s_egg
+	specularmap			textures/caves/s_egg_s
+}
+
+textures/caves/s_eggleg_shadow
+{
+	qer_editorimage		textures/caves/s_eggleg_shadow
+	translucent
+	{
+		blend			filter
+		map				textures/caves/s_eggleg_shadow
+	}
+}
+
+textures/caves/s_eggleg
+{
+	qer_editorimage		textures/editor/s_eggleg
+	ricochet
+	noshadows
+	bumpmap				textures/caves/s_eggleg_local
+	{
+		blend			diffusemap			
+		map				textures/caves/s_eggleg
+		alphatest		.5
+	}
+	specularmap			textures/caves/s_eggleg_s
+}
+
+textures/caves/s_eggrim
+{
+	qer_editorimage		textures/caves/s_eggrim
+	ricochet
+	bumpmap				textures/caves/s_eggrim_local
+	diffusemap			textures/caves/s_eggrim
+	specularmap			textures/caves/s_eggrim_s
+}
+
+textures/caves/sbricksblenddust
+{
+	qer_editorimage		textures/caves/sbricks4
+	stone
+	{
+		blend		bumpmap
+		map			addnormals (textures/caves/sbricks1_local, heightmap (textures/caves/sbricks1_bmp, 4) ) 
+	}
+	{
+		blend		diffusemap
+		map			textures/caves/sbricks1a
+		vertexColor
+	}
+	{
+		blend 		specularmap
+		map			textures/caves/sbricksblenddust_s
+		vertexColor
+	} 
+	{
+		blend 		bumpmap
+		map			textures/caves/rubble3_local
+	
+	}
+	{
+		blend 		diffusemap
+		map			textures/caves/sbricks4
+		inverseVertexColor
+	} 
+	{
+		blend 		specularmap
+		map			textures/caves/sbricks1_s
+		inverseVertexColor
+	} 
+
+}
+
+textures/caves/sbricksblend2
+{
+	qer_editorimage		textures/caves/rubble3
+	stone
+	{
+		blend		bumpmap
+		map			addnormals (textures/caves/sbricks1_local, heightmap (textures/caves/sbricks1_bmp, 4) ) 
+	}
+	{
+		blend		diffusemap
+		map			textures/caves/sbricks1_d
+		scale		0.5, 1
+		vertexColor
+	}
+	{
+		blend 		specularmap
+		map			textures/caves/sbricks1_s
+		VertexColor
+	} 
+	{
+		blend 		bumpmap
+		map			textures/caves/rubble3_local
+	
+	}
+	{
+		blend 		diffusemap
+		map			textures/caves/rubble3
+		inverseVertexColor
+	} 
+}
+
+textures/caves/sbricksblend
+{
+	qer_editorimage		textures/caves/rubble3
+	stone
+	{
+		blend		bumpmap
+		map			addnormals (textures/caves/sbricks1_local, heightmap (textures/caves/sbricks1_bmp, 4) ) 
+	}
+	{
+		blend		diffusemap
+		map			textures/caves/sbricks4
+		vertexColor
+	}
+	{
+		blend 		specularmap
+		map			textures/caves/sbricks1_s
+		VertexColor
+	} 
+	{
+		blend 		bumpmap
+		map			textures/caves/rubble3_local
+	
+	}
+	{
+		blend 		diffusemap
+		map			textures/caves/rubble3
+		inverseVertexColor
+	} 
+}
+
+textures/caves/rubble3
+{
+	qer_editorimage		textures/caves/rubble3
+	stone
+	bumpmap				textures/caves/rubble3_local
+	diffusemap			textures/caves/rubble3
+}
+
+textures/caves/rubble
+{
+	qer_editorimage		textures/caves/rubble
+	stone
+	bumpmap				textures/caves/rubble_local
+	diffusemap			textures/caves/rubble
+}
+
+textures/caves/sbricks4
+{
+	qer_editorimage		textures/caves/sbricks4
+	stone
+	{
+		blend			bumpmap				
+		map				addnormals (textures/caves/sbricks1_local, heightmap (textures/caves/sbricks1_bmp, 4) ) 
+	}
+		diffusemap		textures/caves/sbricks4
+		specularmap		textures/caves/sbricks1_s
+}
+
+textures/caves/sbricks3
+{
+	qer_editorimage		textures/caves/sbricks3
+	stone
+	{
+		blend			bumpmap				
+		map				addnormals (textures/caves/sbricks3_local, heightmap (textures/caves/sbricks3_bmp, 4) ) 
+	}
+		diffusemap		textures/caves/sbricks3
+}
+
+textures/caves/sbricks2a
+{
+	qer_editorimage		textures/caves/sbricks2a
+	stone
+	{
+		blend			bumpmap				
+		map				addnormals (textures/caves/sbricks2_local, heightmap (textures/caves/sbricks1_bmp, 4) ) 
+	}
+		diffusemap		textures/caves/sbricks2a
+		specularmap		textures/caves/sbricks2a_s
+}
+
+textures/caves/sbricks2
+{
+	qer_editorimage		textures/caves/sbricks2
+	stone
+	{
+		blend			bumpmap				
+		map				addnormals (textures/caves/sbricks2_local, heightmap (textures/caves/sbricks1_bmp, 4) ) 
+	}
+		diffusemap		textures/caves/sbricks2
+	//	specularmap			textures/caves/sbricks1_s
+}
+
+textures/caves/sbricks1b
+{
+	qer_editorimage		textures/caves/sbricks1b
+	stone
+	{
+		blend			bumpmap				
+		map				addnormals (textures/caves/sbricks1b_local, heightmap (textures/caves/sbricks1b_bmp, 4) ) 
+	}
+	{
+		blend			diffusemap
+		map				textures/caves/sbricks1b
+	}
+	{
+		blend			specularmap			
+		map				textures/caves/sbricks1_s
+		scale			1,2
+	}
+}
+
+
+textures/caves/s_stairs
+{
+	qer_editorimage		textures/caves/s_stairs
+	{
+		blend			bumpmap				
+		map				addnormals (textures/caves/s_stairs_local, heightmap (textures/caves/sbricks1_bmp, 4) ) 
+	}
+		diffusemap		textures/caves/s_stairs
+}
+
+textures/caves/sbricks1a
+{
+	qer_editorimage		textures/caves/sbricks1a
+	stone
+	{
+		blend			bumpmap				
+		map				addnormals (textures/caves/sbricks1_local, heightmap (textures/caves/sbricks1_bmp, 4) ) 
+	}
+		diffusemap		textures/caves/sbricks1a
+}
+
+textures/caves/sbricks1
+{
+	qer_editorimage		textures/caves/sbricks1
+	stone
+	{
+		blend			bumpmap				
+		map				addnormals (textures/caves/sbricks1_local, heightmap (textures/caves/sbricks1_bmp, 4) ) 
+	}
+	{
+		blend			diffusemap
+		map				textures/caves/sbricks1_d
+		scale			0.5, 1
+	}
+	specularmap			textures/caves/sbricks1_s
+}
+
+textures/caves/sbricks1top
+{
+	qer_editorimage		textures/caves/sbricks1
+	stone
+	{
+		blend			bumpmap				
+		map				addnormals (textures/caves/sbricks1_local, heightmap (textures/caves/sbricks1_bmp, 4) ) 
+	}
+	{
+		blend			diffusemap
+		map				textures/caves/sbricks1_d
+		scale			0.5, 1
+	}
+	specularmap			textures/caves/sbricks1_s
+}
+
+textures/caves/sbricks1bot
+{
+	qer_editorimage		textures/caves/sbricks1
+	stone
+	{
+		blend			bumpmap				
+		map				addnormals (textures/caves/sbricks1_local, heightmap (textures/caves/sbricks1_bmp, 4) ) 
+	}
+	{
+		blend			diffusemap
+		map				textures/caves/sbricks1_d
+		scale			0.5, 1
+	}
+	specularmap			textures/caves/sbricks1_s
+}
+
+//textures/caves/ice
+//{
+//	translucent
+//	noshadows	
+//	{
+//		blend 		bumpmap
+//		map		heightmap (textures/caves/ice.tga, 1)
+//	}
+//	{
+//		blend 		diffusemap
+//		map		textures/caves/ice.tga
+//	}
+//	{
+//		blend		specularmap
+//		map		textures/caves/ice.tga
+//	}
+//}
+
+//textures/caves/iceblend
+//{
+//	translucent
+//	noshadows
+//	{
+//		blend 		bumpmap
+//		map			heightmap (textures/caves/ice.tga, 1)
+//	}
+//	{
+//		blend 		diffusemap
+//		map			textures/caves/ice.tga
+//		vertexColor
+//	}
+//	{
+//		blend		specularmap
+//		map			textures/caves/ice.tga
+//		vertexColor
+//	}
+//	{
+//		blend		bumpmap
+//		map			heightmap (textures/caves/black.tga, 1)
+//	}
+//	{
+//		blend		diffusemap
+//		map			textures/caves/black.tga
+//		inverseVertexColor
+//	}
+//	{
+//		blend 		specularmap
+//		map			textures/caves/black.tga
+//		inverseVertexColor
+//	}
+//}
+
+
+
+//*****************************************************Moved from senetemp.mtr - end*****************************************
+
+
+//Verified good complete by Eutectic - Sep 05-04

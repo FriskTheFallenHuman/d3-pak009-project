@@ -1,0 +1,163 @@
+textures/cameraImg1
+{
+	qer_editorimage	textures/editor/cameragui.tga
+	noshadows
+	guiSurf	entity
+	discrete
+	translucent
+	sort "-2"
+	{
+		rgba 0
+		remoteRenderMap	512 256	// width / height of render image
+		map textures/dynamic/camera1.tga
+		scale 1 , -1		// the render view ars upside down otherwise
+		translate 0, -1
+
+	}
+}
+
+textures/cameraView1
+{
+	qer_editorimage	textures/editor/camera.tga
+	translucent			// everything used on a guisurf should be translucent
+	noshadows
+	discrete
+	sort "-2"
+	{
+		blend add
+		map textures/dynamic/camera1.tga
+		scale 1 , -1		// the render view ars upside down otherwise
+		translate 0, -1
+	}
+}
+
+material particles/flowingblood
+{
+	noSelfShadow
+	//noShadows
+	//twosided
+	//translucent
+	{
+		blend bumpmap
+		map textures/hell/lava1_local.tga
+		centerscale	1+.05*sinTable[time * .1 ], 1+.05*sinTable[time * .1]
+		//scroll	time * 0 , time * -.04
+		vertexcolor
+	}
+	{
+		blend diffusemap
+		map models/mapobjects/teleporter/telecolon1.tga
+		//scale 1 , 3
+		scroll	time * 0 , time * -.06
+		alphaTest 0.5
+		vertexcolor
+	}
+	{
+		blend specularmap
+		map models/mapobjects/teleporter/telecolon1_s.tga
+
+		//scale 1 , 3
+		scroll	time * 0 , time * -.01
+		vertexcolor
+	}
+}
+
+guisurfs/guipreview {
+	qer_editorimage	textures/editor/entitygui.tga
+	guiSurf	guis/mainmenu.gui
+}
+
+guisurfs/guiremap1
+{
+	qer_editorimage	textures/editor/entitygui.tga
+	discrete
+}
+
+guisurfs/guiremap2
+{
+	qer_editorimage	textures/editor/entitygui.tga
+	discrete
+}
+
+guisurfs/guiremap3
+{
+	qer_editorimage	textures/editor/entitygui.tga
+	discrete
+}
+
+guisurfs/guiremap4
+{
+	qer_editorimage	textures/editor/entitygui.tga
+	discrete
+}
+
+guisurfs/guiremap5
+{
+	qer_editorimage	textures/editor/entitygui.tga
+	discrete
+}
+
+guisurfs/guiremap6
+{
+	qer_editorimage	textures/editor/entitygui.tga
+	discrete
+}
+
+guisurfs/guiremap7
+{
+	qer_editorimage	textures/editor/entitygui.tga
+	discrete
+}
+
+guisurfs/guiremap8
+{
+	qer_editorimage	textures/editor/entitygui.tga
+	discrete
+}
+
+textures/gui/remap1
+{
+	qer_editorimage	textures/editor/entitygui.tga
+	discrete
+}
+
+textures/gui/remap2
+{
+	qer_editorimage	textures/editor/entitygui.tga
+	discrete
+}
+
+textures/gui/remap3
+{
+	qer_editorimage	textures/editor/entitygui.tga
+	discrete
+}
+
+textures/gui/remap4
+{
+	qer_editorimage	textures/editor/entitygui.tga
+	discrete
+}
+
+textures/gui/remap5
+{
+	qer_editorimage	textures/editor/entitygui.tga
+	discrete
+}
+
+guisurfs/hazard1
+{
+	qer_editorimage	textures/editor/entitygui.tga
+	guiSurf guis/doors/hazard.gui
+	discrete
+}
+__test/blink223
+{
+	qer_editorimage 	textures/lab/medtile01_d.tga
+}
+
+_emptyname
+{
+	qer_editorimage textures/editor/_emptyname.tga
+	diffusemap	textures/editor/_emptyname.tga
+}

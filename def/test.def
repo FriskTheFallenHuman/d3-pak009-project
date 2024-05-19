@@ -1,0 +1,19 @@
+
+/***********************************************************************
+
+ entity definitions for testing or as example
+
+***********************************************************************/
+
+model test_soldier {
+	mesh							models/fred/soldiertest2.md5mesh
+	anim test						models/fred/soldiertest2.md5anim
+}
+
+model test_labcoat_black {
+	inherit							npc_labcoat
+	anim pda_idle_look				models/md5/chars/PDA_idle_look.md5anim
+	anim pda_idle					models/md5/chars/PDA_idle.md5anim
+	anim pda_talk					models/md5/chars/PDA_talk.md5anim
+	anim gui_operate				models/md5/chars/gui_operate_daniel.md5anim
+}

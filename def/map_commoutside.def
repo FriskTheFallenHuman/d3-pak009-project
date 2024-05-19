@@ -1,0 +1,99 @@
+model commoutside_player {
+	mesh						models/md5/characters/player/mocap/player.md5mesh
+	skin						skins/player/weapons.skin
+	anim teleport				models/md5/cinematics/delta2a/teleporterplayer.md5anim
+	anim sawshot1				models/md5/cinematics/commoutside/sawintro_player1.md5anim
+	anim sawshot2				models/md5/cinematics/commoutside/sawintro_player2.md5anim
+	anim sawshot4				models/md5/cinematics/commoutside/sawintro_player4.md5anim
+
+}
+
+model commoutside_cin_sawyer {
+	mesh						models/md5/monsters/zombies/sawyer/sawyer.md5mesh
+	anim sawshot2				models/md5/cinematics/commoutside/sawintro_sawyer2.md5anim
+	anim sawshot3				models/md5/cinematics/commoutside/sawintro_sawyer3.md5anim
+	anim sawshot4				models/md5/cinematics/commoutside/sawintro_sawyer4.md5anim
+
+}
+
+model commoutside_vehicle {
+	mesh						models/md5/cinematics/commoutside/rover.md5mesh
+	anim sighting1				models/md5/cinematics/commoutside/roversighting1.md5anim {
+	frame 1						trigger	func_door_1688
+	frame 38					trigger	func_door_1688
+	}
+
+	anim sighting2				models/md5/cinematics/commoutside/roversighting2.md5anim {
+	frame 1						trigger	cov_door2
+	frame 1						trigger	cov_door2_gui
+	frame 65					trigger	cov_door2
+	frame 65					trigger	cov_door2_gui
+	}
+	anim sighting3				models/md5/cinematics/commoutside/roversighting3.md5anim {
+	frame 1						trigger commoutside_vehicle_3_door
+	frame 60					trigger commoutside_vehicle_3_door
+	}
+}
+
+entityDef commoutside_vehicle {
+	"inherit"					"cin_base"
+	"anim"						"sighting1"
+	"model"						"commoutside_vehicle"
+	"editor_usage"					"Military Landrover model used in the commoutside map cinematics"
+}
+
+model commoutside_fatty  {
+	mesh							models/md5/monsters/zfat/zfat.md5mesh
+	anim office3					models/md5/cinematics/delta2a/zoffice3.md5anim
+	}
+
+entityDef commoutside_fatty {
+	"inherit"						"cin_base"
+	"model"							"commoutside_fatty"
+	"anim"							"office3"
+	"editor_usage"					"Fatty zombie model used in the commoutside map cinematics"
+}
+
+model commoutside_swann {
+	inherit							char_swann
+	anim idle						models/md5/chars/stand.md5anim {
+		frame 1					 		event disableEyeFocus
+	}
+	anim stand						models/md5/chars/stand.md5anim {
+		frame 1		 					event disableEyeFocus
+	}
+}
+
+entityDef commoutside_swann {
+	"inherit"						"char_swann"
+	"model"							"commoutside_swann"
+	"health"						"800"
+	"mass"							"1000"
+	"editor_usage"					"Swann model used in the commoutside map cinematics"
+}
+
+model commoutside_campbell {
+	inherit					char_campbell_bfg
+
+	anim bfgfire					models/md5/chars/campbell/bfg_fire.md5anim {
+		frame 1							event ignoreDamage
+		frame 2							trigger comm1_dimlights
+		frame 28						trigger bfglight
+		frame 29						trigger bfglight
+		frame 30						launch_missile BFG
+		frame 31						trigger bfglight
+		frame 33						trigger bfglight
+		frame 35						trigger bfglight
+		frame 36						trigger bfglight
+	}
+}
+
+entityDef commoutside_campbell {
+	"inherit"						"char_campbell_bfg"
+	"health"						"800"
+	"mass"							"1000"
+	"ignore_obstacles"				"1"
+	"model"							"commoutside_campbell"
+	"editor_usage"					"Campbell w/BFG model used in the commoutside map cinematics"
+
+}

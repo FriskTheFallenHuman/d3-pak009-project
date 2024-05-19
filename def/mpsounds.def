@@ -1,0 +1,202 @@
+//////////////////////////////////////////
+// Custom Definitions for MP Map Sounds //
+//////////////////////////////////////////
+
+
+///////////////
+// Lightsout //
+///////////////
+
+entityDef sound_d3dm5_generator {
+
+	"editor_color"			"0 1 0"
+	"editor_mins"			"-8 -8 -8"
+	"editor_maxs"			"8 8 8"
+	"editor_material"		"textures/common/speaker"
+
+	"editor_usage"			"Speaker with custom sound shader definitions. Must be controlled by script commands 'startSound' and 'stopSound'."
+	"editor_usage1"			"Generator sounds used in d3dm5."
+	"editor_usage2"			"Sound definitions: 'snd_genOn', 'snd_genOff'."
+	"editor_var s_volume"		"set this to override default sound shader volume level."
+	"editor_var s_minDistance"	"set this to override default shader minDistance."
+	"editor_var s_maxDistance"	"set this to override default shader maxDistance."
+	"editor_var s_omni"		"set to 1 to force sound to be omnidirectional"
+	"editor_var s_looping"		"set to 1 to force sound to loop"
+	"editor_var s_occlusion"	"set to 1 to turn off occlusion of sound by portals"
+	"editor_var s_global"		"set to 1 to turn off sound falloff with distance"
+	"editor_var s_shakes"		"set to 1 to make the player's view shake proportinately to loudness."
+	"editor_var wait"		"when set > 0, time between triggerings in seconds. Time between sounds is 'wait' +/- random"
+	"editor_var random"		"wait variance in seconds."
+
+	"spawnclass"			"idSound"
+
+	"snd_genOff"			"d3dm5_generator_off"
+	"snd_genOn"			"d3dm5_generator_on"
+
+}
+
+entityDef sound_d3dm5_wind {
+
+	"editor_color"			"0 1 0"
+	"editor_mins"			"-8 -8 -8"
+	"editor_maxs"			"8 8 8"
+	"editor_material"		"textures/common/speaker"
+
+	"editor_usage"			"Speaker with custom sound shader definitions. Must be controlled by script commands 'startSound' and 'stopSound'."
+	"editor_usage1"			"Spooky wind sound used in d3dm5."
+	"editor_usage2"			"Sound definition: 'snd_wind'."
+	"editor_var s_volume"		"set this to override default sound shader volume level."
+	"editor_var s_minDistance"	"set this to override default shader minDistance."
+	"editor_var s_maxDistance"	"set this to override default shader maxDistance."
+	"editor_var s_omni"		"set to 1 to force sound to be omnidirectional"
+	"editor_var s_looping"		"set to 1 to force sound to loop"
+	"editor_var s_occlusion"	"set to 1 to turn off occlusion of sound by portals"
+	"editor_var s_global"		"set to 1 to turn off sound falloff with distance"
+	"editor_var s_shakes"		"set to 1 to make the player's view shake proportinately to loudness."
+	"editor_var wait"		"when set > 0, time between triggerings in seconds. Time between sounds is 'wait' +/- random"
+	"editor_var random"		"wait variance in seconds."
+
+	"spawnclass"			"idSound"
+
+	"snd_wind"			"d3dm5_wind"
+}
+
+
+/////////////////
+// Fragchamber //
+/////////////////
+
+entityDef 	sound_fragchamber_berserk {
+
+	"editor_color"			"0 1 0"
+	"editor_mins"			"-8 -8 -8"
+	"editor_maxs"			"8 8 8"
+	"editor_material"		"textures/common/speaker"
+	"editor_usage"			"Speaker with custom sound shader definitions. Must be controlled by script commands 'startSound' and 'stopSound'."
+	"editor_usage1"			"Beserk powerup sounds used in d3dm3."
+	"editor_usage2"			"Sound definitions: 'snd_berserkSpawn', 'snd_berserkLoop'."
+	"editor_var s_volume"		"set this to override default sound shader volume level."
+	"editor_var s_minDistance"	"set this to override default shader minDistance."
+	"editor_var s_maxDistance"	"set this to override default shader maxDistance."
+	"editor_var s_omni"		"set to 1 to force sound to be omnidirectional"
+	"editor_var s_looping"		"set to 1 to force sound to loop"
+	"editor_var s_occlusion"	"set to 1 to turn off occlusion of sound by portals"
+	"editor_var s_global"		"set to 1 to turn off sound falloff with distance"
+	"editor_var s_shakes"		"set to 1 to make the player's view shake proportinately to loudness."
+	"editor_var wait"		"when set > 0, time between triggerings in seconds. Time between sounds is 'wait' +/- random"
+	"editor_var random"		"wait variance in seconds."
+
+	"spawnclass"			"idSound"
+
+	"snd_berserkSpawn"		"fragchamber_sound_berserk_spawn"
+	"snd_berserkLoop"		"fragchamber_sound_berserk"
+}
+
+entityDef 	sound_fragchamber_klaxon {
+
+	"editor_color"			"0 1 0"
+	"editor_mins"			"-8 -8 -8"
+	"editor_maxs"			"8 8 8"
+	"editor_material"		"textures/common/speaker"
+	"editor_usage"			"Speaker with custom sound shader definitions. Must be controlled by script commands 'startSound' and 'stopSound'."
+	"editor_usage1"			"Klaxon sound used in d3dm3."
+	"editor_usage2"			"Sound definition: 'snd_klaxon'."
+	"editor_var s_volume"		"set this to override default sound shader volume level."
+	"editor_var s_minDistance"	"set this to override default shader minDistance."
+	"editor_var s_maxDistance"	"set this to override default shader maxDistance."
+	"editor_var s_omni"		"set to 1 to force sound to be omnidirectional"
+	"editor_var s_looping"		"set to 1 to force sound to loop"
+	"editor_var s_occlusion"	"set to 1 to turn off occlusion of sound by portals"
+	"editor_var s_global"		"set to 1 to turn off sound falloff with distance"
+	"editor_var s_shakes"		"set to 1 to make the player's view shake proportinately to loudness."
+	"editor_var wait"		"when set > 0, time between triggerings in seconds. Time between sounds is 'wait' +/- random"
+	"editor_var random"		"wait variance in seconds."
+
+	"spawnclass"			"idSound"
+
+	"s_volume"			"6"
+	"s_maxDistance"			"20"
+
+	"snd_klaxon"			"fragchamber_klaxon"
+}
+
+entityDef 	sound_fragchamber_lights {
+
+	"editor_color"			"0 1 0"
+	"editor_mins"			"-8 -8 -8"
+	"editor_maxs"			"8 8 8"
+	"editor_material"		"textures/common/speaker"
+	"editor_usage"			"Speaker with custom sound shader definitions. Must be controlled by script commands 'startSound' and 'stopSound'."
+	"editor_usage1"			"Light ballast hum sounds used in d3dm3."
+	"editor_usage2"			"Sound definitions: 'snd_lightsHum', 'snd_lightsFlicker'."
+	"editor_var s_volume"		"set this to override default sound shader volume level."
+	"editor_var s_minDistance"	"set this to override default shader minDistance."
+	"editor_var s_maxDistance"	"set this to override default shader maxDistance."
+	"editor_var s_omni"		"set to 1 to force sound to be omnidirectional"
+	"editor_var s_looping"		"set to 1 to force sound to loop"
+	"editor_var s_occlusion"	"set to 1 to turn off occlusion of sound by portals"
+	"editor_var s_global"		"set to 1 to turn off sound falloff with distance"
+	"editor_var s_shakes"		"set to 1 to make the player's view shake proportinately to loudness."
+	"editor_var wait"		"when set > 0, time between triggerings in seconds. Time between sounds is 'wait' +/- random"
+	"editor_var random"		"wait variance in seconds."
+
+	"spawnclass"			"idSound"
+
+	"snd_lightsHum"			"fragchamber_lights_hum"
+	"snd_lightsFlicker"		"fragchamber_lights_flicker"
+}
+
+entityDef	sound_fragchamber_secretSteam {
+
+	"editor_color"			"0 1 0"
+	"editor_mins"			"-8 -8 -8"
+	"editor_maxs"			"8 8 8"
+	"editor_material"		"textures/common/speaker"
+	"editor_usage"			"Speaker with custom sound shader definitions. Must be controlled by script commands 'startSound' and 'stopSound'."
+	"editor_usage1"			"Steam release sounds."
+	"editor_usage2"			"Sound definitions: 'snd_secretSteam1', 'snd_secretSteam2'."
+	"editor_var s_volume"		"set this to override default sound shader volume level."
+	"editor_var s_minDistance"	"set this to override default shader minDistance."
+	"editor_var s_maxDistance"	"set this to override default shader maxDistance."
+	"editor_var s_omni"		"set to 1 to force sound to be omnidirectional"
+	"editor_var s_looping"		"set to 1 to force sound to loop"
+	"editor_var s_occlusion"	"set to 1 to turn off occlusion of sound by portals"
+	"editor_var s_global"		"set to 1 to turn off sound falloff with distance"
+	"editor_var s_shakes"		"set to 1 to make the player's view shake proportinately to loudness."
+	"editor_var wait"		"when set > 0, time between triggerings in seconds. Time between sounds is 'wait' +/- random"
+	"editor_var random"		"wait variance in seconds."
+
+	"spawnclass"			"idSound"
+
+	"snd_secretSteam1"		"fragchamber_secret_steam_01"
+	"snd_secretSteam2"		"fragchamber_secret_steam_02"
+}
+
+////////////////////
+// GENERAL SOUNDS //
+////////////////////
+
+entityDef 	sound_powerup_berserk {
+
+	"editor_color"			"0 1 0"
+	"editor_mins"			"-8 -8 -8"
+	"editor_maxs"			"8 8 8"
+	"editor_material"		"textures/common/speaker"
+	"editor_usage"			"Speaker with custom sound shader definitions. Must be controlled by script commands 'startSound' and 'stopSound'."
+	"editor_usage1"			"Beserk spawn sound used in d3dm5."
+	"editor_usage2"			"Sound definition: 'snd_berserkSpawn'."
+	"editor_var s_volume"		"set this to override default sound shader volume level."
+	"editor_var s_minDistance"	"set this to override default shader minDistance."
+	"editor_var s_maxDistance"	"set this to override default shader maxDistance."
+	"editor_var s_omni"		"set to 1 to force sound to be omnidirectional"
+	"editor_var s_looping"		"set to 1 to force sound to loop"
+	"editor_var s_occlusion"	"set to 1 to turn off occlusion of sound by portals"
+	"editor_var s_global"		"set to 1 to turn off sound falloff with distance"
+	"editor_var s_shakes"		"set to 1 to make the player's view shake proportinately to loudness."
+	"editor_var wait"		"when set > 0, time between triggerings in seconds. Time between sounds is 'wait' +/- random"
+	"editor_var random"		"wait variance in seconds."
+
+	"spawnclass"			"idSound"
+
+	"snd_berserkSpawn"		"sound_powerup_berserk"
+}

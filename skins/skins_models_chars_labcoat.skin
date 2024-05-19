@@ -1,0 +1,3 @@
+skin skins/models/chars/labcoat/labcoat3nochair {
+	models/mapobjects/base/chairs/chair2_d textures/common/nodraw
+}

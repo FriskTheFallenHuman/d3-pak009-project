@@ -1,0 +1,328 @@
+
+/***********************************************************************
+
+Environmental Entities
+
+***********************************************************************/
+
+/***************************************************
+env_hellchain
+***************************************************/
+model env_hellchain {
+	mesh					models/md5/environments/hellchain.md5mesh
+	anim af_pose				models/md5/environments/hellchain.md5anim
+	anim idle				models/md5/environments/hellchain.md5anim
+}
+
+entityDef env_hellchain {
+	"editor_color"					"1 .5 0"
+	"editor_mins"					"-8 -8 -136"
+	"editor_maxs"					"8 8 0"
+	//"editor_ragdoll"				"1"
+	"editor_usage"					"A rusty chain hanging from ceiling that swings when hit. Chain is 136 units long."
+
+	"spawnclass"					"idAFEntity_Generic"
+	"model"						"env_hellchain"
+	"anim"						"af_pose"
+	"articulatedFigure"				"env_hellchain.af"
+}
+
+
+/***************************************************
+env_evilmeat
+***************************************************/
+model env_evilmeat {
+	mesh					models/md5/environments/evilmeat.md5mesh
+	anim af_pose				models/md5/environments/evilmeat.md5anim
+	anim idle				models/md5/environments/evilmeat.md5anim
+}
+
+entityDef env_evilmeat {
+	"editor_color"					"1 .5 0"
+	"editor_mins"					"-28 -36 -100"
+	"editor_maxs"					"28 32 8"
+	//"editor_ragdoll"				"1"
+	"editor_usage"					"Pinky carcass ragdoll hanging from ceiling."
+
+	"spawnclass"					"idAFEntity_Generic"
+	"model"						"env_evilmeat"
+	"anim"						"af_pose"
+	"articulatedFigure"				"env_evilmeat.af"
+}
+
+
+/***************************************************
+env_juglamp
+***************************************************/
+model env_juglamp {
+	mesh					models/md5/environments/env_juglamp.md5mesh
+	anim af_pose				models/md5/environments/env_juglamp.md5anim
+}
+
+/***************************************************
+env_hires_steampipe
+***************************************************/
+model env_hires_steampipe {
+	mesh						models/md5/environments/env_hires_steampipe.md5mesh
+	anim af_pose					models/md5/environments/env_hires_steampipe.md5anim
+}
+
+/***************************************************
+env_bluesteampipe_128
+***************************************************/
+model env_bluesteampipe_128 {
+	mesh						models/md5/environments/env_bluesteampipe_128.md5mesh
+	anim af_pose					models/md5/environments/env_bluesteampipe_128.md5anim
+}
+
+/***************************************************
+env_greysteampipe_128
+***************************************************/
+model env_greysteampipe_128 {
+	mesh						models/md5/environments/env_greysteampipe_128.md5mesh
+	anim af_pose					models/md5/environments/env_greysteampipe_128.md5anim
+}
+
+/***************************************************
+env_orangesteampipe_128
+***************************************************/
+model env_orangesteampipe_128 {
+	mesh						models/md5/environments/env_orangesteampipe_128.md5mesh
+	anim af_pose					models/md5/environments/env_orangesteampipe_128.md5anim
+}
+
+/***************************************************
+trite_pose
+***************************************************/
+model ss_trite {
+	inherit						monster_demon_trite
+	anim pose1					models/md5/monsters/trite/pose1_t1.md5anim
+	anim pose2					models/md5/monsters/trite/pose2_t1.md5anim
+}
+
+model ss_trite2 {
+	inherit						monster_demon_trite
+	anim pose1					models/md5/monsters/trite/pose1_t2.md5anim
+	anim pose2 					models/md5/monsters/trite/pose2_t2.md5anim
+}
+
+model ss_trite3 {
+	inherit						monster_demon_trite
+	anim pose1					models/md5/monsters/trite/pose1_t3.md5anim
+}
+
+model ss_trite4 {
+	inherit						monster_demon_trite
+	anim pose1					models/md5/monsters/trite/pose1_t4.md5anim
+}
+
+/***************************************************
+env_swinglight_sl128
+***************************************************/
+model env_swinglight_sl128 {
+	mesh						models/md5/environments/env_swinglight_sl128.md5mesh
+	anim af_pose					models/md5/environments/env_swinglight_sl128.md5anim
+	anim idle					models/md5/environments/env_swinglight_sl128.md5anim
+}
+
+entityDef env_swinglight_sl128 {
+	"editor_color"					"1 .5 0"
+	"editor_mins"					"-48 -12 -144"
+	"editor_maxs"					"48 12 0"
+	//"editor_ragdoll"				"1"
+	"editor_usage"					"A rusty hanging light fixture that swings when hit. Fixture stem is 128 units high."
+
+	"spawnclass"					"idAFEntity_Generic"
+	"model"						"env_swinglight_sl128"
+	"anim"						"af_pose"
+	"articulatedFigure"				"env_swinglight_sl128.af"
+}
+
+entityDef env_swinglight_sl128_fixed {
+	"editor_color"					"1 .5 0"
+	"editor_mins"					"-48 -12 -144"
+	"editor_maxs"					"48 12 0"
+	//"editor_ragdoll"				"1"
+	"editor_usage"					"A rusty hanging light fixture that swings when hit. Fixture stem is 128 units high."
+
+	"spawnclass"					"idAFEntity_Generic"
+	"model"						"env_swinglight_sl128"
+	"anim"						"af_pose"
+	"articulatedFigure"				"env_swinglight_sl128_fixed.af"
+}
+
+/***************************************************
+env_swinglight_sl64
+***************************************************/
+model env_swinglight_sl64 {
+	mesh						models/md5/environments/env_swinglight_sl64.md5mesh
+	anim af_pose					models/md5/environments/env_swinglight_sl64.md5anim
+	anim idle					models/md5/environments/env_swinglight_sl64.md5anim
+}
+
+entityDef env_swinglight_sl64 {
+	"editor_color"					"1 .5 0"
+	"editor_mins"					"-48 -12 -76"
+	"editor_maxs"					"48 12 0"
+	//"editor_ragdoll"				"1"
+	"editor_usage"					"A rusty hanging light fixture that swings when hit. Fixture stem is 64 units high."
+
+	"spawnclass"					"idAFEntity_Generic"
+	"model"						"env_swinglight_sl64"
+	"anim"						"af_pose"
+	"articulatedFigure"				"env_swinglight_sl64.af"
+}
+
+/***************************************************
+env_hellcage_long
+***************************************************/
+model env_hellcage_long {
+	mesh						models/md5/environments/env_hellcage_long.md5mesh
+	anim af_pose					models/md5/environments/env_hellcage_long.md5anim
+}
+
+/***************************************************
+env_hellcage_medium
+***************************************************/
+model env_hellcage_medium {
+	mesh						models/md5/environments/env_hellcage_medium.md5mesh
+	anim af_pose					models/md5/environments/env_hellcage_medium.md5anim
+}
+
+/***************************************************
+env_hellcage_short
+***************************************************/
+model env_hellcage_short {
+	mesh						models/md5/environments/env_hellcage_short.md5mesh
+	anim af_pose					models/md5/environments/env_hellcage_short.md5anim
+}
+
+/***************************************************
+env_xianbutton_1
+***************************************************/
+model env_xianbutton_1 {
+	mesh						models/md5/environments/env_xianbutton_1.md5mesh
+	anim af_pose					models/md5/environments/env_xianbutton_1.md5anim
+	anim idle					models/md5/environments/env_xianbutton_1.md5anim
+}
+
+entityDef env_xianbutton_1 {
+	"editor_color"					"1 .5 0"
+	"editor_mins"					"-4 -2 -56"
+	"editor_maxs"					"4 2 0"
+	//"editor_ragdoll"				"1"
+	"editor_usage"					"Crane pin hook that hangs from a steel cable and swings when hit. Cable is 46 units high."
+
+	"spawnclass"					"idAFEntity_Generic"
+	"model"						"env_xianbutton_1"
+	"anim"						"af_pose"
+	"articulatedFigure"				"env_xianbutton_1.af"
+}
+
+/***************************************************
+env_xianbutton_2
+***************************************************/
+model env_xianbutton_2 {
+	mesh						models/md5/environments/env_xianbutton_2.md5mesh
+	anim af_pose					models/md5/environments/env_xianbutton_2.md5anim
+}
+
+/***************************************************
+env_xianbutton_3
+***************************************************/
+
+model env_xianbutton_3 {
+	mesh						models/md5/environments/env_xianbutton_3.md5mesh
+	anim af_pose					models/md5/environments/env_xianbutton_3.md5anim
+}
+
+/***************************************************
+steampipe_a
+***************************************************/
+model env_steampipe_a {
+	mesh						models/md5/environments/env_wirea.md5mesh
+	anim af_pose					models/md5/environments/env_wirea.md5anim
+}
+
+/***************************************************
+steampipe_b
+***************************************************/
+model env_steampipe_b {
+	mesh						models/md5/environments/env_wireb.md5mesh
+	anim af_pose					models/md5/environments/env_wireb.md5anim
+}
+
+/***************************************************
+steampipe_c
+***************************************************/
+model env_steampipe_c {
+	mesh						models/md5/environments/env_wirec.md5mesh
+	anim af_pose					models/md5/environments/env_wirec.md5anim
+}
+
+/***************************************************
+env_wirea
+***************************************************/
+model env_wirea {
+	mesh						models/md5/environments/env_wirea.md5mesh
+	anim af_pose					models/md5/environments/env_wirea.md5anim
+}
+
+/***************************************************
+env_wireb
+***************************************************/
+model env_wireb {
+	mesh						models/md5/environments/env_wireb.md5mesh
+	anim af_pose					models/md5/environments/env_wireb.md5anim
+}
+
+/***************************************************
+env_wirec
+***************************************************/
+model env_wirec {
+	mesh						models/md5/environments/env_wirec.md5mesh
+	anim af_pose					models/md5/environments/env_wirec.md5anim
+}
+
+/***************************************************
+cage_corpse
+***************************************************/
+model env_cage_corpse {
+	mesh						models/md5/environments/cage_corpse.md5mesh
+	anim slowswing					models/md5/environments/corpse_slowswing.md5anim
+	anim twitch1					models/md5/environments/corpse_twitch1.md5anim
+	anim twitch2					models/md5/environments/corpse_twitch2.md5anim
+}
+
+entityDef env_cage_corpse {
+	"editor_color"			"1 .5 0"
+	"editor_mins"			"-16 -8 -52"
+	"editor_maxs"			"16 10 0"
+	"editor_copy"			"anim"
+
+	"editor_usage"			"Mutilated corpse hanging upside down inside a rectangular steel cage."
+	"editor_var anim"		"anim to play when triggered (won't play if 'num_anims' is set). Triggers its targets after playing anim. If 'cycle' is set to -1, object cannot trigger its targets and won't be removed if 'remove' is set to 1 even if object is re-triggered."
+	"editor_var start_anim"		"anim to play when first spawned. Anim will loop until object is triggered (or auto-activated if 'wait' is not set to -1). Won't play if 'hide' is set to 1."
+	"editor_var num_anims"		"the number of anims to play in sequence. Set anims using 'anim1', 'anim2', 'anim3', etc. Trigger entity to start next anim. After last anim of sequence has played, re-triggering it will hide the object until triggered again (which starts over the anim sequence) unless 'remove' is set to 1 and 'cycle' is set to -1 (in which case, the object will be removed instead of hidden). Triggers its targets after playing each anim in the sequence (unless 'cycle' is set to -1)."
+	"editor_var wait"		"how long to wait before auto-activating (-1 means only activate when triggered)."
+	"editor_var cycle"		"how many times to play the animation(s) after being triggered (use -1 for infinite looping, default is 1)."
+	"editor_bool remove"		"if set to 1, object is removed after anim(s) finish playing. If 'cycle' is set to -1 or 'loop_last_anim' is set to 1 when 'num_anims' is set, object must be re-triggered during the last anim to be removed."
+	"editor_var target"		"all targeted entities will be triggered after anim(s) finish playing (unless 'cycle' is set to -1)."
+	"editor_bool hide"		"if set to 1, object remains hidden until triggered (or auto-activated if wait is not set to -1)."
+	"editor_bool loop_last_anim"	"if set to 1, the last anim of the sequence will loop endlessly when 'num_anims' is set. The next triggering will hide the entity, or remove it if 'remove' is set to 1. The object will trigger its targets at the end of each anim except the last one."
+	"editor_bool auto_advance"	"if set to 1, object won't wait to be triggered between each anim when 'num_anims' is set (unless 'cycle' is set to -1)."
+
+	"spawnclass"			"idAnimated"
+	"model"				"env_cage_corpse"
+	"anim"				"slowswing"
+}
+
+/***************************************************
+skullgate
+***************************************************/
+model env_skullgate {
+	mesh						models/md5/environments/skullgate.md5mesh
+	anim idle_closed				models/md5/environments/skullgate_tongue_move.md5anim
+	anim open					models/md5/environments/skullgate_opening.md5anim
+	anim idle_open					models/md5/environments/skullgate_openidle.md5anim
+}

@@ -1,0 +1,48 @@
+//Reactor...
+
+model delta1_reactor {
+	mesh							models/md5/environments/reactor.md5mesh
+	anim idle						models/md5/environments/idle.md5anim
+	anim startup					models/md5/environments/startup.md5anim
+}
+
+//scipull...
+
+model delta1_scipull {
+	mesh							models/md5/cinematics/delta1/scipull_mesh.md5mesh
+	anim idle						models/md5/cinematics/delta1/scipull_idle.md5anim
+	anim pull						models/md5/cinematics/delta1/scipull.md5anim
+}
+
+entityDef delta1_scipull {
+	"editor_color"					"1 .5 .3"
+	"editor_mins"					"-16 -16 0"
+	"editor_maxs"					"16 16 32"
+	"editor_copy2"					"anim"
+	"editor_usage"					"Scientist model hanging upside down, getting pulled up. Used in delta1 map."
+
+	"spawnclass"					"idAnimated"
+	"model"							"delta1_scipull"
+	"anim"							"idle"
+}
+
+//sarge vcd
+
+model delta1_sarge_video_head {
+	mesh							models/md5/heads/sarge/sarge.md5mesh
+	anim stand						models/md5/heads/sarge/sargeidle.md5anim
+
+	anim sarge_vcd					models/md5/heads/sarge/delta1/sarge_vcd.md5anim
+}
+
+model delta1_sarge_video {
+	inherit							npc_marine
+
+	anim sarge_vcd					models/md5/chars/sarge/delta1/sarge_vcd.md5anim {
+		frame 1							event disableEyeFocus
+//		frame 1							aviGame delta1_sarge_vcd
+		frame 15						sound_voice	delta1_sarge_vcd
+//		frame 580						aviGame
+
+	}
+}

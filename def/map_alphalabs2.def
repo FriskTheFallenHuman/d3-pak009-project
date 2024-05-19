@@ -1,0 +1,481 @@
+// ELEVATOR ATTACK
+
+model alphalabs2_maggot {
+	inherit							monster_demon_maggot
+
+	anim elevator      				models/md5/monsters/maggot3/a2_elevator.md5anim {
+		ai_no_turn
+		frame 1							call overrideLegs
+		frame 1							disableGravity
+		frame 1							disableWalkIK
+		frame 6							sound snd_sight
+		frame 8							sound snd_footstep
+		frame 12						sound snd_footstep
+		frame 20						sound snd_footstep
+		frame 39						sound snd_rattlecage
+		frame 71						sound snd_bendcage
+		frame 87						sound snd_sight2
+		frame 92						sound snd_footstep
+		frame 99						sound snd_footstep
+		frame 103						sound snd_footstep
+		frame 108						sound snd_footstep
+		frame 111						sound snd_footstep
+		frame 116						sound snd_footstep
+		frame 119						sound snd_footstep
+		frame 123						sound snd_footstep
+		frame 130						sound snd_slip
+		frame 141						sound snd_sight
+		frame 144						sound snd_footstep
+		frame 148						sound snd_thud
+		frame 166						sound snd_footstep
+		frame 171						sound snd_footstep
+		frame 177						sound snd_footstep
+		frame 182						sound snd_footstep
+		frame 188						sound snd_footstep
+		frame 190						sound snd_sight2
+		frame 194						sound snd_footstep
+		frame 195						enableGravity
+		frame 195						enableWalkIK
+	}
+}
+
+entityDef alphalabs2_maggot {
+	"inherit"						"monster_demon_maggot"
+	"scriptobject"					"monster_demon_maggot"
+	"model"							"alphalabs2_maggot"
+	"anim"							"elevator"
+	"sound_bone"		 			"Shoulders"
+
+	"snd_thud"						"monster_demon_imp_thud"
+	"snd_rattlecage"				"al2_maggot_rattlecage"
+	"editor_usage"					"Maggot monster used in alphalabs2 map"
+}
+
+model alphalabs2_imp {
+	inherit							monster_demon_imp
+
+	anim elevator      				models/md5/monsters/imp/a2_elevator.md5anim {
+		ai_no_turn
+		frame 1							call overrideLegs
+		frame 1							disableGravity
+		frame 1							disableWalkIK
+		frame 15						sound snd_footstep
+		frame 25						sound snd_footstep
+		frame 40						sound snd_footstep
+		frame 50						sound snd_footstep
+		frame 56						sound snd_footstep
+		frame 62						sound snd_footstep
+		frame 66						sound snd_footstep
+		frame 71						sound snd_footstep
+		frame 76						sound snd_footstep
+		frame 85						sound snd_footstep
+		frame 89						sound snd_footstep
+		frame 92						sound snd_footstep
+		frame 106						sound snd_footstep
+		frame 113						sound snd_footstep
+		frame 126						sound snd_footstep
+		frame 136						sound snd_footstep
+		frame 150						sound snd_footstep
+		frame 154						sound snd_footstep
+		frame 158						sound snd_footstep
+		frame 164						sound snd_footstep
+		frame 170						sound snd_sight
+		frame 173						sound snd_footstep
+		frame 179						sound snd_footstep
+		frame 185						enableGravity
+		frame 185						enableWalkIK
+	}
+}
+
+entityDef alphalabs2_imp {
+	"inherit"						"monster_demon_imp"
+	"model"							"alphalabs2_imp"
+	"anim"							"elevator"
+	"editor_usage"					"Imp monster used in alphalabs2 map"
+}
+
+model alphalabs2_elevatorenv {
+	mesh							models/md5/environments/a2_elevatormesh.md5mesh
+	anim elevatoridle				models/md5/environments/a2_elevatoridle.md5anim
+	anim elevator					models/md5/environments/a2_elevator.md5anim
+}
+
+entityDef alphalabs2_elevatorenv {
+	"inherit"						"cin_base"
+	"anim"							"elevator"
+	"model"							"alphalabs2_elevatorenv"
+	"editor_usage"					"Elevator door getting bent model used in alphalabs2 map"
+}
+
+//PINKY AND FATTY BATHROOM CINEMATIC anim 1
+model cin_anim1_pinky {
+	mesh						models/md5/cinematics/alphalabs2/scene1pinkymesh.md5mesh
+	anim scene1pinkyidle		models/md5/cinematics/alphalabs2/scene1pinkyidle.md5anim
+	anim scene1pinky			models/md5/cinematics/alphalabs2/scene1pinky.md5anim {
+
+	// PINKY SOUNDS
+
+	//	frame 143						sound snd_footstep
+	//	frame 150						sound snd_handstep
+	//	frame 175						sound snd_footstep
+	//	frame 181						sound snd_handstep
+	//	frame 198						sound snd_footstep
+	//	frame 208						sound snd_handstep
+	//	frame 244						sound snd_footstep
+	//	frame 247						sound snd_handstep
+	//	frame 270						sound snd_footstep
+	//	frame 273						sound snd_handstep
+	//	frame 295						sound snd_footstep
+	//	frame 298						sound snd_handstep
+	//	frame 318						sound snd_handstep
+	//	frame 323						sound snd_footstep
+	//	frame 373						sound snd_footstep
+	//	frame 428						sound snd_handstep
+	//	frame 490						sound snd_footstep
+	//	frame 501						sound snd_handstep
+	//	frame 524						sound snd_handstep
+
+		frame 543						trigger func_fx_2
+
+	//	frame 131						sound snd_gear
+	//	frame 163						sound snd_gear
+	//	frame 186						sound snd_gear
+	//	frame 232						sound snd_gear
+	//	frame 258						sound snd_gear
+	//	frame 283						sound snd_gear
+	//	frame 311						sound snd_gear
+	//	frame 361						sound snd_gear
+	//	frame 478						sound snd_gear
+
+	//	frame 190						sound snd_growl1
+	//	frame 330						sound snd_growl2
+	//	frame 399						sound snd_growl3
+	//	frame 429						sound snd_growl4
+	//	frame 444						sound snd_growl5
+
+	//	frame 380						sound snd_nudge
+	//	frame 459						sound snd_contact1
+	//	frame 460						sound snd_pullclose
+	//	frame 516						sound snd_openforbite
+	//	frame 538						sound snd_bite1
+	//	frame 551						sound snd_tear1
+	}
+}
+
+model cin_anim1_fatty {
+	mesh							models/md5/cinematics/alphalabs2/scene1fatmesh.md5mesh
+	anim scene1fatidle				models/md5/cinematics/alphalabs2/scene1fatidle.md5anim
+	anim scene1fat					models/md5/cinematics/alphalabs2/scene1fat.md5anim
+}
+
+model cin_anim1_uacm {
+	mesh							models/md5/cinematics/alphalabs2/scene1uacmesh.md5mesh
+	skin							skins/player/pistol.skin
+	anim scene1uacmidle				models/md5/cinematics/alphalabs2/scene1uacidle.md5anim
+	anim scene1uacm					models/md5/cinematics/alphalabs2/scene1uacm.md5anim {
+		frame 7							sound player_sounds_footstep
+		frame 15						sound player_sounds_footstep
+		frame 25						sound player_sounds_footstep
+		frame 33						sound player_sounds_footstep
+		frame 166						sound player_sounds_footstep
+		frame 209						sound player_sounds_footstep
+		frame 260						sound player_sounds_footstep
+		frame 310						sound player_sounds_footstep
+	}
+}
+
+//PINKY AND FATTY BATHROOM CINEMATIC anim 2
+model cin_anim2_pinky {
+	mesh							models/md5/cinematics/alphalabs2/scene6_pinkymesh.md5mesh
+	anim scene6pinky				models/md5/cinematics/alphalabs2/scene6_pinkyanim.md5anim {
+		//frame 37						sound pinkytear_02
+	}
+}
+
+model cin_anim2_fatty {
+	mesh							models/md5/cinematics/alphalabs2/scene6_fattymesh.md5mesh
+	anim scene6fat					models/md5/cinematics/alphalabs2/scene6_fattyanim.md5anim
+}
+
+//PINKY AND FATTY BATHROOM CINEMATIC anim 3
+model cin_anim3_pinky {
+	mesh							models/md5/cinematics/alphalabs2/scene7_pinkymesh.md5mesh
+	anim scene7pinky				models/md5/cinematics/alphalabs2/scene7_pinkyanim.md5anim {
+
+	//	frame 6							sound snd_swingflesh1
+	//	frame 31							sound snd_swingflesh2
+	//	frame 80							sound snd_swingflesh3
+	//	frame 92							sound snd_fleshtoss
+	//	frame 108							sound snd_fleshgulp
+	//	frame 110							sound snd_chomp
+	//	frame 132							sound snd_chew1
+	//	frame 154							sound snd_chew2
+	//	frame 175							sound snd_swallow
+	//	frame 188							sound snd_bite2
+	//	frame 199							sound snd_contact2
+	//	frame 207							sound snd_tear2
+	//	frame 234							sound snd_chew3
+	//	frame 240							sound snd_contact3
+	//	frame 258							sound snd_bite3
+	//	frame 276							sound snd_chew4
+	//	frame 294							sound snd_chew5
+
+		frame 1								trigger func_fx_1
+		frame 2								fx fx/blooddrip1.fx
+
+		frame 190							trigger func_fx_1
+		frame 191							trigger func_fx_2
+
+		frame 280							trigger func_fx_1
+	}
+}
+
+model cin_anim3_fatty {
+	mesh							models/md5/cinematics/alphalabs2/scene7_fattymesh.md5mesh
+	anim scene7fat					models/md5/cinematics/alphalabs2/scene7_fattyanim.md5anim {
+
+// FATTY SOUNDS
+
+	//	frame 5							sound snd_fatbounce1
+	//	frame 13							sound snd_fatbounce2
+	//	frame 18							sound snd_fleshsettle
+	//	frame 22							sound snd_fatbounce3
+	}
+}
+
+//PINKY AND FATTY BATHROOM CINEMATIC anim 4
+model cin_anim9a_pinky {
+	mesh							models/md5/cinematics/alphalabs2/scene9a_pinky.md5mesh
+	anim scene9apinky				models/md5/cinematics/alphalabs2/scene9a_pinky.md5anim {
+	//	frame 32						sound snd_slurp
+	//	frame 39						sound snd_swingflesh4
+	//	frame 40						sound snd_growl6
+	//	frame 68						sound snd_handstep
+	//	frame 69						sound snd_footstep
+	//	frame 74						sound snd_growl7
+	//	frame 77						sound snd_handstep
+	//	frame 86						sound snd_handstep
+	//	frame 91						sound snd_footstep
+	//	frame 105						sound snd_footstep
+	//	frame 122						sound snd_growl8
+	//	frame 131						sound snd_footstep
+	//	frame 138						sound snd_growl9
+	//	frame 144						sound snd_handstep
+	//	frame 154						sound snd_footstep
+	//	frame 160						sound snd_handstep
+	}
+}
+
+model cin_anim9a_fatty {
+	mesh							models/md5/cinematics/alphalabs2/scene9a_fatty.md5mesh
+	anim scene9afat					models/md5/cinematics/alphalabs2/scene9a_fatty.md5anim {
+	//	frame 5							sound snd_fatbounce1
+	//	frame 18						sound snd_fatbounce2
+	}
+}
+
+model cin_anim9a_uacm {
+	mesh							models/md5/cinematics/alphalabs2/scene1uacmesh.md5mesh
+	skin							skins/player/pistol.skin
+	anim scene9auacm				models/md5/cinematics/alphalabs2/scene9a_uacm.md5anim {
+		frame 99						sound player_sounds_footstep
+		frame 132						sound player_sounds_footstep
+		frame 140						sound player_sounds_footstep
+		frame 158						sound player_sounds_footstep
+	}
+}
+
+//PINKY AND FATTY BATHROOM CINEMATIC anim 5
+model cin_anim5_pinky {
+	mesh							models/md5/cinematics/alphalabs2/scene10_pinkymesh.md5mesh
+	anim scene10pinky				models/md5/cinematics/alphalabs2/scene10_pinkyanim.md5anim
+}
+
+model cin_anim5_fatty {
+	mesh							models/md5/cinematics/alphalabs2/scene10_fattymesh.md5mesh
+	anim scene10fat					models/md5/cinematics/alphalabs2/scene10_fattyanim.md5anim
+}
+
+/**********
+Ed Killer
+**********/
+model alphalabs2_cin_imp {
+	mesh							models/md5/monsters/imp/imp.md5mesh
+	anim edkiller					models/md5/cinematics/alphalabs2/edkiller.md5anim
+
+}
+
+entityDef alphalabs2_cin_imp {
+	"inherit"						"cin_base"
+	"anim"							"edkiller"
+	"model"							"alphalabs2_cin_imp"
+	"editor_usage"					"Imp model used in alphalabs2 map cinematics"
+}
+
+model alphalabs2_scientist1_head {
+	mesh								models/md5/characters/npcs/heads/h1.md5mesh
+	channel eyelids						( Ruplid Rlolid Luplid Llolid )
+
+	anim blink							models/md5/characters/npcs/heads/h1blink.md5anim
+	anim stand							models/md5/characters/npcs/heads/h1idle.md5anim
+	anim dead							models/md5/characters/npcs/heads/h1death.md5anim
+
+	anim lips_dontshoot					models/md5/heads/old/alphalabs2/scientist_trigger_1.md5anim {
+		frame 1								sound_voice		alpha_labs2_scientist_trigger_1
+	}
+	anim lips_canhelp					models/md5/heads/old/alphalabs2/scientist_trigger_2.md5anim {
+		frame 1								sound_voice		alpha_labs2_scientist_trigger_2
+	}
+	anim lips_lightsout					models/md5/heads/old/alphalabs2/scientist_trigger_3.md5anim {
+		frame 1								sound_voice		alpha_labs2_scientist_trigger_3
+	}
+	anim lips_stayclose					models/md5/heads/old/alphalabs2/scientist_trigger_4.md5anim {
+		frame 1								sound_voice		alpha_labs2_scientist_trigger_4
+	}
+	anim lips_electro					models/md5/heads/old/alphalabs2/scientist_trigger_5.md5anim {
+		frame 1								sound_voice		alpha_labs2_scientist_trigger_5
+	}
+	anim lips_theresone					models/md5/heads/old/alphalabs2/scientist_trigger_6.md5anim {
+		frame 1								sound_voice		alpha_labs2_scientist_trigger_6
+	}
+	anim lips_hangon					models/md5/heads/old/alphalabs2/scientist_trigger_7.md5anim {
+		frame 1								sound_voice		alpha_labs2_scientist_trigger_7
+	}
+	anim lips_watchit					models/md5/heads/old/alphalabs2/scientist_trigger_8.md5anim {
+		frame 1								sound_voice		alpha_labs2_scientist_trigger_8
+	}
+	anim lips_whatwasthat				models/md5/heads/old/alphalabs2/scientist_trigger_9.md5anim {
+		frame 1								sound_voice		alpha_labs2_scientist_trigger_9
+	}
+	anim lips_theexit					models/md5/heads/old/alphalabs2/scientist_trigger_11.md5anim {
+		frame 1								sound_voice		alpha_labs2_scientist_trigger_11
+	}
+	anim lips_canttalknow				models/md5/heads/old/alphalabs2/scientist_secondary_1.md5anim {
+		frame 1								sound_voice		alpha_labs2_scientist_secondary1
+	}
+	anim lips_itisntfar					models/md5/heads/old/alphalabs2/scientist_secondary_2.md5anim {
+		frame 1								sound_voice		alpha_labs2_scientist_secondary2
+	}
+	anim lips_hurry1					models/md5/heads/old/alphalabs2/scientist_secondary_3.md5anim {
+		frame 1								sound_voice		alpha_labs2_scientist_hurry1
+	}
+	anim lips_hurry2					models/md5/heads/old/alphalabs2/scientist_secondary_4.md5anim {
+		frame 1								sound_voice		alpha_labs2_scientist_hurry2
+	}
+	anim lips_ohgod						models/md5/heads/old/alphalabs2/scientist_attacked_1.md5anim {
+		frame 1								sound_voice		alpha_labs2_scientist_attacked1
+	}
+	anim lips_killit					models/md5/heads/old/alphalabs2/scientist_attacked_2.md5anim {
+		frame 1								sound_voice		alpha_labs2_scientist_attacked2
+	}
+	anim lips_wecantstop					models/md5/heads/old/alphalabs2/scientist_primary_1.md5anim {
+		frame 1								sound_voice		alpha_labs2_scientist_primary
+	}
+	anim lips_ohthankgod				models/md5/heads/old/alphalabs2/scientist_saved_1.md5anim {
+		frame 1								sound_voice		alpha_labs2_scientist_saved1
+	}
+	anim lips_thatwasclose				models/md5/heads/old/alphalabs2/scientist_saved_2.md5anim {
+		frame 1								sound_voice		alpha_labs2_scientist_saved2
+	}
+	anim killme							models/md5/heads/old/alphalabs2/scientist_trigger_10.md5anim {
+		frame 1								sound_voice		alpha_labs2_scientist_trigger_10
+		frame 11							call map_mc_underground::sci_switch_head_to_stump
+	}
+}
+
+model alphalabs2_scientist1 {
+	mesh								models/md5/characters/npcs/lanternlabcoatbody.md5mesh
+	channel torso						( *Waist )
+	channel legs						( *origin Body2 *Hips -*Waist )
+
+	anim af_pose						models/md5/characters/npcs/lanternaf_pose.md5anim
+	anim ik_pose						models/md5/characters/npcs/lanternaf_pose.md5anim
+
+	anim stand							models/md5/characters/npcs/lantern_stand.md5anim
+	anim cower							models/md5/characters/npcs/lantern_cower_center.md5anim,models/md5/characters/npcs/lantern_cower_left.md5anim,models/md5/characters/npcs/lantern_cower_right.md5anim
+	anim working1						models/md5/characters/npcs/lantern_look_in_hole.md5anim {
+		ai_no_turn
+	}
+	anim working2						models/md5/characters/npcs/lantern_look_in_hole.md5anim {
+		ai_no_turn
+	}
+	anim walk							models/md5/characters/npcs/lantern_walk.md5anim {
+		frame 3							sound_body snd_footstep
+		frame 17						sound_body snd_footstep
+		frame 32						sound_body snd_footstep
+		frame 46						sound_body snd_footstep
+	}
+	anim pain							models/md5/characters/npcs/lantern_pain.md5anim
+	anim pain_head						models/md5/characters/npcs/lantern_pain.md5anim
+	anim pain_chest						models/md5/characters/npcs/lantern_pain.md5anim
+	anim pain_left_arm					models/md5/characters/npcs/lantern_pain.md5anim
+	anim pain_right_arm					models/md5/characters/npcs/lantern_pain.md5anim
+	anim turn_left						models/md5/characters/npcs/lantern_turn_left.md5anim, models/md5/characters/npcs/lantern_turn_left_rotation180.md5anim {
+		anim_turn
+	}
+
+	anim turn_right						models/md5/characters/npcs/lantern_turn_right.md5anim, models/md5/characters/npcs/lantern_turn_right_rotation180.md5anim {
+		anim_turn
+	}
+	anim killme							models/md5/characters/npcs/lantern_death.md5anim {
+		frame 18							event kill
+	}
+}
+
+entityDef alphalabs2_scientist1 {
+	"inherit"						"npc_base"
+	"model"							"alphalabs2_scientist1"
+	"skin"							"skins/characters/npcs/body_labcoat_lantern.skin"
+	"ragdoll"						"char_lanternguy"
+	"scriptobject"					"ai_alphalabs2_scientist1"
+	"size"							"44 44 74"
+	"model_gib"						"models/md5/characters/npcs/lanternskeleton.md5mesh"
+
+	"turn_rate"						"190"
+	"head_focus_rate"				"0.05"
+
+	"look_joint Waist"				"0 0 0"
+	"look_joint Chest"				"0.1 0.1 0"
+	"look_joint Shoulders"			"0.2 0.2 0"
+	"look_joint headcontrol"		"0.4 0.4 0"
+
+	"copy_joint_world eyecontrol"	""
+
+	"def_head"						"alphalabs2_scientist1_head"
+	"head_joint"					"Shoulders"
+
+	"def_dropDeathItem"				"moveable_item_lantern"
+	"dropDeathItemJoint"			"lantern"
+	"dropDeathItemRotation"			"0 0 0"
+	"skin_dropDeath"				"skins/characters/npcs/body_labcoat_no_lantern.skin"
+
+	"snd_death"						""
+	"snd_deathscene"				"alpha_labs2_scientist_trigger_10"		// Death screams, flesh ripping sounds
+	"snd_talk_primary"				""
+	"snd_talk_secondary"			""
+	"snd_talk_trigger"				""
+	"editor_usage"					"Scientist w/lantern character used in alphalabs2 map"
+}
+
+model alphalabs2_marine_helmet_p90 {
+	inherit							npc_marine_w_mgun
+	anim run1						models/md5/chars/mgrun.md5anim
+	anim run2						models/md5/chars/mgrun.md5anim
+	anim runstoplookback			models/md5/chars/mgrunstoplookback.md5anim
+}
+
+entityDef alphalabs2_marine_helmet_p90 {
+	"inherit"						"npc_base"
+	"model"							"alphalabs2_marine_helmet_p90"
+	"def_head"						"head_marine_helmet"
+	"head_joint"					"Shoulders"
+	"ik_numlegs"					"0"
+	"no_cower"						"1"
+	"copy_joint_world eyecontrol"	""
+	"model_gib" 					""
+
+	"def_dropDeathItem"				"moveable_item_machinegun"
+	"dropDeathItemJoint"			"machinegun"
+	"skin_dropDeath"				"skins/characters/npcs/marine_helmet.skin"
+	"editor_usage"					"Marine w/helmet character used in alphalabs2 map"
+}

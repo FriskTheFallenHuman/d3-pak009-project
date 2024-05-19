@@ -1,0 +1,12 @@
+lightsout_waterdrops {
+	sound/ambient/water/1shot_drip_01.wav
+	sound/ambient/water/1shot_drip_02.wav
+	sound/ambient/water/1shot_drip_03.wav
+}
+
+lightsout_berserk {
+	volume -15
+	looping
+
+	sound/levels/berserk.wav
+}

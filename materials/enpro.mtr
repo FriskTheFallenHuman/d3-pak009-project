@@ -1,0 +1,757 @@
+//================textures/enpro shader stats================
+//
+// Total # of shaders : 81
+// Working shaders: 65
+// Broken/CommentedOut shaders: 16
+//================================================================
+
+
+//*****************************************************Moved from senetemp.mtr - start*****************************************
+
+
+textures/enpro/minpanel1cut2a
+{
+	qer_editorimage		textures/enpro/minpanel1cut2a
+	bumpmap				textures/base_wall/minpanel1cut_local
+	diffusemap			textures/enpro/minpanel1cut2a
+	specularmap			textures/enpro/minpanel1cut1a_s
+}
+
+textures/enpro/minpanel1cut2
+{
+	qer_editorimage		textures/enpro/minpanel1cut2
+	bumpmap				textures/base_wall/minpanel1cut_local
+	diffusemap			textures/enpro/minpanel1cut2
+	specularmap			textures/enpro/minpanel1cut1_s
+}
+
+textures/enpro/minpanel1cut1a
+{
+	qer_editorimage		textures/enpro/minpanel1cut1a
+	bumpmap				textures/base_wall/minpanel1cut_local
+	diffusemap			textures/enpro/minpanel1cut1a
+	specularmap			textures/enpro/minpanel1cut1a_s
+}
+
+textures/enpro/minpanel1cut1
+{
+	qer_editorimage		textures/enpro/minpanel1cut1
+	bumpmap				textures/base_wall/minpanel1cut_local
+	diffusemap			textures/enpro/minpanel1cut1
+	specularmap			textures/enpro/minpanel1cut1_s
+}
+
+
+textures/enpro/encyl10_glow
+{
+	qer_editorimage		textures/editor/encyl10_glow
+	bumpmap				textures/enpro/encyl10_local
+	diffusemap			textures/enpro/encyl10
+	specularmap			textures/enpro/encyl10_s
+	{
+		blend			add
+		map				textures/enpro/encyl10_add
+		colored
+		
+	}
+}
+
+textures/enpro/encyl10_glow_global
+{
+	qer_editorimage		textures/editor/encyl10_glow_global
+	bumpmap				textures/enpro/encyl10_local
+	diffusemap			textures/enpro/encyl10
+	specularmap			textures/enpro/encyl10_s
+	{
+		blend			add
+		map				textures/enpro/encyl10_add
+		red				parm0
+		green			parm1 * global1
+		blue			parm2 * global1
+		
+	}
+}
+
+textures/enpro/encyl10
+{
+	qer_editorimage		textures/editor/encyl10
+	bumpmap				textures/enpro/encyl10_local
+	diffusemap			textures/enpro/encyl10
+	specularmap			textures/enpro/encyl10_s
+}
+
+textures/enpro/encyl9
+{
+	qer_editorimage		textures/editor/encyl9
+	bumpmap				textures/enpro/encyl9_local
+	diffusemap			textures/enpro/encyl9
+	specularmap			textures/enpro/encyl9_s
+}
+
+textures/enpro/encyl8
+{
+	qer_editorimage		textures/editor/encyl8
+	bumpmap				textures/enpro/encyl8_local
+	diffusemap			textures/enpro/encyl8
+	specularmap			textures/enpro/encyl8_s
+}
+
+textures/enpro/encyl7
+{
+	qer_editorimage		textures/enpro/encyl7
+	bumpmap				textures/enpro/encyl7_local
+	diffusemap			textures/enpro/encyl7
+	specularmap			textures/enpro/encyl7_s
+//	{
+//		blend			add
+//		map				textures/enpro/encyl7_add
+//	}
+}
+
+textures/enpro/encyl6
+{
+	qer_editorimage		textures/enpro/encyl6
+	bumpmap				textures/enpro/encyl6_local
+	diffusemap			textures/enpro/encyl6
+	specularmap			textures/enpro/encyl6_s
+}
+
+textures/enpro/encyl5
+{
+	qer_editorimage		textures/enpro/encyl5
+	{
+		blend			bumpmap				
+		map				textures/enpro/encyl5_local
+		
+	}
+
+	diffusemap			textures/enpro/encyl5
+	specularmap			textures/enpro/encyl5_s
+}
+
+textures/enpro/encyl4
+{
+	qer_editorimage		textures/editor/encyl4
+	bumpmap				textures/enpro/encyl4_local
+	diffusemap			textures/enpro/encyl4
+	specularmap			textures/enpro/encyl4_s
+}
+
+textures/enpro/encyl3
+{
+	qer_editorimage		textures/enpro/encyl3
+	noshadows
+	twosided
+	bumpmap				textures/enpro/encyl3_local
+	{
+		blend			diffusemap			
+		map				textures/enpro/encyl3
+		alphatest		.65
+	}
+	specularmap			textures/enpro/encyl3_s
+}
+
+textures/enpro/encyl2
+{
+	qer_editorimage		textures/editor/encyl2
+	bumpmap				textures/enpro/encyl2_local
+	diffusemap			textures/enpro/encyl2
+	specularmap			textures/enpro/encyl2_s
+	{
+		blend			add
+		map				textures/enpro/encyl2_add
+	}
+}
+
+textures/enpro/encyl1
+{
+	qer_editorimage		textures/editor/encyl1
+	bumpmap				textures/enpro/encyl1_local
+	diffusemap			textures/enpro/encyl1
+	specularmap			textures/enpro/encyl1_s
+	{
+		blend			add
+		map				textures/enpro/encyl1_add
+		colored
+	}
+}
+
+textures/enpro/encyl1_global
+{
+	qer_editorimage		textures/editor/encyl1_global
+	bumpmap				textures/enpro/encyl1_local
+	diffusemap			textures/enpro/encyl1
+	specularmap			textures/enpro/encyl1_s
+	{
+		blend			add
+		map				textures/enpro/encyl1_add
+		red				parm0
+		green			parm1 * global1
+		blue			parm2 * global1
+	}
+}
+
+textures/enpro/enwall22e
+{
+	qer_editorimage		textures/enpro/enwall22e
+	bumpmap				textures/base_wall/snpanel18_local
+	diffusemap			textures/enpro/enwall22e
+	specularmap			textures/enpro/enwall22_s
+}
+
+textures/enpro/enwall22d
+{
+	qer_editorimage		textures/enpro/enwall22d
+	bumpmap				textures/base_wall/snpanel18_local
+	diffusemap			textures/enpro/enwall22d
+	specularmap			textures/enpro/enwall22_s
+}
+
+//textures/enpro/enwall22c
+//{
+//	qer_editorimage		textures/enpro/enwall22c
+//	bumpmap				textures/base_wall/snpanel18_local
+//	diffusemap			textures/enpro/enwall22c
+//	specularmap			textures/enpro/enwall22a_s
+//}
+
+textures/enpro/enwall22b
+{
+	qer_editorimage		textures/enpro/enwall22b
+	bumpmap				textures/base_wall/snpanel18_local
+	diffusemap			textures/enpro/enwall22b
+	specularmap			textures/enpro/enwall22a_s
+}
+
+//textures/enpro/enwall22a
+//{
+//	qer_editorimage		textures/enpro/enwall22a
+//	bumpmap				textures/base_wall/snpanel18_local
+//	diffusemap			textures/enpro/enwall22a
+//	specularmap			textures/enpro/enwall22a_s
+//}
+
+textures/enpro/enwall22
+{
+	qer_editorimage		textures/enpro/enwall22
+	bumpmap				textures/base_wall/snpanel18_local
+	diffusemap			textures/enpro/enwall22
+	specularmap			textures/enpro/enwall22_s
+}
+
+textures/enpro/enwall21c
+{
+	qer_editorimage		textures/enpro/enwall21c
+	bumpmap				textures/base_wall/snpanel17_local
+	diffusemap			textures/enpro/enwall21c
+	specularmap			textures/enpro/enwall21c_s
+}
+
+//textures/enpro/enwall21b
+//{
+//	qer_editorimage		textures/enpro/enwall21b
+//	bumpmap				textures/base_wall/snpanel17_local
+//	diffusemap			textures/enpro/enwall21b
+//	specularmap			textures/enpro/enwall21_s
+//}
+
+textures/enpro/enwall21a
+{
+	qer_editorimage		textures/enpro/enwall21a
+	bumpmap				textures/base_wall/snpanel17_local
+	diffusemap			textures/enpro/enwall21a
+	specularmap			textures/enpro/enwall21_s
+}
+
+textures/enpro/enwall21
+{
+	qer_editorimage		textures/enpro/enwall21
+	bumpmap				textures/base_wall/snpanel17_local
+	diffusemap			textures/enpro/enwall21
+	specularmap			textures/enpro/enwall21_s
+}
+
+textures/enpro/enwall20f
+{
+	qer_editorimage		textures/enpro/enwall20f
+	bumpmap				textures/enpro/enwall20_local
+	diffusemap			textures/enpro/enwall20f
+	specularmap			textures/enpro/enwall20f_s
+}
+
+//textures/enpro/enwall20e
+//{
+//	qer_editorimage		textures/enpro/enwall20e
+//	bumpmap				textures/enpro/enwall20_local
+//	diffusemap			textures/enpro/enwall20e
+//	specularmap			textures/enpro/enwall20a_s
+//}
+
+textures/enpro/enwall20d
+{
+	qer_editorimage		textures/enpro/enwall20d
+	bumpmap				textures/enpro/enwall20_local
+	diffusemap			textures/enpro/enwall20d
+	specularmap			textures/enpro/enwall20a_s
+}
+
+//textures/enpro/enwall20c
+//{
+//	qer_editorimage		textures/enpro/enwall20c
+//	bumpmap				textures/enpro/enwall20_local
+//	diffusemap			textures/enpro/enwall20c
+//	specularmap			textures/enpro/enwall20a_s
+//}
+
+//textures/enpro/enwall20b
+//{
+//	qer_editorimage		textures/enpro/enwall20b
+//	bumpmap				textures/enpro/enwall20_local
+//	diffusemap			textures/enpro/enwall20b
+//	specularmap			textures/enpro/enwall20a_s
+//}
+
+textures/enpro/enwall20a
+{
+	qer_editorimage		textures/enpro/enwall20a
+	bumpmap				textures/enpro/enwall20_local
+	diffusemap			textures/enpro/enwall20a
+	specularmap			textures/enpro/enwall20a_s
+}
+
+textures/enpro/enwall20
+{
+	qer_editorimage		textures/enpro/enwall20
+	bumpmap				textures/enpro/enwall20_local
+	diffusemap			textures/enpro/enwall20
+	specularmap			textures/enpro/enwall20_s
+}
+
+textures/enpro/enwall19f
+{
+	qer_editorimage		textures/enpro/enwall19f
+	bumpmap				textures/base_wall/stepanel5_local
+	diffusemap			textures/enpro/enwall19f
+	specularmap			textures/enpro/enwall19_s
+}
+
+//textures/enpro/enwall19e
+//{
+//	qer_editorimage		textures/enpro/enwall19e
+//	bumpmap				textures/base_wall/stepanel5_local
+//	diffusemap			textures/enpro/enwall19e
+//	specularmap			textures/enpro/enwall19_s
+//}
+
+textures/enpro/enwall19d
+{
+	qer_editorimage		textures/enpro/enwall19d
+	bumpmap				textures/base_wall/stepanel5_local
+	diffusemap			textures/enpro/enwall19d
+	specularmap			textures/enpro/enwall19_s
+}
+
+textures/enpro/enwall19c
+{
+	qer_editorimage		textures/enpro/enwall19c
+	bumpmap				textures/base_wall/stepanel5_local
+	diffusemap			textures/enpro/enwall19c
+	specularmap			textures/enpro/enwall19_s
+}
+
+textures/enpro/enwall19b
+{
+	qer_editorimage		textures/enpro/enwall19b
+	bumpmap				textures/base_wall/stepanel5_local
+	diffusemap			textures/enpro/enwall19b
+	specularmap			textures/enpro/enwall19_s
+}
+
+textures/enpro/enwall19a
+{
+	qer_editorimage		textures/enpro/enwall19a
+	bumpmap				textures/base_wall/stepanel5_local
+	diffusemap			textures/enpro/enwall19a
+	specularmap			textures/enpro/enwall19_s
+}
+
+//textures/enpro/enwall19
+//{
+//	qer_editorimage		textures/enpro/enwall19
+//	bumpmap				textures/base_wall/stepanel5_local
+//	diffusemap			textures/enpro/enwall19
+//	specularmap			textures/enpro/enwall19_s
+//}
+
+textures/enpro/enwall18e
+{
+	qer_editorimage		textures/enpro/enwall18e
+	bumpmap				textures/enpro/enwall18_local
+	diffusemap			textures/enpro/enwall18e
+	specularmap			textures/enpro/enwall18e_s
+}
+
+textures/enpro/enwall18d
+{
+	qer_editorimage		textures/enpro/enwall18d
+	bumpmap				textures/enpro/enwall18_local
+	diffusemap			textures/enpro/enwall18d
+	specularmap			textures/enpro/enwall18_s
+}
+
+//textures/enpro/enwall18c
+//{
+//	qer_editorimage		textures/enpro/enwall18c
+//	bumpmap				textures/enpro/enwall18_local
+//	diffusemap			textures/enpro/enwall18c
+//	specularmap			textures/enpro/enwall18_s
+//}
+
+//textures/enpro/enwall18b
+//{
+//	qer_editorimage		textures/enpro/enwall18b
+//	bumpmap				textures/enpro/enwall18_local
+//	diffusemap			textures/enpro/enwall18b
+//	specularmap			textures/enpro/enwall18b_s
+//}
+
+textures/enpro/enwall18a
+{
+	qer_editorimage		textures/enpro/enwall18a
+	bumpmap				textures/enpro/enwall18_local
+	diffusemap			textures/enpro/enwall18a
+	specularmap			textures/enpro/enwall18_s
+}
+
+textures/enpro/enwall18
+{
+	qer_editorimage		textures/enpro/enwall18
+	bumpmap				textures/enpro/enwall18_local
+	diffusemap			textures/enpro/enwall18
+	specularmap			textures/enpro/enwall18_s
+}
+
+textures/enpro/enwall17a
+{
+	qer_editorimage		textures/enpro/enwall17a
+	bumpmap				textures/enpro/enwall17_local
+	diffusemap			textures/enpro/enwall17a
+	specularmap			textures/enpro/enwall17_s
+}
+
+//textures/enpro/enwall17
+//{
+//	qer_editorimage		textures/enpro/enwall17
+//	bumpmap				textures/enpro/enwall17_local
+//	{
+//		blend			diffusemap			
+//		map				textures/enpro/enwall17_d
+//		scale			0.5,1
+//	}
+//	specularmap			textures/enpro/enwall17_s
+//}
+
+//textures/enpro/enwall16d
+//{
+//	qer_editorimage		textures/enpro/enwall16d
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/enpro/enwall16_local, heightmap (textures/enpro/enwall16_bmp.tga, 4) ) 
+//	}
+//	diffusemap			textures/enpro/enwall16d
+//	specularmap			textures/enpro/enwall16_s
+//}
+
+textures/enpro/enwall16c
+{
+	qer_editorimage		textures/enpro/enwall16c
+	{
+		blend			bumpmap				
+		map				addnormals (textures/enpro/enwall16_local, heightmap (textures/enpro/enwall16_bmp.tga, 4) ) 
+	}
+	diffusemap			textures/enpro/enwall16c
+	specularmap			textures/enpro/enwall16_s
+}
+
+//textures/enpro/enwall16b
+//{
+//	qer_editorimage		textures/enpro/enwall16b
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/enpro/enwall16_local, heightmap (textures/enpro/enwall16_bmp.tga, 4) ) 
+//	}
+//	diffusemap			textures/enpro/enwall16b
+//	specularmap			textures/enpro/enwall16_s
+//}
+
+//textures/enpro/enwall16a
+//{
+//	qer_editorimage		textures/enpro/enwall16a
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/enpro/enwall16_local, heightmap (textures/enpro/enwall16_bmp.tga, 4) ) 
+//	}
+//	diffusemap			textures/enpro/enwall16a
+//	specularmap			textures/enpro/enwall16_s
+//}
+
+textures/enpro/enwall16
+{
+	qer_editorimage		textures/enpro/enwall16
+	{
+		blend			bumpmap				
+		map				addnormals (textures/enpro/enwall16_local, heightmap (textures/enpro/enwall16_bmp.tga, 4) ) 
+	}
+	diffusemap			textures/enpro/enwall16
+	specularmap			textures/enpro/enwall16_s
+}
+
+textures/enpro/enwall15a
+{
+	qer_editorimage		textures/enpro/enwall15a
+	bumpmap				textures/enpro/enwall15a_local
+	diffusemap			textures/enpro/enwall15a
+	specularmap			textures/enpro/enwall15a_s
+}
+
+textures/enpro/enwall15
+{
+	qer_editorimage		textures/enpro/enwall15
+	bumpmap				textures/enpro/enwall15_local
+	diffusemap			textures/enpro/enwall15
+	specularmap			textures/enpro/enwall15_s
+}
+
+textures/enpro/enwall14
+{
+	qer_editorimage		textures/enpro/enwall14
+	{
+		blend			bumpmap				
+		map				addnormals (textures/enpro/enwall14_local, heightmap (textures/enpro/enwall14_bmp, 3) )
+	}
+	diffusemap			textures/enpro/enwall14
+	specularmap			textures/enpro/enwall14_s
+}
+
+textures/enpro/enwall13c
+{
+	qer_editorimage		textures/enpro/enwall13c
+	bumpmap				textures/enpro/enwall13_local
+	diffusemap			textures/enpro/enwall13c
+	specularmap			textures/enpro/enwall13_s
+}
+
+textures/enpro/enwall13b
+{
+	qer_editorimage		textures/enpro/enwall13b
+	bumpmap				textures/enpro/enwall13_local
+	diffusemap			textures/enpro/enwall13b
+	specularmap			textures/enpro/enwall13a_s
+}
+
+textures/enpro/enwall13a
+{
+	qer_editorimage		textures/enpro/enwall13a
+	bumpmap				textures/enpro/enwall13_local
+	diffusemap			textures/enpro/enwall13a
+	specularmap			textures/enpro/enwall13a_s
+}
+
+textures/enpro/enwall13
+{
+	qer_editorimage		textures/enpro/enwall13
+	bumpmap				textures/enpro/enwall13_local
+	diffusemap			textures/enpro/enwall13
+	specularmap			textures/enpro/enwall13_s
+}
+
+textures/enpro/enwall12
+{
+	qer_editorimage		textures/enpro/enwall12
+	bumpmap				textures/enpro/enwall12_local
+	diffusemap			textures/enpro/enwall12
+	specularmap			textures/enpro/enwall12_s
+}
+
+textures/enpro/enwall11
+{
+	qer_editorimage		textures/enpro/enwall11
+	bumpmap				textures/enpro/enwall11_local
+	diffusemap			textures/enpro/enwall11
+	specularmap			textures/enpro/enwall11_s
+}
+
+textures/enpro/enwall10
+{
+	qer_editorimage		textures/enpro/enwall10
+	{
+		blend			bumpmap				
+		map				textures/enpro/enwall10_local
+		
+	}
+	{
+		blend			diffusemap			
+		map				textures/enpro/enwall10
+	//	
+	}
+	{
+		blend			specularmap			
+		map				textures/enpro/enwall10_s
+	//	
+	}
+}
+
+textures/enpro/enwall9
+{
+	qer_editorimage		textures/enpro/enwall9
+	bumpmap				textures/enpro/enwall9_local
+	diffusemap			textures/enpro/enwall9
+	specularmap			textures/enpro/enwall9_s
+}
+/**
+textures/enpro/enwall8a6
+{
+	qer_editorimage		textures/enpro/enwall8a6
+	bumpmap				textures/enpro/enwall8a_local
+	{
+		blend			diffusemap			
+		map				textures/enpro/enwall8a6
+		scale			0.5,1
+	}
+	{
+		blend			specularmap			
+		map				textures/enpro/enwall8a6_s
+		scale			0.5,1
+	}
+}
+
+textures/enpro/enwall8a5
+{
+	qer_editorimage		textures/enpro/enwall8a5
+	bumpmap				textures/enpro/enwall8_local
+	diffusemap			textures/enpro/enwall8a5
+	specularmap			textures/enpro/enwall8a5_s
+}
+**/
+textures/enpro/enwall8a4
+{
+	qer_editorimage		textures/enpro/enwall8a4
+	bumpmap				textures/enpro/enwall8a_local
+	diffusemap			textures/enpro/enwall8a4
+	specularmap			textures/enpro/enwall8a4_s
+}
+
+textures/enpro/enwall8a3
+{
+	qer_editorimage		textures/enpro/enwall8a3
+	bumpmap				textures/enpro/enwall8a_local
+	diffusemap			textures/enpro/enwall8a3
+	specularmap			textures/enpro/enwall8a3_s
+}
+
+textures/enpro/enwall8a2
+{
+	qer_editorimage		textures/enpro/enwall8a2
+	bumpmap				textures/enpro/enwall8_local
+	diffusemap			textures/enpro/enwall8a2
+	specularmap			textures/enpro/enwall8a2_s
+}
+
+textures/enpro/enwall8a
+{
+	qer_editorimage		textures/enpro/enwall8a
+	bumpmap				textures/enpro/enwall8a_local
+	diffusemap			textures/enpro/enwall8a
+	specularmap			textures/enpro/enwall8a_s
+}
+
+textures/enpro/enwall8
+{
+	qer_editorimage		textures/enpro/enwall8
+	bumpmap				textures/enpro/enwall8_local
+	diffusemap			textures/enpro/enwall8
+	specularmap			textures/enpro/enwall8_s
+}
+
+textures/enpro/enwall7
+{
+	qer_editorimage		textures/enpro/enwall7
+	bumpmap				textures/enpro/enwall7_local
+	diffusemap			textures/enpro/enwall7
+	specularmap			textures/enpro/enwall7_s
+}
+
+textures/enpro/enwall6
+{
+	qer_editorimage		textures/enpro/enwall6
+	bumpmap				textures/enpro/enwall6_local
+	diffusemap			textures/enpro/enwall6
+	specularmap			textures/enpro/enwall6_s
+}
+
+textures/enpro/enwall5
+{
+	qer_editorimage		textures/editor/enwall5
+	bumpmap				textures/enpro/enwall5_local
+	diffusemap			textures/enpro/enwall5
+	specularmap			textures/enpro/enwall5_s
+}
+
+textures/enpro/enwall4
+{
+	qer_editorimage		textures/editor/enwall4
+	bumpmap				textures/enpro/enwall4_local
+	diffusemap			textures/enpro/enwall4
+	specularmap			textures/enpro/enwall4_s
+}
+
+textures/enpro/enwall3a
+{
+	qer_editorimage		textures/enpro/enwall3a
+	bumpmap				textures/enpro/enwall3a_local
+	diffusemap			textures/enpro/enwall3a
+	specularmap			textures/enpro/enwall3a_s
+}
+
+textures/enpro/enwall3
+{
+	qer_editorimage		textures/enpro/enwall3
+	bumpmap				textures/enpro/enwall3_local
+	diffusemap			textures/enpro/enwall3
+	specularmap			textures/enpro/enwall3_s
+}
+
+textures/enpro/enwall2
+{
+	qer_editorimage		textures/enpro/enwall2
+	{
+		blend			bumpmap				
+		map				addnormals (textures/enpro/enwall2_local, heightmap (textures/enpro/enwall2_bmp, 4) )
+	}
+	diffusemap			textures/enpro/enwall2
+	specularmap			textures/enpro/enwall2_s
+}
+
+textures/enpro/enwall1a
+{
+	qer_editorimage		textures/enpro/enwall1a
+	bumpmap				textures/enpro/enwall1_local
+	diffusemap			textures/enpro/enwall1a
+	specularmap			textures/enpro/enwall1a_s
+}
+
+textures/enpro/enwall1
+{
+	qer_editorimage		textures/enpro/enwall1
+	bumpmap				textures/enpro/enwall1_local
+	diffusemap			textures/enpro/enwall1
+	specularmap			textures/enpro/enwall1_s
+}
+
+
+
+
+//*****************************************************Moved from senetemp.mtr - end*****************************************
+
+
+//Verified good complete by Eutectic - Sep 05-04

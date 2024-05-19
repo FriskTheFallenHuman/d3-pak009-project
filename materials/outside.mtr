@@ -1,0 +1,826 @@
+//================textures/outside shader stats================
+//
+// Total # of shaders : 83
+// Working shaders: 52
+// Broken/CommentedOut shaders: 31
+//================================================================
+
+
+textures/outside/a_redskybuilding1_01
+{	
+	qer_editorimage	        textures/outside/a_redskybuilding1_01.tga
+	bumpmap			textures/outside/a_redskybuilding1_local.tga
+	diffusemap		textures/outside/a_redskybuilding1_d01.tga
+	specularmap		textures/outside/a_redskybuilding1_s01.tga
+        description             "doesn't necessarily need to be used outside"
+
+}
+
+
+textures/outside/a_redskybuilding2_d01
+{	
+	qer_editorimage	        textures/outside/a_redskybuilding2_d01.tga
+	bumpmap			textures/outside/a_redskybuilding2_local.tga
+	diffusemap		textures/outside/a_redskybuilding2_d01.tga
+	specularmap		textures/outside/a_redskybuilding2_s01.tga
+        description             "doesn't necessarily need to be used outside"
+}
+
+//textures/outside/a_redskybuilding3_d01
+//{	
+//	qer_editorimage	        textures/outside/a_redskybuilding3_d01.tga
+//	bumpmap			addnormals( textures/outside/a_redskybuilding3_local.tga, heightmap( textures/outside/a_redskybuilding3_b01.tga, 2 ) )
+//	diffusemap		textures/outside/a_redskybuilding3_d01.tga
+//	specularmap		textures/outside/a_redskybuilding3_s01.tga
+//        description             "doesn't necessarily need to be used outside"
+//}
+
+//textures/outside/a_fencewall1_d01
+//{	
+//	qer_editorimage	        textures/outside/a_fencewall1_d01.tga
+//	bumpmap			textures/outside/a_fencewall1_local.tga
+//	diffusemap		textures/outside/a_fencewall1_d01.tga
+//	specularmap		textures/outside/a_fencewall1_s01.tga
+//        
+//}
+
+textures/outside/a_fencewall1_d02
+{	
+	qer_editorimage	        textures/outside/a_fencewall1_d02.tga
+	bumpmap			textures/outside/a_fencewall1_local.tga
+	diffusemap		textures/outside/a_fencewall1_d02.tga
+	specularmap		textures/outside/a_fencewall1_s02.tga
+        
+}
+
+//textures/outside/a_fencewall2_d01
+//{	
+//	qer_editorimage	        textures/outside/a_fencewall2_d01.tga
+//	bumpmap			textures/outside/a_fencewall2_local.tga
+//	diffusemap		textures/outside/a_fencewall2_d01.tga
+//	specularmap		textures/outside/a_fencewall2_s01.tga
+//        
+//}
+
+textures/outside/a_fencewall3_d01
+{	
+	qer_editorimage	        textures/outside/a_fencewall3_d01.tga
+	bumpmap			textures/outside/a_fencewall3_local.tga
+	diffusemap		textures/outside/a_fencewall3_d01.tga
+	specularmap		textures/outside/a_fencewall3_s01.tga
+        
+}
+
+//textures/outside/a_fencewall4_d01
+//{	
+//	qer_editorimage	        textures/outside/a_fencewall4_d01.tga
+//	bumpmap			textures/outside/a_fencewall4_local.tga
+//	diffusemap		textures/outside/a_fencewall4_d01.tga
+//	specularmap		textures/outside/a_fencewall4_s01.tga
+//        
+//}
+
+
+//*****************************************************Moved from senetemp.mtr - start*****************************************
+
+
+textures/outside/outfactory_new9
+{
+	qer_editorimage		textures/outside/outfactory_new9
+	{
+		blend			bumpmap				
+		map				textures/outside/outfactory_new9_local
+		scale			2,1
+	}
+	diffusemap			textures/outside/outfactory_new9
+	specularmap			textures/outside/outfactory_new9_s
+}
+
+textures/outside/outfactory_new8
+{
+	qer_editorimage		textures/outside/outfactory_new8
+	bumpmap				textures/outside/outfactory_new8_local
+	diffusemap			textures/outside/outfactory_new8
+	specularmap			textures/outside/outfactory_new8_s
+}
+
+textures/outside/outfactory_new7c
+{
+	noshadows
+	qer_editorimage		textures/outside/outfactory_new7c
+	
+
+	bumpmap				addnormals (textures/outside/outfactory_new7c_local, heightmap (textures/outside/outfactory_new7c_bmp.tga,4) ) 
+	diffusemap			textures/outside/outfactory_new7c
+	specularmap			textures/outside/outfactory_new7c_s
+}
+textures/outside/outfactory_new7b
+{
+	qer_editorimage		textures/outside/outfactory_new7b
+	bumpmap				textures/outside/outfactory_new7_local
+	diffusemap			textures/outside/outfactory_new7b
+	specularmap			textures/outside/outfactory_new7_s
+}
+
+//textures/outside/outfactory_new7a
+//{
+//	qer_editorimage		textures/outside/outfactory_new7a
+//	bumpmap				textures/outside/outfactory_new7_local
+//	diffusemap			textures/outside/outfactory_new7a
+//	specularmap			textures/outside/outfactory_new7_s
+//}
+
+textures/outside/outfactory_new7
+{
+	qer_editorimage		textures/outside/outfactory_new7
+	bumpmap				addnormals (textures/outside/outfactory_new7_local, heightmap (textures/outside/outfactory_new7_bmp.tga,4) ) 
+	diffusemap			textures/outside/outfactory_new7
+	specularmap			textures/outside/outfactory_new7_s
+}
+
+
+
+//textures/outside/outfactory_new6a
+//{
+//	qer_editorimage		textures/outside/outfactory_new6a
+//	bumpmap				textures/outside/outfactory_new6_local
+//	diffusemap			textures/outside/outfactory_new6a
+//	specularmap			textures/outside/outfactory_new6_s
+//}
+//
+//textures/outside/outfactory_new6
+//{
+//	qer_editorimage		textures/outside/outfactory_new6
+//	bumpmap				textures/outside/outfactory_new6_local
+//	diffusemap			textures/outside/outfactory_new6
+//	specularmap			textures/outside/outfactory_new6_s
+//}
+
+textures/outside/outfactory_new5b
+{
+	qer_editorimage		textures/outside/outfactory_new5b
+	bumpmap				textures/outside/outfactory_new5_local
+	diffusemap			textures/outside/outfactory_new5b
+	specularmap			textures/outside/outfactory_new5_s
+}
+
+//textures/outside/outfactory_new5a
+//{
+//	qer_editorimage		textures/outside/outfactory_new5a
+//	{
+//		blend			bumpmap	
+//		map				textures/outside/outfactory_new5_local
+//	}
+//	diffusemap			textures/outside/outfactory_new5a
+//	specularmap			textures/outside/outfactory_new5_s
+//}
+
+textures/outside/outfactory_new5
+{
+	qer_editorimage		textures/outside/outfactory_new5
+	{
+		blend			bumpmap	
+	//	map				textures/outside/outfactory_new5_local
+		map				addnormals (textures/outside/outfactory_new5_local, heightmap (textures/outside/outfactory_new5_bmp.tga, 4) )
+	}
+	diffusemap			textures/outside/outfactory_new5
+	specularmap			textures/outside/outfactory_new5_s
+}
+
+//textures/outside/outfactory_new4b2
+//{
+//	qer_editorimage		textures/outside/outfactory_new4b2
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/outside/outfactory_new4_local, heightmap (textures/outside/outfactory_new4_bmp.tga, 4) )
+//	}
+//	diffusemap			textures/outside/outfactory_new4b2
+//	specularmap			textures/outside/outfactory_new4_s
+//}
+//
+//textures/outside/outfactory_new4b
+//{
+//	qer_editorimage		textures/outside/outfactory_new4b
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/outside/outfactory_new4_local, heightmap (textures/outside/outfactory_new4_bmp.tga, 4) )
+//	}
+//	diffusemap			textures/outside/outfactory_new4b
+//	specularmap			textures/outside/outfactory_new4_s
+//}
+//
+//textures/outside/outfactory_new4a2
+//{
+//	qer_editorimage		textures/outside/outfactory_new4a2
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/outside/outfactory_new4_local, heightmap (textures/outside/outfactory_new4_bmp.tga, 4) )
+//	}
+//	diffusemap			textures/outside/outfactory_new4a2
+//	specularmap			textures/outside/outfactory_new4_s
+//}
+//
+//textures/outside/outfactory_new4a
+//{
+//	qer_editorimage		textures/outside/outfactory_new4a
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/outside/outfactory_new4_local, heightmap (textures/outside/outfactory_new4_bmp.tga, 4) )
+//	}
+//	diffusemap			textures/outside/outfactory_new4a
+//	specularmap			textures/outside/outfactory_new4_s
+//}
+
+textures/outside/outfactory_new4
+{
+	qer_editorimage		textures/outside/outfactory_new4
+	{
+		blend			bumpmap				
+		map				addnormals (textures/outside/outfactory_new4_local, heightmap (textures/outside/outfactory_new4_bmp.tga, 4) )
+	}
+	diffusemap			textures/outside/outfactory_new4
+	specularmap			textures/outside/outfactory_new4_s
+}
+
+textures/outside/outfactory_new3
+{
+	qer_editorimage		textures/outside/outfactory_new3
+	bumpmap				textures/outside/outfactory_new3_local
+	diffusemap			textures/outside/outfactory_new3
+	specularmap			textures/outside/outfactory_new3_s
+}
+
+textures/outside/outfactory_new2
+{
+	qer_editorimage		textures/outside/outfactory_new2
+	bumpmap				textures/outside/outfactory_new2_local
+	diffusemap			textures/outside/outfactory_new2
+	specularmap			textures/outside/outfactory_new2_s
+	{
+		map				textures/outside/outfactory_new2
+		maskcolor
+	}
+	{
+		blend			gl_dst_alpha , gl_one
+		cameraCubeMap	env/cloudy  
+		texgen			reflect
+		rgb				.6
+	}
+}
+
+textures/outside/outfactory_new1
+{
+	qer_editorimage		textures/editor/outfactory_new1
+	bumpmap				textures/outside/outfactory_new1_local
+	{
+		blend			diffusemap			
+		map				textures/outside/outfactory_new1
+		scale			0.5,0.5
+		rgb				.7
+	}
+	{
+		blend			specularmap			
+		map				textures/outside/outfactory_new1_s
+		scale			0.5,0.5
+	}
+}
+
+textures/outside/track
+{
+	qer_editorimage		textures/outside/track
+	bumpmap				textures/outside/track_local
+	diffusemap			textures/outside/track
+	specularmap			textures/outside/track_s
+}
+
+textures/outside/tramwaydoor2
+{
+	qer_editorimage		textures/outside/tramwaydoor2
+{
+		blend			bumpmap				
+		map				addnormals ( textures/outside/tramwaydoor2_local, heightmap ( textures/outside/tramwaydoor_bmp, 12) )
+}
+	diffusemap			textures/outside/tramwaydoor2
+	{
+		blend			specularmap			
+		map				textures/outside/tramwaydoor_s
+		rgb				0.2
+	}
+}
+
+textures/outside/tramwaydoor
+{
+	qer_editorimage		textures/outside/tramwaydoor
+{
+		blend			bumpmap				
+		map				addnormals ( textures/outside/tramwaydoor_local, heightmap ( textures/outside/tramwaydoor_s, 6) )
+}
+	diffusemap			textures/outside/tramwaydoor
+	{
+		blend			specularmap			
+		map				textures/outside/tramwaydoor_s
+		rgb				0.2
+	}
+}
+
+//textures/outside/tram9tex
+//{
+//	qer_editorimage		textures/outside/tram9tex
+//	bumpmap				textures/outside/tram9tex_local
+//	diffusemap			textures/outside/tram9tex
+//	{
+//		blend			specularmap			
+//		map				textures/outside/tram9tex
+//		rgb				.5
+//	}
+//}
+
+textures/outside/tram8tex
+{
+	qer_editorimage		textures/outside/tram8tex
+	bumpmap				textures/outside/tram8tex_local
+	diffusemap			textures/outside/tram8tex
+	specularmap			textures/outside/tram8tex_s
+}
+
+textures/outside/tram7tex
+{
+	qer_editorimage		textures/outside/tram7tex
+	bumpmap				textures/outside/tram7tex_local
+	diffusemap			textures/outside/tram7tex
+	specularmap			textures/outside/tram7tex_s
+}
+
+textures/outside/tram6tex
+{
+	qer_editorimage		textures/outside/tram6tex
+	bumpmap				textures/outside/tram6tex_local
+	diffusemap			textures/outside/tram6tex
+	specularmap			textures/outside/tram6tex_s
+}
+
+textures/outside/tram5tex
+{
+	qer_editorimage		textures/outside/tram5tex
+	bumpmap				textures/outside/tram5tex_local
+	diffusemap			textures/outside/tram5tex
+	specularmap			textures/outside/tram5tex_s
+}
+
+textures/outside/tram4tex
+{
+	qer_editorimage		textures/editor/tram4tex
+	bumpmap				textures/outside/tram4tex_local
+	diffusemap			textures/outside/tram4tex
+	{
+		blend			specularmap			
+		map				textures/outside/tram4tex
+		rgb				.2
+	}
+}
+
+textures/outside/tram3tex2
+{
+	qer_editorimage		textures/editor/tram3tex2
+	bumpmap				textures/outside/tram3tex_local
+	diffusemap			textures/outside/tram3tex
+	specularmap			textures/outside/tram3tex_s
+	{
+		blend			add
+		map				textures/decals/ember2_add3
+	}
+}
+
+textures/outside/tram3tex
+{
+	qer_editorimage		textures/outside/tram3tex
+	bumpmap				textures/outside/tram3tex_local
+	diffusemap			textures/outside/tram3tex
+	specularmap			textures/outside/tram3tex_s
+}
+
+textures/outside/tram2tex2
+{
+	qer_editorimage		textures/outside/tram2tex2
+	{
+		blend			bumpmap				
+		map				addnormals ( textures/outside/tram2tex_local, heightmap ( textures/outside/tram2tex_bmp, 4) )
+	}
+	diffusemap			textures/outside/tram2tex2
+	specularmap			textures/outside/tram2tex_s
+}
+
+textures/outside/tram2tex
+{
+	qer_editorimage		textures/outside/tram2tex
+	bumpmap				textures/outside/tram2tex_local
+	diffusemap			textures/outside/tram2tex
+	specularmap			textures/outside/tram2tex_s
+}
+
+textures/outside/tram1tex2
+{
+	qer_editorimage		textures/outside/tram1tex2
+	{
+		blend			bumpmap				
+		map				addnormals ( textures/outside/tram1tex_local, heightmap ( textures/outside/tram1tex_bmp, 4) )
+	}
+	diffusemap			textures/outside/tram1tex2
+	specularmap			textures/outside/tram1tex_s
+}
+
+textures/outside/tram1tex
+{
+	qer_editorimage		textures/outside/tram1tex
+	bumpmap				textures/outside/tram1tex_local
+	diffusemap			textures/outside/tram1tex
+	specularmap			textures/outside/tram1tex_s
+}
+
+textures/outside/outfactory19
+{
+	qer_editorimage		textures/outside/outfactory19_d
+	bumpmap				addnormals (textures/outside/outfactory19_local, heightmap (textures/outside/outfactory19_d , 2 ) )
+	diffusemap			textures/outside/outfactory19_d
+	//specularmap			textures/outside/outfactory15_s.tga
+}
+
+textures/outside/outfactory18
+{
+	qer_editorimage		textures/outside/outfactory18_d
+	bumpmap				addnormals (textures/outside/outfactory18_local, heightmap (textures/outside/outfactory18_d , 2 ) )
+	diffusemap			textures/outside/outfactory18_d
+	specularmap			textures/outside/outfactory14_s.tga
+}
+
+textures/outside/outfactory17
+{
+	qer_editorimage		textures/outside/outfactory17_d
+	bumpmap				addnormals (textures/outside/outfactory17_local, heightmap (textures/outside/outfactory17_d , 2 ) )
+	diffusemap			textures/outside/outfactory17_d
+}
+
+textures/outside/outfactory16
+{
+	qer_editorimage		textures/outside/outfactory16_d
+	bumpmap				addnormals (textures/outside/outfactory16_local, heightmap (textures/outside/outfactory16_d , 2 ) )
+	diffusemap			textures/outside/outfactory16_d
+	//specularmap			textures/outside/outfactory16_s
+}
+
+textures/outside/outfactory15a
+{
+	qer_editorimage		textures/outside/outfactory15a_d
+	bumpmap				addnormals (textures/outside/outfactory15_local, heightmap (textures/outside/outfactory15a_d , 2 ) )
+	diffusemap			textures/outside/outfactory15a_d
+	specularmap			textures/outside/outfactory15_s
+}
+
+textures/outside/outfactory15
+{
+	qer_editorimage		textures/outside/outfactory15_d
+	bumpmap				addnormals (textures/outside/outfactory15_local, heightmap (textures/outside/outfactory15_d , 2 ) )
+	diffusemap			textures/outside/outfactory15_d
+	specularmap			textures/outside/outfactory15_s
+}
+
+textures/outside/outfactory14
+{
+	qer_editorimage		textures/outside/outfactory14_d
+	bumpmap				addnormals (textures/outside/outfactory14_local, heightmap (textures/outside/outfactory14_d , 3 ) )
+	diffusemap			textures/outside/outfactory14_d
+	specularmap			textures/outside/outfactory14_s
+}
+
+textures/outside/outfactory13
+{
+	qer_editorimage		textures/editor/outfactory13
+	bumpmap				addnormals (textures/outside/outfactory13_local, heightmap (textures/outside/outfactory13_d , 3 ) )
+	diffusemap			textures/outside/outfactory13_d
+	specularmap			textures/outside/outpipe1_s
+}
+
+textures/outside/outfactory12
+{
+	qer_editorimage		textures/outside/outfactory12_d
+	bumpmap				addnormals (textures/outside/outfactory12_local, heightmap (textures/outside/outfactory12_d , 3 ) )
+	diffusemap			textures/outside/outfactory12_d
+	specularmap			textures/outside/outpipe1_s
+}
+
+textures/outside/outfactory11
+{
+	qer_editorimage		textures/outside/outfactory11_d
+	bumpmap				addnormals (textures/outside/outfactory11_local, heightmap (textures/outside/outfactory11_d , 3 ) )
+	diffusemap			textures/outside/outfactory11_d
+	specularmap			textures/outside/outfactory11_s
+}
+
+textures/outside/outpipe1
+{
+	qer_editorimage		textures/outside/outpipe1
+	bumpmap				addnormals (textures/outside/outpipe1_local, heightmap (textures/outside/outpipe1_s , 1 ) )
+	diffusemap			textures/outside/outpipe1
+	specularmap			textures/outside/outpipe1_s
+}
+
+//textures/outside/outbuildings14
+//{
+//	qer_editorimage		textures/outside/outbuildings14.ga
+//	bumpmap			textures/outside/outbuildings14_local.tga
+//	diffusemap		textures/outside/outbuildings14.tga
+////	specularmap		textures/outside/outbuildings14_s.tga
+//	{
+//		blend		add
+//		map		textures/outside/outbuildings14_add.tga
+//		rgb		5
+//	}
+//}
+//
+//textures/outside/outbuildings13
+//{
+//	qer_editorimage		textures/outside/outbuildings13.ga
+//	bumpmap			textures/outside/outbuildings13_local.tga
+//	diffusemap		textures/outside/outbuildings13.tga
+////	specularmap		textures/outside/outbuildings13_s.tga
+//}
+//
+//textures/outside/outbuildings12
+//{
+//	qer_editorimage		textures/outside/outbuildings12.ga
+//	bumpmap			textures/outside/outbuildings12_local.tga
+//	diffusemap		textures/outside/outbuildings12.tga
+////	specularmap		textures/outside/outbuildings12_s.tga
+//}
+//
+//textures/outside/outbuildings11
+//{
+//	qer_editorimage		textures/outside/outbuildings11.ga
+//	bumpmap			textures/outside/outbuildings11_local.tga
+//	diffusemap		textures/outside/outbuildings11.tga
+////	specularmap		textures/outside/outbuildings11_s.tga
+//}
+
+//textures/outside/outbuildings10
+//{
+//	qer_editorimage		textures/outside/outbuildings10.ga
+//	bumpmap			textures/outside/outbuildings10_local.tga
+//	diffusemap		textures/outside/outbuildings10.tga
+////	specularmap		textures/outside/outbuildings10_s.tga
+//	{
+//		blend		add
+//		map		textures/outside/outbuildings10_add.tga
+//		rgb		5
+//	}
+//}
+
+//textures/outside/outbuildings9
+//{
+//	qer_editorimage		textures/outside/outbuildings9.tga
+//	bumpmap			textures/outside/outbuildings9_local.tga
+//	diffusemap		textures/outside/outbuildings9.tga
+//	specularmap		textures/outside/outbuildings9_s.tga
+//	{
+//		blend		add
+//		map		textures/outside/outbuildings9_add.tga
+//		rgb		5
+//	}
+//}
+//
+//textures/outside/outbuildings8
+//{
+//
+//	qer_editorimage		textures/outside/outbuildings8.tga
+//	bumpmap			textures/outside/outbuildings8_local.tga
+//	diffusemap		textures/outside/outbuildings8.tga
+////	specularmap		textures/outside/outbuildings8_s.tga
+//}
+//
+//textures/outside/outbuildings7
+//{
+//	noshadows
+//	qer_editorimage		textures/outside/outbuildings7.tga
+//	bumpmap			textures/outside/outbuildings7_local.tga
+//	{
+//		blend		diffusemap
+//		map		textures/outside/outbuildings7.tga
+//		alphatest	.5
+//	}
+////	specularmap		textures/outside/outbuildings7_s.tga
+//}
+
+textures/outside/outbuildings6
+{
+	qer_editorimage		textures/outside/outbuildings6.tga
+	bumpmap			textures/outside/outbuildings6_local.tga
+	diffusemap		textures/outside/outbuildings6.tga
+	specularmap		textures/outside/outbuildings6_s.tga
+}
+
+//textures/outside/outbuildings5
+//{
+//	qer_editorimage		textures/outside/outbuildings5.tga
+//	bumpmap			textures/outside/outbuildings5_local.tga
+//	diffusemap		textures/outside/outbuildings5.tga
+////	specularmap		textures/outside/outbuildings5_s.tga
+//}
+//
+//textures/outside/outbuildings4
+//{
+//	noshadows
+//	qer_editorimage		textures/outside/outbuildings4.tga
+//	bumpmap			textures/outside/outfactory5_local.tga
+//	{
+//		blend		diffusemap
+//		map		textures/outside/outbuildings4.tga
+//		alphatest	.2
+//	}
+////	specularmap		textures/outside/outbuildings3_s.tga
+//}
+//
+//textures/outside/outbuildings3
+//{
+//	qer_editorimage		textures/outside/outbuildings3.tga
+//	bumpmap			textures/outside/outfactory4_local.tga
+//	diffusemap		textures/outside/outbuildings3.tga
+////	specularmap		textures/outside/outbuildings3_s.tga
+//	{
+//		blend		add
+//		map		textures/outside/outbuildings3_add.tga
+//		rgb		5
+//	}
+//}
+//
+//textures/outside/outbuildings2
+//{
+//	qer_editorimage		textures/outside/outbuildings2.tga
+//	bumpmap			textures/outside/outbuildings2_local.tga
+//	diffusemap		textures/outside/outbuildings2.tga
+////	specularmap		textures/outside/outbuildings2_s.tga
+//}
+//
+//textures/outside/outbuildings1
+//{
+//	qer_editorimage		textures/outside/outbuildings1.tga
+//	bumpmap			textures/outside/outbuildings1_local.tga
+//	diffusemap		textures/outside/outbuildings1_d.tga
+////	specularmap		textures/outside/outbuildings1_s.tga
+//}
+
+textures/outside/outerpipe
+{	
+	qer_editorimage		textures/outside/outerpipe_d.tga
+	bumpmap			addnormals (textures/outside/outerpipe_local.tga , heightmap (textures/outside/outerpipe_bmp.tga , 4))
+	diffusemap		textures/outside/outerpipe_d.tga
+}
+
+textures/outside/outfactory1
+{	
+	qer_editorimage	textures/outside/outfactory1_d.tga
+	bumpmap			addnormals (textures/outside/outfactory1_local.tga, heightmap (textures/outside/outfactory1_bmp.tga, 4))
+	diffusemap		textures/outside/outfactory1_d.tga
+}
+
+textures/outside/outfactory2
+{	
+	qer_editorimage	textures/editor/outfactory2.tga
+//	twosided
+//	noshadows
+	bumpmap			textures/outside/outfactory2_local.tga
+	{
+		blend		diffusemap
+		map			textures/outside/outfactory2_d.tga
+		alphatest	0.35
+	}
+}
+
+textures/outside/outfactory3
+{	
+	qer_editorimage	textures/editor/outfactory3.tga
+//	twosided
+//	noshadows
+	bumpmap			textures/outside/outfactory3_local.tga
+	{
+		blend		diffusemap
+		map			textures/outside/outfactory3_d.tga
+		alphatest	0.35
+	}
+}
+
+textures/outside/outfactory4
+{	
+	qer_editorimage	textures/outside/outfactory4_d.tga
+	bumpmap			textures/outside/outfactory4_local.tga
+	diffusemap		textures/outside/outfactory4_d.tga
+}
+
+//textures/outside/outfactory5
+//{	
+//	qer_editorimage	textures/outside/outfactory5.tga
+//	twosided
+//	noshadows
+//	bumpmap			textures/outside/outfactory5_local.tga
+//	{
+//		blend		diffusemap
+//		map			textures/outside/outfactory5_d.tga
+//		alphatest	0.5
+//	}
+//}
+//
+//textures/outside/outfactory6
+//{	
+//	qer_editorimage	textures/outside/outfactory6.tga
+//	bumpmap			textures/outside/outfactory6_local.tga
+//	diffusemap		textures/outside/outfactory6_d.tga
+//}
+
+textures/outside/outfactory7
+{	
+	qer_editorimage	textures/outside/outfactory7_d.tga
+	bumpmap			addnormals (textures/outside/outfactory7_local.tga, heightmap (textures/outside/outfactory7_bmp.tga,4))
+	diffusemap		textures/outside/outfactory7_d.tga
+}
+
+textures/outside/outfactory8
+{	
+	qer_editorimage	textures/outside/outfactory8_d.tga
+	bumpmap			addnormals (textures/outside/outfactory8_local.tga, heightmap (textures/outside/outfactory8_bmp.tga,4))
+	diffusemap		textures/outside/outfactory8_d.tga
+}
+
+textures/outside/outfactory9
+{	
+	qer_editorimage	textures/outside/outfactory9_d.tga
+	bumpmap			textures/outside/outfactory9_local.tga
+	diffusemap		textures/outside/outfactory9_d.tga
+}
+
+textures/outside/outfactory10
+{	
+	qer_editorimage	textures/outside/outfactory10_d.tga
+	bumpmap			textures/outside/outfactory10_local.tga
+	diffusemap		textures/outside/outfactory10_d.tga
+	specularmap		textures/outside/outfactory10_s.tga
+}
+
+//textures/outside/redskybuilding1
+//{	
+//	qer_editorimage	textures/outside/redskybuilding1.tga
+//	bumpmap			textures/outside/redskybuilding1_local.tga
+//	diffusemap		textures/outside/redskybuilding1_d.tga
+//	specularmap		textures/outside/redskybuilding1_s.tga
+//}
+
+textures/outside/redskyroadwall2
+{	
+	qer_editorimage	textures/outside/redskyroadwall2_d.tga
+	{
+		blend		bumpmap
+		map			addnormals ( textures/outside/redskyroadwall2_local.tga, heightmap (textures/outside/redskyroadwall2_bmp.tga, 4) )
+	}
+	diffusemap		textures/outside/redskyroadwall2_d.tga
+	specularmap		textures/outside/redskyroadwall2_s.tga
+}
+
+textures/outside/redskyroadwall
+{	
+	qer_editorimage	textures/outside/redskyroadwall_d.tga
+	{
+		blend		bumpmap
+		map			addnormals ( textures/outside/redskyroadwall_local.tga, heightmap (textures/outside/redskyroadwall_bmp.tga, 4) )
+	}
+	diffusemap		textures/outside/redskyroadwall_d.tga
+	specularmap		textures/outside/redskyroadwall_s.tga
+}
+
+
+
+
+//*****************************************************Moved from senetemp.mtr - end*****************************************
+
+
+//*****************************************************Moved from stevetest.mtr - start*****************************************
+
+
+//textures/outside/fencewall1
+//{
+//        qer_editorimage		textures/outside/fencewall1.tga	
+//        bumpmap	        textures/outside/fencewall1_local.tga
+//	diffusemap	textures/outside/fencewall1_d.tga
+//	specularmap	textures/outside/fencewall1_s.tga
+//        
+//}
+//
+//textures/outside/fencewall2
+//{
+//        qer_editorimage		textures/outside/fencewall2.tga	
+//        bumpmap	        textures/outside/fencewall2_local.tga
+//	diffusemap	textures/outside/fencewall2_d.tga
+//	specularmap	textures/outside/fencewall2_s.tga
+//        
+//}
+
+
+//*****************************************************Moved from stevetest.mtr - end*****************************************
+
+//Verified good complete by Eutectic - Sep 12-04

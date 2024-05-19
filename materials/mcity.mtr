@@ -1,0 +1,1759 @@
+//================textures/mcity shader stats================
+//
+// Total # of shaders : 191
+// Working shaders: 106
+// Broken/CommentedOut shaders: 85
+//================================================================
+
+textures/mcity/mcity3_grn
+{
+	qer_editorimage			textures/editor/mcity3_grn.tga
+	bumpmap				addnormals (textures/mcity/mcity3_local.tga, heightmap (textures/mcity/mcity3_bmp.tga, 4 ) )
+	diffusemap			textures/mcity/mcity3_grn_d.tga
+	specularmap			textures/mcity/mcity3_grn_s.tga
+	{
+		blend			add
+		map			textures/mcity/mcity3_add.tga
+		rgb			3
+	}
+}
+
+textures/mcity/mcityc13blu
+{
+		qer_editorimage		textures/mcity/mcityc13blu
+		bumpmap			textures/mcity/mcityc13_local
+		diffusemap		textures/mcity/mcityc13blu
+		specularmap		textures/mcity/mcityc1_s
+}
+
+
+
+//*****************************************************Moved from mp_lights.mtr - start*****************************************
+
+
+//===============================================================================
+// Materials below are used in D3DM3 ( Fragchamber )
+//===============================================================================
+
+textures/mcity/mcityc29_global_d3dm3
+{
+	description 		"uses global parms"
+	qer_editorimage		textures/mcity/mcityc29
+	bumpmap			textures/mcity/mcityc29_local
+	{
+		blend		diffusemap		
+		map		textures/mcity/mcityc29_d
+		alphatest	.5
+	}
+	specularmap		textures/mcity/mcityc29_s
+	{
+		blend		add
+		map		textures/mcity/mcityc29_add
+		red		parm0 * global0
+		green		parm1 * global0
+		blue		parm2 * global0
+	}
+}
+
+//===============================================================================
+
+
+//*****************************************************Moved from mp_lights.mtr - end*****************************************
+
+
+//*****************************************************Moved from phook.mtr - start*****************************************
+
+
+textures/mcity/mcitya12_2_break
+{
+	qer_editorimage	textures/mcity/mcitya12_2
+
+	{ if( parm7 == 0 )
+		blend bumpmap
+		map textures/mcity/mcitya12_local
+	}
+	{ if( parm7 == 0 )
+		blend diffusemap
+		map textures/mcity/mcitya12_d
+	}
+	{ if( parm7 == 0 )
+		blend specularmap
+		map textures/mcity/mcitya12_s
+	}
+	{ if( parm7 == 0 )
+		blend gl_one, gl_one
+		map textures/mcity/mcitya12_2_add
+		red 		parm0 * 2
+		green 		parm1 * 2
+		blue 		parm2 * 2
+	}
+
+	{ if( parm7 != 0 )
+		blend bumpmap
+		map textures/mcity/mcitya12_local
+	}
+	{ if( parm7 != 0 )
+		blend diffusemap
+		map textures/mcity/mcitya12_broke_d
+	}
+	{ if( parm7 != 0 )
+		blend specularmap
+		map textures/mcity/mcitya12_broke_s
+	}
+	{ if( parm7 != 0 )
+		blend gl_one, gl_one
+		map textures/mcity/mcitya12_broke_add
+		red 		parm0 * 2
+		green 		parm1 * 2
+		blue 		parm2 * 2
+	}
+}
+
+
+
+//*****************************************************Moved from phook.mtr - end*****************************************
+
+
+//*****************************************************Moved from senetemp.mtr - start*****************************************
+
+
+textures/mcity/mchangar15
+{
+	qer_editorimage		textures/mcity/mchangar15
+	bumpmap				textures/mcity/mcityb22_local
+	diffusemap			textures/mcity/mchangar15
+	specularmap			textures/mcity/mchangar15_s
+}
+
+textures/mcity/mchangar14
+{
+	qer_editorimage		textures/mcity/mchangar14
+	bumpmap				textures/mcity/mcityb10_local
+	diffusemap			textures/mcity/mchangar14
+	specularmap			textures/mcity/mchangar14_s
+}
+
+//textures/mcity/mchangar13
+//{
+//	qer_editorimage		textures/mcity/mchangar13
+//	bumpmap				textures/mcity/mchangar13_local
+//	diffusemap			textures/mcity/mchangar13
+//	specularmap			textures/mcity/mchangar13_s
+//	{
+//		blend			add
+//		map				textures/mcity/mchangar13_add
+//	}
+//}
+
+textures/mcity/mchangar12_skysandnew
+{
+	qer_editorimage	textures/mcity/mchangar12_skysandnew
+	{
+		blend 		bumpmap
+		map			textures/mcity/mchangar12_local
+		scale		2,2
+	}
+	{
+		blend 		diffusemap
+		map			textures/mcity/mchangar12
+		scale		2,2
+		vertexColor
+	}
+	{
+		blend		specularmap
+		map			textures/mcity/mchangar12_s
+		scale		2,2
+		vertexColor
+	}
+	{
+		blend		bumpmap
+		map			addnormals (textures/rock/skysand1_local.tga, heightmap (textures/rock/skysand2_bmp.tga, 4))
+		//scale		.5, .5
+	}
+	{
+		blend		diffusemap
+		map			textures/rock/skysand2.tga
+		//scale		.5, .5
+		inverseVertexColor
+	}
+}
+
+textures/mcity/mchangar12_scale //this is for d3dm4 where it blends to sand
+{
+	qer_editorimage		textures/editor/mchangar12_scale
+	{
+		blend			bumpmap				
+		map				textures/mcity/mchangar12_local
+		scale			2,2
+	}
+	{
+		blend			diffusemap			
+		map				textures/mcity/mchangar12
+		scale			2,2
+	}
+	{
+		blend			specularmap			
+		map				textures/mcity/mchangar12_s
+		scale			2,2
+	}
+}
+
+textures/mcity/mchangar12
+{
+	qer_editorimage		textures/mcity/mchangar12
+	bumpmap				textures/mcity/mchangar12_local
+	diffusemap			textures/mcity/mchangar12
+	specularmap			textures/mcity/mchangar12_s
+}
+
+textures/mcity/mchangar11
+{
+	qer_editorimage		textures/mcity/mchangar11
+	bumpmap				textures/mcity/mchangar10_local
+	diffusemap			textures/mcity/mchangar11
+	specularmap			textures/mcity/mchangar10_s
+}
+
+textures/mcity/mchangar10
+{
+	qer_editorimage		textures/mcity/mchangar10
+	bumpmap				textures/mcity/mchangar10_local
+	diffusemap			textures/mcity/mchangar10
+	specularmap			textures/mcity/mchangar10_s
+}
+
+textures/mcity/mchangar9
+{
+	qer_editorimage		textures/mcity/mchangar9
+	bumpmap				textures/mcity/mchangar9_local
+	diffusemap			textures/mcity/mchangar9
+	specularmap			textures/mcity/mchangar9_s
+}
+
+textures/mcity/mchangar8
+{
+	qer_editorimage		textures/mcity/mchangar8
+	bumpmap				textures/mcity/mchangar8_local
+	diffusemap			textures/mcity/mchangar8
+	specularmap			textures/mcity/mchangar8_s
+}
+
+textures/mcity/mchangar7a
+{
+	qer_editorimage		textures/mcity/mchangar7a
+	bumpmap				textures/mcity/mchangar7_local
+	diffusemap			textures/mcity/mchangar7a
+	specularmap			textures/mcity/mchangar7_s
+}
+
+textures/mcity/mchangar7
+{
+	qer_editorimage		textures/mcity/mchangar7
+	bumpmap				textures/mcity/mchangar7_local
+	diffusemap			textures/mcity/mchangar7
+	specularmap			textures/mcity/mchangar7_s
+}
+
+textures/mcity/mchangar6
+{
+	qer_editorimage		textures/mcity/mchangar6
+	bumpmap				textures/mcity/mcityb18_local
+	diffusemap			textures/mcity/mchangar6
+	specularmap			textures/mcity/mchangar6_s
+}
+
+textures/mcity/mchangar5
+{
+	qer_editorimage		textures/mcity/mchangar5
+	bumpmap				textures/mcity/mchangar5_local
+	diffusemap			textures/mcity/mchangar5
+	specularmap			textures/mcity/mchangar5_s
+}
+
+textures/mcity/mchangar4
+{
+	qer_editorimage		textures/mcity/mchangar4
+	bumpmap				textures/mcity/mchangar4_local
+	diffusemap			textures/mcity/mchangar4
+	specularmap			textures/mcity/mchangar4_s
+}
+
+textures/mcity/mchangar3
+{
+	qer_editorimage		textures/mcity/mchangar3
+	bumpmap				textures/mcity/mchangar3_local
+	diffusemap			textures/mcity/mchangar3_d
+	specularmap			textures/mcity/mchangar3_s
+}
+
+textures/mcity/mchangar2
+{
+	qer_editorimage		textures/mcity/mchangar2
+	diffusemap			textures/mcity/mchangar2
+	specularmap			textures/mcity/mchangar2_s
+}
+
+textures/mcity/mchangar2ns
+
+{
+	qer_editorimage		textures/mcity/mchangar2
+	noselfshadow
+	diffusemap			textures/mcity/mchangar2
+	specularmap			textures/mcity/mchangar2_s
+}
+
+
+textures/mcity/mchangar1
+{
+	qer_editorimage		textures/mcity/mchangar1
+	bumpmap				textures/mcity/mcityb11_local
+	diffusemap			textures/mcity/mchangar1
+	specularmap			textures/mcity/mchangar1_s
+}
+
+textures/mcity/stelabwafer3
+{
+	qer_editorimage		textures/mcity/stelabwafer3
+	bumpmap				textures/base_wall/stelabwafer3_local
+	diffusemap			textures/mcity/stelabwafer3
+	specularmap			textures/mcity/stelabwafer3_s
+}
+
+textures/mcity/stelabwafer2
+{
+	qer_editorimage		textures/mcity/stelabwafer2
+	bumpmap				textures/base_wall/stelabwafer2_local
+	diffusemap			textures/mcity/stelabwafer2
+	specularmap			textures/mcity/stelabwafer2_s
+}
+
+textures/mcity/stelabwafer1
+{
+	qer_editorimage		textures/mcity/stelabwafer1
+	bumpmap				textures/base_wall/gholabwafer1_local
+	diffusemap			textures/mcity/stelabwafer1
+	specularmap			textures/mcity/stelabwafer1_s
+}
+
+textures/mcity/minwall13
+{
+	qer_editorimage		textures/mcity/minwall13
+	bumpmap				textures/base_wall/minwall13_local
+	diffusemap			textures/mcity/minwall13
+	specularmap			textures/mcity/minwall13_s
+}
+
+textures/mcity/minwall11
+{
+	qer_editorimage		textures/mcity/minwall11
+	bumpmap				textures/base_wall/minwall11_local
+	diffusemap			textures/mcity/minwall11
+	specularmap			textures/mcity/minwall11_s
+}
+
+textures/mcity/minwall9
+{
+	qer_editorimage		textures/mcity/minwall9
+	bumpmap				textures/base_wall/minwall9_local
+	diffusemap			textures/mcity/minwall9
+	specularmap			textures/mcity/minwall9_s
+}
+
+textures/mcity/minwall8
+{
+	qer_editorimage		textures/mcity/minwall8
+	bumpmap				textures/base_wall/minwall8_local
+	diffusemap			textures/mcity/minwall8
+	specularmap			textures/mcity/minwall8_s
+}
+
+textures/mcity/minwall4
+{
+	qer_editorimage		textures/mcity/minwall4
+	bumpmap				textures/base_wall/ghowall4_local
+	diffusemap			textures/mcity/minwall4
+	specularmap			textures/mcity/minwall4_s
+}
+
+textures/mcity/minwall2
+{
+	qer_editorimage		textures/mcity/minwall2
+	bumpmap				textures/base_wall/ghowall2_local
+	diffusemap			textures/mcity/minwall2
+	specularmap			textures/mcity/minwall2_s
+}
+
+textures/mcity/minwall1
+{
+	qer_editorimage		textures/mcity/minwall1
+	bumpmap				textures/base_wall/ghowall1_local
+	diffusemap			textures/mcity/minwall1
+	specularmap			textures/mcity/minwall1_s
+}
+
+textures/mcity/stewall4
+{
+	qer_editorimage		textures/mcity/stewall4
+	bumpmap				textures/base_wall/stewall4_local
+	diffusemap			textures/mcity/stewall4
+	specularmap			textures/mcity/stewall4_s
+}
+
+textures/mcity/stewall3b
+{
+	qer_editorimage		textures/mcity/stewall3b
+	bumpmap				textures/base_wall/stewall3b_local
+	diffusemap			textures/mcity/stewall3b
+	specularmap			textures/mcity/stewall3b_s2
+}
+
+textures/mcity/stewall2a
+{
+	qer_editorimage		textures/mcity/stewall2a
+	bumpmap				textures/base_wall/stewall2a_local
+	diffusemap			textures/mcity/stewall2a
+	specularmap			textures/mcity/stewall2a_s
+}
+
+//textures/mcity/stewall1a
+//{
+//	qer_editorimage		textures/mcity/stewall1a
+//	bumpmap				textures/base_wall/stewall1_local
+//	diffusemap			textures/mcity/stewall1a
+//	specularmap			textures/mcity/stewall3b_s
+//}
+
+textures/mcity/stewall1
+{
+	qer_editorimage		textures/mcity/stewall1
+	bumpmap				textures/base_wall/stewall1_local
+	diffusemap			textures/mcity/stewall1
+	specularmap			textures/mcity/stewall3b_s
+}
+
+// ADDED SPECULAR
+textures/mcity/steribwall1
+{
+	qer_editorimage		textures/mcity/steribwall1
+	bumpmap				textures/base_wall/steribwall1_local
+	diffusemap			textures/mcity/steribwall1
+	specularmap			textures/base_wall/steribwall1_s
+}
+
+// ADDED SPECULAR
+textures/mcity/stecolumn2
+{
+	qer_editorimage		textures/mcity/stecolumn2
+	bumpmap				textures/base_wall/stecolumn2_local
+	diffusemap			textures/mcity/stecolumn2
+	//specularmap			textures/mcity/stewall3b_s
+	specularmap			textures/mcity/stecolumn2kc_s
+}
+
+// ADDED SPECULAR
+textures/mcity/stecolumn1a
+{
+	qer_editorimage		textures/mcity/stecolumn1a
+	bumpmap				textures/base_wall/stecolumn1_local
+	diffusemap			textures/mcity/stecolumn1a
+	//specularmap			textures/mcity/stewall3b_s
+	specularmap			textures/mcity/stecolumn1akc_s
+}
+
+textures/mcity/stecolumn1
+{
+	qer_editorimage		textures/mcity/stecolumn1
+	bumpmap				textures/base_wall/stecolumn1_local
+	diffusemap			textures/mcity/stecolumn1
+	specularmap			textures/mcity/stewall3b_s
+}
+
+//textures/mcity/mchelev
+//{
+//		qer_editorimage	textures/mcity/mchelev
+//		bumpmap			textures/mcity/mchelev_local
+//		diffusemap		textures/mcity/mchelev
+//	//	specularmap		textures/mcity/mcityc1_s
+//}
+
+//textures/mcity/mcityc34
+//{
+//		qer_editorimage	textures/mcity/mcityc34
+//		noshadows
+//		bumpmap			textures/mcity/mcityc34_local
+//		{
+//			blend		diffusemap		
+//			map			textures/mcity/mcityc34_d
+//			alphatest	.5
+//		}
+//		specularmap		textures/mcity/mcityc34_s
+//		{
+//			blend		add
+//			map			textures/mcity/mcityc34_add
+//			colored
+//		}
+//}
+//
+//textures/mcity/mcityc33
+//{
+//		qer_editorimage	textures/mcity/mcityc33
+//		noshadows
+//		bumpmap			textures/mcity/mcityc33_local
+//		{
+//			blend		diffusemap		
+//			map			textures/mcity/mcityc33_d
+//			alphatest	.5
+//		}
+//		specularmap		textures/mcity/mcityc33_s
+//		{
+//			blend		add
+//			map			textures/mcity/mcityc33_add
+//			colored
+//		}
+//
+//}
+
+textures/mcity/mcityc32
+{
+		qer_editorimage	textures/mcity/mcityc32
+		bumpmap			textures/mcity/mcityc32_local
+		diffusemap		textures/mcity/mcityc32
+		specularmap		textures/mcity/mcityc32_s
+}
+
+textures/mcity/mcityc31a
+{
+		qer_editorimage	textures/mcity/mcityc31a
+		bumpmap			textures/mcity/mcityc31_local
+		diffusemap		textures/mcity/mcityc31a
+		specularmap		textures/mcity/mcityc31_s
+}
+
+textures/mcity/mcityc31
+{
+		qer_editorimage	textures/mcity/mcityc31
+		bumpmap			textures/mcity/mcityc31_local
+		diffusemap		textures/mcity/mcityc31
+		specularmap		textures/mcity/mcityc31_s
+}
+
+textures/mcity/mcityc30b
+{
+		qer_editorimage	textures/mcity/mcityc30b
+		bumpmap			textures/base_wall/snpanel22_local
+		diffusemap		textures/mcity/mcityc30b
+		specularmap		textures/mcity/mcityc30_s
+}
+
+textures/mcity/mcityc30a
+{
+		qer_editorimage	textures/mcity/mcityc30a
+		bumpmap			textures/base_wall/snpanel22_local
+		diffusemap		textures/mcity/mcityc30a
+		specularmap		textures/mcity/mcityc30_s
+}
+
+//textures/mcity/mcityc30
+//{
+//		qer_editorimage	textures/mcity/mcityc30
+//		bumpmap			textures/base_wall/snpanel22_local
+//		diffusemap		textures/mcity/mcityc30
+//		specularmap		textures/mcity/mcityc30_s
+//}
+
+textures/mcity/mcityc29rusty
+{
+		qer_editorimage	textures/mcity/mcityc29
+		bumpmap			textures/mcity/mcityc29_local
+		bumpmap		addnormals( textures/mcity/mcityc29_local.tga  , heightmap( textures/mcity/mcityc29rusty_b.tga, 2 ) )
+		{
+			blend		diffusemap		
+			map			textures/mcity/mcityc29rusty_d
+			alphatest	.5
+		}
+		specularmap		textures/mcity/mcityc29rusty_s
+		{
+			blend		add
+			map			textures/mcity/mcityc29rusty_add
+			colored
+		}
+}
+
+textures/mcity/mcityc29
+{
+		qer_editorimage	textures/mcity/mcityc29
+		bumpmap			textures/mcity/mcityc29_local
+		{
+			blend		diffusemap		
+			map			textures/mcity/mcityc29_d
+			alphatest	.5
+		}
+		specularmap		textures/mcity/mcityc29_s
+		{
+			blend		add
+			map			textures/mcity/mcityc29_add
+			colored
+		}
+}
+
+textures/mcity/mcityc28
+{
+		qer_editorimage	textures/mcity/mcityc28
+		bumpmap			textures/mcity/mcityc28_local
+		diffusemap		textures/mcity/mcityc28
+		specularmap		textures/mcity/mcityc28_s
+}
+
+textures/mcity/mcityc27b
+{
+		qer_editorimage	textures/mcity/mcityc27b
+		bumpmap			textures/mcity/mcityc27b_local
+		diffusemap		textures/mcity/mcityc27b
+		specularmap		textures/mcity/mcityc27b_s
+}
+
+textures/mcity/mcityc27a
+{
+		qer_editorimage	textures/mcity/mcityc27a
+		bumpmap			textures/mcity/mcityc27a_local
+		diffusemap		textures/mcity/mcityc27a
+		specularmap		textures/mcity/mcityc27a_s
+}
+
+textures/mcity/mcityc27
+{
+		qer_editorimage	textures/mcity/mcityc27
+		bumpmap			textures/mcity/mcityc27_local
+		diffusemap		textures/mcity/mcityc27
+		specularmap		textures/mcity/mcityc27_s
+}
+
+textures/mcity/mcityc26
+{
+		qer_editorimage	textures/mcity/mcityc26
+		bumpmap			textures/mcity/mcityc26_local
+		diffusemap		textures/mcity/mcityc26
+		specularmap		textures/mcity/mcityc1_s
+}
+
+// ADDED SPECULAR
+textures/mcity/mcityc25
+{
+		qer_editorimage	textures/editor/mcityc25
+		bumpmap			textures/mcity/mcityc25_local
+		diffusemap		textures/mcity/mcityc25
+		//specularmap		textures/mcity/mcityc1_s
+		specularmap		textures/mcity/mcityc25kc_s
+}
+
+textures/mcity/mcityc24
+{
+		qer_editorimage	textures/mcity/mcityc24
+		bumpmap			textures/mcity/mcityc24_local
+		diffusemap		textures/mcity/mcityc24
+		specularmap		textures/mcity/mcityc1_s
+}
+
+//textures/mcity/mcityc23c
+//{
+//		qer_editorimage	textures/mcity/mcityc23c
+//		bumpmap			textures/mcity/mcityc23_local
+//		diffusemap		textures/mcity/mcityc23c
+//		specularmap		textures/mcity/mcityc23_s
+//}
+//
+//textures/mcity/mcityc23b
+//{
+//		qer_editorimage	textures/mcity/mcityc23b
+//		bumpmap			textures/mcity/mcityc23_local
+//		diffusemap		textures/mcity/mcityc23b
+//		specularmap		textures/mcity/mcityc23_s
+//}
+//
+//textures/mcity/mcityc23a
+//{
+//		qer_editorimage	textures/mcity/mcityc23a
+//		bumpmap			textures/mcity/mcityc23_local
+//		diffusemap		textures/mcity/mcityc23a
+//		specularmap		textures/mcity/mcityc23_s
+//}
+//
+//textures/mcity/mcityc23
+//{
+//		qer_editorimage	textures/mcity/mcityc23
+//		bumpmap			textures/mcity/mcityc23_local
+//		diffusemap		textures/mcity/mcityc23
+//		specularmap		textures/mcity/mcityc23_s
+//}
+
+textures/mcity/mcityc22
+{
+		qer_editorimage	textures/mcity/mcityc22
+		bumpmap			textures/mcity/mcityc22_local
+		diffusemap		textures/mcity/mcityc22
+		specularmap		textures/mcity/mcityc22_s
+}
+
+//textures/mcity/mcityc21
+//{
+//		qer_editorimage	textures/mcity/mcityc21
+//		bumpmap			textures/mcity/mcityc21_local
+//		diffusemap		textures/mcity/mcityc21
+//		specularmap		textures/mcity/mcityc1_s
+//}
+//
+//textures/mcity/mcityc20
+//{
+//		qer_editorimage	textures/mcity/mcityc20
+//		bumpmap			textures/mcity/mcityc20_local
+//		diffusemap		textures/mcity/mcityc20
+//		specularmap		textures/mcity/mcityc1_s
+//}
+
+textures/mcity/mcityc19
+{
+		qer_editorimage	textures/mcity/mcityc19
+		bumpmap			textures/mcity/mcityc19_local
+		diffusemap		textures/mcity/mcityc19
+		specularmap		textures/mcity/mcityc1_s
+	{
+		blend			add
+		map				textures/mcity/mcityc19_add.tga
+		colored
+	}
+}
+
+textures/mcity/mcityc18d
+{
+		qer_editorimage	textures/editor/mcityc18d
+		bumpmap			textures/mcity/mcityc18d_local
+		diffusemap		textures/mcity/mcityc18d
+		specularmap		textures/mcity/mcityc18d_s
+}
+
+textures/mcity/mcityc18c
+{
+		qer_editorimage	textures/mcity/mcityc18c
+		bumpmap			textures/mcity/mcityc18c_local
+		diffusemap		textures/mcity/mcityc18c
+		specularmap		textures/mcity/mcityc18c_s
+}
+
+textures/mcity/mcityc18b
+{
+		qer_editorimage	textures/editor/mcityc18b
+		bumpmap			textures/mcity/mcityc18b_local
+		diffusemap		textures/mcity/mcityc18b
+		specularmap		textures/mcity/mcityc18b_s
+}
+
+textures/mcity/mcityc18a
+{
+		qer_editorimage	textures/editor/mcityc18a
+		bumpmap			textures/mcity/mcityc18a_local
+		diffusemap		textures/mcity/mcityc18a
+		specularmap		textures/mcity/mcityc18a_s
+}
+
+textures/mcity/mcityc17
+{
+		qer_editorimage	textures/mcity/mcityc17
+		bumpmap			textures/mcity/mcityc17_local
+		diffusemap		textures/mcity/mcityc17
+		specularmap		textures/mcity/mcityc17_s
+}
+
+textures/mcity/mcityc16
+{
+		qer_editorimage	textures/mcity/mcityc16
+		bumpmap			textures/mcity/mcityc16_local
+		diffusemap		textures/mcity/mcityc16
+		specularmap		textures/mcity/mcityc1_s
+}
+
+// ADDED SPECULAR
+textures/mcity/mcityc15
+{
+		qer_editorimage	textures/mcity/mcityc15
+		bumpmap			textures/mcity/mcityc15_local
+		diffusemap		textures/mcity/mcityc15
+		//specularmap		textures/mcity/mcityc1_s
+		specularmap		textures/mcity/mcityc15kc_s
+}
+
+textures/mcity/mcityc14
+{
+		qer_editorimage	textures/mcity/mcityc14
+		bumpmap			textures/mcity/mcityc14_local
+		diffusemap		textures/mcity/mcityc14
+		specularmap		textures/mcity/mcityc1_s
+}
+
+textures/mcity/mcityc13a
+{
+		qer_editorimage	textures/mcity/mcityc13a
+		bumpmap			textures/mcity/mcityc13_local
+		diffusemap		textures/mcity/mcityc13a
+		specularmap		textures/mcity/mcityc13a_s
+}
+
+//textures/mcity/mcityc13aa
+//{
+//		qer_editorimage	textures/mcity/mcityc13aa
+//		bumpmap			textures/mcity/mcityc13aa_local
+//		diffusemap		textures/mcity/mcityc13aa
+//		specularmap		textures/mcity/mcityc13aa_s
+//}
+
+textures/mcity/mcityc13
+{
+		qer_editorimage	textures/mcity/mcityc13
+		bumpmap			textures/mcity/mcityc13_local
+		diffusemap		textures/mcity/mcityc13
+		specularmap		textures/mcity/mcityc1_s
+}
+
+textures/mcity/mcityc12
+{
+		qer_editorimage	textures/mcity/mcityc12
+		bumpmap			textures/mcity/mcityc12_local
+		diffusemap		textures/mcity/mcityc12
+		specularmap		textures/mcity/mcityc1_s
+}
+
+textures/mcity/mcityc11
+{
+		qer_editorimage	textures/mcity/mcityc11
+		bumpmap			textures/mcity/mcityc11_local
+		diffusemap		textures/mcity/mcityc11
+		specularmap		textures/mcity/mcityc1_s
+}
+
+textures/mcity/mcityc10
+{
+		qer_editorimage	textures/mcity/mcityc10
+		bumpmap			textures/mcity/mcityc10_local
+		diffusemap		textures/mcity/mcityc10
+		specularmap		textures/mcity/mcityc10_s
+}
+
+// ADDED SPECULAR
+textures/mcity/mcityc9
+{
+		qer_editorimage	textures/mcity/mcityc9
+		bumpmap			textures/mcity/mcityc9_local
+		diffusemap		textures/mcity/mcityc9
+		//specularmap		textures/mcity/mcityc9_s
+		specularmap		textures/mcity/mcityc9kc_s
+}
+
+//textures/mcity/mcityc8b
+//{
+//		qer_editorimage	textures/mcity/mcityc8b
+//		bumpmap			textures/mcity/mcityc8_local
+//		diffusemap		textures/mcity/mcityc8b
+//		specularmap		textures/mcity/mcityc1_s
+//}
+//
+//textures/mcity/mcityc8a
+//{
+//		qer_editorimage	textures/mcity/mcityc8a
+//		bumpmap			textures/mcity/mcityc8_local
+//		diffusemap		textures/mcity/mcityc8a
+//		specularmap		textures/mcity/mcityc1_s
+//}
+//
+//textures/mcity/mcityc8
+//{
+//		qer_editorimage	textures/mcity/mcityc8
+//		bumpmap			textures/mcity/mcityc8_local
+//		diffusemap		textures/mcity/mcityc8
+//		specularmap		textures/mcity/mcityc1_s
+//}
+
+// ADDED SPECULAR
+textures/mcity/mcityc7a
+{
+		qer_editorimage	textures/mcity/mcityc7a
+		bumpmap			textures/mcity/mcityc7a_local
+		diffusemap		textures/mcity/mcityc7a
+		specularmap		textures/mcity/mcityc7akc_s
+		//specularmap		textures/mcity/mcityc7a_s
+}
+
+// ADDED SPECULAR
+textures/mcity/mcityc7
+{
+		qer_editorimage	textures/mcity/mcityc7
+		bumpmap			textures/mcity/mcityc7_local
+		diffusemap		textures/mcity/mcityc7
+		//specularmap		textures/mcity/mcityc7_s
+		specularmap		textures/mcity/mcityc7kc_s
+}
+
+// ADDED SPECULAR
+textures/mcity/mcityc6_2
+{
+		qer_editorimage	textures/mcity/mcityc6_2
+		bumpmap			textures/mcity/mcityc6_2_local
+		diffusemap		textures/mcity/mcityc6_2
+		//specularmap		textures/mcity/mcityc1_s
+		specularmap		textures/mcity/mcityc6kc_s
+}
+
+// ADDED SPECULAR
+textures/mcity/mcityc6
+{
+		qer_editorimage	textures/mcity/mcityc6
+		bumpmap			textures/mcity/mcityc6_local
+		diffusemap		textures/mcity/mcityc6
+		//specularmap		textures/mcity/mcityc1_s
+		specularmap		textures/mcity/mcityc6kc_s
+}
+
+textures/mcity/mcityc5
+{
+		qer_editorimage	textures/mcity/mcityc5
+		bumpmap			textures/mcity/mcityc5_local
+		diffusemap		textures/mcity/mcityc5
+		specularmap		textures/mcity/mcityc5_s
+}
+
+// ADDED SPECULAR
+textures/mcity/mcityc4
+{
+		qer_editorimage	textures/mcity/mcityc4
+		bumpmap			textures/mcity/mcityc4_local
+		diffusemap		textures/mcity/mcityc4
+		//specularmap		textures/mcity/mcityc1_s
+		specularmap		textures/mcity/mcityc4kc_s
+}
+
+// ADDED SPECULAR
+textures/mcity/mcityc3
+{
+		qer_editorimage	textures/mcity/mcityc3
+		bumpmap			textures/mcity/mcityc3_local
+		diffusemap		textures/mcity/mcityc3
+		//specularmap		textures/mcity/mcityc1_s
+		specularmap		textures/mcity/mcityc3kc_s
+}
+
+textures/mcity/mcityc2
+{
+		qer_editorimage	textures/mcity/mcityc2
+		bumpmap			textures/mcity/mcityc2_local
+		diffusemap		textures/mcity/mcityc2
+		specularmap		textures/mcity/mcityc2_s
+}
+
+/**
+textures/mcity/mcityc1b
+{
+		qer_editorimage	textures/mcity/mcityc1b
+		bumpmap			textures/mcity/mcityc1_local
+		diffusemap		textures/mcity/mcityc1b
+		specularmap		textures/mcity/mcityc1_s
+}
+
+textures/mcity/mcityc1a
+{
+		qer_editorimage	textures/mcity/mcityc1a
+		bumpmap			textures/mcity/mcityc1_local
+		diffusemap		textures/mcity/mcityc1a
+		specularmap		textures/mcity/mcityc1_s
+}
+**/
+
+// ADDED SPECULAR
+textures/mcity/mcityc1
+{
+		qer_editorimage	textures/mcity/mcityc1
+		bumpmap			textures/mcity/mcityc1_local
+		diffusemap		textures/mcity/mcityc1
+		//specularmap		textures/mcity/mcityc1_s
+		specularmap		textures/mcity/mcityc1kc_s
+}
+
+//textures/mcity/mcitycplain3
+//{
+//		qer_editorimage	textures/mcity/mcitycplain3
+//		diffusemap		textures/mcity/mcitycplain3
+//		specularmap		textures/mcity/mcityc1_s
+//}
+//
+//textures/mcity/mcitycplain2
+//{
+//		qer_editorimage	textures/mcity/mcitycplain2
+//		diffusemap		textures/mcity/mcitycplain2
+//		specularmap		textures/mcity/mcityc1_s
+//}
+//
+//textures/mcity/mcitycplain1
+//{
+//		qer_editorimage	textures/mcity/mcitycplain1
+//		diffusemap		textures/mcity/mcitycplain1
+//		specularmap		textures/mcity/mcityc1_s
+//}
+
+//textures/mcity/mcityb24
+//{
+//		qer_editorimage	textures/mcity/mcityb24
+//		bumpmap			textures/mcity/mcityb24_local
+//		diffusemap		textures/mcity/mcityb24
+//		{
+//			blend		add
+//			map			textures/mcity/mcityb24_add
+//			rgb			3
+//		}
+//}
+
+textures/mcity/mcityb23
+{
+		qer_editorimage	textures/mcity/mcityb23
+		bumpmap			textures/mcity/mcityb23_local
+		diffusemap		textures/mcity/mcityb23
+}
+
+textures/mcity/mcityb22
+{
+		qer_editorimage	textures/mcity/mcityb22
+		bumpmap			textures/mcity/mcityb22_local
+		diffusemap		textures/mcity/mcityb22
+}
+
+//textures/mcity/mcityb21
+//{
+//		qer_editorimage	textures/mcity/mcityb21
+//		bumpmap			textures/mcity/mcityb21_local
+//		diffusemap		textures/mcity/mcityb21
+//}
+
+textures/mcity/mcityb20d
+{
+		qer_editorimage	textures/mcity/mcityb20d
+		bumpmap			textures/mcity/mcityb20_local
+		diffusemap		textures/mcity/mcityb20d
+		specularmap		textures/mcity/mcityb20_s
+}
+
+//textures/mcity/mcityb20c
+//{
+//		qer_editorimage	textures/mcity/mcityb20c
+//		bumpmap			textures/mcity/mcityb20_local
+//		diffusemap		textures/mcity/mcityb20c
+//		specularmap		textures/mcity/mcityb20_s
+//}
+
+textures/mcity/mcityb20b
+{
+		qer_editorimage	textures/mcity/mcityb20b
+		bumpmap			textures/mcity/mcityb20_local
+		diffusemap		textures/mcity/mcityb20b
+	{
+		blend			specularmap		
+		map				textures/mcity/mcityb20_s
+		rgb				.5
+	}
+}
+
+//textures/mcity/mcityb20a
+//{
+//		qer_editorimage	textures/mcity/mcityb20a
+//		bumpmap			textures/mcity/mcityb20_local
+//		diffusemap		textures/mcity/mcityb20a
+//		specularmap		textures/mcity/mcityb20_s
+//}
+//
+//textures/mcity/mcityb20
+//{
+//		qer_editorimage	textures/mcity/mcityb20
+//		bumpmap			textures/mcity/mcityb20_local
+//		diffusemap		textures/mcity/mcityb20
+//		specularmap		textures/mcity/mcityb20_s
+//}
+
+//textures/mcity/mcityb19
+//{
+//		qer_editorimage	textures/mcity/mcityb19
+//		bumpmap			textures/mcity/mcityb19_local
+//		diffusemap		textures/mcity/mcityb19
+//}
+
+
+//textures/mcity/mcityb18a
+//{
+//		qer_editorimage	textures/mcity/mcityb18a
+//		bumpmap			textures/mcity/mcityb18_local
+//		diffusemap		textures/mcity/mcityb18a
+//		specularmap		textures/mcity/mcityb18a_s
+//}
+
+//textures/mcity/mcityb18
+//{
+//		qer_editorimage	textures/mcity/mcityb18
+//		bumpmap			textures/mcity/mcityb18_local
+//		diffusemap		textures/mcity/mcityb18
+//}
+
+textures/mcity/mcityb17b
+{
+		qer_editorimage	textures/mcity/mcityb17b
+		bumpmap			textures/mcity/mcityb17_local
+		diffusemap		textures/mcity/mcityb17b
+}
+
+//textures/mcity/mcityb17a
+//{
+//		qer_editorimage	textures/mcity/mcityb17a
+//		bumpmap			textures/mcity/mcityb17_local
+//		diffusemap		textures/mcity/mcityb17a
+//}
+//
+//textures/mcity/mcityb17
+//{
+//		qer_editorimage	textures/mcity/mcityb17
+//		bumpmap			textures/mcity/mcityb17_local
+//		diffusemap		textures/mcity/mcityb17
+//}
+//
+//textures/mcity/mcityb16
+//{
+//		qer_editorimage	textures/mcity/mcityb16
+//		bumpmap			textures/mcity/mcityb16_local
+//		diffusemap		textures/mcity/mcityb16
+//}
+
+textures/mcity/mcityb15
+{
+		qer_editorimage	textures/mcity/mcityb15
+		bumpmap			textures/mcity/mcityb15_local
+		diffusemap		textures/mcity/mcityb15
+}
+
+textures/mcity/mcityb14
+{
+		qer_editorimage	textures/mcity/mcityb14
+		bumpmap			textures/mcity/mcityb14_local
+		diffusemap		textures/mcity/mcityb14
+}
+
+textures/mcity/mcityb13
+{
+		qer_editorimage	textures/mcity/mcityb13
+		bumpmap			textures/mcity/mcityb13_local
+		diffusemap		textures/mcity/mcityb13
+}
+
+textures/mcity/mcityb12
+{
+		qer_editorimage	textures/mcity/mcityb12
+		bumpmap			textures/mcity/mcityb12_local
+		diffusemap		textures/mcity/mcityb12
+}
+
+textures/mcity/mcityb11c
+{
+		qer_editorimage	textures/mcity/mcityb11c
+		bumpmap			textures/mcity/mcityb11_local
+		diffusemap		textures/mcity/mcityb11c
+		specularmap		textures/mcity/mcityb11a_s
+}
+
+textures/mcity/mcityb11b
+{
+		qer_editorimage	textures/mcity/mcityb11b
+		bumpmap			textures/mcity/mcityb11_local
+		diffusemap		textures/mcity/mcityb11b
+		specularmap		textures/mcity/mcityb11a_s
+}
+
+textures/mcity/mcityb11a
+{
+		qer_editorimage	textures/mcity/mcityb11a
+		bumpmap			textures/mcity/mcityb11_local
+		diffusemap		textures/mcity/mcityb11a
+		specularmap		textures/mcity/mcityb11a_s
+}
+
+textures/mcity/mcityb11
+{
+		qer_editorimage	textures/mcity/mcityb11
+		bumpmap			textures/mcity/mcityb11_local
+		diffusemap		textures/mcity/mcityb11
+}
+
+//textures/mcity/mcityb10
+//{
+//		qer_editorimage	textures/mcity/mcityb10
+//		bumpmap			textures/mcity/mcityb10_local
+//		diffusemap		textures/mcity/mcityb10
+//}
+
+//textures/mcity/mcityb9
+//{
+//		qer_editorimage	textures/mcity/mcityb9
+//		bumpmap			textures/mcity/mcityb9_local
+//		diffusemap		textures/mcity/mcityb9
+//}
+//
+//textures/mcity/mcityb8
+//{
+//		qer_editorimage	textures/mcity/mcityb8
+//		bumpmap			textures/mcity/mcityb8_local
+//		diffusemap		textures/mcity/mcityb8
+//}
+//
+//textures/mcity/mcityb7c
+//{
+//		qer_editorimage	textures/mcity/mcityb7c
+//		bumpmap			textures/mcity/mcityb7_local
+//		diffusemap		textures/mcity/mcityb7c
+//		specularmap		textures/mcity/mcityb7_s
+//}
+//
+//textures/mcity/mcityb7b
+//{
+//		qer_editorimage	textures/mcity/mcityb7b
+//		bumpmap			textures/mcity/mcityb7_local
+//		diffusemap		textures/mcity/mcityb7b
+//		specularmap		textures/mcity/mcityb7_s
+//}
+//
+//textures/mcity/mcityb7a
+//{
+//		qer_editorimage	textures/mcity/mcityb7a
+//		bumpmap			textures/mcity/mcityb7_local
+//		diffusemap		textures/mcity/mcityb7a
+//		specularmap		textures/mcity/mcityb7_s
+//}
+//
+//textures/mcity/mcityb7
+//{
+//		qer_editorimage	textures/mcity/mcityb7
+//		bumpmap			textures/mcity/mcityb7_local
+////		bumpmap			addnormals (textures/mcity/mcityb7_local, heightmap (textures/mcity/mcityb7_add.tga, 4 ) )
+//		diffusemap		textures/mcity/mcityb7
+//		specularmap		textures/mcity/mcityb7_s
+//}
+//
+//textures/mcity/mcityb6a
+//{
+//		qer_editorimage	textures/mcity/mcityb6a
+//		bumpmap			textures/mcity/mcityb6_local
+//		diffusemap		textures/mcity/mcityb6a
+//		//specularmap		textures/mcity/mcityb7_s
+//}
+//
+//textures/mcity/mcityb6
+//{
+//		qer_editorimage	textures/mcity/mcityb6
+//		bumpmap			textures/mcity/mcityb6_local
+//		diffusemap		textures/mcity/mcityb6
+//}
+//
+//
+//textures/mcity/mcityb5b
+//{
+//		qer_editorimage	textures/mcity/mcityb5b
+//		bumpmap			textures/mcity/mcityb5_local
+//		diffusemap		textures/mcity/mcityb5b
+//		specularmap		textures/mcity/mcityb5_s
+//}
+//
+//textures/mcity/mcityb5a
+//{
+//		qer_editorimage	textures/mcity/mcityb5a
+//		bumpmap			textures/mcity/mcityb5_local
+//		diffusemap		textures/mcity/mcityb5a
+//		specularmap		textures/mcity/mcityb5_s
+//}
+//
+//textures/mcity/mcityb5
+//{
+//		qer_editorimage	textures/mcity/mcityb5
+//		bumpmap			textures/mcity/mcityb5_local
+//		diffusemap		textures/mcity/mcityb5
+//		specularmap		textures/mcity/mcityb5_s
+//}
+//
+//textures/mcity/mcityb4c
+//{
+//		qer_editorimage	textures/mcity/mcityb4c
+//		bumpmap			textures/mcity/mcityb4c_local
+//		diffusemap		textures/mcity/mcityb4c
+//}
+//
+//textures/mcity/mcityb4b
+//{
+//		qer_editorimage	textures/mcity/mcityb4b
+//		bumpmap			textures/mcity/mcityb4b_local
+//		diffusemap		textures/mcity/mcityb4b
+//}
+//
+//textures/mcity/mcityb4a
+//{
+//		qer_editorimage	textures/mcity/mcityb4a
+//		bumpmap			textures/mcity/mcityb4a_local
+//		diffusemap		textures/mcity/mcityb4a
+//}
+//
+//textures/mcity/mcityb4
+//{
+//		qer_editorimage	textures/mcity/mcityb4
+//		bumpmap			textures/mcity/mcityb4_local
+//		diffusemap		textures/mcity/mcityb4
+//}
+//
+//textures/mcity/mcityb3
+//{
+//		qer_editorimage	textures/mcity/mcityb3
+//		bumpmap			textures/mcity/mcityb3_local
+//		diffusemap		textures/mcity/mcityb3
+//}
+
+//textures/mcity/mcityb2
+//{
+//		qer_editorimage	textures/mcity/mcityb2
+//		bumpmap			textures/mcity/mcityb2_local
+//		diffusemap		textures/mcity/mcityb2
+////	specularmap		textures/mcity/mcityb2_s
+//}
+
+//textures/mcity/mcityb1b
+//{
+//		qer_editorimage	textures/mcity/mcityb1b
+//		bumpmap			textures/mcity/mcityb1b_local
+//		diffusemap		textures/mcity/mcityb1b
+//		specularmap		textures/mcity/mcityb1b_s
+//}
+//
+//textures/mcity/mcityb1a
+//{
+//		qer_editorimage	textures/mcity/mcityb1a
+//		bumpmap			textures/mcity/mcityb1a_local
+//		diffusemap		textures/mcity/mcityb1a
+//		specularmap		textures/mcity/mcityb1a_s
+//}
+
+//textures/mcity/mcityb1
+//{
+//		qer_editorimage	textures/mcity/mcityb1
+//		bumpmap			textures/mcity/mcityb1_local
+//		diffusemap		textures/mcity/mcityb1
+////		{
+////			blend		specularmap		
+////			map			_white
+////			rgb			.5
+////		}
+//}
+
+//textures/mcity/mcitya14
+//{
+//		qer_editorimage	textures/mcity/mcitya14
+//		bumpmap			textures/mcity/mcitya14_local
+//		diffusemap		textures/mcity/mcitya14_d
+//		specularmap		textures/mcity/mcitya12_s
+//	{
+//		blend			add
+//		map				textures/mcity/mcitya14_add
+//		colored
+//	}
+//}
+
+//textures/mcity/mcitya13a_nolit
+//{
+//		qer_editorimage	textures/mcity/mcitya13a
+//		bumpmap			textures/mcity/mcitya13_local
+//		diffusemap		textures/mcity/mcitya13a
+//		specularmap		textures/mcity/mcitya13a_s
+//}
+
+//textures/mcity/mcitya13a
+//{
+//		qer_editorimage	textures/mcity/mcitya13a
+//		bumpmap			textures/mcity/mcitya13_local
+//		diffusemap		textures/mcity/mcitya13a
+//		specularmap		textures/mcity/mcitya13a_s
+//	{
+//		blend			add
+//		map				textures/mcity/mcitya13a_add
+//		colored
+//	}
+//}
+//
+//textures/mcity/mcitya13
+//{
+//		qer_editorimage	textures/mcity/mcitya13
+//		bumpmap			textures/mcity/mcitya13_local
+//		diffusemap		textures/mcity/mcitya13_d
+//		specularmap		textures/mcity/mcitya12_s
+//	{
+//		blend			add
+//		map				textures/mcity/mcitya13_add
+//		colored
+//	}
+//}
+
+textures/mcity/mcitya12_2
+{
+		qer_editorimage	textures/mcity/mcitya12_d
+		bumpmap			textures/mcity/mcitya12_local
+		diffusemap		textures/mcity/mcitya12_d
+		specularmap		textures/mcity/mcitya12_s
+	{
+		blend			add
+		map				textures/mcity/mcitya12_2_add
+		colored
+	}
+}
+
+//textures/mcity/mcitya12
+//{
+//		qer_editorimage	textures/mcity/mcitya12
+//		bumpmap			textures/mcity/mcitya12_local
+//		diffusemap		textures/mcity/mcitya12_d
+//		specularmap		textures/mcity/mcitya12_s
+//	{
+//		blend			add
+//		map				textures/mcity/mcitya12_add
+//		colored
+//	}
+//}
+//
+//textures/mcity/mcitya11_3
+//{
+//		qer_editorimage	textures/mcity/mcitya11_3
+//		bumpmap			textures/mcity/mcitya11_local
+//		diffusemap		textures/mcity/mcitya11_3
+//		specularmap		textures/mcity/mcitya11_s
+//}
+//
+//textures/mcity/mcitya11_2
+//{
+//		qer_editorimage	textures/mcity/mcitya11_2
+//		bumpmap			textures/mcity/mcitya11_local
+//		diffusemap		textures/mcity/mcitya11_2
+//		specularmap		textures/mcity/mcitya11_s
+//}
+//
+//textures/mcity/mcitya11
+//{
+//		qer_editorimage	textures/mcity/mcitya11
+//		bumpmap			textures/mcity/mcitya11_local
+//		diffusemap		textures/mcity/mcitya11
+//		specularmap		textures/mcity/mcitya11_s
+//}
+//
+//textures/mcity/mcitya10
+//{
+//		qer_editorimage	textures/mcity/mcitya10
+//		bumpmap			textures/mcity/mcitya10_local
+//		diffusemap		textures/mcity/mcitya10
+//		specularmap		textures/mcity/mcitya10_s
+//}
+
+//textures/mcity/mcitya9
+//{
+//		qer_editorimage	textures/mcity/mcitya9
+//		bumpmap			textures/mcity/mcitya9_local
+//		diffusemap		textures/mcity/mcitya9_d
+//		specularmap		textures/mcity/mcitya9_s
+//		{
+//			blend		add
+//			map			textures/mcity/mcitya9_add
+//			colored
+//		}
+//}
+//
+//textures/mcity/mcitya8
+//{
+//		qer_editorimage	textures/mcity/mcitya8
+//		bumpmap			textures/mcity/mcitya8_local
+//		diffusemap		textures/mcity/mcitya8
+//		specularmap		textures/mcity/mcitya8_s
+//}
+
+textures/mcity/mcitya7_3
+{
+		qer_editorimage	textures/mcity/mcitya7_3
+		bumpmap			textures/mcity/mcitya7_local
+		diffusemap		textures/mcity/mcitya7_3
+		specularmap		textures/mcity/mcitya7_s
+}
+
+//textures/mcity/mcitya7_2
+//{
+//		qer_editorimage	textures/mcity/mcitya7_2
+//		bumpmap			textures/mcity/mcitya7_local
+//		diffusemap		textures/mcity/mcitya7_2
+//		specularmap		textures/mcity/mcitya7_s
+//}
+//
+//textures/mcity/mcitya7
+//{
+//		qer_editorimage	textures/mcity/mcitya7
+//		bumpmap			textures/mcity/mcitya7_local
+//		diffusemap		textures/mcity/mcitya7
+//		specularmap		textures/mcity/mcitya7_s
+//}
+//
+//textures/mcity/mcitya6a2
+//{
+//		qer_editorimage	textures/mcity/mcitya6a2
+//		bumpmap			textures/mcity/mcitya6a_local
+//		diffusemap		textures/mcity/mcitya6a2
+//		specularmap		textures/mcity/mcitya6a_s
+//}
+
+textures/mcity/mcitya6a
+{
+		qer_editorimage	textures/mcity/mcitya6a
+		bumpmap			textures/mcity/mcitya6a_local
+		diffusemap		textures/mcity/mcitya6a
+		specularmap		textures/mcity/mcitya6a_s
+}
+
+textures/mcity/mcitya6_2
+{
+		qer_editorimage	textures/mcity/mcitya6_2
+		bumpmap			textures/mcity/mcitya6_local
+		diffusemap		textures/mcity/mcitya6_2
+		specularmap		textures/mcity/mcityc1_s
+}
+
+//textures/mcity/mcitya6
+//{
+//		qer_editorimage	textures/mcity/mcitya6
+//		bumpmap			textures/mcity/mcitya6_local
+//		diffusemap		textures/mcity/mcitya6
+//		specularmap		textures/mcity/mcityc1_s
+//}
+
+textures/mcity/mcitya5_2
+{
+		qer_editorimage	textures/mcity/mcitya5_2
+		bumpmap			textures/mcity/mcitya5_local
+		diffusemap		textures/mcity/mcitya5_2
+		specularmap		textures/mcity/mcityc1_s
+			
+}
+
+// ADDED SPECULAR
+textures/mcity/mcitya5
+{
+		qer_editorimage	textures/mcity/mcitya5
+		bumpmap			textures/mcity/mcitya5_local
+		diffusemap		textures/mcity/mcitya5
+		//specularmap		textures/mcity/mcityc1_s
+		specularmap		textures/mcity/mcitya5kc_s
+}
+
+//textures/mcity/mcitya4
+//{
+//		qer_editorimage	textures/mcity/mcitya4
+//		bumpmap			textures/mcity/mcitya4_local
+//		diffusemap		textures/mcity/mcitya4
+//		specularmap		textures/mcity/mcitya4_s
+//}
+//
+//textures/mcity/mcitya3
+//{
+//		qer_editorimage	textures/mcity/mcitya3
+//		bumpmap			textures/mcity/mcitya3_local
+//		diffusemap		textures/mcity/mcitya3
+//		specularmap		textures/mcity/mcitya3_s
+//}
+//
+//textures/mcity/mcitya2
+//{
+//		qer_editorimage	textures/mcity/mcitya2
+//		bumpmap			textures/mcity/mcitya2_local
+//		diffusemap		textures/mcity/mcitya2
+//		specularmap		textures/mcity/mcitya2_s
+//}
+
+//textures/mcity/mcitya1
+//{
+//		qer_editorimage	textures/mcity/mcitya1
+//		bumpmap			textures/mcity/mcitya1_local
+//		diffusemap		textures/mcity/mcitya1
+//		specularmap		textures/mcity/mcitya1_s
+//}
+
+//textures/mcity/mcityfloor1
+//{
+//	qer_editorimage			textures/mcity/mcityfloor1
+//	bumpmap				addnormals (textures/mcity/mcityfloor1_local.tga, heightmap (textures/mcity/mcityfloor1_bmp.tga, 4) )
+//	diffusemap			textures/mcity/mcityfloor1
+//	specularmap			textures/mcity/mcityfloor1_s
+//}
+
+textures/mcity/mcityplain
+{	
+	qer_editorimage			textures/mcity/mcityplain
+	bumpmap				heightmap (textures/mcity/mcityplain.tga, 1)
+	diffusemap			textures/mcity/mcityplain
+}
+
+//textures/mcity/mcityplain2
+//{	
+//	qer_editorimage			textures/mcity/mcityplain2
+//	bumpmap				heightmap (textures/mcity/mcityplain2.tga, 1)
+//	diffusemap			textures/mcity/mcityplain2
+//}
+//
+//textures/mcity/mcityplain3
+//{	
+//	qer_editorimage			textures/mcity/mcityplain3
+//	bumpmap				heightmap (textures/mcity/mcityplain3.tga, 1)
+//	diffusemap			textures/mcity/mcityplain3
+//}
+//
+//textures/mcity/mcityplain4
+//{	
+//	qer_editorimage			textures/mcity/mcityplain4
+//	bumpmap				heightmap (textures/mcity/mcityplain4.tga, 1)
+//	diffusemap			textures/mcity/mcityplain4
+//}
+//
+//textures/mcity/mcityplain5
+//{	
+//	qer_editorimage			textures/mcity/mcityplain5
+//	bumpmap				heightmap (textures/mcity/mcityplain5.tga, 1)
+//	diffusemap			textures/mcity/mcityplain5
+//}
+//
+//textures/mcity/mcityplain6a
+//{	
+//	qer_editorimage		textures/mcity/mcityplain6a
+//	bumpmap				heightmap (textures/mcity/mcityplain6a_bmp.tga, 4)
+//	diffusemap			textures/mcity/mcityplain6a
+//	specularmap			textures/mcity/mcityplain6_s
+//}
+
+textures/mcity/mcityplain6
+{	
+	qer_editorimage		textures/mcity/mcityplain6
+	bumpmap				heightmap (textures/mcity/mcityplain6_bmp.tga, 4)
+	diffusemap			textures/mcity/mcityplain6
+	specularmap			textures/mcity/mcityplain6_s
+}
+
+textures/mcity/mcityplain7
+{	
+	qer_editorimage			textures/mcity/mcityplain7
+	bumpmap				heightmap (textures/mcity/mcityplain6_bmp.tga, 4)
+	diffusemap			textures/mcity/mcityplain7
+	specularmap			textures/mcity/mcityplain6_s
+}
+
+
+//textures/mcity/mcity4
+//{	
+//	qer_editorimage			textures/mcity/mcity4
+//	bumpmap				addnormals (textures/mcity/mcity4_local.tga, heightmap (textures/mcity/mcity4_bmp.tga, 4) )
+//	diffusemap			textures/mcity/mcity4
+//	specularmap			textures/mcity/mcity4_s
+//	{
+//		blend			add
+//		map			textures/mcity/mcity4_add.tga
+//		rgb			3
+//	}
+//}
+
+//textures/mcity/mcity3
+//{
+//	qer_editorimage			textures/mcity/mcity3.tga
+//	bumpmap				addnormals (textures/mcity/mcity3_local.tga, heightmap (textures/mcity/mcity3_bmp.tga, 4 ) )
+//	diffusemap			textures/mcity/mcity3.tga
+//	specularmap			textures/mcity/mcity3_s.tga
+//	{
+//		blend			add
+//		map			textures/mcity/mcity3_add.tga
+//		rgb			3
+//	}
+//}
+//
+//textures/mcity/mcity2a
+//{
+//	qer_editorimage			textures/mcity/mcity2a.tga
+//	bumpmap				addnormals (textures/mcity/mcity2a_local.tga, heightmap (textures/mcity/mcity2a_bmp.tga, 4 ) )
+//	diffusemap			textures/mcity/mcity2a.tga
+//}
+
+textures/mcity/mcity2
+{
+	qer_editorimage			textures/mcity/mcity2.tga
+	bumpmap				addnormals (textures/mcity/mcity2_local.tga, heightmap (textures/mcity/mcity2_bmp.tga, 4 ) )
+	diffusemap			textures/mcity/mcity2.tga
+}
+
+textures/mcity/mcity1a
+{
+	qer_editorimage			textures/mcity/mcity1a.tga
+	bumpmap				addnormals (textures/mcity/mcity1_local.tga, heightmap (textures/mcity/mcity1_bmp.tga, 4 ) )
+	diffusemap			textures/mcity/mcity1a.tga
+}
+
+textures/mcity/mcity1
+{
+	qer_editorimage			textures/mcity/mcity1.tga
+	bumpmap				addnormals (textures/mcity/mcity1_local.tga, heightmap (textures/mcity/mcity1_bmp.tga, 4 ) )
+	diffusemap			textures/mcity/mcity1.tga
+}
+
+
+//textures/mcity/mcitypipe2a
+//{
+//	qer_editorimage			textures/mcity/mcitypipe2a.tga
+//	bumpmap				addnormals (textures/mcity/mcitypipe1a_local.tga, heightmap (textures/mcity/mcitypipe1a_bmp.tga, 4 ) )
+//	diffusemap			textures/mcity/mcitypipe2a.tga
+//	specularmap			textures/mcity/mcitypipe2a_s.tga
+//}
+
+textures/mcity/mcitypipe2
+{
+	qer_editorimage			textures/mcity/mcitypipe2.tga
+	bumpmap				addnormals (textures/mcity/mcitypipe1_local.tga, heightmap (textures/mcity/mcitypipe1_bmp.tga, 4 ) )
+	diffusemap			textures/mcity/mcitypipe2.tga
+	specularmap			textures/mcity/mcitypipe2_s.tga
+}
+
+//textures/mcity/mcitypipe1as
+//{
+//	qer_editorimage			textures/mcity/mcitypipe1a.tga
+//	bumpmap				addnormals (textures/mcity/mcitypipe1a_local.tga, heightmap (textures/mcity/mcitypipe1a_bmp.tga, 4 ) )
+//	diffusemap			textures/mcity/mcitypipe1a.tga
+//	specularmap			textures/mcity/mcitypipe1a.tga
+//}
+
+//textures/mcity/mcitypipe1a
+//{
+//	qer_editorimage			textures/mcity/mcitypipe1a.tga
+//	bumpmap				addnormals (textures/mcity/mcitypipe1a_local.tga, heightmap (textures/mcity/mcitypipe1a_bmp.tga, 4 ) )
+//	diffusemap			textures/mcity/mcitypipe1a.tga
+//}
+
+//textures/mcity/mcitypipe1s
+//{
+//	qer_editorimage			textures/mcity/mcitypipe1.tga
+//	bumpmap				addnormals (textures/mcity/mcitypipe1_local.tga, heightmap (textures/mcity/mcitypipe1_bmp.tga, 4 ) )
+//	diffusemap			textures/mcity/mcitypipe1.tga
+//	specularmap			textures/mcity/mcitypipe1_s.tga
+//}
+
+textures/mcity/mcitypipe1
+{
+	qer_editorimage			textures/mcity/mcitypipe1.tga
+	bumpmap				addnormals (textures/mcity/mcitypipe1_local.tga, heightmap (textures/mcity/mcitypipe1_bmp.tga, 4 ) )
+	diffusemap			textures/mcity/mcitypipe1.tga
+}
+
+
+
+
+//*****************************************************Moved from senetemp.mtr - end*****************************************
+
+
+//Verified good complete by Eutectic - Sep 11-04

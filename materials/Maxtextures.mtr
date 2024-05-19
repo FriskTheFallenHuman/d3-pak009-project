@@ -1,0 +1,62 @@
+//***************************************************************************
+//*  models/mapobjects/lights/3_bulb_lamp.ase
+//*  models/mapobjects/lights/3_bulb_broke.ase
+//***************************************************************************
+
+//***************************************************************************
+//*  models/mapobjects/lights/sq_light.ase
+//***************************************************************************
+
+//***************************************************************************
+//*  models/mapobjects/doors/delta_door01.ase
+//***************************************************************************
+
+
+//***************************************************************************
+//*  models/mapobjects/doors/delta_door01.ase
+//***************************************************************************
+
+//***************************************************************************
+//*  models/mapobjects/base/lights/striplight_ceiling1
+//***************************************************************************
+
+//***************************************************************************
+//*  models/mapobjects/doors/officedoor01
+//***************************************************************************
+
+
+//textures/architecture/offtrim01_ed
+//{
+//	diffusemap		textures/architecture/offtrim01_d.tga
+//	bumpmap heightmap (textures/architecture/offtrim01_b.tga, 4)
+//	specularmap		textures/ktest/concretetest_s.tga
+//}
+
+//textures/seneca/shinymonitor1_ed
+//{
+//	bumpmap			models/seneca/textures/shinymonitor1_local.tga
+//	diffusemap			models/seneca/textures/shinymonitor1_d.tga
+//	specularmap			models/seneca/textures/shinymonitor1_s.tga
+//	{
+//		blend gl_one,gl_one
+//		map models/seneca/textures/shinymonitor1_add.tga
+//		rgb	flickertable [ time * 6 ]
+//	}
+//}
+
+//***************************************************************************
+//*  models/mapobjects/doors/
+//***************************************************************************
+
+//textures/architecture/testdoor
+//{
+//	qer_editorimage	textures/architecture/testdoor.tga
+//
+//	bumpmap		addnormals( textures/architecture/timedoorbump_local.tga , heightmap( textures/architecture/doortest_b, 10 ) )
+//	diffusemap		textures/architecture/offtrim01_d.tga
+//	specularmap		textures/ktest/concretetest_s.tga
+//	
+//}
+
+
+//Verified good complete by Eutectic - Aug 27-04

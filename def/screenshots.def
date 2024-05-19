@@ -1,0 +1,179 @@
+model ss_hero_player {
+	mesh							models/md5/screenshots/ss_player.md5mesh
+	anim pistol1					models/md5/screenshots/ss_player_pistolpose1.md5anim {
+		frame 1						skin skins/characters/player/ss_pistol
+	}
+	anim pistol2					models/md5/screenshots/ss_player_pistolpose2.md5anim {
+		frame 1						skin skins/characters/player/ss_pistol
+	}
+
+	anim pistol3					models/md5/screenshots/ss_player_pistolpose3.md5anim {
+		frame 1						skin skins/characters/player/ss_pistol
+	}
+
+	anim shotgun1					models/md5/screenshots/ss_player_shotgunpose1.md5anim {
+		frame 1						skin skins/characters/player/ss_shotgun
+	}
+
+	anim shotgun2					models/md5/screenshots/ss_player_shotgunpose2.md5anim {
+		frame 1						skin skins/characters/player/ss_shotgun
+	}
+
+	anim shotgun3					models/md5/screenshots/ss_player_shotgunpose3.md5anim {
+		frame 1						skin skins/characters/player/ss_shotgun
+	}
+	anim shotgun4					models/md5/screenshots/ss_player_shotgunpose4.md5anim {
+		frame 1						skin skins/characters/player/ss_shotgun
+	}
+
+	anim chainsaw1					models/md5/screenshots/ss_player_chainsawpose1.md5anim {
+		frame 1						skin skins/characters/player/ss_chainsaw
+	}
+
+	anim chainsaw2					models/md5/screenshots/ss_player_chainsawpose2.md5anim {
+		frame 1						skin skins/characters/player/ss_chainsaw
+	}
+	anim machinegun1				models/md5/screenshots/ss_player_machinegunpose1.md5anim {
+		frame 1						skin skins/characters/player/ss_machinegun
+	}
+
+	anim machinegun2				models/md5/screenshots/ss_player_machinegunpose2.md5anim {
+		frame 1						skin skins/characters/player/ss_machinegun
+	}
+
+	anim machinegun3				models/md5/screenshots/ss_player_machinegunpose3.md5anim {
+		frame 1						skin skins/characters/player/ss_machinegun
+	}
+
+	anim shotty1					models/md5/screenshots/ss_shotgun_player1.md5anim {
+		frame 1						skin skins/characters/player/ss_shotgun
+	}
+	anim shotty2					models/md5/screenshots/ss_shotgun_player2.md5anim {
+		frame 1						skin skins/characters/player/ss_shotgun
+	}
+	anim shotty3					models/md5/screenshots/ss_shotgun_player3.md5anim {
+		frame 1						skin skins/characters/player/ss_shotgun
+	}
+	anim shotty4					models/md5/screenshots/ss_shotgun_player4.md5anim {
+		frame 1						skin skins/characters/player/ss_shotgun
+	}
+	anim shotty5					models/md5/screenshots/ss_shotgun_player5.md5anim {
+		frame 1						skin skins/characters/player/ss_shotgun
+	}
+	anim shotty6					models/md5/screenshots/ss_shotgun_player6.md5anim {
+		frame 1						skin skins/characters/player/ss_shotgun
+	}
+	anim shotty7					models/md5/screenshots/ss_shotgun_player7.md5anim {
+		frame 1						skin skins/characters/player/ss_shotgun
+	}
+	anim shotty8					models/md5/screenshots/ss_shotgun_player8.md5anim {
+		frame 1						skin skins/characters/player/ss_shotgun
+	}
+	anim shotty9					models/md5/screenshots/ss_shotgun_player9.md5anim {
+		frame 1						skin skins/characters/player/ss_shotgun
+	}
+	anim shotty10					models/md5/screenshots/ss_shotgun_player10.md5anim {
+		frame 1						skin skins/characters/player/ss_shotgun
+	}
+	anim shotty11					models/md5/screenshots/ss_shotgun_player11.md5anim {
+		frame 1						skin skins/characters/player/ss_shotgun
+	}
+	anim shotty12					models/md5/screenshots/ss_shotgun_player12.md5anim {
+		frame 1						skin skins/characters/player/ss_shotgun
+	}
+	anim shotty13					models/md5/screenshots/ss_shotgun_player13.md5anim {
+		frame 1						skin skins/characters/player/ss_shotgun
+	}
+	anim shotty14					models/md5/screenshots/ss_shotgun_player14.md5anim {
+		frame 1						skin skins/characters/player/ss_shotgun
+	}
+	anim shotty15					models/md5/screenshots/ss_shotgun_player15.md5anim {
+		frame 1						skin skins/characters/player/ss_shotgun
+	}
+	anim shotty16					models/md5/screenshots/ss_shotgun_player16.md5anim {
+		frame 1						skin skins/characters/player/ss_shotgun
+	}
+	anim shotty17					models/md5/screenshots/ss_shotgun_player17.md5anim {
+		frame 1						skin skins/characters/player/ss_shotgun
+	}
+
+
+}
+
+model ss_hellknight {
+	mesh							models/md5/monsters/hellknight/hellknight.md5mesh
+	anim hk_a						models/md5/screenshots/hk_hk1.md5anim
+	anim hk_b						models/md5/screenshots/hk_hk2.md5anim
+	anim hk_c						models/md5/screenshots/hk_hk3.md5anim
+	anim hk_d						models/md5/screenshots/hk_hk4.md5anim
+	anim hk_e						models/md5/screenshots/hk_hk5.md5anim
+	anim hk_f						models/md5/screenshots/hk_hk6.md5anim
+	anim hk_g						models/md5/screenshots/hk_hk7.md5anim
+	anim hk_h						models/md5/screenshots/hk_hk8.md5anim
+	anim hk_i						models/md5/screenshots/hk_hk9.md5anim
+	anim hk_j						models/md5/screenshots/hk_hk10.md5anim
+	anim hk_k						models/md5/screenshots/hk_hk11.md5anim
+}
+
+
+//CGW SCREENSHOT
+
+model ss_cgw_zsci {
+	skin							skins/models/monsters/zsci2.skin
+	mesh							models/md5/meshes/zsci.md5mesh
+	anim cgwzsci					models/md5/anims/ss/cgwzsci.md5anim
+}
+
+model ss_cgw_zsci2 {
+	skin							skins/models/monsters/zsci1.skin
+	mesh							models/md5/meshes/zsci.md5mesh
+	anim cgw2zsci					models/md5/anims/ss/cgwzsci2.md5anim
+}
+
+model ss_cgw_jump {
+	skin							skins/models/monsters/zjumpcs.skin
+
+	mesh							models/md5/anims/ss/zjumpmesh.md5mesh
+	//anim cgwjump					models/md5/anims/ss/cgwjump.md5anim
+	anim pose1						models/md5/anims/ss/zjumppose1.md5anim
+	anim pose2						models/md5/anims/ss/zjumppose2.md5anim
+	anim pose3						models/md5/anims/ss/zjumppose3.md5anim
+	anim pose4						models/md5/anims/ss/zjumppose4.md5anim
+}
+
+model ss_cgw_gibs {
+	mesh							models/md5/meshes/cgwgibs_mesh.md5mesh
+	anim cgwgibs					models/md5/anims/ss/cgwgibs.md5anim
+}
+
+//EW SCREENSHOT
+
+model ss_ew_maint {
+	mesh							models/monsters/zombie/zombie01/cycles/ref_fullskin.md5mesh
+	anim ewmaint					models/fred/ewmaint.md5anim
+}
+
+model ss_ew_fat {
+	skin							skins/models/monsters/fatty.skin
+	mesh							models/md5/meshes/zfat.md5mesh
+	anim ewfat						models/fred/ewfat.md5anim
+}
+
+model ss_ew_jump {
+	skin							skins/models/monsters/zjumpcs.skin
+	mesh							models/md5/meshes/zjumpsuit.md5mesh
+	anim ewjump						models/fred/ewjump.md5anim
+}
+
+//PCG SCREENSHOT
+
+model ss_pcg_hk {
+	mesh							models/monsters/hellknight/cycles/idle1.md5mesh
+	anim pcghk						models/md5/anims/cinematics/pcghkpose1.md5anim
+}
+
+model ss_pcg_player {
+	skin							skins/player/shotgun.skin
+	mesh							models/md5/meshes/player_full.md5mesh
+	anim pcgplayer					models/md5/anims/cinematics/pcgplayerpose1.md5anim
+}

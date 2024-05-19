@@ -1,0 +1,50 @@
+skin skins/models/mapobjects/lanternoff {
+	model models/items/lantern/lantern_world.lwo
+	models/items/lantern/lanternglow textures/common/nodraw
+	models/items/lantern/lanternflare textures/common/nodraw
+}
+
+skin skins/mkeyboard2 {
+	model models/mapobjects/filler/mkeyboard.lwo
+	models/mapobjects/filler/mkeyboard models/mapobjects/filler/mkeyboard2
+}
+
+skin skins/healthguidirty {
+	model models/mapobjects/healthgui/healthgui.lwo
+	models/mapobjects/healthgui/healthgui  models/mapobjects/healthgui/healthguidirty
+}
+
+skin skins/monsters/skeleton/skragdoll {
+	models/monsters/skeleton/skeleton01 models/monsters/skeleton/skragdoll
+}
+
+skin skins/monsters/skeleton/skragdoll2 {
+	models/monsters/skeleton/skeleton01 models/monsters/skeleton/skeleton02_d
+}
+
+skin skins/dropshipnoflare {
+	models/mapobjects/dropship/dropship models/mapobjects/dropship/dropshipns
+	models/mapobjects/dropship/dropshipglass models/mapobjects/dropship/dropshipglassns
+	models/mapobjects/dropship/dbeam1 textures/common/nodraw
+	models/mapobjects/dropship/dbeam2 textures/common/nodraw
+	models/items/flashlight/flare textures/common/nodraw
+}
+
+skin skins/dropship {
+}
+
+skin skins/dropshipns {
+	models/mapobjects/dropship/dropship models/mapobjects/dropship/dropshipns
+	models/mapobjects/dropship/dropshipglass models/mapobjects/dropship/dropshipglassns
+}
+
+skin skins/dropshipnowarp {
+	textures/sfx/vp1 textures/common/nodraw
+}
+
+skin skins/a_hangingmonitor04 {
+	model models/mapobjects/monitors/hangingmonitor.lwo
+	model models/mapobjects/monitors/hangingmonitor.ase
+	models/mapobjects/monitors/hangingmonitor   models/mapobjects/monitors/a_hangingmonitor04
+	models/mapobjects/monitors/hangingmonitorpiece   models/mapobjects/monitors/a_hangingmonitorpiece04
+}

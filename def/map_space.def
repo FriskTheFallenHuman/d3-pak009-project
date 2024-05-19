@@ -1,0 +1,38 @@
+model space_planet {
+	mesh							models/md5/cinematics/marscity/spaceplanet.md5mesh
+	anim space						models/md5/cinematics/marscity/spaceplanet.md5anim
+	anim space_a					models/md5/cinematics/marscity/spaceplanet_a.md5anim
+	anim space_b					models/md5/cinematics/marscity/spaceplanet_b.md5anim
+	anim space_c					models/md5/cinematics/marscity/spaceplanet_c.md5anim
+
+}
+
+model space_stars {
+	mesh							models/md5/cinematics/marscity/spacestars.md5mesh
+	anim space						models/md5/cinematics/marscity/spacestars.md5anim
+	anim space_a					models/md5/cinematics/marscity/spacestars_a.md5anim
+	anim space_b					models/md5/cinematics/marscity/spacestars_b.md5anim
+	anim space_c					models/md5/cinematics/marscity/spacestars_c.md5anim
+}
+
+model space_ship {
+	mesh							models/md5/cinematics/marscity/spaceship.md5mesh
+	skin							skins/dropshipnoflare.skin
+	anim bind						models/md5/cinematics/marscity/spaceship_bindme.md5anim
+	anim space_a					models/md5/cinematics/marscity/spaceship_shot1.md5anim {
+		frame 45					sound_global snd_flyby
+	}
+	anim space_b					models/md5/cinematics/marscity/spaceship_shot2.md5anim {
+		frame 1						trigger light_11
+		frame 1						sound_global snd_flyby2
+		frame 80					trigger func_emitter_48
+	}
+	anim space_c					models/md5/cinematics/marscity/spaceship_shot3.md5anim {
+		frame 1						sound_global snd_entry
+	}
+	anim mono						models/md5/cinematics/marscity/spacemonoship.md5anim {
+	//	frame 1					 	recordDemo monoflyby
+	//	frame 70					recordDemo
+	}
+	anim window						models/md5/cinematics/marscity/windowship.md5anim
+}

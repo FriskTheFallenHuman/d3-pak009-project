@@ -1,0 +1,287 @@
+//================textures/skies shader stats==============================================
+//
+// Total # of shaders : 15
+// Working shaders: 6
+// Broken/CommentedOut shaders: 9
+//=======================================================================================
+
+//textures/skies/marssky
+//{
+//	qer_editorimage	textures/skies/marssky_back.tga
+//	noFragment
+//	noshadows
+//	nooverlays
+//	forceOpaque				// so transparent windows can draw on top of it
+//	{
+//		blend		add		// so transparent windows can draw on top of it
+//		cameraCubeMap	env/marssky
+//		texgen		skybox
+//		texgen			wobblesky .0 .0 .0
+//	}
+//}
+
+//textures/skies/marscloud
+//{
+//	qer_editorimage	textures/skies/marscloud_back.tga
+//	noFragment
+//	noshadows
+//	nooverlays
+//	forceOpaque				// so transparent windows can draw on top of it
+//	{
+//		blend		add		// so transparent windows can draw on top of it
+//		cameraCubeMap	env/marscloud
+//		texgen		skybox
+//		texgen			wobblesky .55 .125 .05
+//	}
+//}
+
+//textures/skies/marssky_dust
+//{
+//	qer_editorimage	textures/skies/marssky_dust_back.tga
+//	noFragment
+//	noshadows
+//	nooverlays
+//	forceOpaque				// so transparent windows can draw on top of it
+//	{
+//		blend		add		// so transparent windows can draw on top of it
+//		cameraCubeMap	env/marssky_dust
+//		texgen		skybox
+//		texgen			wobblesky .75 .25 .1
+//	}
+//}
+
+
+//textures/skies/marssky_foreground
+//{
+//	qer_editorimage	textures/skies/marssky_foreground_back.tga
+//	noFragment
+//	noshadows
+//	nooverlays
+//	forceOpaque				// so transparent windows can draw on top of it
+//	{
+//		blend		add		// so transparent windows can draw on top of it
+//		cameraCubeMap	env/marssky_foreground
+//		texgen		skybox
+//		texgen			wobblesky .0 .0 .0
+//	}
+//}
+
+//textures/skies/hellsky
+//{
+//	qer_editorimage	textures/skies/hellsky.tga
+//	noFragment
+//	noshadows
+//	nooverlays
+//	forceOpaque				// so transparent windows can draw on top of it
+//	{
+//		blend		add		// so transparent windows can draw on top of it
+//		cameraCubeMap	env/hellsky
+//		texgen		skybox
+//		texgen			wobblesky 1.5 .5 .2
+//	}
+//}
+
+textures/skies/hellsky2
+{
+	qer_editorimage	env/hellsky2_forward.tga
+	noFragment
+	noshadows
+	nooverlays
+	forceOpaque				// so transparent windows can draw on top of it
+	{
+		blend		add		// so transparent windows can draw on top of it
+		cameraCubeMap	env/hellsky2
+		texgen		skybox
+		texgen			wobblesky .05 .05 .05
+	}
+}
+
+//textures/skies/hellsky3
+//{
+//	qer_editorimage	textures/skies/hellsky3.tga
+//	noFragment
+//	nooverlays
+//	noshadows
+//	{
+//		
+//		cameraCubeMap	env/hellsky3
+//		texgen		skybox
+//		texgen			wobblesky .05 .05 .05
+//		
+//	}
+//}
+
+textures/skies/hellsky4
+{
+	qer_editorimage	env/hellsky4_forward.tga
+	noFragment
+	noshadows
+	noimpact
+	nooverlays
+	{
+		
+		cameraCubeMap	env/hellsky4
+		texgen		skybox
+		texgen			wobblesky .05 .05 .05
+		
+	}
+}
+
+
+
+//textures/skies/qc_sky
+//{
+//	qer_editorimage	textures/skies/qc_sky.tga
+//	noshadows
+//	nonsolid
+//	noimpact
+//	nooverlays
+//	discrete	
+//	{
+//	                  blend    Add
+//		map textures/skies/qc_sky.tga
+//		scroll	time * 0.31 , time * -0.1
+//		
+//	}
+//                 {
+//	                  blend	add 
+//		map textures/skies/qc_sky.tga
+//		scroll	time * 0.21 , time * 0.14
+//		
+//	}
+//	{
+//		blend gl_dst_color,gl_zero
+//		map lights/round.tga
+//	}	
+//	
+//}	
+
+//textures/skies/animatingSky
+//{
+//	discrete
+//	nooverlays
+//	forceOpaque					// so transparent windows can draw on top of it
+//	{
+//		blend			add		// so transparent windows can draw on top of it
+//		texgen			skybox
+//		videoMap		models\skies\e3outsideskyrender\render\skyroqCM.roq	// because this has a height = 6x width, it will be a cube map
+////		cameraCubeMap	test\skyroq
+////		cameraCubeMap	env/boxsky
+//	}
+//}
+
+//**********************************************Moved from aaduffyTest.mtr - start**************************************************
+
+//textures/skies/duffyblah_sky
+//{
+//	qer_editorimage	textures/skies/qc_sky.tga
+//	noshadows
+//	nonsolid
+//	noimpact
+//	discrete	
+//	{
+//	                  blend    Add
+//		map textures/skies/duffyblah_sky.tga
+//		scroll	time * 0.31 , time * -0.1
+//		rgb 0.5
+//		alpha parm4		
+//	}
+//                 {
+//	                  blend	add 
+//		map textures/skies/duffyblah_sky.tga
+//		scroll	time * 0.21 , time * 0.14
+//		rgb 0.5
+//		alpha parm4		
+//		
+//	}
+//                 {
+//	                  blend	add 
+//		map guis/assets/test/duffyfaces.tga
+//		scroll	time * 0.1 , time * 0.04
+//		rgb 0.5
+//		alpha parm4		
+//		
+//	}
+//	{
+//		blend gl_dst_color,gl_zero
+//		map lights/round.tga
+//		alpha parm4		
+//	}	
+//
+//	
+//}	
+
+//**********************************************Moved from aaduffyTest.mtr - end**************************************************
+
+
+//*****************************************************Moved from senetemp.mtr - start*****************************************
+
+
+table deserttable { { .3, .2, .12, .4, .1, .5, .32, .15, .1, .12, .15, .12, .15, .3, .5, .12, .15, 1, 0, 1, .5, .1, .4, .15, .12, .15, .18, 1, .1, .11, .15, .2, .1, .2, .1, .12, .12, .3, .2, .1, .1, .1, .2, .14, .14, .1, .2, .05, .2, .3, .1, .12, .1, .1, .1, .13, .14, .1, .14, .21, 0, 1, .5, .1, .4, .15, .1, .12, .14, .1 } }
+
+textures/skies/colortest
+{
+	qer_editorimage	env/cloudy_up.tga
+	noFragment
+	forceOpaque
+	noshadows
+	{
+		blend		add		// so transparent windows can draw on top of it
+		cameraCubeMap	env/cloudy
+		texgen		skybox
+	}
+}
+
+textures/skies/desertlightning
+{
+	qer_editorimage	env/desert_up.tga
+	noFragment
+	forceOpaque				// so transparent windows can draw on top of it
+	noshadows
+	{
+		blend			add		// so transparent windows can draw on top of it
+		cameraCubeMap	env/desert
+		texgen			skybox
+		red 			( deserttable [Parm4 + (time * 0.1) ]) * Parm0
+		green 			( deserttable [Parm4 + (time * 0.1) ]) * Parm1
+		blue 			( deserttable [Parm4 + (time * 0.1) ]) * Parm2	
+	}
+}
+
+textures/skies/desert
+{
+	qer_editorimage	env/desert_up.tga
+	noFragment
+	noshadows
+	noimpact
+	forceOpaque		
+	{
+		blend			add	
+		cameraCubeMap	env/desert
+		texgen			skybox
+	}
+}
+
+textures/skies/commoutside
+{
+	qer_editorimage	env/cloudy_up.tga
+	noFragment
+	noshadows
+	noimpact
+	forceOpaque		
+	{
+		blend			add	
+		cameraCubeMap	env/cloudy //desert
+		texgen			skybox
+		red				.75//Parm0 * xray02table[ time * .1 ]
+		green			.75//Parm1 * xray02table[ time * .1 ]
+		blue			.75//Parm2 * xray02table[ time * .1 ]
+	}
+}
+
+
+
+
+//*****************************************************Moved from senetemp.mtr - end*****************************************
+
+//Verified good complete by Eutectic - Sep 15-04

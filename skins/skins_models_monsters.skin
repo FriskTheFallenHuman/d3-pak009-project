@@ -1,0 +1,51 @@
+skin skins/models/monsters/maledict {
+	//models/monsters/maledict/mtongue textures/common/nodraw
+	models/characters/common/leftbet models/characters/common/leftmaledict
+	models/characters/common/rightbet models/characters/common/rightmaledict
+}
+
+skin skins/models/monsters/maledictnohead {
+	models/monsters/maledict/mtongue textures/common/nodraw
+	models/characters/common/leftbet textures/common/nodraw
+	models/characters/common/rightbet textures/common/nodraw
+}
+
+skin skins/models/monsters/sabdeath {
+	models/monsters/sabaoth/treads models/monsters/sabaoth/treads_stopped
+	models/weapons/bfg/bfg_world textures/common/nodraw
+}
+
+
+skin skins/models/monsters/magnospikes {
+	models/monsters/maggot/magspine textures/common/nodraw
+}
+
+skin skins/models/monsters/sentrynobeam {
+	models/items/flashlight/beam1 textures/common/nodraw
+	models/items/flashlight/flare textures/common/nodraw
+	models/items/flashlight/bulb textures/common/nodraw
+}
+
+skin skins/models/monsters/sentrybeam {
+	//models/items/flashlight/beam1 textures/common/nodraw
+	//models/items/flashlight/flare textures/common/nodraw
+	//models/items/flashlight/bulb textures/common/nodraw
+}
+
+skin skins/models/monsters/revnoeyes {
+	models/monsters/revenant/reye textures/common/nodraw
+	models/monsters/revenant/leye textures/common/nodraw
+}
+
+skin skins/models/monsters/fatty {
+	textures/base_trim/bluetex4n_ed textures/common/nodraw
+	models/mapobjects/filler/monkeywrench.tga textures/common/nodraw
+}
+
+skin skins/models/monsters/a_hk_branded {
+	models/monsters/hellknight/hellknight models/monsters/hellknight/a_hk_branded 
+}
+
+skin skins/models/monsters/a_hellimp {
+	models/monsters/imp/imp  models/monsters/imp/a_hellimp 
+}

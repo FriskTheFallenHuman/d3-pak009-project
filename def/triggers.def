@@ -1,0 +1,313 @@
+
+/***********************************************************************
+
+ trigger
+
+***********************************************************************/
+
+entityDef trigger_multiple {
+	"editor_color"			".5 .5 .5"
+	"editor_mins"			"?"
+	"editor_maxs"			"?"
+	"editor_material"		"textures/common/trigmulti"
+
+	"editor_usage"			"Variable sized repeatable trigger. Can be targeted at one or more entities."
+	"editor_var wait"		"wait time in seconds between triggerings. If set to -1, trigger will fire once only (default is 0.5)."
+	"editor_var random"		"wait variance in seconds. Effective wait time before triggering again is ('wait' +/- 'random')."
+	"editor_var delay"		"delay in seconds before firing targets after trigger is activated."
+	"editor_var random_delay"	"delay variance in seconds. Effective delay before firing targets is ('delay' +/- 'random_delay')."
+	"editor_var call"		"script function to call when trigger is activated."
+	"editor_var requires"		"item required in player's inventory for trigger to fire."
+	"editor_var removeItem"		"name of item to remove from player's inventory when trigger is activated by the player."
+	"editor_bool anyTouch"		"if set to 1, anything can touch activate trigger: players, characters and func_activators."
+	"editor_bool noTouch"		"if set to 1, nothing can touch activate trigger, it must be triggered."
+	"editor_bool triggerFirst"	"if set to 1, trigger is disabled until triggered."
+	"editor_bool noClient"		"if set to 1, trigger can't be activated by players, only by characters and func_activators."
+
+	"spawnclass"			"idTrigger_Multi"
+
+	"wait"				"0.5"
+	"random"			"0"
+	"delay"				"0"
+	"random_delay"			"0"
+	"anyTouch"			"0"
+	"noTouch"			"0"
+	"noClient"			"0"
+}
+
+entityDef trigger_once {
+	"editor_color"			".5 .5 .5"
+	"editor_mins"			"?"
+	"editor_maxs"			"?"
+	"editor_material"		"textures/common/trigonce"
+
+	"editor_usage"			"Variable sized use-once trigger. Removed from map after firing. Can be targeted at one or more entities."
+	"editor_var delay"		"delay in seconds before firing targets after trigger is activated."
+	"editor_var call"		"script function to call when trigger is activated."
+	"editor_var requires"		"item required in player's inventory for trigger to fire."
+	"editor_var removeItem"		"name of item to remove from player's inventory when trigger is activated by the player."
+	"editor_bool anyTouch"		"if set to 1, anything can touch activate trigger: players, characters and func_activators."
+	"editor_bool noTouch"		"if set to 1, nothing can touch activate trigger, it must be triggered."
+	"editor_bool triggerFirst"	"if set to 1, trigger is disabled until triggered."
+	"editor_bool noClient"		"if set to 1, trigger can't be activated by players, only by characters and func_activators."
+
+	"spawnclass"			"idTrigger_Multi"
+
+	"wait"				"-1"
+	"random"			"0"
+	"delay"				"0"
+	"anyTouch"			"0"
+	"noTouch"			"0"
+	"noClient"			"0"
+}
+
+entityDef trigger_timer {
+	"editor_color"			"0.3 0.1 0.6"
+	"editor_mins"			"-8 -8 -8"
+	"editor_maxs"			"8 8 8"
+	"editor_material"		"textures/common/trigtimer"
+
+	"editor_usage"			"Non-touchable trigger which repeatedly and automatically fires its targets. Triggering this will toggle it on/off."
+	"editor_var start_on"		"if set to 1, trigger timer will be active as soon as it spawns in the map (default is 0)."
+	"editor_var wait"		"wait time in seconds between triggerings. If set to -1, trigger will fire once only (default is 0.5)."
+	"editor_var random"		"wait variance in seconds. Effective wait time before triggering again is ('wait' +/- 'random')."
+	"editor_var call"		"script function to call when trigger is activated."
+
+	"spawnclass"			"idTrigger_Timer"
+
+	"start_on"			"0"
+	"wait"				"0.5"
+	"random"			"0"
+}
+
+entityDef trigger_relay {
+	"editor_color"			"0.3 0.1 0.6"
+	"editor_mins"			"-8 -8 -8"
+	"editor_maxs"			"8 8 8"
+	"editor_material"		"textures/common/trigrelay"
+
+	"editor_usage"			"Non-touchable repeatable trigger. Used as a proxy for triggering multiple targets from a script or a touch trigger."
+	"editor_var wait"		"wait time in seconds between triggerings. If set to -1, trigger will fire once only (default is 0)."
+	"editor_var delay"		"delay in seconds before firing targets after trigger is activated."
+	"editor_var call"		"script function to call when trigger is activated."
+	"editor_var requires"		"item required in player's inventory for trigger to fire."
+	"editor_var removeItem"		"name of item to remove from player's inventory when trigger is activated by the player."
+	"editor_var random"		"wait variance in seconds. Effective wait time before triggering again is ('wait' +/- 'random')."
+
+	"spawnclass"			"idTrigger_Multi"
+
+	"wait"				"0"
+	"random"			"0"
+	"delay"				"0"
+	"notouch"			"1"
+}
+
+entityDef trigger_hurt {
+	"editor_color"			"0.8 0.1 0.2"
+	"editor_mins"			"?"
+	"editor_maxs"			"?"
+	"editor_material"		"textures/common/trighurt"
+
+	"editor_usage"			"Variable sized trigger that damages the activator when touched. Triggering this will toggle it on/off."
+	"editor_bool on"		"if set to 1, trigger will be active when it spawns in the map."
+	"editor_var delay"		"delay in seconds between damage jolts when staying in constant physical contact with the trigger (default is 1)."
+	"editor_var def_damage"		"damage definition to use (damage.def file). Common ones are damage_painTrigger, damage_triggerhurt_100, damage_triggerhurt_1000."
+
+	"spawnclass"			"idTrigger_Hurt"
+
+	"on"				"1"
+	"def_damage"			"damage_painTrigger"
+}
+
+entityDef trigger_count {
+	"editor_color"			".3 .5 .8"
+	"editor_mins"			"-8 -8 -8"
+	"editor_maxs"			"8 8 8"
+
+	"editor_usage"			"Trigger counter. Must be triggered a certain number of times before firing its targets."
+	"editor_var count"		"number of times this must be triggered before firing its targets (default is 1)."
+	"editor_bool repeat"		"if set to 1, counter will reset after firing its targets and count up again, if set to 0, it will only fire once (default is 0)."
+
+	"spawnclass"			"idTrigger_Count"
+
+	"count"				"1"
+}
+
+/*
+entityDef trigger_presize {
+	"editor_color"			".5 .5 .5"
+	"editor_mins"			"-64 -64 -16"
+	"editor_maxs"			"64 64 16"
+	"editor_material"		"textures/common/trigmulti"
+
+	"editor_usage"			"Fixed sized repeatable trigger.Doesn't work, not used in Id's maps so commented out."
+	"editor_var wait"		"seconds between triggerings.  Use '-1' to indicate one time only."
+	"editor_var delay"		"seconds to wait before firing after triggered."
+	"editor_var call"		"script function to call when triggered."
+	"editor_var requires"		"item required in players inventory to fire."
+	"editor_var removeItem"		"if above item is removed from inventory when used."
+	"editor_var anyTouch"		"anything can touch it, players, mobs."		// What the hell are mobs?
+	"editor_var noTouch"		"cannot be touched, must be triggered."
+	"editor_var noClient"		"can't be touched by players, but can be touched by other entities (func_activators, for instance)."
+	"editor_var random"		"wait variance."
+
+	"spawnclass"			"idTrigger_Multi"
+
+	"wait"				"0.5"
+	"random"			"0"
+	"delay"				"0"
+	"anyTouch"			"0"
+	"noTouch"			"0"
+	"noClient"			"0"
+}
+*/
+
+entityDef trigger_fade {
+	"editor_color"			"0.8 0.1 0.2"
+	"editor_mins"			"-8 -8 -8"
+	"editor_maxs"			"8 8 8"
+	"editor_material"		"textures/common/trigfade"
+
+	"editor_usage"			"When triggered, this fades the screen to a given color/translucence over a given amount of time."
+	"editor_var fadeColor"		"color and translucence to fade the screen to (default is 0 0 0 1 - 100% opaque black)."
+	"editor_var fadeTime"		"time in seconds it takes to fade (default is 1)."
+
+	"spawnclass"			"idTrigger_Fade"
+
+	"fadeColor"			"0 0 0 1"
+	"fadeTime"			"1.0"
+}
+
+/*
+entityDef trigger_guiOverlay {
+	"editor_color"			"0.8 0.1 0.2"
+	"editor_mins"			"-8 -8 -8"
+	"editor_maxs"			"8 8 8"
+	"editor_material"		"textures/common/triggui"
+
+	"editor_usage"			"Toggles an overlay gui full screen over the view. No spawn function, entity doesn't exist: commented out.""
+	"editor_var overlayGui"		"gui to overlay"
+
+	"spawnclass"			"idTrigger_GuiOverlay"
+}
+*/
+
+entityDef trigger_entityname {
+	"editor_color"			".5 .5 .5"
+	"editor_mins"			"?"
+	"editor_maxs"			"?"
+	"editor_material"		"textures/common/trigentityname"
+
+	"editor_usage"			"Variable sized repeatable trigger that only responds to a specific entity. Can be targeted at one or more entities."
+	"editor_var entityname"		"name of entity that can activate the trigger."
+	"editor_var wait"		"wait time in seconds between triggerings. If set to -1, trigger will fire once only (default is 0.5)."
+	"editor_var random"		"wait variance in seconds. Effective wait time before triggering again is ('wait' +/- 'random')."
+	"editor_var delay"		"delay in seconds before firing targets after trigger is activated."
+	"editor_var random_delay"	"delay variance in seconds. Effective delay before firing targets is ('delay' +/- 'random_delay')."
+	"editor_var call"		"script function to call when trigger is activated."
+	"editor_bool noTouch"		"if set to 1, nothing can touch activate trigger, it must be triggered."
+	"editor_bool triggerFirst"	"if set to 1, trigger is disabled until triggered."
+
+	"spawnclass"			"idTrigger_EntityName"
+
+	"wait"				"0.5"
+	"random"			"0"
+	"delay"				"0"
+	"random_delay"			"0"
+}
+
+entityDef trigger_once_entityname {
+	"editor_color"			".5 .5 .5"
+	"editor_mins"			"?"
+	"editor_maxs"			"?"
+	"editor_material"		"textures/common/trigentityname_once"
+
+	"editor_usage"			"Variable sized use-once trigger that only responds to a specific entity. Can be targeted at one or more entities."
+	"editor_var entityname"		"name of entity that can activate the trigger."
+	"editor_var delay"		"delay in seconds before firing targets after trigger is activated."
+	"editor_var call"		"script function to call when trigger is activated."
+	"editor_bool noTouch"		"if set to 1, nothing can touch activate trigger, it must be triggered."
+	"editor_bool triggerFirst"	"if set to 1, trigger is disabled until triggered."
+
+	"spawnclass"			"idTrigger_EntityName"
+
+	"wait"				"-1"
+	"random"			"0"
+	"delay"				"0"
+	"random_delay"			"0"
+}
+
+entityDef trigger_flashlight {
+	"editor_color"			".5 .5 .5"
+	"editor_mins"			"?"
+	"editor_maxs"			"?"
+	"editor_material"		"textures/common/trigflashlight"
+
+	"editor_usage"			"Variable sized repeatable trigger that is activated by shining the flashlight on it. Can be targeted at one or more entities."
+	"editor_var wait"		"wait time in seconds between triggerings. If set to -1, trigger will fire once only (default is 0.5)."
+	"editor_var random"		"wait variance in seconds. Effective wait time before triggering again is ('wait' +/- 'random')."
+	"editor_var delay"		"delay in seconds before firing targets after trigger is activated."
+	"editor_var random_delay"	"delay variance in seconds. Effective delay before firing targets is ('delay' +/- 'random_delay')."
+	"editor_var call"		"script function to call when trigger is activated."
+	"editor_var requires"		"item required in player's inventory for trigger to fire."
+	"editor_var removeItem"		"name of item to remove from player's inventory when trigger is activated by the player."
+	"editor_bool anyTouch"		"if set to 1, anything can touch activate trigger: players, characters and func_activators."
+	"editor_bool noTouch"		"if set to 1, nothing can touch activate trigger, it must be triggered."
+	"editor_bool triggerFirst"	"if set to 1, trigger is disabled until triggered."
+	"editor_bool noClient"		"if set to 1, trigger can't be activated by players, only by characters and func_activators."
+
+	"spawnclass"			"idTrigger_Multi"
+
+	"flashlight_trigger"		"1"
+	"wait"				"0.5"
+	"random"			"0"
+	"delay"				"0"
+	"random_delay"			"0"
+	"anyTouch"			"0"
+	"noTouch"			"0"
+	"noClient"			"0"
+}
+
+entityDef trigger_facing {
+	"editor_color"			".5 .5 .5"
+	"editor_mins"			"?"
+	"editor_maxs"			"?"
+	"editor_material"		"textures/common/trigmulti"
+	"editor_showangle"		"1"
+
+	"editor_usage"			"Behaves exactly like a trigger_once except that the player must be facing within the specified angle to activate the trigger."
+	"editor_var angle"		"angle that the player must be facing to activate trigger."
+	"editor_var angleLimit"		"angle deviation limit in degrees from 'angle' key value that player must be within to activate trigger. For eg, if 'angle is set to 0 and 'angleLimit' is set to 45, trigger will fire if player faces 0 degrees + or - 45 degrees."
+	"editor_var delay"		"delay in seconds before firing targets after trigger is activated."
+	"editor_var call"		"script function to call when trigger is activated."
+	"editor_var requires"		"item required in player's inventory for trigger to fire."
+	"editor_var removeItem"		"name of item to remove from player's inventory when trigger is activated by the player."
+	"editor_bool noTouch"		"if set to 1, nothing can touch activate trigger, it must be triggered."
+	"editor_bool triggerFirst"	"if set to 1, trigger is disabled until triggered."
+
+	"spawnclass"			"idTrigger_Multi"
+
+	"wait"				"-1"
+	"random"			"0"
+	"delay"				"0"
+	"anyTouch"			"0"
+	"noTouch"			"0"
+	"noClient"			"0"
+	"facing"			"1"
+}
+
+entityDef trigger_touch {
+	"editor_color"			".5 .5 .5"
+	"editor_mins"			"?"
+	"editor_maxs"			"?"
+	"editor_material"		"textures/common/trigmulti"
+	"editor_showangle"		"1"
+
+	"editor_usage"			"Continuously tests whether entities are touching it and calls a script function at any such occurence. Be careful using this trigger because it's fairly demanding in system resources."
+	"editor_var call"		"script function to call when an entity touches the trigger. The script function can have only a single entity as a parameter."
+	"editor_bool start_on"		"if true the trigger starts on."
+
+	"spawnclass"			"idTrigger_Touch"
+
+	"start_on"			"0"
+}

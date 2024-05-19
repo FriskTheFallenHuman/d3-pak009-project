@@ -1,0 +1,338 @@
+//================textures/ice shader stats================
+//
+// Total # of shaders : 27
+// Working shaders: 1
+// Broken/CommentedOut shaders: 26
+//================================================================
+
+
+//*****************************************************Moved from senetemp.mtr - start*****************************************
+
+
+//textures/ice/sflpanel4a_ice
+//{
+//	qer_editorimage		textures/ice/sflpanel4a_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/ice/sflpanel4a_ice_local, heightmap (textures/ice/sflpanel4a_ice, 1) ) 
+//	}
+//	diffusemap			textures/ice/sflpanel4a_ice
+//	specularmap			textures/ice/sflpanel4a_ice
+//}
+
+//textures/ice/elec_box1s_ice
+//{
+//	qer_editorimage	textures/ice/elec_box1s_ice
+//	bumpmap			heightmap (textures/base_trim/elec_box1s_ice_bmp.tga, 1)
+//	diffusemap		textures/ice/elec_box1s_ice
+//	specularmap		textures/ice/elec_box1s_ice
+//}
+
+//textures/ice/elec_box1_ice
+//{
+//	qer_editorimage	textures/ice/elec_box1_ice
+//	bumpmap			heightmap (textures/base_trim/elec_box1_ice_bmp.tga, 1)
+//	diffusemap		textures/ice/elec_box1_ice
+//	specularmap		textures/ice/elec_box1_ice
+//	{
+//		blend		gl_one,gl_one
+//		map 		textures/base_trim/elec_box1_add.tga
+//		red			parm0 * 2
+//		green		parm1 * 2
+//		blue		parm2 * 2
+//	}
+//}
+
+//textures/ice/sopanel1a_ice
+//{
+//	qer_editorimage		textures/ice/sopanel1a_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/ice/sopanel1a_ice_local, heightmap (textures/ice/sopanel1a_ice, 2) ) 
+//	}
+//	diffusemap			textures/ice/sopanel1a_ice
+//	specularmap			textures/ice/sopanel1a_ice
+//}
+
+//textures/ice/reactorwalk1a_ice
+//{
+//	qer_editorimage		textures/ice/reactorwalk1a_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/ice/reactorwalk1a_ice_local, heightmap (textures/ice/reactorwalk1a_ice, 2) ) 
+//	}
+//	diffusemap			textures/ice/reactorwalk1a_ice
+//	specularmap			textures/ice/reactorwalk1a_ice
+//}
+//
+//textures/ice/sofloor3_ice
+//{
+//	qer_editorimage		textures/ice/sofloor3_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/ice/sofloor3_ice_local, heightmap (textures/ice/sofloor3_ice, 2) ) 
+//	}
+//	diffusemap			textures/ice/sofloor3_ice
+//	specularmap			textures/ice/sofloor3_ice
+//}
+
+//textures/ice/sopanel2b4_ice
+//{
+//	qer_editorimage		textures/ice/sopanel2b4_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/ice/sopanel2b4_ice_local, heightmap (textures/ice/sopanel2b4_ice, 1) ) 
+//	}
+//	diffusemap			textures/ice/sopanel2b4_ice
+//	specularmap			textures/ice/sopanel2b4_ice
+//}
+
+//textures/ice/sopanel22_ice
+//{
+//	qer_editorimage		textures/ice/sopanel22_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/base_wall/sopanel22_local, heightmap (textures/ice/sopanel22_ice, 1) ) 
+//	}
+//	{
+//		blend			diffusemap		
+//		map				textures/ice/sopanel22_ice_d
+//		alphatest		.5
+//	}
+//	specularmap			textures/ice/sopanel22_ice_d
+//}
+
+//textures/ice/sopanel20_ice
+//{
+//	qer_editorimage		textures/ice/sopanel20_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/base_wall/sopanel20_local, heightmap (textures/ice/sopanel20_ice, 1) ) 
+//	}
+//	{
+//		blend			diffusemap			
+//		map				textures/ice/sopanel20_ice_d
+//		alphatest		.5
+//	}
+//	specularmap			textures/ice/sopanel20_ice_d
+//}
+
+//textures/ice/skpanel12b_ice
+//{
+//	qer_editorimage		textures/ice/skpanel12b_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/ice/skpanel12b_ice_local, heightmap (textures/ice/skpanel12b_ice, 1) ) 
+//	}
+//	diffusemap			textures/ice/skpanel12b_ice
+//	specularmap			textures/ice/skpanel12b_ice
+//}
+
+//textures/ice/sopanel21_ice
+//{
+//	qer_editorimage		textures/ice/sopanel21_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/ice/sopanel21_ice_local, heightmap (textures/ice/sopanel21_ice, 1) ) 
+//	}
+//	{
+//		blend			diffusemap			
+//		map				textures/ice/sopanel21_ice_d
+//		alphatest		.5
+//	}
+//	specularmap			textures/ice/sopanel21_ice_d
+//}
+
+//textures/ice/smalldoortex_ice
+//{
+//	qer_editorimage		textures/ice/smalldoortex_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/ice/smalldoortex_ice_local, heightmap (textures/ice/smalldoortex_ice, 1) ) 
+//	}
+//	diffusemap			textures/ice/smalldoortex_ice
+//	specularmap			textures/ice/smalldoortex_ice
+//}
+
+//textures/ice/sopanel4_ice
+//{
+//	qer_editorimage		textures/ice/sopanel4_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/ice/sopanel4_ice_local, heightmap (textures/ice/sopanel4_ice, 2) ) 
+//	}
+//	diffusemap			textures/ice/sopanel4_ice
+//	specularmap			textures/ice/sopanel4_ice
+//}
+
+//textures/ice/sopanel2a_ice
+//{
+//	qer_editorimage		textures/ice/sopanel2a_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/ice/sopanel2a_ice_local, heightmap (textures/ice/sopanel2a_ice, 2) ) 
+//	}
+//	diffusemap			textures/ice/sopanel2a_ice
+//	specularmap			textures/ice/sopanel2a_ice
+//}
+//
+//textures/ice/sopanel25_ice
+//{
+//	qer_editorimage		textures/ice/sopanel25_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/ice/sopanel25_ice_local, heightmap (textures/ice/sopanel25_ice, 2) ) 
+//	}
+//	diffusemap			textures/ice/sopanel25_ice
+//	specularmap			textures/ice/sopanel25_ice
+//}
+
+//textures/ice/sopanel9_ice
+//{
+//	qer_editorimage		textures/ice/sopanel9_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/ice/sopanel9_ice_local, heightmap (textures/ice/sopanel9_ice, 2) ) 
+//	}
+//	diffusemap			textures/ice/sopanel9_ice
+//	specularmap			textures/ice/sopanel9_ice
+//}
+
+//textures/ice/shatterglass01_ice
+//{
+//	translucent
+//	noshadows
+//	twoSided
+//	glass
+//	qer_editorimage		textures/ice/shatterglass01_ice
+//	specularmap			textures/ice/sopanel2b_ice
+//	{
+//		blend			add
+//		map				textures/ice/shatterglass01_ice
+//	}
+//	{
+//		blend			add
+//		cubeMap			env/bland
+//		texgen			reflect
+//	}
+//}
+
+//textures/ice/sopanel2b5_ice
+//{
+//	qer_editorimage		textures/ice/sopanel2b5_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/ice/sopanel2b5_ice_local, heightmap (textures/ice/sopanel2b5_ice, 1) ) 
+//	}
+//	diffusemap			textures/ice/sopanel2b5_ice
+//	specularmap			textures/ice/sopanel2b5_ice
+//}
+
+//textures/ice/sopanel15b_ice
+//{
+//	qer_editorimage		textures/ice/sopanel15b_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/ice/sopanel15b_ice_local, heightmap (textures/ice/sopanel15b_ice, 2) ) 
+//	}
+//	diffusemap			textures/ice/sopanel15b_ice
+//	specularmap			textures/ice/sopanel15b_ice
+//}
+
+textures/ice/sopanel23_ice
+{
+	qer_editorimage		textures/ice/sopanel23_ice
+	{
+		blend			bumpmap				
+		map				addnormals (textures/ice/sopanel23_ice_local, heightmap (textures/ice/sopanel23_ice, 1.5) ) 
+	}
+	diffusemap			textures/ice/sopanel23_ice
+	specularmap			textures/ice/sopanel23_ice
+}
+
+//textures/ice/sopanel2b_ice
+//{
+//	qer_editorimage		textures/ice/sopanel2b_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/ice/sopanel2b_ice_local, heightmap (textures/ice/sopanel2b_ice, 1) ) 
+//	}
+//	diffusemap			textures/ice/sopanel2b_ice
+//	specularmap			textures/ice/sopanel2b_ice
+//}
+
+//textures/ice/sofloor2_ice
+//{
+//	qer_editorimage		textures/ice/sofloor2_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/ice/sofloor2_ice_local, heightmap (textures/ice/sofloor2_ice, 2) ) 
+//	}
+//	diffusemap			textures/ice/sofloor2_ice
+//	specularmap			textures/ice/sofloor2_ice
+//}
+
+//textures/ice/sopanel16_ice
+//{
+//	qer_editorimage		textures/ice/sopanel16_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/ice/sopanel16_ice_local, heightmap (textures/ice/sopanel16_ice, 2) ) 
+//	}
+//	diffusemap			textures/ice/sopanel16_ice
+//	specularmap			textures/ice/sopanel16_ice
+//}
+//
+//textures/ice/sopanel2c_ice
+//{
+//	qer_editorimage		textures/ice/sopanel2c_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/ice/sopanel2c_ice_local, heightmap (textures/ice/sopanel2c_ice, 2) ) 
+//	}
+//	diffusemap			textures/ice/sopanel2c_ice
+//	specularmap			textures/ice/sopanel2c_ice
+//}
+
+//textures/ice/servertex1_ice
+//{
+//	qer_editorimage		textures/ice/servertex1_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/ice/servertex1_ice_local, heightmap (textures/ice/servertex1_ice, 2) ) 
+//	}
+//	diffusemap			textures/ice/servertex1_ice
+//	specularmap			textures/ice/servertex1_ice
+//}
+
+//textures/ice/sfloor_ice
+//{
+//	qer_editorimage		textures/ice/sfloor_ice
+//	{
+//		blend			bumpmap				
+//		map				addnormals (textures/ice/sfloor_ice_local, heightmap (textures/ice/sfloor_ice, 2) ) 
+//	}
+//	diffusemap			textures/ice/sfloor_ice
+//	specularmap			textures/ice/sfloor_ice
+//}
+
+
+//textures/ice/sofloor1_ice
+//{
+//	qer_editorimage		textures/ice/sofloor1_ice
+//	{
+//		blend		bumpmap
+//		map				addnormals (textures/ice/sofloor1_ice_local, heightmap (textures/ice/sofloor1_ice, 2) ) 
+//		scale		2 , 2
+//	}
+//	diffusemap			textures/ice/sofloor1_ice
+//	specularmap			textures/ice/sofloor1_ice
+//}
+
+
+
+
+//*****************************************************Moved from senetemp.mtr - end*****************************************
+
+
+//Verified good complete by Eutectic - Sep 10-04

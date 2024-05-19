@@ -1,0 +1,13 @@
+//===============================================================
+//Tim's spooky lights
+//===============================================================
+
+table builduplight { clamp { 0, .2, .4, .6, .8, 1, 1, 1 } }
+table builduplight2 { clamp { 0, .2, .4, .6, .8, 1, 1, 1, 1, 0 } }
+table fadedown  { clamp { 1, 1, 1, .8, .8, .6, .5, .4, .2, .2, .1, 0 } }
+table builduppulse { {.8, .6, .4, .2, 0, .2, .4, .6, .8 } }
+table builduppulse2 { { 1 } }
+table xOnlight { { 1, 1, 1 } }
+table xFlickerLight { { 0.8, 0.5, 0, 0.8 } }
+
+//Test textures

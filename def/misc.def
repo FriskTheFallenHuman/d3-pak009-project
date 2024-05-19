@@ -1,0 +1,147 @@
+/***********************************************************************
+
+ miscellaneous
+
+***********************************************************************/
+
+entityDef worldspawn {
+	"editor_color"			"0 0 0"
+	"editor_mins"			"?"
+	"editor_maxs"			"?"
+
+	"editor_usage"			"World geometry. Every map should have exactly one worldspawn."
+	"editor_var music"		"music wav file."
+	"editor_var gravity"		"gravity value for the level (default is 1066)."
+	"editor_var no_stamina"		"if set to 1, stamina is disabled so the player can always run."
+	"editor_var no_Weapons"		"if set to 1, player spawns with only fists (which do melee damage to objects only) and can't pick up melee weapons. He can pick up regular weapons but can't use them. Triggering a target_enableweapons in the game will disable this but any weapons picked up before firing the trigger won't be enabled."
+
+	"spawnclass"			"idWorldspawn"
+	"gravity"			"1066"
+	"name"				"world"
+}
+
+entityDef light {
+	"editor_color"			"0 1 0"
+	"editor_mins"			"-8 -8 -8"
+	"editor_maxs"			"8 8 8"
+	"editor_rotatable"		"1"
+
+	"editor_usage"			"Light source. If health is set, light can take damage and turns off when broken. Can be assigned separate models and light shaders for normal and broken states."
+
+	"editor_material texture"	"light shader to use."
+	"editor_color _color"		"light color"
+	"editor_var shaderParm3"	"shaderParm 3"
+	"editor_var shaderParm4"	"shaderParm 4"
+	"editor_var shaderParm5"	"shaderParm 5"
+	"editor_var shaderParm6"	"shaderParm 6"
+	"editor_var shaderParm7"	"shaderParm 7"
+	"editor_var count"		"how many times light must be triggered to toggle."
+	"editor_var break"		"break when triggered."
+	"editor_model model"		"model to use."
+	"editor_model broken"		"model to use when the light is broken (defaults to model name with '_broken' appended to name)"
+	"editor_var hideModelOnBreak"	"hides the model when broken"
+	"editor_var health"		"amount of damage to recieve before becoming broken.  0 is nonbreakable."
+	"editor_var target"		"entities to trigger if shot."
+	"editor_var levels"		"the number of times a light must be triggered until it turns off.  Each time it's triggered, it's dimmed to a lower level."
+	"editor_var start_off"		"causes the light to be off when the level starts."
+	"editor_var snd_broken"		"sound shader to use when broken"
+	"editor_var mtr_broken"		"material to use when broken"
+	"editor_color color_demonic"	"demonic color to use if in demonic mode."
+	"editor_material mat_demonic"	"demonic shader to use if in demonic mode."
+	"editor_var leave_demonic_mat"	"leaves the demonic shader when the effect expires.. color is still reverted back."
+	"editor_var style"             "the ligth style, -1 means no ligth style at all"
+
+	"spawnclass"			"idLight"
+	"health"			"0"
+	"levels"			"1"
+	"start_off"			"0"
+	"count"				"1"
+	"break"				"0"
+	"style"				"-1"
+}
+
+entityDef speaker {
+	"editor_color"				"0 1 0"
+	"editor_mins"				"-8 -8 -8"
+	"editor_maxs"				"8 8 8"
+	"editor_material"			"textures/common/speaker"
+
+
+	"editor_usage"				"Placeholder for sounds in maps"
+
+	"editor_snd s_shader"			"name of sound shader or wavefile to use."
+	"editor_snd snd_demonic"		"name of sound shader to use when under demonic influence."
+	"editor_var overlayDemonic"		"set to 1 overlays the demonic sound instead of replacing it."
+	"editor_var s_waitfortrigger"		"play on load or play when triggered."
+	"editor_var s_volume"			"set this to override default sound shader volume level."
+	"editor_var s_minDistance"		"set this to override default shader minDistance."
+	"editor_var s_maxDistance"		"set this to override default shader maxDistance."
+	"editor_var s_omni"			"set to 1 to force sound to be omnidirectional"
+	"editor_var s_looping"			"set to 1 to force sound to loop"
+	"editor_var s_occlusion"		"set to 1 to turn off occlusion of sound by portals"
+	"editor_var s_global"			"set to 1 to turn off sound falloff with distance"
+	"editor_var s_shakes"			"set to 1 to make the player's view shake proportinately to loudness."
+	"editor_var wait"			"when set > 0, time between triggerings in seconds. Time between sounds is 'wait' +/- random"
+	"editor_var random"			"wait variance in seconds."
+
+	"spawnclass"				"idSound"
+}
+
+entityDef info_location {
+	"editor_color"			"1 1 0"
+	"editor_mins"			"-4 -4 -4"
+	"editor_maxs"			"4 4 4"
+
+	"editor_usage"			"Area based location name which appears on player's HUD. Locations can be separated by a func_door or a visportal."
+	"editor_var name"		"location name for HUD.  Cannot be the same as any other entity in the game."
+	"editor_var location"		"use this when you have two locations with the same name."
+
+	"spawnclass"			"idLocationEntity"
+}
+
+entityDef info_locationSeparator {
+	"editor_color"			"1 1 0"
+	"editor_mins"			"-16 -16 -16"
+	"editor_maxs"			"16 16 16"
+
+	"editor_usage"			"Area location name separator. Touch a visportal brush with this to break location name flood filling without using a func_door"
+
+	"spawnclass"			"idLocationSeparatorEntity"
+}
+
+entityDef info_vacuum {
+	"editor_color"			"1 1 0"
+	"editor_mins"			"-4 -4 -4"
+	"editor_maxs"			"4 4 4"
+
+	"editor_usage"			"Floods a map area with vaccum. Can be confined only by solid, non-translucent polygons or a closed visportal. Only one is alllowed in a map."
+
+	"spawnclass"			"idVacuumEntity"
+}
+
+entityDef info_vacuumSeparator {
+	"editor_color"			"1 1 0"
+	"editor_mins"			"-16 -16 -16"
+	"editor_maxs"			"16 16 16"
+
+	"editor_usage"			"Touch a visportal brush with this to break vacuum flood filling at windows. Trigger it to allow vacuum to flood through. Cannot be re-triggered to stop vaccum flood."
+
+	"spawnclass"			"idVacuumSeparatorEntity"
+}
+
+entityDef text {
+	"editor_color"			"1 1 0"
+	"editor_mins"			"-4 -4 -4"
+	"editor_maxs"			"4 4 4"
+	"editor_showangle"		"1"
+	"editor_rotatable"		"1"
+
+	"editor_usage"			"Displays text in a level"
+	"editor_var text"		"text to display"
+	"editor_var force"		"if set to 1, text always displays. Otherwise only displays in developer mode"
+	"editor_var playerOriented"	"if set to 1, text always faces the player"
+
+	"spawnclass"			"idTextEntity"
+}
+
+

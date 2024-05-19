@@ -1,0 +1,27 @@
+
+//*****************************************************Moved from mapobjects.mtr - start*****************************************
+
+/*
+models/mal/spike1
+{
+	renderbump  -size 512 512 -trace 0.05 -colorMap -aa 2  models/mal/spike1_local.tga models/mal/spike1_hi.lwo
+        noSelfShadow
+	    noshadows
+
+		{       
+      			 blend	diffusemap
+			 map	models/mal/spike1.tga
+			 alphaTest 0.5
+		}	
+
+		bumpmap 	addnormals (models/mal/spike1_local.tga, heightmap (models/mal/spike1_h.tga, 5) )
+		specularmap models/mal/spike1_s.tga
+        	
+}
+*/
+
+
+//*****************************************************Moved from mapobjects.mtr - end*****************************************
+
+
+//Verified good complete by Eutectic - Nov 23-04

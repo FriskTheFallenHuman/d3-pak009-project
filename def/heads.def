@@ -1,0 +1,220 @@
+ /***********************************************************************
+
+Heads without bodies
+
+***********************************************************************/
+model head_old {
+	mesh							models/md5/characters/npcs/heads/h1.md5mesh
+	channel eyelids					( Ruplid Rlolid Luplid Llolid )
+
+	anim idle						models/md5/characters/npcs/heads/h1idle.md5anim
+	anim stand						models/md5/characters/npcs/heads/h1idle.md5anim
+	anim blink						models/md5/characters/npcs/heads/h1blink.md5anim
+	anim dead						models/md5/characters/npcs/heads/h1death.md5anim
+
+}
+
+model head_bald {
+	mesh							models/md5/characters/npcs/heads/h3.md5mesh
+	channel eyelids					( Ruplid Rlolid Luplid Llolid )
+
+	anim idle						models/md5/characters/npcs/heads/h3idle.md5anim
+	anim stand						models/md5/characters/npcs/heads/h3idle.md5anim
+	anim blink						models/md5/characters/npcs/heads/h3blink.md5anim
+	anim dead						models/md5/characters/npcs/heads/h3death.md5anim
+}
+
+model head_black {
+	mesh							models/md5/characters/npcs/heads/h6.md5mesh
+	skin							skins/characters/npcs/head_black.skin
+	channel eyelids					( Ruplid Rlolid Luplid Llolid )
+
+	anim idle						models/md5/characters/npcs/heads/h6idle.md5anim
+	anim stand						models/md5/characters/npcs/heads/h6idle.md5anim
+	anim blink						models/md5/characters/npcs/heads/h6blink.md5anim
+	anim dead						models/md5/characters/npcs/heads/h6death.md5anim
+
+}
+
+model head_young {
+	mesh							models/md5/characters/npcs/heads/h2.md5mesh
+	channel eyelids					( Ruplid Rlolid Luplid Llolid )
+
+	anim idle						models/md5/characters/npcs/heads/h2idle.md5anim
+	anim stand						models/md5/characters/npcs/heads/h2idle.md5anim
+	anim blink						models/md5/characters/npcs/heads/h2blink.md5anim
+	anim dead						models/md5/characters/npcs/heads/h2death.md5anim
+	anim IPN_News						models/md5/heads/young/marscity/IPN_News.md5anim {
+		frame 1							sound_voice sound/vo/video/video_ipn_news.wav
+	}
+
+}
+
+model head_pretty_old {
+	skin 							skins/characters/npcs/prettyoldhead.skin
+	mesh							models/md5/characters/npcs/heads/h2.md5mesh
+	channel eyelids					( Ruplid Rlolid Luplid Llolid )
+
+	anim idle						models/md5/characters/npcs/heads/h2idle.md5anim
+	anim stand						models/md5/characters/npcs/heads/h2idle.md5anim
+	anim blink						models/md5/characters/npcs/heads/h2blink.md5anim
+	anim dead						models/md5/characters/npcs/heads/h2death.md5anim
+}
+
+model head_asian_old {
+	mesh							models/md5/characters/npcs/heads/h5.md5mesh
+	channel eyelids					( Ruplid Rlolid Luplid Llolid )
+
+	anim idle						models/md5/characters/npcs/heads/h5idle.md5anim
+	anim stand						models/md5/characters/npcs/heads/h5idle.md5anim
+	anim blink						models/md5/characters/npcs/heads/h5blink.md5anim
+	anim dead						models/md5/characters/npcs/heads/h5death.md5anim
+}
+
+model head_asian_young {
+	skin							skins/characters/npcs/head_asian_young.skin
+	mesh							models/md5/characters/npcs/heads/h5.md5mesh
+	channel eyelids					( Ruplid Rlolid Luplid Llolid )
+
+	anim idle						models/md5/characters/npcs/heads/h5idle.md5anim
+	anim stand						models/md5/characters/npcs/heads/h5idle.md5anim
+	anim blink						models/md5/characters/npcs/heads/h5blink.md5anim
+	anim dead						models/md5/characters/npcs/heads/h5death.md5anim
+}
+
+model head_surgeon {
+	mesh							models/md5/characters/npcs/heads/h4.md5mesh
+	channel eyelids					( Ruplid Rlolid Luplid Llolid )
+
+	anim idle						models/md5/characters/npcs/heads/h4idle.md5anim
+	anim stand						models/md5/characters/npcs/heads/h4idle.md5anim
+	anim blink						models/md5/characters/npcs/heads/h4blink.md5anim
+	anim dead						models/md5/characters/npcs/heads/h4death.md5anim
+}
+
+model head_marine_helmet {
+	mesh							models/md5/characters/npcs/heads/mhelmet.md5mesh
+	anim idle						models/md5/characters/npcs/heads/mhelmetidle.md5anim
+	anim stand						models/md5/characters/npcs/heads/mhelmetidle.md5anim
+}
+
+model head_security_helmet {
+	mesh							models/md5/characters/npcs/heads/shelmet.md5mesh
+	anim idle						models/md5/characters/npcs/heads/shelmetidle.md5anim
+	anim stand						models/md5/characters/npcs/heads/shelmetidle.md5anim
+}
+
+model head_security_dhelmet {
+	mesh							models/md5/characters/npcs/heads/shelmet.md5mesh
+	anim idle						models/md5/characters/npcs/heads/shelmetidle.md5anim
+	anim stand						models/md5/characters/npcs/heads/shelmetidle.md5anim
+	skin							skins/monsters/zombies/dsechelmet.skin
+}
+
+model head_security_goggles {
+	mesh							models/md5/heads/security_goggles/goggles.md5mesh
+
+	channel eyelids					( Ruplid Rlolid Luplid Llolid )
+
+	anim idle						models/md5/heads/security_goggles/gogglesidle.md5anim
+	anim stand						models/md5/heads/security_goggles/gogglesidle.md5anim
+	anim blink						models/md5/heads/security_goggles/gogglesblink.md5anim
+}
+
+model head_sarge {
+	mesh							models/md5/heads/sarge/sarge.md5mesh
+	channel eyelids					( Ruplid Rlolid Luplid Llolid )
+
+	anim stand						models/md5/heads/sarge/sargeidle.md5anim
+	anim idle						models/md5/heads/sarge/sargeidle.md5anim
+	anim blink						models/md5/heads/sarge/sargeblink.md5anim
+
+}
+
+model head_swann {
+	skin 							skins/characters/npcs/swannglasses.skin
+	mesh							models/md5/heads/swann/swann.md5mesh
+	channel eyelids					( Ruplid Rlolid Luplid Llolid )
+
+	anim stand						models/md5/heads/swann/swannidle.md5anim
+	anim idle						models/md5/heads/swann/swannidle.md5anim
+	anim blink						models/md5/heads/swann/swannblink.md5anim
+}
+
+model head_betruger {
+	mesh							models/md5/heads/betruger/betruger.md5mesh
+	channel eyelids					( Ruplid Rlolid Luplid Llolid )
+
+	anim idle						models/md5/heads/betruger/betrugeridle.md5anim
+	anim stand						models/md5/heads/betruger/betrugeridle.md5anim
+	anim blink						models/md5/heads/betruger/betrugerblink.md5anim
+}
+
+model head_campbell {
+	mesh							models/md5/heads/campbell/campbell.md5mesh
+	channel eyelids					( Ruplid Rlolid Luplid Llolid )
+
+	anim idle						models/md5/heads/campbell/campbellidle.md5anim
+	anim stand						models/md5/heads/campbell/campbellidle.md5anim
+	anim blink						models/md5/heads/campbell/campbellblink.md5anim
+}
+
+model head_player {
+	mesh							models/md5/heads/player/player.md5mesh
+	channel eyelids					( Ruplid Rlolid Luplid Llolid )
+
+	anim idle						models/md5/heads/player/idle.md5anim
+	anim stand						models/md5/heads/player/idle.md5anim
+	anim blink						models/md5/heads/player/blink.md5anim
+}
+
+model head_zombie1 {
+	mesh							models/md5/characters/npcs/zheads/z1.md5mesh
+	anim idle						models/md5/characters/npcs/zheads/z1idle.md5anim
+}
+
+model head_zombie2 {
+	mesh							models/md5/characters/npcs/zheads/z2.md5mesh
+	anim idle						models/md5/characters/npcs/zheads/z2idle.md5anim
+}
+
+model head_zombie3 {
+	mesh							models/md5/characters/npcs/zheads/z3.md5mesh
+	anim idle						models/md5/characters/npcs/zheads/z3idle.md5anim
+}
+
+model head_zombie4 {
+	mesh							models/md5/characters/npcs/zheads/z4.md5mesh
+	anim idle						models/md5/characters/npcs/zheads/z4idle.md5anim
+}
+
+model head_zombie5 {
+	mesh							models/md5/characters/npcs/zheads/z5.md5mesh
+	anim idle						models/md5/characters/npcs/zheads/z5idle.md5anim
+}
+
+model head_zombie6 {
+	mesh							models/md5/characters/npcs/zheads/z6.md5mesh
+	anim idle						models/md5/characters/npcs/zheads/z6idle.md5anim
+	anim stand						models/md5/characters/npcs/zheads/z6idle.md5anim
+	anim sight						models/md5/characters/npcs/zheads/z6_pistol_sight.md5anim
+}
+
+model head_stump {
+	mesh							models/md5/characters/npcs/zheads/z7.md5mesh
+	anim idle						models/md5/characters/npcs/zheads/z7idle.md5anim
+	anim stand						models/md5/characters/npcs/zheads/z7idle.md5anim
+}
+
+model head_skull {
+	mesh							models/md5/characters/npcs/zheads/skull.md5mesh
+	anim idle						models/md5/characters/npcs/zheads/skullidle.md5anim
+	anim stand						models/md5/characters/npcs/zheads/skullidle.md5anim
+}
+
+model head_bloodybald {
+	skin							skins/characters/npcs/head_bald_bloody.skin
+	mesh							models/md5/characters/npcs/heads/h3.md5mesh
+	anim idle						models/md5/characters/npcs/heads/h3idle.md5anim
+	anim dead						models/md5/characters/npcs/heads/h3death.md5anim
+}

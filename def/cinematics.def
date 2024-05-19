@@ -1,0 +1,351 @@
+
+entityDef cin_base {
+	"inherit"				"func_animate"
+	"editor_color"			"1 .5 .3"
+	"editor_mins"			"-16 -16 0"
+	"editor_maxs"			"16 16 32"
+	"editor_copy2"			"anim"
+
+	"spawnclass"			"idAnimated"
+	"cycle"					"1"
+	"wait"					"-1"
+	"editor_usage"			"Parent entity class for animated models used in cinematics. Do not use in maps."
+}
+
+model cin_e3teaser_hk {
+	mesh							models/md5/cinematics/e3teaserhk_mesh.md5mesh
+	anim e3teaserhk					models/md5/cinematics/e3teaserhk.md5anim {
+		frame 1							call e3teaserhk_drool
+	}
+}
+
+//Planet Mars Space Shot...
+
+model cin_mars_flare {
+	mesh							models/md5/cinematics/mars/flaremesh.md5mesh
+	anim marsflare					models/md5/cinematics/mars/flaremove.md5anim {
+		frame 92						sound e3_voiceover_line1
+	}
+}
+
+//ROOM SHAKE...
+
+model cin_shake {
+	mesh							models/md5/cinematics/roomshake/cin_shake.md5mesh
+	anim shake						models/md5/cinematics/roomshake/cin_shake.md5anim {
+		frame 9							trigger func_fx_1
+		frame 22						trigger shake_fire1
+
+		frame 32						trigger func_fx_2
+		frame 72						trigger func_fx_3
+		frame 99						trigger func_fx_4
+		frame 107						trigger shake_fire2
+
+		frame 116						trigger func_fx_5
+		frame 117						trigger break_shake
+		frame 146						trigger func_fx_6
+		frame 149						trigger shake_fire3
+	}
+}
+
+//teleport room
+
+model cin_tele_skull7 {
+	mesh						models/md5/cinematics/teleporter/skull7mesh.md5mesh
+	anim skull7tel				models/md5/cinematics/teleporter/skullseven.md5anim {
+		frame 7						trigger tim_func_fx_1
+		frame 19					trigger tim_func_fx_2
+	}
+}
+
+// possessions
+
+model cin_posess_sec {
+	skin						skins/security/face2.skin
+	mesh						models/md5/cinematics/lobby/cinsecurity.md5mesh
+	anim secpos					models/md5/cinematics/posession/sec.md5anim {
+    	frame 1						skin skins/security/face2.skin
+		frame 80					sound player_sounds_footstep
+		frame 81					sound player_sounds_footstep
+		frame 145					skin skins/security/dface.skin
+		frame 145					call setShaderTime
+		frame 243					skin skins/security/face2blood.skin
+	}
+}
+
+model cin_posess_zsec {
+	mesh							models/md5/cinematics/posession/zsecmesh.md5mesh
+	anim zsecpos					models/md5/cinematics/posession/zsec.md5anim {
+		frame 364						sound player_sounds_footstep
+		frame 405						sound player_sounds_footstep
+		frame 449						sound player_sounds_footstep
+	}
+}
+
+model cin_posess_skull {
+	mesh							models/md5/cinematics/posession/skullmesh.md5mesh
+	anim skullpos					models/md5/cinematics/posession/skull.md5anim {
+		frame 1							fx fx/skulltrail.fx
+	}
+}
+
+model cin_posess_skull2 {
+	mesh						models/md5/cinematics/posession/skull2mesh.md5mesh
+	anim skull2pos				models/md5/cinematics/posession/skull2.md5anim {
+		frame 1						fx fx/skulltrail.fx
+	}
+}
+
+model cin_posess_skull3 {
+	mesh							models/md5/cinematics/teleporter/skull3mesh.md5mesh
+
+	anim skullone					models/md5/cinematics/teleporter/skullone.md5anim {
+		frame 1							fx fx/skulltrail2.fx
+	}
+	anim skulltwo					models/md5/cinematics/teleporter/skulltwo.md5anim {
+		frame 1							fx fx/skulltrail2.fx
+	}
+	anim skullthree					models/md5/cinematics/teleporter/skullthree.md5anim {
+		frame 1							fx fx/skulltrail2.fx
+	}
+	anim skullfour					models/md5/cinematics/teleporter/skullfour.md5anim {
+		frame 1							fx fx/skulltrail2.fx
+	}
+	anim skullfive					models/md5/cinematics/teleporter/skullfive.md5anim {
+		frame 1							fx fx/skulltrail2.fx
+	}
+	anim skullsix					models/md5/cinematics/teleporter/skullsix.md5anim {
+		frame 1							fx fx/skulltrail2.fx
+	}
+}
+
+model cin_posess_imp {
+	mesh							models/md5/monsters/imp/imp.md5mesh
+	anim imppos						models/md5/cinematics/posession/imppos.md5anim
+}
+
+model cin_posess_hk {
+	mesh							models/monsters/hellknight/cycles/idle1.md5mesh
+	anim poshk					models/md5/cinematics/posession/hkanim.md5anim
+}
+
+//HK WALK BY DOOR...
+
+model cin_hk_walkbydoor {
+	mesh							models/monsters/hellknight/cycles/idle1.md5mesh
+	anim walkbydoor					models/md5/cinematics/hkwalkbydoor.md5anim {
+		frame 2							sound monster_demon_hellknight_footstep
+		frame 21						sound monster_demon_hellknight_footstep
+		frame 35						sound monster_demon_hellknight_footstep
+		frame 57						sound monster_demon_hellknight_footstep
+		frame 77						sound monster_demon_hellknight_footstep
+		frame 117						sound monster_demon_hellknight_footstep
+		frame 142						sound monster_demon_hellknight_footstep
+		frame 161						sound monster_demon_hellknight_footstep
+		frame 180						sound monster_demon_hellknight_footstep
+		frame 200						sound monster_demon_hellknight_footstep
+		frame 220						sound monster_demon_hellknight_footstep
+		frame 244						sound monster_demon_hellknight_footstep
+		frame 267						sound monster_demon_hellknight_footstep
+
+		frame 67						sound monster_demon_hellknight_chatter
+		frame 91						sound monster_demon_hellknight_chatter
+	}
+}
+
+// Commandos
+
+model cin_chain_uacm {
+	skin							skins/player/machinegun.skin
+	mesh							models/md5/cinematics/commandos/cin_uac.md5mesh
+	anim caught						models/md5/cinematics/commandos/cin_commandos_uac.md5anim {
+		frame 6							sound player_sounds_footstep
+		frame 19						sound player_sounds_footstep
+		frame 32						sound player_sounds_footstep
+		frame 46						sound player_sounds_footstep
+		frame 60						sound player_sounds_footstep
+		frame 72						sound player_sounds_footstep
+		frame 89						sound player_sounds_footstep
+		frame 101						sound player_sounds_footstep
+		frame 306						sound player_sounds_footstep
+		frame 317						sound player_sounds_footstep
+		frame 331						sound player_sounds_footstep
+		frame 345						sound player_sounds_footstep
+		frame 358						sound player_sounds_footstep
+		frame 373						sound player_sounds_footstep
+		frame 418						sound player_sounds_footstep
+		frame 427						sound player_sounds_footstep
+		frame 438						sound player_sounds_footstep
+
+		frame 443						trigger chain_fx_1
+		frame 443						trigger csteam_1
+		frame 447						trigger chain_fx_2
+		frame 447						trigger csteam_2
+		frame 449						trigger chain_fx_3
+		frame 449						trigger csteam_3
+
+		frame 462						sound e32_commando_bodyroll
+
+		frame 470						sound player_sounds_footstep
+		frame 473						sound player_sounds_footstep
+		frame 490						sound player_sounds_footstep
+		frame 501						sound player_sounds_footstep
+		frame 512						sound player_sounds_footstep
+	}
+}
+
+model cin_chain_zct {
+	mesh							models/monsters/zombie/zct/cycles/ZC_tent_R.md5mesh
+	anim ambush						models/md5/cinematics/commandos/cin_commandos_tent.md5anim {
+		frame 126						sound monster_zombie_commando_tentacle_out
+		frame 155						sound monster_zombie_commando_tentacle_in
+		frame 160						sound monster_zombie_commando_smellfear
+	}
+}
+
+model cin_chain_zcc {
+	skin							skins/zcc/muzzle_flash.skin
+
+	mesh							models/md5/cinematics/commandos/cin_commandos_chain.md5mesh
+	anim ambush						models/md5/cinematics/commandos/cin_commandos_chain.md5anim {
+		frame 280						sound snd_footstep
+		frame 281						sound snd_chains
+
+		frame 289						sound snd_footstep
+		frame 290						sound snd_chains
+
+		frame 298						sound snd_footstep
+		frame 299						sound snd_chains
+
+		frame 307						sound snd_footstep
+		frame 308						sound snd_chains
+
+		frame 317						sound snd_footstep
+		frame 318						sound snd_chains
+
+		frame 328						sound snd_footstep
+		frame 329						sound snd_chains
+
+		frame 338						sound snd_footstep
+		frame 339						sound snd_chains
+
+		frame 348						sound snd_footstep
+		frame 349						sound snd_chains
+
+		frame 357						sound snd_footstep
+		frame 358						sound snd_chains
+
+		frame 368						sound snd_footstep
+		frame 369						sound snd_chains
+
+		frame 375						sound snd_footstep
+
+		frame 380						sound snd_bleed
+		frame 381						sound snd_chains
+
+		frame 384						sound snd_footstep
+		frame 385						sound snd_chains
+		frame 386						sound snd_footstep
+
+		frame 388						sound snd_chains
+
+		frame 390						sound snd_windup
+		frame 400						call zcc_cine_fire
+		frame 401						fx fx/chaingunfire.fx
+		frame 406						sound snd_chains
+		frame 460						sound snd_winddown
+	}
+}
+
+// Elevator
+
+model cin_elevator_player {
+	skin							skins/player/nowep.skin
+
+	mesh							models/md5/cinematics/elevator/cin_elevator_uac.md5mesh
+	anim elevator					models/md5/cinematics/elevator/cin_elevator_uac.md5anim {
+		frame 1							sound snd_elevator_start
+		frame 12						sound snd_oneman_voice
+		frame 152						sound snd_elevator_thud
+		frame 153						sound snd_player_elevator
+		frame 165						sound snd_elevator_door_open
+
+		//frame 192						sound snd_elevator_door_thud
+		frame 196						sound snd_footstep
+		frame 209						sound snd_footstep
+		frame 225						sound snd_footstep
+		frame 432						sound snd_helmet
+	}
+}
+
+model cin_elevator_elev {
+	mesh							models/md5/cinematics/elevator/cin_elevator_elev.md5mesh
+	anim elev						models/md5/cinematics/elevator/cin_elevator_elev.md5anim
+}
+
+//Dragged Zombie
+
+model cin_zombie_drag {
+	mesh							models/monsters/zombie/zombie01/cycles/ref_fullskin.md5mesh
+
+	anim zombidle					models/md5/monsters/zombies/zmaint/zombdragidle.md5anim
+	anim zombdrag					models/md5/monsters/zombies/zmaint/zombdraganim.md5anim
+}
+
+/***********************************************************************
+
+fatdrag
+
+***********************************************************************/
+
+model cin_fat_drag {
+	mesh							models/monsters/zombie/fatty/Animation/cycles/facepain.md5mesh
+	anim fatdragidle				maps/fred/bathroom/fatdragidle.md5anim
+	anim fatdraganim				maps/fred/bathroom/fatdraganim.md5anim {
+		frame 1							sound e3_bathroom_fatdrag
+		frame 28						sound monster_demon_pinky_chatter_combat2
+		frame 36						sound e3_bathroom_fatdrag_02
+	}
+}
+
+model cin_pink_drag {
+	mesh							maps/fred/bathroom/pinkdragmesh.md5mesh
+	anim pinkdragidle				maps/fred/bathroom/pinkdragidle.md5anim
+	anim pinkdraganim				maps/fred/bathroom/pinkdraganim.md5anim
+}
+
+//HellKnight Feast...
+
+model cin_hkdeath_uac {
+	mesh							models/md5/cinematics/hellknightfeast/cin_hk_uacdeath.md5mesh
+	anim uacdeath					models/md5/cinematics/hellknightfeast/cin_hk_uacdeath.md5anim {
+		frame 1							trigger bloodonfloor
+	}
+}
+
+model cin_hkrip_uac {
+	mesh							models/md5/cinematics/hellknightfeast/cin_hk_uacrip.md5mesh
+	anim uacrip						models/md5/cinematics/hellknightfeast/cin_hk_uacrip.md5anim {
+		frame 1							trigger ken_hk
+		frame 353						fx fx/headsplat.fx
+		frame 371						fx fx/headspurt.fx
+		frame 384						trigger bloodonwall
+		frame 388						fx fx/headsplat.fx
+		frame 410						fx fx/headsplat.fx
+	}
+}
+
+model cin_hk_hk {
+	mesh							models/md5/cinematics/hellknightfeast/cin_hk_hk.md5mesh
+	anim hkanim						models/md5/cinematics/hellknightfeast/cin_hk_hk.md5anim {
+		frame 15						sound monster_demon_cin_hellknight_footstep2
+		frame 60						sound monster_demon_cin_hellknight_footstep2
+		frame 120						sound monster_demon_cin_hellknight_footstep2
+		frame 130						sound monster_demon_cin_hellknight_footstep2
+	}
+}
+
+model cin_hkendroar_hk {
+	mesh							models/md5/cinematics/hellknightfeast/cin_hk_hk.md5mesh
+	anim hkendanim					models/md5/cinematics/hellknightfeast/cin_hkend_hk.md5anim
+}

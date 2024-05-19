@@ -1,0 +1,18 @@
+
+/***********
+HK screenshot for gamepro
+***********/
+
+model ss_hk_gamepro {
+	mesh							models/md5/monsters/hellknight/hellknight.md5mesh
+	anim hk_gp_pose1				models/md5/screenshots/hk_gp_pose1.md5anim
+}
+
+/***********
+IMP screenshot for gamepro
+***********/
+
+model ss_imp_gamepro {
+	mesh							models/md5/monsters/imp/imp.md5mesh
+	anim pose1						models/md5/screenshots/gamepropose1.md5anim
+}

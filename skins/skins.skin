@@ -1,0 +1,552 @@
+skin skins/elevator_door_dirty {
+	model models/mapobjects/elevators/elevator_door.lwo
+	textures/base_door/smdoor1a textures/base_door/smdoor1b
+}
+
+skin skins/modgobflat1_dirt {
+	model models/mapobjects/chairs/modchair/modarm.lwo
+	model models/mapobjects/chairs/modchair/modcorner.lwo
+	model models/mapobjects/chairs/modchair/modseat.lwo
+	model models/mapobjects/chairs/modchair/modtable.lwo
+	textures/object/modgobflat1	textures/object/modgobflat1_dirt
+}
+
+skin skins/lunchbaggrant {
+	model models/mapobjects/filler/lunchbag.lwo
+	models/mapobjects/filler/lunchbag	models/mapobjects/filler/lunchbaggrant
+}
+
+skin skins/storagecabgen {
+	textures/object/storagecabdoor   textures/object/storagecabdoorgen
+	models/mapobjects/storagecab/storagecab		models/mapobjects/storagecab/storagecab
+}
+
+skin skins/storagecabdelta {
+	textures/object/storagecabdoor   textures/object/storagecabdoordelta
+	models/mapobjects/storagecab/storagecab		models/mapobjects/storagecab/storagecab
+}
+
+skin skins/storagecabdirt {
+	textures/object/storagecabdoor   textures/object/storagecabdoordirt
+	models/mapobjects/storagecab/storagecab		models/mapobjects/storagecab/storagecabdirt
+}
+
+skin skins/storagecabblood {
+	textures/object/storagecabdoor   textures/object/storagecabdoorblood
+	models/mapobjects/storagecab/storagecab		models/mapobjects/storagecab/storagecabblood
+}
+
+skin skins/inhaler_red {
+	model models/mapobjects/utility/inhaler/inhaler.lwo
+	model models/mapobjects/hell/site3/LandscapesRadar/canyonaa.lwo
+	models/mapobjects/utility/inhaler/inhaler   models/mapobjects/utility/inhaler/inhaler_red
+}
+
+skin skins/compcartblood {
+	model models/mapobjects/lab/compcart/compcart.lwo
+	models/mapobjects/lab/compcart/compcart   models/mapobjects/lab/compcart/compcartblood
+	models/mapobjects/tablecart1ball	models/mapobjects/tablecart1ball
+	textures/common/entitygui		textures/common/entitygui
+	textures/common/entitygui2		textures/common/entitygui2
+}
+
+skin skins/wallcabinetdoor_dirt {
+	model models/mapobjects/storagecab/wallcabinet/wallcabinetdoor.lwo
+	models/mapobjects/storagecab/wallcabinet/wallcabinetdoor   models/mapobjects/storagecab/wallcabinet/wallcabinetdoor_dirt
+	textures/sfx/chiglass1blue   textures/sfx/act1glass2
+}
+
+skin skins/airlockdoor {
+	model models/mapobjects/doors/airlockdoor/airdoormaster.lwo
+	textures/base_door/airwheel	textures/base_door/airwheel_enpro
+	textures/base_door/deldoorgutter	textures/base_door/deldoorgutter2_enpro
+	textures/base_door/airdoor	textures/base_door/airdoor_enpro
+	textures/base_door/airdoorfrm	textures/base_door/airdoorfrm_enpro
+}
+
+skin skins/recconpanel1alpha {
+	model models/mapobjects/guiobjects/recconpanel1/recconpanel1.lwo
+	models/mapobjects/guiobjects/recconpanel1/recconpanel1   models/mapobjects/guiobjects/recconpanel1/recconpanel1alpha
+}
+
+skin skins/modconsole1dirt {
+	model models/mapobjects/com/modconsole1.lwo
+	textures/object/modconsole1   textures/object/modconsole1dirt
+	textures/object/modsidesbackflat   textures/object/modsidesbackflatdirt
+}
+
+skin skins/modconsole1burn {
+	model models/mapobjects/com/modconsole1.lwo
+	textures/object/modconsole1   textures/object/modconsole1burn
+	textures/object/modsidesbackflat   textures/object/modsidesbackflat
+}
+
+skin skins/modconsole2dirt {
+	model models/mapobjects/com/modconsole2.lwo
+	textures/object/modconsole2   textures/object/modconsole2dirt
+	textures/object/modsidesbackflat   textures/object/modsidesbackflatdirt
+}
+
+skin skins/modconsole2burn {
+	model models/mapobjects/com/modconsole2.lwo
+	textures/object/modconsole2   textures/object/modconsole2burn
+	textures/object/modsidesbackflat   textures/object/modsidesbackflatburn
+}
+
+skin skins/modconsole3dirt {
+	model models/mapobjects/com/modconsole3.lwo
+	textures/object/modconsole3   textures/object/modconsole3dirt
+	textures/object/modsidesbackflat   textures/object/modsidesbackflatdirt
+}
+
+skin skins/modconsole3burn {
+	model models/mapobjects/com/modconsole3.lwo
+	textures/object/modconsole3   textures/object/modconsole3burn
+	textures/object/modsidesbackflat   textures/object/modsidesbackflatburn
+}
+
+skin skins/modconsole4dirt {
+	model models/mapobjects/com/modconsole4.lwo
+	//textures/object/modconsole4   textures/object/modconsole4dirt
+	textures/object/modsidesbackflat   textures/object/modsidesbackflatdirt
+}
+
+skin skins/modconsole5dirt {
+	model models/mapobjects/com/modconsole5.lwo
+	textures/object/modconsole5   textures/object/modconsole5dirt
+	textures/object/modsidesbackflat   textures/object/modsidesbackflatdirt
+}
+
+skin skins/modconsole6dirt {
+	model models/mapobjects/com/modconsole6.lwo
+	textures/object/modconsole6   textures/object/modconsole6dirt
+	textures/object/modsidesbackflat   textures/object/modsidesbackflatdirt
+}
+
+skin skins/a_cavedoor1frm_d02 {
+	model models/mapobjects/doors/cavedoor1/cavedoor1frm.lwo
+	model models/mapobjects/doors/cavedoor2/cavedoor2frm.lwo
+	models/mapobjects/doors/cavedoor1/cavedoor1frm   models/mapobjects/doors/cavedoor1/a_cavedoor1frm_d02
+}
+
+skin skins/airtank_grey {
+	model models/mapobjects/washroom/airtank.lwo
+	models/mapobjects/washroom/airtank	models/mapobjects/washroom/airtank_grey
+}
+
+skin skins/a_delelev1_d03 {
+	model models/mapobjects/doors/delelev/delelevlf.lwo
+	model models/mapobjects/doors/delelev/delelevrt.lwo
+	textures/base_door/delelev1	textures/base_door/a_delelev1_d03.tga
+}
+
+skin skins/a_hangingmonitor {
+	model models/mapobjects/monitors/hangingmonitor.lwo
+	model models/mapobjects/monitors/hangingmonitor.ase
+	models/mapobjects/monitors/hangingmonitor   models/mapobjects/monitors/a_hangingmonitor
+	models/mapobjects/monitors/hangingmonitorpiece   models/mapobjects/monitors/a_hangingmonitorpiece
+}
+
+skin skins/a_smalldoor_02 {
+	model models/mapobjects/doors/smalldoor.lwo
+	model models/mapobjects/doors/smalldoor2.lwo
+	models/mapobjects/doors/smalldoor   models/mapobjects/doors/a_smalldoor_02
+}
+
+skin skins/a_smalldoor_04 {
+	model models/mapobjects/doors/smalldoor.lwo
+	model models/mapobjects/doors/smalldoor2.lwo
+	models/mapobjects/doors/smalldoor   models/mapobjects/doors/a_smalldoor_04
+}
+
+skin skins/smalldoorblue {
+	model models/mapobjects/doors/smalldoor.lwo
+	model models/mapobjects/doors/smalldoor2.lwo
+	models/mapobjects/doors/smalldoor_light		models/mapobjects/doors/smalldoorblue_light
+	models/mapobjects/doors/smalldoor_sign		models/mapobjects/doors/smalldoorblue_sign
+}
+
+skin skins/cpudesk1a {
+	model models/mapobjects/cpu/cpudesk1.lwo
+	model models/mapobjects/cpu/cpudesk1a_f.lwo
+	model models/mapobjects/cpu/cpudesk1_f.lwo
+	models/mapobjects/cpu/cpudesk1		models/mapobjects/cpu/cpudesk1a
+}
+
+skin skins/cpudesk2_white {
+	model models/mapobjects/cpu/cpudesk2.lwo
+	models/mapobjects/cpu/cpudesk2		models/mapobjects/cpu/cpudesk2_white
+}
+
+skin skins/diamondbox_green {
+	model models/mapobjects/lab/diamondbox/diamondbox.lwo
+	models/mapobjects/lab/diamondbox/diamondboxtex		models/mapobjects/lab/diamondbox/diamondboxtex_green
+}
+
+skin skins/diamondbox_red {
+	model models/mapobjects/lab/diamondbox/diamondbox.lwo
+	models/mapobjects/lab/diamondbox/diamondboxtex		models/mapobjects/lab/diamondbox/diamondboxtex_red
+}
+
+skin skins/diamondbox_sm_dirt {
+	model models/mapobjects/lab/diamondbox/diamondbox_sm.lwo
+	models/mapobjects/lab/diamondbox/diamondbox_sm		models/mapobjects/lab/diamondbox/diamondbox_sm_dirt
+}
+
+skin skins/dummy {
+
+}
+
+skin skins/elevator_cop {
+	model models/mapobjects/elevators/elevator.lwo 
+	model models/mapobjects/elevators/elevator_glass.lwo 
+	models/mapobjects/elevators/elevator		models/mapobjects/elevators/elevator_cop
+	textures/sfx/act1glass3					textures/sfx/act1glass3_dirt
+}
+
+skin skins/elevator_cop3 {
+	model models/mapobjects/elevators/elevator.lwo 
+	model models/mapobjects/elevators/elevator_glass.lwo
+	models/mapobjects/elevators/elevator		models/mapobjects/elevators/elevator_cop3
+	textures/sfx/act1glass3					textures/sfx/act1glass3_dirt
+}
+
+skin skins/elevator_green {
+	model models/mapobjects/elevators/elevator.lwo
+	model models/mapobjects/elevators/elevator_glass.lwo 
+	models/mapobjects/elevators/elevator		models/mapobjects/elevators/elevator_green
+}
+
+skin skins/exp_barrel_red {
+	model 							models/mapobjects/fuel_barrel/exp_barrel.lwo
+	models/mapobjects/fuel_barrel/exp_barrel		models/mapobjects/fuel_barrel/exp_barrel_red
+	models/mapobjects/fuel_barrel/exp_barrel2		models/mapobjects/fuel_barrel/exp_barrel2_red
+	models/mapobjects/fuel_barrel/exp_barrel2a	models/mapobjects/fuel_barrel/exp_barrel2a_red
+}
+
+skin skins/exp_barrel_blue {
+	model 							models/mapobjects/fuel_barrel/exp_barrel.lwo
+	models/mapobjects/fuel_barrel/exp_barrel		models/mapobjects/fuel_barrel/exp_barrel_blue
+	models/mapobjects/fuel_barrel/exp_barrel2		models/mapobjects/fuel_barrel/exp_barrel2_blue
+	models/mapobjects/fuel_barrel/exp_barrel2a	models/mapobjects/fuel_barrel/exp_barrel2a_blue
+}
+
+skin skins/exp_barrel_white {
+	model 							models/mapobjects/fuel_barrel/exp_barrel.lwo
+	models/mapobjects/fuel_barrel/exp_barrel		models/mapobjects/fuel_barrel/exp_barrel_white
+	models/mapobjects/fuel_barrel/exp_barrel2		models/mapobjects/fuel_barrel/exp_barrel2_white
+	models/mapobjects/fuel_barrel/exp_barrel2a	models/mapobjects/fuel_barrel/exp_barrel2a_white
+}
+
+skin skins/fridge2blood {
+	//there is no lwo model compatible with this skin - Eutectic
+	models/mapobjects/fridge2	models/mapobjects/fridge2blood
+	models/mapobjects/fridge2grill	models/mapobjects/fridge2grillblood
+}
+
+skin skins/mcitydoor2_hangar {
+	model models/mapobjects/doors/mcitydoor2l.lwo
+	model models/mapobjects/doors/mcitydoor2r.lwo
+	models/mapobjects/doors/mcitydoor2tex	models/mapobjects/doors/mcitydoor2tex_hangar
+}
+
+skin skins/mcitydoorframe_hangar {
+	model models/mapobjects/doors/mcdoor2frame.lwo
+	model models/mapobjects/doors/mcitydoorframe.lwo
+	model models/mapobjects/doors/mcitydoorframegui.lwo
+	models/mapobjects/doors/mcitydoorframetex_white		models/mapobjects/doors/mcitydoorframetex_hangar
+	models/mapobjects/doors/mcitydoorframetex		models/mapobjects/doors/mcitydoorframetex_hangar
+}
+
+skin skins/jumbofrm_hangar {
+	model models/mapobjects/doors/jumbodoor/jumbodoorfrm.lwo
+	textures/base_door/jumbofrm	textures/base_door/jumbofrm_hangar
+}
+
+skin skins/noGob {
+	// the drool sometimes doesn't look good
+	models/monsters/hellknight/gob	textures/common/nodraw
+}
+
+skin skins/marqueerust {
+	model models/mapobjects/signs/marquee/marquee.lwo
+	models/mapobjects/signs/marquee		models/mapobjects/signs/marqueerust
+}
+
+skin skins/plasticjar1b {
+	model models/mapobjects/lab/plasticjar1/plasticjar1
+	models/mapobjects/lab/plasticjar1/plasticjar1		models/mapobjects/lab/plasticjar1/plasticjar1b
+}
+
+skin skins/plasticjar1g {
+	model models/mapobjects/lab/plasticjar1/plasticjar1
+	models/mapobjects/lab/plasticjar1/plasticjar1		models/mapobjects/lab/plasticjar1/plasticjar1g
+}
+
+skin skins/plasticjar2b {
+	model models/mapobjects/lab/plasticjar2/plasticjar2
+	models/mapobjects/lab/plasticjar2/plasticjar2		models/mapobjects/lab/plasticjar2/plasticjar2b
+}
+
+skin skins/plasticjar2c {
+	model models/mapobjects/lab/plasticjar2/plasticjar2
+	models/mapobjects/lab/plasticjar2/plasticjar2		models/mapobjects/lab/plasticjar2/plasticjar2c
+}
+
+skin skins/plasticjar2o {
+	model models/mapobjects/lab/plasticjar2/plasticjar2
+	models/mapobjects/lab/plasticjar2/plasticjar2		models/mapobjects/lab/plasticjar2/plasticjar2o
+}
+
+skin skins/plasticjar2r {
+	model models/mapobjects/lab/plasticjar2/plasticjar2
+	models/mapobjects/lab/plasticjar2/plasticjar2		models/mapobjects/lab/plasticjar2/plasticjar2r
+}
+
+skin skins/plasticjar2w {
+	model models/mapobjects/lab/plasticjar2/plasticjar2
+	models/mapobjects/lab/plasticjar2/plasticjar2		models/mapobjects/lab/plasticjar2/plasticjar2w
+}
+
+skin skins/serverrack1a {
+	model models/mapobjects/lab/serverrack1/serverrack_sized.lwo
+	models/mapobjects/serverrack1		models/mapobjects/serverrack1a
+}
+
+skin skins/skbeltmachine_orange {
+	model models/mapobjects/skmachines/skbeltmachine.lwo
+	models/mapobjects/skmachines/skbeltmachine		models/mapobjects/skmachines/skbeltmachine_orange
+}
+
+skin skins/skceilingdisc_dirty {
+	model	models/mapobjects/skmachines/skceilingdisc.lwo
+	models/mapobjects/skmachines/skceilingdisc1	models/mapobjects/skmachines/skceilingdisc1b	
+	models/mapobjects/skmachines/skceilingdisc1a models/mapobjects/skmachines/skceilingdisc1b2	
+}
+
+skin skins/skceilingdiscred {
+	model	models/mapobjects/skmachines/skceilingdisc.lwo
+	models/mapobjects/skmachines/skceilingdisc1	models/mapobjects/skmachines/skceilingdisc1red
+}
+
+skin skins/a_skcube_03 {
+	model models/mapobjects/skmachines/skcube.lwo
+	models/mapobjects/skmachines/skcube	models/mapobjects/skmachines/a_skcube_03
+	models/mapobjects/skmachines/skcube2	models/mapobjects/skmachines/skcube2
+}
+
+skin skins/a_skcube_04 {
+	model models/mapobjects/skmachines/skcube.lwo
+	models/mapobjects/skmachines/skcube	models/mapobjects/skmachines/a_skcube_04
+	models/mapobjects/skmachines/skcube2	models/mapobjects/skmachines/skcube2
+}
+
+skin skins/a_skcube_05 {
+	model models/mapobjects/skmachines/skcube.lwo
+	models/mapobjects/skmachines/skcube	models/mapobjects/skmachines/a_skcube_05
+}
+
+skin skins/skcubeblue {
+	model models/mapobjects/skmachines/skcube.lwo
+	models/mapobjects/skmachines/skcube	models/mapobjects/skmachines/skcubeblue
+	models/mapobjects/skmachines/skcube2	models/mapobjects/skmachines/skcube2
+}
+
+skin skins/skcubedirtgreen {
+	model models/mapobjects/skmachines/skcube.lwo
+	models/mapobjects/skmachines/skcube	models/mapobjects/skmachines/skcubedirtgreen
+	models/mapobjects/skmachines/skcube2	models/mapobjects/skmachines/skcubedirtgreen2
+}
+
+skin skins/skcubedirtred {
+	model models/mapobjects/skmachines/skcube.lwo
+	models/mapobjects/skmachines/skcube	models/mapobjects/skmachines/skcubedirtred
+	models/mapobjects/skmachines/skcube2	models/mapobjects/skmachines/skcubedirtred2
+}
+
+skin skins/skcubegreen {
+	model models/mapobjects/skmachines/skcube.lwo
+	models/mapobjects/skmachines/skcube	models/mapobjects/skmachines/skcubegreen
+	models/mapobjects/skmachines/skcube2	models/mapobjects/skmachines/skcube2
+}
+
+skin skins/skcubered {
+	model models/mapobjects/skmachines/skcube.lwo
+	models/mapobjects/skmachines/skcube	models/mapobjects/skmachines/skcubered
+	models/mapobjects/skmachines/skcube2	models/mapobjects/skmachines/skcube2
+}
+
+skin skins/skcubeyellow {
+	model models/mapobjects/skmachines/skcube.lwo
+	models/mapobjects/skmachines/skcube	models/mapobjects/skmachines/skcubeyellow
+	models/mapobjects/skmachines/skcube2	models/mapobjects/skmachines/skcube2
+}
+
+skin skins/sodamachinesq {
+	model models/mapobjects/filler/sodamachine.lwo
+	models/mapobjects/filler/sodamachine		models/mapobjects/filler/sodamachinesq
+	models/mapobjects/filler/sodamachine_add	models/mapobjects/filler/sodamachinesq_add
+	models/mapobjects/filler/sodamachine_add2	models/mapobjects/filler/sodamachinesq_add2
+}
+
+skin skins/sotechdr2frame {
+	model models/mapobjects/doors/techdoor2/techdr2frame.lwo
+	models/mapobjects/doors/techdoor2/techdr2frame		models/mapobjects/doors/techdoor2/sotechdr2frame
+}
+
+skin skins/techdr2frame_red {
+	model models/mapobjects/doors/techdoor2/techdr2frame.lwo
+	models/mapobjects/doors/techdoor2/techdr2frame		models/mapobjects/doors/techdoor2/techdr2frame_red
+}
+
+skin skins/techdr2frame_mcu {
+	model models/mapobjects/doors/techdoor2/techdr2frame.lwo
+	models/mapobjects/doors/techdoor2/techdr2frame		models/mapobjects/doors/techdoor2/techdr2frame_mcu
+}
+
+skin skins/techdr2frame_grease {
+	model models/mapobjects/doors/techdoor2/techdr2frame.lwo
+	models/mapobjects/doors/techdoor2/techdr2frame		models/mapobjects/doors/techdoor2/techdr2frame_grease
+}
+
+skin skins/techdr2frame_cop {
+	model models/mapobjects/doors/techdoor2/techdr2frame.lwo
+	models/mapobjects/doors/techdoor2/techdr2frame		models/mapobjects/doors/techdoor2/techdr2frame_cop
+}
+
+skin skins/techdr2lft_red {
+	model models/mapobjects/doors/techdoor2/techdr2lft.lwo
+	model models/mapobjects/doors/techdoor2/techdr2rt.lwo
+	models/mapobjects/doors/techdoor2/techdr2lft		models/mapobjects/doors/techdoor2/techdr2lft_red
+}
+
+skin skins/techdr2lft_reddirt {
+	model models/mapobjects/doors/techdoor2/techdr2lft.lwo
+	model models/mapobjects/doors/techdoor2/techdr2rt.lwo
+	models/mapobjects/doors/techdoor2/techdr2lft		models/mapobjects/doors/techdoor2/techdr2lft_reddirt
+}
+
+skin skins/techdr2lft_mcu {
+	model models/mapobjects/doors/techdoor2/techdr2lft.lwo
+	model models/mapobjects/doors/techdoor2/techdr2rt.lwo
+	models/mapobjects/doors/techdoor2/techdr2lft		models/mapobjects/doors/techdoor2/techdr2lft_mcu
+}
+
+skin skins/techdr2lft_cop {
+	model models/mapobjects/doors/techdoor2/techdr2lft.lwo
+	model models/mapobjects/doors/techdoor2/techdr2rt.lwo
+	models/mapobjects/doors/techdoor2/techdr2lft		models/mapobjects/doors/techdoor2/techdr2lft_cop
+}
+
+skin skins/sotechdr1frame {
+	model models/mapobjects/doors/techdoor1/techdr1frame.lwo
+	models/mapobjects/doors/techdoor1/techdr1frame		models/mapobjects/doors/techdoor1/sotechdr1frame
+}
+
+skin skins/techdr1frame_red {
+	model models/mapobjects/doors/techdoor1/techdr1frame.lwo
+	models/mapobjects/doors/techdoor1/techdr1frame		models/mapobjects/doors/techdoor1/techdr1frame_red
+}
+
+skin skins/techdr1frame_mcu {
+	model models/mapobjects/doors/techdoor1/techdr1frame.lwo
+	models/mapobjects/doors/techdoor1/techdr1frame		models/mapobjects/doors/techdoor1/techdr1frame_mcu
+}
+
+skin skins/techdr1frame_cop {
+	model models/mapobjects/doors/techdoor1/techdr1frame.lwo
+	models/mapobjects/doors/techdoor1/techdr1frame		models/mapobjects/doors/techdoor1/techdr1frame_cop
+}
+
+skin skins/sotechdr1lft {
+	model models/mapobjects/doors/techdoor1/techdr1lft.lwo
+	models/mapobjects/doors/techdoor1/techdr1lft		models/mapobjects/doors/techdoor1/sotechdr1lft
+}
+
+skin skins/sotechdr1rt {
+	model models/mapobjects/doors/techdoor1/techdr1rt.lwo
+	models/mapobjects/doors/techdoor1/techdr1rt		models/mapobjects/doors/techdoor1/sotechdr1rt
+}
+
+skin skins/techdr1lft_cop {
+	model models/mapobjects/doors/techdoor1/techdr1lft.lwo
+	models/mapobjects/doors/techdoor1/techdr1lft		models/mapobjects/doors/techdoor1/techdr1lft_cop
+}
+
+skin skins/techdr1rt_cop {
+	model models/mapobjects/doors/techdoor1/techdr1rt.lwo
+	models/mapobjects/doors/techdoor1/techdr1rt		models/mapobjects/doors/techdoor1/techdr1rt_cop
+}
+
+skin skins/techdr1rt_blu {
+	model models/mapobjects/doors/techdoor1/techdr1rt.lwo
+	models/mapobjects/doors/techdoor1/techdr1rt		models/mapobjects/doors/techdoor1/techdr1rt_blu
+}
+
+skin skins/techdr1rt_mcu {
+	model models/mapobjects/doors/techdoor1/techdr1rt.lwo
+	models/mapobjects/doors/techdoor1/techdr1rt		models/mapobjects/doors/techdoor1/techdr1rt_mcu
+}
+
+skin skins/techdr1rt_red {
+	model models/mapobjects/doors/techdoor1/techdr1rt.lwo
+	models/mapobjects/doors/techdoor1/techdr1rt		models/mapobjects/doors/techdoor1/techdr1rt_red
+}
+
+skin skins/tecknob1yel {
+	model models/mapobjects/utility/tecknob1/tecknob1.lwo
+	model models/mapobjects/utility/tecknob3/tecknob1.lwo
+	model models/mapobjects/crane/cranesusp.lwo
+	models/mapobjects/utility/tecknob1/tecknob1		models/mapobjects/utility/tecknob1/tecknob1yel
+}
+
+skin skins/tecknob2dirt {
+	model models/mapobjects/utility/tecknob2/tecknob2.lwo
+	models/mapobjects/utility/tecknob2/tecknob2		models/mapobjects/utility/tecknob2/tecknob2dirt
+}
+
+skin skins/toolchest_rust {
+	model models/mapobjects/filler/toolchest.lwo
+	models/mapobjects/filler/toolchest		models/mapobjects/filler/toolchest_rust
+}
+
+skin skins/a_xrayboard1_yel01_d {
+	model models/mapobjects/cpu/xrayboard1a.lwo
+	model models/mapobjects/cpu/xrayboard2.lwo
+	models/mapobjects/cpu/xrayboard1		models/mapobjects/cpu/a_xrayboard1_yel01_d
+}
+
+skin skins/a_cavedoor1dn_org01_d {
+	model models/mapobjects/doors/cavedoor1/cavedoor1dn.lwo
+	models/mapobjects/doors/cavedoor1/cavedoor1dn		models/mapobjects/doors/cavedoor1/a_cavedoor1dn_org01_d
+}
+
+skin skins/a_cavedoor1up_org01_d {
+	model models/mapobjects/doors/cavedoor1/cavedoor1up.lwo
+	models/mapobjects/doors/cavedoor1/cavedoor1up		models/mapobjects/doors/cavedoor1/a_cavedoor1up_org01_d
+}
+
+skin skins/a_cavedoor2_org01_d {
+	model models/mapobjects/doors/cavedoor2/cavedoor2.lwo
+	models/mapobjects/doors/cavedoor2/cavedoor2		models/mapobjects/doors/cavedoor2/a_cavedoor2_org01_d
+}
+
+skin skins/defaultbeam {
+	_default textures/sfx/flare
+}
+
+skin skins/beam_red {
+	_default textures/sfx/beam_red
+}
+
+skin skins/beam_blue {
+	_default textures/sfx/beam_blue
+}
+
+skin skins/duffybolt {
+	_default textures/particles/duffybolt
+}
+
+skin skins/duffybolt_white {
+	_default textures/particles/duffybolt_white
+}

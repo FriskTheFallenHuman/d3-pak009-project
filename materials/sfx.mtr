@@ -1,0 +1,4845 @@
+//================textures/sfx shader stats==============================================
+//
+// Total # of shaders : 203
+// Working shaders: 73
+// Broken/CommentedOut shaders: 100
+// Unwisely named shaders which can't be used for map texturing and kept by necessity: 30
+// (Note: all materials with a vertexcolor parameter can only be used by game models)
+// (Note2: some vfp driven materials here *might* work with Nvidia NV30 or NV40 chipsets)
+//=======================================================================================
+
+table hangarblinktable { { 0,0,0,1,1,1,1,1,.5,.25, 0 } }
+
+textures/sfx/puzzglass
+ {
+	noSelfShadow
+	noshadows
+	translucent
+	glass
+
+	qer_editorimage textures/sfx/puzzglass.tga
+
+	{	
+		maskcolor				
+	    map	makealpha(textures/sfx/puzzglass.tga)
+
+	}
+	
+	
+	{
+	    blend gl_dst_alpha, gl_one
+	    maskalpha
+       	cubeMap		env/gen2
+			red		Parm0
+	        green   Parm1
+	        blue	Parm2
+        texgen		reflect
+
+	}
+
+		
+}
+
+textures/sfx/fridgeglass1
+ {
+	translucent
+	twoSided
+	noshadows
+	glass
+	
+	qer_editorimage textures/sfx/fridgeglass1
+	
+
+	{	
+		maskcolor				
+	    map	makealpha(textures/sfx/fridgeglass1.tga)
+
+	}
+	
+	
+	{
+	    blend gl_dst_alpha, gl_one
+	    maskalpha
+       	cubeMap		env/gen2
+        texgen		reflect
+		red .7	
+		green .9
+		blue  .9
+
+	}
+
+		
+}
+
+textures/sfx/mc_medglass
+ {
+	translucent
+	twoSided
+	noshadows
+	//glass
+	
+	qer_editorimage textures/sfx/mc_medglass
+	
+
+
+
+
+
+	{	
+		maskcolor				
+	    map	makealpha(textures/sfx/mc_medglass.tga)
+
+	}
+	{
+	    blend gl_dst_alpha, gl_one
+	    maskalpha
+       	cubeMap		env/gen2
+        texgen		reflect
+		red .7	
+		green .9
+		blue  .9
+
+	}
+
+
+		
+}
+
+
+//textures/sfx/alphaglass1
+// {
+//	translucent
+//	twoSided
+//	noshadows
+//	glass
+//	
+//	qer_editorimage textures/sfx/alphaglass1
+//	
+//
+//	{	
+//		maskcolor				
+//	    map	makealpha(textures/sfx/alphaglass1.tga)
+//
+//	}
+//	
+//	
+//	{
+//	    blend gl_dst_alpha, gl_one
+//	    maskalpha
+//       	cubeMap		env/act1
+//        texgen		reflect
+//
+//	}
+//
+//		
+//}
+
+textures/sfx/bioscanbeam
+ {
+	sort nearest
+	noSelfShadow
+	noshadows
+	twosided
+	translucent
+	nonsolid
+	noimpact
+
+
+
+	qer_editorimage textures/sfx/bioscanbeam.tga
+
+	{
+		blend	add
+		map	textures/sfx/bioscanbeam.tga
+		rgb	neontable2 [ time * 1.5 ]
+	}
+		
+}
+
+
+textures/sfx/hangar_redflare
+{
+	qer_editorimage textures/editor/hangar_redflare.tga
+	noShadows
+	deform sprite
+	discrete
+	nonsolid
+	noimpact
+
+	{       
+      	 blend	add
+	 map	textures/sfx/defaultflare
+	red 1
+	green 0
+	blue 0
+
+	}
+
+
+ }
+
+textures/sfx/hangar_redflareblink
+{
+	qer_editorimage textures/editor/hangar_redflareblink.tga
+	noShadows
+	deform sprite
+	discrete
+	nonsolid
+	noimpact
+
+	{       
+      	 blend	add
+	 map	textures/sfx/defaultflare
+	red hangarblinktable[ time * 1 ]
+	green 0
+	blue 0
+
+	}
+
+
+ }
+
+
+//textures/sfx/telemask
+//{
+//	noSelfShadow
+//	noshadows
+//	translucent
+//	discrete
+//	twosided
+//	nonsolid
+//	noimpact
+//
+//	qer_editorimage		textures/hell/htorch.tga
+//	{
+//		maskcolor
+//		map makealpha(textures/sfx/telemask.tga)
+//			scroll	time * .3 , time * 0	
+//		//clamp
+//	
+//	
+//	}
+//	{
+//		blend gl_dst_alpha, gl_one
+//	    maskalpha
+//	    map textures/sfx/telemask.tga
+//		translate	time * 2 , time * 2
+//		//rgb		fireballtable[ time * .02 ]
+//	}
+//	{
+//		blend gl_dst_alpha, gl_one
+//	    maskalpha
+//	    map textures/sfx/telemask.tga
+//		translate	time * -2 , time * 1
+//		//rgb		fireballtable[ time * .03 ]
+//	}
+//
+//
+//}
+
+//textures/sfx/add_glass1
+//
+//{
+//    noselfShadow
+//    noshadows	
+//	translucent
+//	twoSided
+//	discrete
+//	glass
+//
+//	qer_editorimage  textures/sfx/add_glass1.tga 
+//
+//		{ 
+//      
+//      		 blend	add
+//	 		map	textures/sfx/add_glass1.tga
+//	}
+//	               	
+//
+//}
+
+//textures/sfx/add_glass2
+//
+//{
+//    noselfShadow
+//    noshadows	
+//	translucent
+//	twoSided
+//	discrete
+//	glass
+//
+//	qer_editorimage  textures/sfx/add_glass2.tga 
+//
+//		{ 
+//      
+//      		 blend	add
+//	 		map	textures/sfx/add_glass2.tga
+//	}
+//	               	
+//
+//}
+
+//textures/sfx/add_glass3
+//
+//{
+//    noselfShadow
+//    noshadows	
+//	translucent
+//	twoSided
+//	discrete
+//	glass
+//
+//	qer_editorimage  textures/sfx/add_glass3.tga 
+//
+//		{ 
+//      
+//      		 blend	add
+//	 		map	textures/sfx/add_glass3.tga
+//	}
+//	               	
+//
+//}
+
+
+
+textures/sfx/keycircuit
+{
+	translucent
+	twoSided
+	noshadows
+	
+	qer_editorimage	textures/sfx/keycircuit.tga
+
+	{
+		blend add
+		cubeMap		env/bland
+		texgen		reflect
+		vertexcolor
+	}
+	
+	{
+	 	 blend	diffuseMap
+		map textures/sfx/keycircuit.tga
+	}
+
+}
+
+
+
+
+
+
+//textures/sfx/lens_flare02_teleport
+//{
+//	qer_editorimage textures/sfx/lens_flare02.tga
+//	noShadows
+//	deform sprite
+//	discrete
+//	nonsolid
+//	noimpact
+//
+//	{       
+//      	 blend	add
+//	 map	textures/sfx/lens_flare02.tga
+//	rotate	( time * -0.01 )
+//	}
+//
+//
+// }
+
+//textures/sfx/sadglass
+//{
+//	translucent
+//	twoSided
+//	noshadows
+//	glass
+//	
+//	qer_editorimage	textures/sfx/sadglass.tga
+//
+//	{
+//		blend add
+//		cubeMap		env/map10
+//		texgen		reflect
+//		vertexcolor
+//	}
+//	
+//}
+
+armorViewEffect
+{
+	{
+		blend blend
+		map makealpha(textures/sfx/armorViewEffect2.tga)
+		clamp
+		red 1.0
+		green 0.0
+		blue 0.0
+		alpha parm3
+	}
+}
+
+//textures/sfx/floorglass
+//{
+//	translucent
+//	nonsolid
+//	noimpact
+//	twoSided
+//	noshadows
+//	//polygonOffset
+//	glass
+//
+//	qer_editorimage	textures/sfx/floorglass.tga
+//	
+//	{
+//		blend diffuseMap
+//		map textures/sfx/floorglass.tga
+//	}
+//
+//
+//
+//}
+
+//textures/sfx/chainsmoke
+//{
+//	noSelfShadow
+//	noshadows
+//	//twosided
+//	translucent
+//	discrete
+//	nonsolid
+//	noimpact
+//	deform sprite
+//
+//	qer_editorimage		textures/sfx/chainsmoke.tga
+//
+//	{
+//	    blend  add   // GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+//		map    textures/sfx/chainsmoke.tga
+//		clamp
+//
+//	}
+//
+//}
+
+
+//textures/sfx/bam1
+//{
+//	noSelfShadow
+//	noshadows
+//	twosided
+//	translucent
+//	discrete
+//	nonsolid
+//	noimpact
+//	deform sprite
+//
+//	qer_editorimage textures/sfx/bam1.tga
+//	{
+//		if ( ( time * 38 ) % 16 == 0 )
+//		blend add
+//		map		textures/sfx/bam1.tga
+//	}	
+//	{
+//		if ( ( time * 38 ) % 16 == 1 )
+//		blend add
+//		map		textures/sfx/bam2.tga
+//	}	
+//	{
+//		if ( ( time * 38 ) % 16 == 2 )
+//		blend add
+//		map		textures/sfx/bam3.tga
+//	}	
+//	{
+//		if ( ( time * 38 ) % 16 == 3 )
+//	blend add
+//		map		textures/sfx/bam4.tga
+//	}	
+//	{
+//		if ( ( time * 38 ) % 16 == 4 )
+//	blend add
+//		map		textures/sfx/bam5.tga
+//	}	
+//	{
+//		if ( ( time * 38 ) % 16 == 5 )
+//	blend add
+//		map		textures/sfx/bam6.tga
+//	}
+//	{
+//		if ( ( time * 38 ) % 16 == 6 )
+//	blend add
+//		map		textures/sfx/bam7.tga
+//	}
+//	{
+//		if ( ( time * 38 ) % 16 == 7 )
+//	blend add
+//		map		textures/sfx/bam8.tga
+//	}
+//	{
+//		if ( ( time * 38 ) % 16 == 8 )
+//	blend add
+//		map		textures/sfx/bam9.tga
+//	}
+//	{
+//		if ( ( time * 38 ) % 16 == 9 )
+//	blend add
+//		map		textures/sfx/bam10.tga
+//	}
+//	{
+//		if ( ( time * 38 ) % 16 == 10 )
+//	blend add
+//		map		textures/sfx/bam11.tga
+//	}
+//	{
+//		if ( ( time * 38 ) % 16 == 11 )
+//	blend add
+//		map		textures/sfx/bam12.tga
+//	}
+//	{
+//		if ( ( time * 38 ) % 16 == 12 )
+//	blend add
+//		map		textures/sfx/bam13.tga
+//	}
+//	{
+//		if ( ( time * 38 ) % 16 == 13 )
+//	blend add
+//		map		textures/sfx/bam14.tga
+//	}
+//	{
+//		if ( ( time * 38 ) % 16 == 14 )
+//	blend add
+//		map		textures/sfx/bam15.tga
+//	}
+//	{
+//		if ( ( time * 38 ) % 16 == 15 )
+//	blend add
+//		map		textures/sfx/bam16.tga
+//	}
+//
+//}
+
+
+//textures/sfx/foop1
+//{
+//	noSelfShadow
+//	noshadows
+//	twosided
+//	translucent
+//	discrete
+//	nonsolid
+//	noimpact
+//	deform sprite
+//
+//	qer_editorimage textures/sfx/foop1.tga
+//	{
+//		if ( ( time * 24 ) % 12 == 0 )
+//		blend add
+//		map		textures/sfx/pop1.tga
+//	}	
+//	{
+//		if ( ( time * 24 ) % 12 == 1 )
+//		blend add
+//		map		textures/sfx/foop2.tga
+//	}	
+//	{
+//		if ( ( time * 24 ) % 12 == 2 )
+//		blend add
+//		map		textures/sfx/foop3.tga
+//	}	
+//	{
+//		if ( ( time * 24 ) % 12 == 3 )
+//	blend add
+//		map		textures/sfx/foop4.tga
+//	}	
+//	{
+//		if ( ( time * 24 ) % 12 == 4 )
+//	blend add
+//		map		textures/sfx/foop5.tga
+//	}	
+//	{
+//		if ( ( time * 24 ) % 12 == 5 )
+//	blend add
+//		map		textures/sfx/foop6.tga
+//	}
+//	{
+//		if ( ( time * 24 ) % 12 == 6 )
+//	blend add
+//		map		textures/sfx/foop7.tga
+//	}
+//	{
+//		if ( ( time * 24 ) % 12 == 7 )
+//	blend add
+//		map		textures/sfx/foop8.tga
+//	}
+//	{
+//		if ( ( time * 24 ) % 12 == 8 )
+//	blend add
+//		map		textures/sfx/foop9.tga
+//	}
+//	{
+//		if ( ( time * 24 ) % 12 == 9 )
+//	blend add
+//		map		textures/sfx/foop10.tga
+//	}
+//	{
+//		if ( ( time * 24 ) % 12 == 10 )
+//	blend add
+//		map		textures/sfx/foop11.tga
+//	}
+//	{
+//		if ( ( time * 24 ) % 12 == 11 )
+//	blend add
+//		map		textures/sfx/foop12.tga
+//	}
+//
+//}
+
+
+//textures/sfx/pop1
+//{
+//	noSelfShadow
+//	noshadows
+//	twosided
+//	translucent
+//	discrete
+//	nonsolid
+//	noimpact
+//	deform sprite
+//
+//	qer_editorimage textures/sfx/pop1.tga
+//	{
+//		if ( ( time * 32 ) % 16 == 0 )
+//		blend add
+//		map		textures/sfx/pop1.tga
+//	}	
+//	{
+//		if ( ( time * 32 ) % 16 == 1 )
+//		blend add
+//		map		textures/sfx/pop2.tga
+//	}	
+//	{
+//		if ( ( time * 32 ) % 16 == 2 )
+//		blend add
+//		map		textures/sfx/pop3.tga
+//	}	
+//	{
+//		if ( ( time * 32 ) % 16 == 3 )
+//	blend add
+//		map		textures/sfx/pop4.tga
+//	}	
+//	{
+//		if ( ( time * 32 ) % 16 == 4 )
+//	blend add
+//		map		textures/sfx/pop5.tga
+//	}	
+//	{
+//		if ( ( time * 32 ) % 16 == 5 )
+//	blend add
+//		map		textures/sfx/pop6.tga
+//	}
+//	{
+//		if ( ( time * 32 ) % 16 == 6 )
+//	blend add
+//		map		textures/sfx/pop7.tga
+//	}
+//	{
+//		if ( ( time * 32 ) % 16 == 7 )
+//	blend add
+//		map		textures/sfx/pop8.tga
+//	}
+//	{
+//		if ( ( time * 32 ) % 16 == 8 )
+//	blend add
+//		map		textures/sfx/pop9.tga
+//	}
+//	{
+//		if ( ( time * 32 ) % 16 == 9 )
+//	blend add
+//		map		textures/sfx/pop10.tga
+//	}
+//	{
+//		if ( ( time * 32 ) % 16 == 10 )
+//	blend add
+//		map		textures/sfx/pop11.tga
+//	}
+//	{
+//		if ( ( time * 32 ) % 16 == 11 )
+//	blend add
+//		map		textures/sfx/pop12.tga
+//	}
+//	{
+//		if ( ( time * 32 ) % 16 == 12 )
+//	blend add
+//		map		textures/sfx/pop13.tga
+//	}
+//	{
+//		if ( ( time * 32 ) % 16 == 13 )
+//	blend add
+//		map		textures/sfx/pop14.tga
+//	}
+//	{
+//		if ( ( time * 32 ) % 16 == 14 )
+//	blend add
+//		map		textures/sfx/pop15.tga
+//	}
+//	{
+//		if ( ( time * 32 ) % 16 == 15 )
+//	blend add
+//		map		textures/sfx/pop16.tga
+//	}
+//
+//}
+
+textures/sfx/act1glass3
+{
+	translucent
+	twoSided
+	noshadows
+	glass
+	qer_editorimage	textures/editor/act1glass3
+
+	{
+		blend add
+		Map		textures/glass/tram_add
+		//this has to be del for speed on monorail texgen		reflect
+		red			parm0
+		green		parm1
+		blue		parm2
+	}
+
+}
+
+//textures/sfx/purpleglass
+//{
+//	translucent
+//	twoSided
+//	noshadows
+//	glass
+//	
+//	qer_editorimage	textures/sfx/purpleglass.tga
+//
+//	{
+//		blend add
+//		cubeMap		env/bland
+//		texgen		reflect
+//	}
+//	
+//	{
+//	 	 blend	diffuseMap
+//		map textures/sfx/purpleglass.tga
+//		//scale	 16 , 16
+//	}
+//
+//}
+
+
+//textures/sfx/redglass
+//{
+//	translucent
+//	twoSided
+//	noshadows
+//	glass
+//	
+//	qer_editorimage	textures/sfx/redglass.tga
+//
+//	{
+//		blend add
+//		cubeMap		env/bland
+//		texgen		reflect
+//	}
+//	
+//	{
+//	 	 blend	diffuseMap
+//		map textures/sfx/redglass.tga
+//		//scale	 16 , 16
+//	}
+//
+//}
+
+
+textures/sfx/blueglass
+{
+	translucent
+	twoSided
+	noshadows
+	glass
+	
+	qer_editorimage	textures/editor/buttugly_glass.tga
+
+	{
+		blend add
+		cubeMap		env/bland
+		texgen		reflect
+	}
+	
+	{
+	 	 blend	diffuseMap
+		//map textures/sfx/blueglass
+		map textures/glass/daddyitburns
+		//scale	 16 , 16
+	}
+
+}
+
+textures/sfx/blueshard
+{
+	translucent
+	twoSided
+	noshadows
+	
+	qer_editorimage	textures/sfx/blueglass.tga
+
+	{
+	 	 blend	diffuseMap
+		map textures/sfx/blueglass.tga
+		//scale	 16 , 16
+		colored
+	}
+
+}
+textures/sfx/amberglass
+{
+	translucent
+	twoSided
+	noshadows
+	glass
+	
+	qer_editorimage	textures/sfx/amberglass.tga
+
+	{
+		blend add
+		cubeMap		env/bland
+		texgen		reflect
+	}
+	
+	{
+	 	 blend	diffuseMap
+		map textures/sfx/amberglass.tga
+		//scale	 16 , 16
+	}
+
+}
+
+textures/sfx/ambershard
+{
+	translucent
+	twoSided
+	noshadows
+	
+	qer_editorimage	textures/sfx/amberglass.tga
+
+	{
+	 	 blend	diffuseMap
+		map textures/sfx/amberglass.tga
+		//scale	 16 , 16
+		colored
+	}
+
+}
+
+textures/sfx/bubble
+
+{
+    noselfShadow
+    noshadows	
+	deform sprite
+	translucent
+	discrete
+	nonsolid
+	noimpact
+
+	qer_editorimage  textures/sfx/bubble.tga 
+
+		{ 
+      
+      		 blend	add
+	 		map	textures/sfx/bubble.tga
+	}
+	               	
+
+}
+
+
+
+//textures/sfx/depthtest
+//{
+//	noshadows
+//	translucent
+//
+//	qer_editorimage		textures/sfx/depthtest.tga
+//
+//	{
+//	   blend  blend  // GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+//		map    textures/sfx/depthtest.tga
+//
+//	}
+//}
+
+textures/sfx/bevglass01
+
+{
+    noselfShadow
+    noshadows	
+	twosided
+	translucent
+	glass
+	               
+		{
+       
+    		  		 blend	filter
+				     map	textures/sfx/bevglass01.tga
+
+		}
+						bumpmap		addnormals(textures/sfx/bevglass01_local.tga, heightmap(textures/sfx/bevglass01_h.tga, 2 ) )
+						specularmap		textures/sfx/bevglass01_s.tga
+	//{
+	//	blend add
+	//	cubeMap		env/bland
+	//	texgen		reflect
+	//}
+
+}
+
+//textures/sfx/desertdust2
+//{
+//	translucent
+//	noshadows
+//	{
+//		//blend gl_dst_color,gl_zero
+//		blend add
+//		map textures/sfx/desertdust2.tga
+//		rotate	( time * -0.1 )
+//		clamp
+//                vertexColor
+//	}	
+//}
+
+textures/sfx/monitor_glass2
+
+{
+	qer_editorimage		textures/editor/monitor_glass2.tga
+    noselfShadow
+    noshadows	
+	translucent
+	glass
+	               
+	
+						bumpmap		textures/sfx/monitor_glass_local.tga
+						specularmap		textures/sfx/monitor_glass_s.tga
+	//{
+	//	blend add
+	//	cubeMap		env/bland
+	//	texgen		reflect
+	//}
+
+}
+
+
+//textures/sfx/monitor_glass
+//
+//{
+//    noselfShadow
+//    noshadows	
+//	translucent
+//	glass
+//	               
+//		{
+//       
+//    		  		 blend	filter
+//				     map	textures/sfx/monitor_glass.tga
+//					scale	2, 2
+//					translate	time * 5 , time * 3
+//		}
+//	
+//						bumpmap		textures/sfx/monitor_glass_local.tga
+//						specularmap		textures/sfx/monitor_glass_s.tga
+//	//{
+//	//	blend add
+//	//	cubeMap		env/bland
+//	//	texgen		reflect
+//	//}
+//
+//}
+
+/* this flare dissapears when SHADERPARM_MODE (parm7) is set, indicating a broken light */
+textures/sfx/flare
+{
+	noshadows
+	translucent
+	nonsolid
+	deform flare 		16
+	qer_editorimage		textures/editor/flare.tga
+	{
+		if ( parm7 == 0 )
+		blend		add
+		map		_quadratic
+		colored
+		vertexcolor
+	}
+}
+
+textures/sfx/flare_8
+{
+	noshadows
+	translucent
+	nonsolid
+	deform flare 		8
+	qer_editorimage		textures/editor/flare.tga
+	{
+		if ( parm7 == 0 )
+		blend		add
+		map		_quadratic
+		colored
+		vertexcolor
+	}
+}
+
+textures/sfx/flare_2
+{
+	noshadows
+	translucent
+	nonsolid
+	deform flare 		2
+	qer_editorimage		textures/editor/flare.tga
+	{
+		if ( parm7 == 0 )
+		blend		add
+		map		_quadratic
+		colored
+		vertexcolor
+	}
+}
+
+
+textures/sfx/flare_1
+{
+	noshadows
+	translucent
+	nonsolid
+	deform flare 		1
+	qer_editorimage		textures/editor/flare.tga
+	{
+		if ( parm7 == 0 )
+		blend		add
+		map		_quadratic
+		colored
+		vertexcolor
+	}
+}
+
+/* this flare uses parm4 to modify the size */
+textures/sfx/flareSizeable
+{
+	noshadows
+	translucent
+	nonsolid
+	deform flare 		( 16 + parm4 )
+	qer_editorimage		textures/editor/flare.tga
+	{
+		if ( parm7 == 0 )
+		blend		add
+		map		_quadratic
+		colored
+		vertexcolor
+	}
+}
+
+
+textures/sfx/flare_cv
+{
+	noshadows
+	translucent
+	nonsolid
+	deform flare 		16
+	qer_editorimage		textures/editor/flare.tga
+
+	{
+		blend		add
+		map		_quadratic
+		colored
+		vertexcolor
+	}
+}
+
+textures/sfx/flare_toggle
+{
+	noshadows
+	translucent
+	nonsolid
+	deform flare 		16
+	qer_editorimage		textures/editor/flare.tga
+
+	{
+		blend		add
+		map		_quadratic
+		rgba
+		red		parm0 * parm7
+		green	parm1 * parm7
+		blue	parm2 * parm7
+		alpha	parm3 * parm7
+		vertexcolor
+	}
+}
+
+textures/sfx/flare_toggle2
+{
+	noshadows
+	translucent
+	nonsolid
+	deform flare 		16
+	qer_editorimage		textures/editor/flare.tga
+
+	{
+		blend		add
+		map		_quadratic
+		rgba
+		red		parm0 * parm7
+		green	parm1 * parm7
+		blue	parm2 * parm7
+		alpha	parm3 * parm7
+		vertexcolor
+	}
+}
+
+
+
+
+textures/sfx/flare_cv2
+{
+	noshadows
+	translucent
+	nonsolid
+	deform flare 		16
+	qer_editorimage		textures/editor/flare.tga
+
+	{
+		blend		add
+		map		_quadratic
+		colored
+		vertexcolor
+	}
+}
+
+//textures/sfx/flare_onoff1
+//{
+//	noshadows
+//	translucent
+//	nonsolid
+//	deform flare 		16
+//	qer_editorimage		textures/editor/flare.tga
+//
+//	{
+//		if ( parm7 == 0 )
+//		blend 	add
+//		map		textures/sfx/nullflare.tga
+//		rgb		5
+//	}
+//
+//	{
+//		if ( parm7 == 1 )
+//		colored
+//		blend		add
+//		map		_quadratic
+//		colored
+//		vertexcolor
+//	}
+//}
+
+
+//duplicate of flare needed for models
+textures/sfx/flare2
+{
+	noshadows
+	translucent
+	nonsolid
+	deform flare 		( 16 + parm4 )
+	qer_editorimage		textures/editor/flare.tga
+
+	{
+		blend		add
+		map		_quadratic
+		colored
+		vertexcolor
+	}
+}
+
+//duplicate of flare needed for models
+textures/sfx/flare3
+{
+	noshadows
+	translucent
+	nonsolid
+	deform flare 		( 16 + parm4 )
+	qer_editorimage		textures/editor/flare.tga
+
+	{
+		blend		add
+		map		_quadratic
+		colored
+		vertexcolor
+	}
+}
+
+
+//duplicate of flare needed for models
+textures/sfx/flare4
+{
+	noshadows
+	translucent
+	nonsolid
+	deform flare 		( 16 + parm4 )
+	qer_editorimage		textures/editor/flare.tga
+
+	{
+		blend		add
+		map		_quadratic
+		colored
+		vertexcolor
+	}
+}
+
+//duplicate of flare needed for models
+textures/sfx/flare5
+{
+	noshadows
+	translucent
+	nonsolid
+	deform flare 		( 16 + parm4 )
+	qer_editorimage		textures/editor/flare.tga
+
+	{
+		blend		add
+		map		_quadratic
+		colored
+		vertexcolor
+	}
+}
+
+//textures/sfx/lens_flare02
+//{
+//	qer_editorimage textures/sfx/lens_flare02.tga
+//	noShadows
+//	deform sprite
+//	discrete
+//	nonsolid
+//	noimpact
+//
+//	{       
+//      	 blend	add
+//	 map	textures/sfx/lens_flare02.tga
+//	}
+//
+//
+// }
+//
+//
+//textures/sfx/lens_flare01
+//{
+//	qer_editorimage textures/sfx/lens_flare01.tga
+//	noShadows
+//	deform sprite
+//	discrete
+//	nonsolid
+//	noimpact
+//
+//	{       
+//      	 blend	add
+//	 map	textures/sfx/lens_flare01.tga
+//	}
+//
+//
+// }
+
+
+
+//textures/sfx/shard06
+//{
+//	translucent
+//	twoSided
+//	noshadows
+//	qer_editorimage	textures/sfx/shard06.tga
+//	
+//	{
+//		blend add //diffuseMap
+//		map textures/sfx/shard06.tga
+//	}
+//
+//
+//
+//}
+//
+//
+//
+//
+//textures/sfx/shard05
+//{
+//	translucent
+//	twoSided
+//	noshadows
+//	qer_editorimage	textures/sfx/shard05.tga
+//	
+//	{
+//		blend add //diffuseMap
+//		map textures/sfx/shard05.tga
+//	}
+//
+//
+//
+//}
+//
+//
+//
+//textures/sfx/shard04
+//{
+//	translucent
+//	twoSided
+//	noshadows
+//	qer_editorimage	textures/sfx/shard04.tga
+//	
+//	{
+//		blend add //diffuseMap
+//		map textures/sfx/shard04.tga
+//	}
+//
+//
+//
+//}
+//
+//
+//
+//textures/sfx/shard03
+//{
+//	translucent
+//	twoSided
+//	noshadows
+//	qer_editorimage	textures/sfx/shard03.tga
+//	
+//	{
+//		blend add //diffuseMap
+//		map textures/sfx/shard03.tga
+//	}
+//
+//
+//
+//}
+//
+//
+//textures/sfx/shard02
+//{
+//	translucent
+//	twoSided
+//	noshadows
+//	qer_editorimage	textures/sfx/shard02.tga
+//	
+//	{
+//		blend add //diffuseMap
+//		map textures/sfx/shard02.tga
+//	}
+//
+//
+//
+//}
+//
+//
+//textures/sfx/shard01
+//{
+//	translucent
+//	twoSided
+//	noshadows
+//	qer_editorimage	textures/sfx/shard01.tga
+//	
+//	{
+//		blend add //diffuseMap
+//		map textures/sfx/shard01.tga
+//	}
+//
+//
+//
+//}
+//
+//textures/sfx/shard00
+//{
+//	translucent
+//	twoSided
+//	noshadows
+//	qer_editorimage	textures/sfx/shard00.tga
+//	
+//	{
+//		blend add //diffuseMap
+//		map textures/sfx/shard00.tga
+//	}
+//
+//
+//
+//}
+
+//textures/sfx/pane//1
+//{
+//	translucent
+//	//nonsolid
+//	//noimpact
+//	twoSided
+//	noshadows
+//	//polygonOffset
+//	qer_editorimage	textures/sfx/paneglass1.tga
+//
+//	{
+//		blend add
+//		cubeMap		env/bland
+//		texgen		reflect
+//	}
+//	
+//	{
+//		blend diffuseMap
+//		map textures/sfx/paneglass1_d.tga
+//	}
+//
+//
+//}
+
+//textures/sfx/paneglass2
+//{
+//	translucent
+//	//nonsolid
+//	//noimpact
+//	twoSided
+//	noshadows
+//	//polygonOffset
+//	glass
+//
+//	qer_editorimage	textures/sfx/paneglass2.tga
+//
+//	{
+//		blend add
+//		cubeMap		env/bland
+//		texgen		reflect
+//	}
+//	
+//	{
+//		blend diffuseMap
+//		map textures/sfx/paneglass2_d.tga
+//	}
+//
+//
+//}
+
+textures/sfx/shatterglass01
+{
+	translucent
+	//nonsolid
+	//noimpact
+	twoSided
+	noshadows
+
+	//polygonOffset
+	qer_editorimage	textures/editor/shatterglass01.tga
+
+	{
+		blend add
+		cubeMap		env/bland
+		texgen		reflect
+	}
+	
+	{
+		blend diffuseMap
+		map textures/sfx/shatterglass01_d.tga
+	}
+
+
+
+}
+
+
+//textures/sfx/smoke_a
+//{
+//	noSelfShadow
+//	noshadows
+//	twosided
+//	translucent
+//	discrete
+//	nonsolid
+//	noimpact
+//
+//	qer_editorimage textures/sfx/smoke_a_1.tga
+//	{
+//		if ( ( time * 11 ) % 11 == 0 )
+//		blend add
+//		map		textures/sfx/smoke_a_1.tga
+//	}	
+//	{
+//		if ( ( time * 11 ) % 11 == 1 )
+//		blend add
+//		map		textures/sfx/smoke_a_2.tga
+//	}	
+//	{
+//		if ( ( time * 11 ) % 11 == 2 )
+//		blend add
+//		map		textures/sfx/smoke_a_3.tga
+//	}	
+//	{
+//		if ( ( time * 11 ) % 11 == 3 )
+//	blend add
+//		map		textures/sfx/smoke_a_4.tga
+//	}	
+//	{
+//		if ( ( time * 11 ) % 11 == 4 )
+//	blend add
+//		map		textures/sfx/smoke_a_5.tga
+//	}	
+//	{
+//		if ( ( time * 11 ) % 11 == 5 )
+//	blend add
+//		map		textures/sfx/smoke_a_6.tga
+//	}
+//	{
+//		if ( ( time * 11 ) % 11 == 6 )
+//	blend add
+//		map		textures/sfx/smoke_a_7.tga
+//	}
+//	{
+//		if ( ( time * 11 ) % 11 == 7 )
+//	blend add
+//		map		textures/sfx/smoke_a_8.tga
+//	}
+//	{
+//		if ( ( time * 11 ) % 11 == 8 )
+//	blend add
+//		map		textures/sfx/smoke_a_9.tga
+//	}
+//	{
+//		if ( ( time * 11 ) % 11 == 9 )
+//	blend add
+//		map		textures/sfx/smoke_a_10.tga
+//	}
+//	{
+//		if ( ( time * 11 ) % 11 == 10 )
+//	blend add
+//		map		textures/sfx/smoke_a_11.tga
+//	}
+//
+//}
+
+textures/sfx/techglass1
+{
+	translucent
+	//nonsolid
+	//noimpact
+	twosided
+	noshadows
+	//polygonOffset
+	glass
+	qer_editorimage	textures/editor/buttugly_glass.tga
+
+	{
+		blend add
+		cubeMap		env/bland
+		texgen		reflect
+	}
+	
+	{
+	 	 blend	add
+	    map textures/glass/daddyitburns
+		//map textures/sfx/techglass1
+		scale	8 , 8
+	}
+
+
+
+}
+
+
+textures/sfx/chiglass1blue
+{
+	translucent
+	twoSided
+	glass
+	noshadows
+	forceOverlays
+	
+	qer_editorimage	textures/sfx/chiglass1blue.tga
+	
+	{
+	 	 blend	diffuseMap
+		map textures/sfx/chiglass1blue_d.tga
+		scale	 16 , 16
+	}
+	{
+		blend add
+		cubeMap		env/gen1
+		texgen		reflect 
+		vertexcolor
+	}
+
+
+
+}
+
+
+textures/sfx/chiglass1blue_sort_close
+{
+	translucent
+	twoSided
+	noshadows
+	sort nearest	
+	glass
+	qer_editorimage	textures/sfx/chiglass1blue.tga
+
+	{
+		blend add
+		cubeMap		env/bland
+		texgen		reflect
+	}
+	
+	{
+	 	 blend	diffuseMap
+		map textures/sfx/chiglass1blue_d.tga
+		scale	 16 , 16
+	}
+
+
+
+}
+
+
+
+//textures/sfx/chiglass1bluemac
+//{
+//	translucent
+//	twoSided
+//	noshadows
+//	glass
+//	
+//	qer_editorimage	textures/sfx/chiglass1blue.tga
+//
+//	{
+//		blend add
+//		cubeMap		env/machine1
+//		texgen		reflect
+//	}
+//	
+//	{
+//	 	 blend	diffuseMap
+//		map textures/sfx/chiglass1blue_d.tga
+//		scale	 16 , 16
+//	}
+//
+//
+//
+//}
+
+
+
+textures/sfx/chiglass1bluex
+{
+	translucent
+	//nonsolid
+	//noimpact
+	twoSided
+	noshadows
+	//polygonOffset
+	glass
+	qer_editorimage	textures/sfx/chiglass1blue.tga
+
+	{
+		blend add
+		cubeMap		env/xcputest
+		texgen		reflect
+	}
+	
+	{
+	 	 blend	diffuseMap
+		map textures/sfx/chiglass1blue_d.tga
+		scale	 16 , 16
+	}
+
+
+
+}
+
+
+textures/sfx/chiglass1
+{
+	translucent
+	//nonsolid
+	//noimpact
+	twosided
+	noshadows
+	//polygonOffset
+	glass
+	qer_editorimage	textures/sfx/chiglass1.tga
+
+	{
+		blend add
+		cubeMap		env/bland
+		texgen		reflect
+	}
+	
+	{
+	 	 blend	diffuseMap
+		map textures/sfx/chiglass1_d.tga
+		scale	 16 , 16
+	}
+
+
+
+}
+
+textures/sfx/act1glass
+{
+	translucent
+	twoSided
+	noshadows
+	glass
+	
+	qer_editorimage	textures/sfx/chiglass1blue.tga
+
+	{
+		blend add
+		cubeMap		env/act1
+		texgen		reflect
+	}
+	
+	{
+	 	 blend	diffuseMap
+		map textures/sfx/chiglass1blue_d.tga
+		scale	 16 , 16
+	}
+
+
+
+}
+
+textures/sfx/act1glass2
+{
+	translucent
+	twoSided
+	noshadows
+	sort close	
+	glass
+	qer_editorimage	textures/sfx/act1glass.tga
+
+	{
+		blend add
+		cubeMap		env/act1
+		texgen		reflect
+	}
+	
+	{
+	 	 blend	diffuseMap
+		map textures/sfx/act1glass_d.tga
+//		scale	 16 , 16
+	}
+
+
+
+}
+
+
+//textures/sfx/bglass02
+//{
+//	translucent
+//	nonsolid
+//	noimpact
+//	twoSided
+//	noshadows
+//	glass
+//	//polygonOffset
+//	qer_editorimage	textures/sfx/bglass02.tga
+//	
+//	{
+//		blend diffuseMap
+//		map textures/sfx/bglass02_d.tga
+//	}
+//
+//
+//
+//}
+
+//textures/sfx/wing
+//{
+//	translucent
+//	twosided
+//	nonsolid
+//	noimpact
+//	noshadows
+//	polygonOffset
+//	qer_editorimage	textures/sfx/wing.tga
+//	{
+//		blend gl_dst_color,gl_zero
+//		map textures/sfx/wing.tga
+//	}	
+//}
+
+
+
+
+//textures/sfx/bglasstrim
+//{
+//	translucent
+//	nonsolid
+//	noimpact
+//	twosided
+//	noshadows
+//	//polygonOffset
+//	qer_editorimage	textures/sfx/bglasstrim.tga
+//	
+//	{
+//		blend add
+//		map textures/sfx/bglasstrim.tga
+//	}
+//
+//
+//
+//}
+
+textures/sfx/bglass01a
+{
+	qer_editorimage	textures/sfx/bglass01.tga
+	translucent
+	twosided
+	noshadows
+	nonsolid
+	glass
+	diffusemap		textures/sfx/bglass01_d.tga
+}
+
+textures/sfx/bglass01
+{
+	translucent
+	nonsolid
+	noimpact
+	twosided
+	noshadows
+	//polygonOffset
+	glass
+	qer_editorimage	textures/sfx/bglass01.tga
+	
+	{
+		blend add
+		map textures/sfx/bglass01_d.tga
+	}
+
+
+
+}
+
+
+//textures/sfx/beam_n
+//
+// {
+//	noSelfShadow
+//	noshadows
+//	twosided
+//	translucent
+//	nonsolid
+//	noimpact
+//
+//	qer_editorimage textures/sfx/beam_n.tga
+//
+//	{
+//		blend	add
+//		map	textures/sfx/beam_n.tga
+//		scroll	time * 0.2 , time * 0	
+//		//scale	 2 , 1
+//		
+//	}
+//	{
+//		blend	add
+//		map	textures/sfx/beam_n.tga
+//		scroll	time * 0.11 , time * 0	
+//		//scale	 4 , 1
+//		
+//	}
+//}
+
+
+textures/sfx/black
+
+ {
+	description "used for big boxes no light no shadows"
+	noSelfShadow
+	noshadows
+	forceOpaque			// will still seal levels
+	//twosided
+
+	qer_editorimage textures/sfx/black.tga
+
+	{	
+		map	textures/sfx/black_2.tga
+	}
+	
+}
+
+//textures/sfx/white
+//
+// {
+//	description "bright white"
+//	noSelfShadow
+//	noshadows
+//	//twosided
+//
+//	qer_editorimage textures/sfx/white.tga
+//
+//	
+//	{
+//		map	textures/sfx/white_2.tga
+//	}
+//}
+
+
+
+textures/sfx/beam_red
+
+ {
+	noSelfShadow
+	noshadows
+	twosided
+	translucent
+	nonsolid
+	noimpact
+
+	qer_editorimage textures/sfx/beam_red.tga
+
+	{
+		blend	add
+		map	textures/sfx/beam_red.tga
+		scroll	time * 0.2 , time * 0	
+		//scale	 2 , 1
+		
+	}
+	{
+		blend	add
+		map	textures/sfx/beam_red.tga
+		scroll	time * 0.11 , time * 0	
+		//scale	 4 , 1
+		
+	}
+}
+
+textures/sfx/beam_blue
+ {
+	noSelfShadow
+	noshadows
+	twosided
+	translucent
+	nonsolid
+	noimpact
+
+	qer_editorimage textures/sfx/beam_blue.tga
+
+	{
+		blend	add
+		map	textures/sfx/beam_blue.tga
+		scroll	time * 0.2 , time * 0	
+		//scale	 2 , 1
+		
+	}
+	{
+		blend	add
+		map	textures/sfx/beam_blue2.tga
+		scroll	time * -0.31 , time * 0	
+		scale	 2 , 1
+		
+	}
+}
+
+
+textures/sfx/mac_reflective
+{
+	discrete
+	translucent
+	noshadows
+	
+	qer_editorimage	textures/editor/mac_reflective.tga
+	
+	{
+		blend diffuseMap
+		map textures/sfx/shatterglass01_d.tga
+//		map textures/washroom/mirror.tga
+	}
+
+	{
+		mirrorRenderMap		256 256		// size of the texture to draw the mirror view in
+		blend	blend
+
+		// tint
+		red		0.7
+		green	0.7
+		blue	0.8
+
+		// opacity
+		alpha	0.6
+
+		// fix up the projection
+		translate	0.5 , 0.5
+		scale	0.5 , 0.5
+
+	
+	}
+
+
+}
+
+textures/sfx/shotgunpuff
+{
+	qer_editorimage textures/editor/dontuse.tga
+	noShadows
+	sort 5
+	{
+		blend blend
+		map textures/particles/smokepuffb.tga
+		vertexcolor
+	}
+}
+
+textures/sfx/muzzleflash
+{
+	qer_editorimage textures/editor/dontuse.tga
+	noShadows
+	{
+		blend add
+		map textures/particles/smokepuffb.tga
+		vertexcolor
+	}
+}
+
+//textures/sfx/flamesoul
+//{
+//	noSelfShadow
+//	noshadows
+//	twosided
+//	translucent
+//	nonsolid
+//	noimpact
+//
+//	qer_editorimage textures/sfx/flame.tga
+//	{
+//		if ( ( time * 9 ) % 9 == 0 )
+//	blend	blend
+//		map		textures/sfx/flameparticle1.tga
+//		vertexcolor
+//	}	
+//	{
+//		if ( ( time * 9 ) % 9 == 1 )
+//	blend	blend
+//		map		textures/sfx/flameparticle2.tga
+//		vertexcolor
+//	}	
+//	{
+//		if ( ( time * 9 ) % 9 == 2 )
+//	blend	blend
+//		map		textures/sfx/flameparticle3.tga
+//		vertexcolor
+//	}	
+//	{
+//		if ( ( time * 9 ) % 9 == 3 )
+//	blend	blend
+//		map		textures/sfx/flameparticle4.tga
+//		vertexcolor
+//	}	
+//	{
+//		if ( ( time * 9 ) % 9 == 4 )
+//	blend	blend
+//		map		textures/sfx/flameparticle5.tga
+//		vertexcolor	
+//	}	
+//	{
+//		if ( ( time * 9 ) % 9 == 5 )
+//	blend	blend
+//		map		textures/sfx/flameparticle6.tga
+//		vertexcolor
+//	}
+//	{
+//		if ( ( time * 9 ) % 9 == 6 )
+//	blend	blend
+//		map		textures/sfx/flameparticle7.tga
+//		vertexcolor
+//	}
+//	{
+//		if ( ( time * 9 ) % 9 == 7 )
+//	blend	blend
+//		map		textures/sfx/flameparticle8.tga
+//		vertexcolor
+//	}
+//	{
+//		if ( ( time * 9 ) % 9 == 8 )
+//	blend	blend
+//		map		textures/sfx/flameparticle9.tga
+//		vertexcolor
+//	}
+//
+//
+//}
+
+//textures/sfx/explosionparticle
+//{
+//	noSelfShadow
+//	noshadows
+//	twosided
+//	translucent
+//	nonsolid
+//	noimpact
+//
+//	qer_editorimage textures/sfx/flame.tga
+//	{
+//		if ( ( time * 13 ) % 13 == 0 )
+//		blend blend
+//		map		textures/sfx/exp1.tga
+//		vertexcolor
+//
+//	}	
+//	{
+//		if ( ( time * 13 ) % 13 == 1 )
+//		blend	blend
+//		map		textures/sfx/exp2.tga
+//		vertexcolor
+//
+//	}	
+//	{
+//		if ( ( time * 13 ) % 13 == 2 )
+//		blend	blend
+//		map		textures/sfx/exp3.tga
+//		vertexcolor
+//
+//	}	
+//	{
+//		if ( ( time * 13 ) % 13 == 3 )
+//		blend	blend
+//		map		textures/sfx/exp4.tga
+//		vertexcolor
+//
+//	}	
+//	{
+//		if ( ( time * 13 ) % 13 == 4 )
+//		blend	blend
+//		map		textures/sfx/exp5.tga
+//		vertexcolor
+//
+//	}	
+//	{
+//		if ( ( time * 13 ) % 13 == 5 )
+//		blend	blend
+//		map		textures/sfx/exp6.tga
+//		vertexcolor
+//
+//	}
+//	{
+//		if ( ( time * 13 ) % 13 == 6 )
+//		blend	blend
+//		map		textures/sfx/exp7.tga
+//		vertexcolor
+//
+//	}
+//	{
+//		if ( ( time * 13 ) % 13 == 7 )
+//		blend	blend
+//		map		textures/sfx/exp8.tga
+//		vertexcolor
+//
+//	}
+//	{
+//		if ( ( time * 13 ) % 13 == 8 )
+//		blend	blend
+//		map		textures/sfx/exp9.tga
+//		vertexcolor
+//
+//	}
+//	{
+//		if ( ( time * 13 ) % 13 == 9 )
+//		blend	blend
+//		map		textures/sfx/exp10.tga
+//		vertexcolor
+//
+//	}
+//	{
+//		if ( ( time * 13 ) % 13 == 10 )
+//		blend	blend
+//		map		textures/sfx/exp11.tga
+//		vertexcolor
+//
+//	}
+//	{
+//		if ( ( time * 13 ) % 13 == 11 )
+//		blend	blend
+//		map		textures/sfx/exp12.tga
+//		vertexcolor
+//
+//	}
+//	{
+//		if ( ( time * 13 ) % 13 == 12 )
+//		blend	blend
+//		map		textures/sfx/exp13.tga
+//		vertexcolor
+//
+//	}
+//
+//
+//
+//
+//}
+//
+
+
+//textures/sfx/firesoul
+//{
+//	noSelfShadow
+//	noshadows
+//	twosided
+//	translucent
+//	nonsolid
+//	noimpact
+//
+//	qer_editorimage textures/sfx/flame.tga
+//	{
+//		if ( ( time * 6 ) % 6 == 0 )
+//		blend	add
+//		map		textures/sfx/fire_a.tga
+//		vertexcolor
+//	}	
+//	{
+//		if ( ( time * 6 ) % 6 == 1 )
+//		blend	add
+//		map		textures/sfx/fire_b.tga
+//		vertexcolor
+//	}	
+//	{
+//		if ( ( time * 6 ) % 6 == 2 )
+//		blend	add
+//		map		textures/sfx/fire_c.tga
+//		vertexcolor
+//	}	
+//	{
+//		if ( ( time * 6 ) % 6 == 3 )
+//		blend	add
+//		map		textures/sfx/fire_d.tga
+//		vertexcolor
+//	}	
+//	{
+//		if ( ( time * 6 ) % 6 == 4 )
+//		blend	add
+//		map		textures/sfx/fire_e.tga
+//		vertexcolor	
+//	}	
+//	{
+//		if ( ( time * 6 ) % 6 == 5 )
+//		blend	add
+//		map		textures/sfx/fire_f.tga
+//		vertexcolor
+//	}
+//}
+
+//textures/sfx/expstrip
+//{
+//	qer_editorimage textures/sfx/exp_strip.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	sort		10		// sort very late, so no translucent objects in the world draws over it
+//	{
+//		blend add
+//		map textures/sfx/exp_strip.tga
+//		vertexColor
+//	}
+//}
+
+//textures/sfx/smokestrip
+//{
+//	qer_editorimage textures/sfx/smoke_strip.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	sort		10		// sort very late, so no translucent objects in the world draws over it
+//	{
+//		blend add
+//		map textures/sfx/smoke_strip.tga
+//		vertexColor
+//	}
+//}
+
+/* this flare uses global parms to affect the color of all using this shader */
+textures/sfx/flare_global
+{
+	noshadows
+	translucent
+	nonsolid
+	deform flare 		16
+	qer_editorimage		textures/editor/flare.tga
+	{
+		if ( parm7 == 0 )
+		blend		add
+		map			_quadratic
+		red			parm0 * global0
+		green		parm1 * global0
+		blue		parm2 * global0
+		vertexcolor
+	}
+}
+
+textures/sfx/flare_global1
+{
+	noshadows
+	translucent
+	nonsolid
+	deform flare 		16
+	qer_editorimage		textures/editor/flare.tga
+	{
+		if ( parm7 == 0 )
+		blend		add
+		map			_quadratic
+		red			parm0 * global1
+		green		parm1 * global1
+		blue		parm2 * global1
+		vertexcolor
+	}
+}
+
+//*********************************************Moved from aaduffyTest.mtr - start***********************************************
+
+table refract { { .7, 1, .5, .7, 0, .6, 1, .8, .6, 0, .7, 1, .6, 1, 1, .6, .7, .8, 0, .6, 1, .5, .7, 1 } }
+
+
+textures/sfx/refract {
+    noselfShadow
+    noshadows	
+	deform sprite
+	translucent
+	discrete
+	nonsolid
+	noimpact
+	
+	qer_editorimage	textures/particles/smokepuff.tga
+
+
+	{
+		blend blend
+		//cubeMap		env/bland
+		//texgen		reflect
+		map textures/particles/smokepuff.tga
+		rgba refract[ time * 0.4 ] * 0.5
+		scroll	sintable[time * 0.08], time * 1.14
+	}
+/*	
+	{
+	 	 blend	blend
+		map textures/particles/smokepuff.tga
+		//scroll 0, time * 0.1
+		alpha refract[ time * 0.1 ] * 0.2
+		//scale	 16 , 16
+	}
+*/	
+}
+
+
+//textures/sfx/firetrail
+//{
+//	qer_editorimage textures/particles/firepuff.tga
+//	translucent
+//	noShadows
+//	{
+//		blend	add
+//		map		textures/particles/firepuff.tga
+//		vertexColor
+//	}
+//}
+//
+//textures/sfx/fireplume
+//{
+//	qer_editorimage textures/particles/fireplume.tga
+//	translucent
+//	noShadows
+//	{
+//		blend	add
+//		map		textures/particles/fireplume.tga
+//		vertexColor
+//	}
+//}
+
+
+//*****************************************Moved from aaduffyTest.mtr - end*************************************************
+
+
+//*****************************************************Moved from kentest.mtr - start*****************************************
+
+table shattertable1 { clamp { 0, 0, 1, 0 } }
+table shattertable2 { clamp { 0, 0, 0, 1 } }
+
+
+//textures/sfx/roqtest
+//
+//{
+//	qer_editorimage	textures/editor/video.tga
+//	deform sprite
+//	translucent
+//	{
+//		blend add
+//		videoMap	video/testhead.roq
+//	}
+//}
+
+
+//textures/sfx/shatterglass01_fx1
+//{
+//	qer_editorimage textures/sfx/shatterglass01_fx1.tga
+//	translucent
+//	noshadows
+//	twoSided
+//	nonsolid
+//
+//	// non-shattered version
+///*
+//	{
+//		if ( parm7 == 0 )
+//		blend add
+//		cubeMap		env/bland
+//		texgen		reflect
+//	}
+//	{
+//		if ( parm7 == 0 )
+//		blend diffuseMap
+//		map textures/sfx/shatterglass01_d.tga
+//	}
+//*/
+//	// shattered version
+//	{
+//		if ( parm7 == 1 )
+//		blend add
+//		map	textures/sfx/shatterglass01_fx1.tga
+//		rgb	shattertable1 [ ( ( time - parm3 ) * 3 ) + 2 / 3 ]
+//	}
+//	{
+//		if ( parm7 == 1 )
+//		blend add
+//		map	textures/sfx/shatterglass01_fx2.tga
+//		rgb	shattertable1 [ ( ( time - parm3 ) * 3 ) + 1 / 3 ]
+//	}
+//	{
+//		if ( parm7 == 1 )
+//		blend add
+//		map	textures/sfx/shatterglass01_fx3.tga
+//		rgb	shattertable1 [ ( ( time - parm3 ) * 3 ) ]
+//	}
+//	{
+//		if ( parm7 == 1 )
+//		blend add
+//		map	textures/sfx/shatterglass01_fx4.tga
+//		rgb	shattertable2 [ ( ( time - parm3 ) * 3 ) ]
+//	}
+//}
+//
+
+
+
+//*****************************************************Moved from kentest.mtr - end*****************************************
+
+
+//*****************************************************Moved from ktest.mtr - start*****************************************
+
+
+//textures/sfx/vids
+//{
+//	noshadows
+//	//translucent
+//
+//	qer_editorimage		textures/sfx/vids.tga
+//
+//    {
+//		map    textures/sfx/vids.tga
+//
+//	}
+//	{
+//
+//	    blend		add
+//		scale 1 ,1
+//		translate time * staticatable[ time * 10 ], time *staticatable[ time * 10 ]
+//		rotate time * 7
+//		red .8
+//		green .8
+//		blue 1
+//		map    textures/decals/statica.tga
+//
+//	}
+//	{
+//
+//	    blend		add
+//		scale 1 ,1
+//		translate time * staticatable[ time * 20 ],time * staticatable[ time * 20 ]
+//		rotate time * 6
+//		red .8
+//		green .8
+//		blue 1
+//		map    textures/decals/statica.tga
+//
+//	}
+//
+///*
+//	{
+//
+//	    blend		filter
+//		scale 2,2
+//		translate time * staticatable[ time * 20 ],time * staticatable[ time * 20 ]
+//		rotate time * 6
+//		map    textures/decals/oldfilm.tga
+//
+//	}
+//	{
+//
+//	    blend		filter
+//		scale 1, .005
+//		translate time * 0, time * -40
+//
+//		map    textures/decals/oldfilm2.tga
+//
+//	}
+//*/
+//
+//}
+
+
+
+
+
+
+//*****************************************************Moved from ktest.mtr - end*****************************************
+
+
+
+//*****************************************************Moved from Maxtextures.mtr - start*****************************************
+
+
+textures/sfx/bglass01_ed
+
+//used on broken version of 3_bulb_light 3 of 4
+{
+	translucent
+	nonsolid
+	noimpact
+	twosided
+	noshadows
+	//polygonOffset
+	qer_editorimage	textures/sfx/bglass01.tga
+	
+	{
+		blend add
+		map textures/sfx/bglass01.tga
+	}
+
+}
+
+
+
+
+//*****************************************************Moved from Maxtextures.mtr - end*****************************************
+
+
+//*****************************************************Moved from patricktest.mtr - start*****************************************
+
+
+table ptfullfade 	{ { .2, .1 , .002 , .0 ,.3, .1, .2, .8 ,.6 , .5 } }
+table lightning 	{ { .2, 0 , 1 , 1 , 1, 0 ,0 ,0 ,0 ,0 ,.5,0 ,0 ,0  } }
+table lightning2 	{ { .2, .3 , 0, 0.1, 0, .2 , .3 ,.2 , 0 , 0 , 0 , 0.02 , 0 , 0.02 , 0 , 0.02 , .05 , .08 , .02, 0 , 0 , 0 , 0, .2, 0 , 0 , .1  } }
+
+
+//textures/sfx/drip_01
+//{
+//	noSelfShadow
+//	noshadows
+//	translucent
+//	
+//				
+//	{
+//		maskcolor
+//		map		makealpha(textures/sfx/drip_mask)
+//		scroll 		time *0 , time * -.65 
+//	}
+//
+//	{
+//		blend 	gl_dst_alpha, gl_one
+//		maskalpha
+//		map		textures/sfx/drip_01
+//	
+//	}
+// }
+
+//textures/sfx/drip_02
+//{
+//	noSelfShadow
+//	noshadows
+//	translucent
+//	
+//				
+//	{
+//		maskcolor
+//		map		makealpha(textures/sfx/drip_mask)
+//		scroll 		time *0 , time * -.55
+//	}
+//
+//	{
+//		blend 	gl_dst_alpha, gl_one
+//		maskalpha
+//		map		textures/sfx/drip_02
+//	
+//	}
+// }
+
+//textures/sfx/drip_03
+//{
+//	noSelfShadow
+//	noshadows
+//	translucent
+//	
+//				
+//	{
+//		maskcolor
+//		map		makealpha(textures/sfx/drip_mask)
+//		scroll 		time *0 , time * -.74
+//	}
+//
+//	{
+//		blend 	gl_dst_alpha, gl_one
+//		maskalpha
+//		map		textures/sfx/drip_03
+//	
+//	}
+// }
+
+textures/sfx/vpring_power3
+{
+	qer_editorimage		textures/editor/dontuse.tga
+		//deform sprite
+        {
+                vertexProgram           heatHazeWithMask.vfp
+                vertexParm              0       time * 0 , time * 0 // texture scrolling
+                vertexParm              1       3           // magnitude of the distortion
+                fragmentProgram			heatHazeWithMask.vfp
+                fragmentMap             0       _currentRender
+                fragmentMap             1       textures/particles/vpring1.tga   // the normal map for distortion
+                fragmentMap             2       textures/particles/vpring1_alpha.tga   // the distortion blend map
+        }
+
+
+}
+
+
+textures/sfx/lightning2
+{
+	qer_editorimage		textures/editor/dontuse.tga
+	translucent
+	twosided
+	noshadows
+	nonsolid
+	{
+		maskcolor
+		map makealpha(textures/particles/lightningmask.tga)
+		vertexcolor
+	}
+	{ 
+		blend gl_dst_alpha, gl_one
+	    	maskalpha
+		map			textures/sfx/lightning3
+		translate	1,time*2.1
+		rgb		lightning2 [ time * .3624 ]*1.5
+		scale		1,ember1   [time*.251]
+	}
+}
+
+textures/sfx/lightning3
+{
+	qer_editorimage		textures/editor/dontuse.tga
+	translucent
+	twosided
+	noshadows
+	nonsolid
+
+	{
+		maskcolor
+		map			makealpha(textures/particles/lightningmask.tga)
+		vertexcolor
+	}
+	{ 
+		blend		gl_dst_alpha, gl_one
+	   	maskalpha
+		map			textures/sfx/lightning3
+		translate	1,time*3
+		red			parm0 * lightning2 [time*.3124]*2   //rgb		lightning2 [time*.3124]*2
+		green		parm1 * lightning2 [time*.3124]*2
+		blue		parm2 * lightning2 [time*.3124]*2
+		scale		1,ember1   [time*.21]
+	}
+}
+
+//textures/sfx/lightning4
+//{
+//	translucent
+//	twosided
+//	noshadows
+//	nonsolid
+//	{
+//		maskcolor
+//		map makealpha(textures/particles/lightningmask.tga)
+//		vertexcolor
+//	}
+//	{ 
+//		blend gl_dst_alpha, gl_one
+//	    	maskalpha
+//		map			textures/sfx/lightning4
+//		translate	1,time*2.1
+//		rgb		lightning2 [ time * .6124 ]*1.3121
+//		scale		1,ember1   [time*.5]
+//	}
+//}
+
+textures/sfx/lightning4_color
+{
+	qer_editorimage		textures/editor/dontuse.tga
+	translucent
+	twosided
+	noshadows
+	nonsolid
+	{
+		maskcolor
+		map makealpha(textures/particles/lightningmask.tga)
+		vertexcolor
+	}
+	{ 
+		blend gl_dst_alpha, gl_one
+	    	maskalpha
+		map			textures/sfx/lightning4_color
+		translate	1,time*2.1
+		rgb		lightning2 [ time * .6124 ]*1.3121
+		scale		1,ember1   [time*.5]
+	}
+}
+
+//textures/sfx/lightning5
+//{
+//	translucent
+//	twosided
+//	noshadows
+//	nonsolid
+//	{
+//		maskcolor
+//		map makealpha(textures/particles/lightningmask.tga)
+//		vertexcolor
+//	}
+//	{ 
+//		blend gl_dst_alpha, gl_one
+//	    	maskalpha
+//		map			textures/sfx/lightning5
+//		translate	1,time*3
+//		rgb		lightning2 [ time * .7824 ]*2.1
+//		scale		1,ember1   [time*.5]
+//	}
+//}
+
+textures/sfx/lightning5_color
+
+{
+	qer_editorimage		textures/editor/dontuse.tga
+	translucent
+	twosided
+	noshadows
+	nonsolid
+	{
+		maskcolor
+		map makealpha(textures/particles/lightningmask.tga)
+		vertexcolor
+	}
+	{ 
+		blend gl_dst_alpha, gl_one
+	    	maskalpha
+		map			textures/sfx/lightning5_color.tga
+
+		translate	1,time*3
+		rgb		lightning2 [ time * .7824 ]*2.1
+		scale		1,ember1   [time*.5]
+	}
+}
+
+//textures/sfx/lightning6
+//{
+//	translucent
+//	twosided
+//	noshadows
+//	nonsolid
+//	{
+//		maskcolor
+//		map makealpha(textures/particles/lightningmask.tga)
+//		vertexcolor
+//	}
+//	{ 
+//		blend gl_dst_alpha, gl_one
+//	    	maskalpha
+//		map			textures/sfx/lightning6
+//		translate	time*3,time*3
+//		rgb		lightning2 [ time * .7824 ]*2.1
+//		scale		1,ember1   [time*.5]
+//		clamp
+//	}
+//}
+
+
+textures/sfx/lightning7
+{
+	qer_editorimage		textures/editor/dontuse.tga
+	translucent
+	twosided
+	noshadows
+	nonsolid
+	{
+		maskcolor
+		map makealpha(textures/particles/lightningmask.tga)
+		vertexcolor
+	}
+	{ 
+		blend gl_dst_alpha, gl_one
+	    	maskalpha
+		map			textures/sfx/lightning7.tga
+
+		translate	1,time*3
+		rgb		lightning2 [ time * .7824 ]*2.1
+		scale		1,ember1   [time*.5]
+	}
+}
+
+textures/sfx/lightning8a
+{
+	qer_editorimage		textures/editor/dontuse.tga
+	translucent
+	twosided
+	noshadows
+	nonsolid
+	{
+		maskcolor
+		map makealpha(textures/particles/lightningmask.tga)
+		vertexcolor
+	}
+	{ 
+		blend gl_dst_alpha, gl_one
+	    	maskalpha
+		map			textures/sfx/lightning8.tga
+
+		translate	1,time*3.2
+		rgb		lightning2 [ time * .71 ]*2.1
+		scale		1,ember1   [time*.5]
+	}
+}
+
+textures/sfx/lightning9a
+{
+	qer_editorimage		textures/editor/dontuse.tga
+	translucent
+	twosided
+	noshadows
+	nonsolid
+	{
+		maskcolor
+		map makealpha(textures/particles/lightningmask.tga)
+		vertexcolor
+	}
+	{ 
+		blend gl_dst_alpha, gl_one
+	    	maskalpha
+		map			textures/sfx/lightning9.tga
+
+		translate	1,time*3
+		rgb		lightning2 [ time * .7824 ]*2.1
+		scale		1,ember1   [time*.5]
+	}
+}
+
+textures/sfx/radiogoop_d
+{
+	qer_editorimage textures/sfx/radiogoop_d.tga
+	deform turbulent	sinTable 0.02 (time*0.1) 10
+    noShadows
+    noselfShadow
+	{
+		blend		bumpmap	 
+		map			textures/sfx/radiogoop_local.tga
+		translate	1,time*0.02
+	}
+	{
+		blend		diffusemap	 
+		map			textures/sfx/radiogoop_d.tga
+		translate	1,time*0.02
+		rgb			.5
+	}
+	{
+		blend		specularmap	 
+		map			models/mapobjects/radiogoop/radiogoopflow_s.tga
+		translate	1,time*0.02
+	}
+	{
+
+		blend		add	 
+		map			textures/sfx/radiogoop_add.tga
+		translate	1,time*0.02
+		rgb		 PTfullfade [ time * .1 ]+0.1
+
+	}
+
+}
+
+
+
+
+
+//textures/sfx/radiogoopflow_d
+//{
+//	qer_editorimage textures/sfx/radiogoopflow_d.tga
+//
+//    	noselfShadow
+//	noshadows
+//	{
+//
+//		blend		bumpmap	 
+//		map			textures/sfx/radiogoopflow_local.tga
+//		translate	1,time*	.8
+//	}
+//	{
+//		blend		diffusemap	 
+//		map			textures/sfx/radiogoopflow_d.tga
+//		translate	1,time*	.8
+//	}
+//	{
+//		blend		specularmap	 
+//		map			models/mapobjects/radiogoop/radiogoopflow_s.tga
+//		translate	1,time*	.8
+//	}
+//	{
+//
+//		blend		add	 
+//		map			textures/sfx/radiogoopflow_add.tga
+//		//translate	time*       .8    ,time*	.0
+//		rgb		 PTfullfade [ time * .1 ]+0.1
+//
+//	}
+//
+//}
+
+
+
+//textures/sfx/radiogoopflow2_d
+//{
+//	qer_editorimage textures/sfx/radiogoopflow_d.tga
+//
+//    	noselfShadow
+//	noshadows
+//	{
+//
+//		blend		bumpmap	 
+//		map			textures/sfx/radiogoopflow_local.tga
+//		translate	1,time*	.4
+//	}
+//	{
+//		blend		diffusemap	 
+//		map			textures/sfx/radiogoopflow_d.tga
+//		translate	1,time*	.4
+//	}
+//	{
+//		blend		specularmap	 
+//		map			models/mapobjects/radiogoop/radiogoopflow_s.tga
+//		translate	1,time*	.4
+//	}
+//
+//}
+
+
+
+//textures/sfx/radiogoop_mix
+//
+//{
+//	qer_editorimage textures/sfx/radiogoop_mix.tga
+//
+//    noShadows
+//    noselfShadow
+//
+//	{
+//		blend		bumpmap	 
+//		map			textures/sfx/radiogoop_local.tga
+//		translate	1,time*.2
+//	}
+//	{
+//		blend		diffusemap	 
+//		map			textures/sfx/radiogoop_d.tga
+//		translate	1,time*.2
+//		rgb			.5
+//		vertexColor
+//	}
+//	{
+//		blend		specularmap	 
+//		map			models/mapobjects/radiogoop/radiogoopflow_s.tga
+//		translate	1,time*.2
+//		vertexColor
+//	}
+//	{
+//
+//		blend		bumpmap	 
+//		map			textures/sfx/radiogoopflow_local.tga
+//		translate	.2,time*	.5
+//	}
+//	{
+//		blend		diffusemap	 
+//		map			textures/sfx/radiogoopflow_d.tga
+//		translate	.2,time*	.5
+//		inverse
+//
+//
+//
+//	}
+//	{
+//		blend		specularmap	 
+//		map			models/mapobjects/radiogoop/radiogoopflow_s.tga
+//		translate	.2,time*	.5
+//		inversevertexColor
+//		
+//	}
+//
+//}
+
+//textures/sfx/purpleglassb
+//{
+//	noshadows
+//	noselfshadow
+//	
+//	qer_editorimage	textures/sfx/purpleglass.tga
+//
+//	{
+//		blend add
+//		cubeMap		env/bland
+//		texgen		reflect
+//	}
+//	
+//	{
+//	 	 blend	diffuseMap
+//		map textures/sfx/purpleglass.tga
+//		//scale	 16 , 16
+//	}
+//
+//}
+
+
+
+
+//*****************************************************Moved from patricktest.mtr - end*****************************************
+
+
+//*****************************************************Moved from senetemp.mtr - start*****************************************
+
+
+table ember1 { { .7, 1, .5, .7, .6, 1, .8, .6, .7, 1, .6, 1, 1, .6, .7, .8, .6, 1, .5, .7, 1 } }
+table stripAnim16table { snap { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 } }
+
+table threestage { { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } }
+table elevenstage { { .5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } }
+table sixstage { { 1, 0, 0, 0, 0, 0 } }
+
+table slowstart_one_zero { { 1.000000, 0.999699, 0.998795, 0.997290, 0.995185, 0.992480, 0.989177, 0.985278, 
+0.980785, 0.975702, 0.970031, 0.963776, 0.956940, 0.949528, 0.941544, 0.932993, 
+0.923880, 0.914210, 0.903989, 0.893224, 0.881921, 0.870087, 0.857729, 0.844854, 
+0.831470, 0.817585, 0.803208, 0.788346, 0.773010, 0.757209, 0.740951, 0.724247, 
+0.707107, 0.689541, 0.671559, 0.653173, 0.634393, 0.615232, 0.595699, 0.575808, 
+0.555570, 0.534998, 0.514103, 0.492898, 0.471397, 0.449611, 0.427555, 0.405241, 
+0.382683, 0.359895, 0.336890, 0.313682, 0.290285, 0.266713, 0.242980, 0.219101, 
+0.195090, 0.170962, 0.146730, 0.122411, 0.098017, 0.073565, 0.049068, 0.024541
+} }
+
+table faststart_zero_one { { 0.024541, 0.049068, 0.073565, 0.098017, 0.122411, 0.146730, 0.170962, 
+0.195090, 0.219101, 0.242980, 0.266713, 0.290285, 0.313682, 0.336890, 0.359895, 
+0.382683, 0.405241, 0.427555, 0.449611, 0.471397, 0.492898, 0.514103, 0.534998, 
+0.555570, 0.575808, 0.595699, 0.615232, 0.634393, 0.653173, 0.671559, 0.689541, 
+0.707107, 0.724247, 0.740951, 0.757209, 0.773010, 0.788346, 0.803208, 0.817585, 
+0.831470, 0.844854, 0.857729, 0.870087, 0.881921, 0.893224, 0.903989, 0.914210, 
+0.923880, 0.932993, 0.941544, 0.949528, 0.956940, 0.963776, 0.970031, 0.975702, 
+0.980785, 0.985278, 0.989177, 0.992480, 0.995185, 0.997290, 0.998795, 0.999699, 
+1.000000 } }
+
+table watersplashscaletable { { 0.024541, 0.049068, 0.073565, 0.098017, 0.122411, 0.146730, 0.170962, 
+0.195090, 0.219101, 0.242980, 0.266713, 0.290285, 0.313682, 0.336890, 0.359895, 
+0.382683, 0.405241, 0.427555, 0.449611, 0.471397, 0.492898, 0.514103, 0.534998, 
+0.555570, 0.575808, 0.595699, 0.615232, 0.634393, 0.653173, 0.671559, 0.689541, 
+0.707107, 0.724247, 0.740951, 0.757209, 0.773010, 0.788346, 0.803208, 0.817585, 
+0.831470, 0.844854, 0.857729, 0.870087, 0.881921, 0.893224, 0.903989, 0.914210, 
+0.923880, 0.932993, 0.941544, 0.949528, 0.956940, 0.963776, 0.970031, 0.975702, 
+0.980785, 0.985278, 0.989177, 0.992480, 0.995185, 0.997290, 0.998795, 0.999699, 
+1.000000 } }
+
+
+table watersplashrgbtable { { 0, 1, 1, 1, .8, .6, .4, .2, .1, .05, 0 } }
+table s_lightningtable { { 1, .5, 1, 0, 0, 0, 0, 1, 1, 0, .5, 1, 0, 1, .5, 0, 0, 0, 0, 0, 0, 0} }
+table s_lightningtable2 { { 1, 2, 1, 3 } }
+
+//textures/sfx/hellhole_endflame1
+//{
+//	translucent
+//	twosided
+//	{
+//		blend			add
+//		map				textures/sfx/hellhole_endflame1d
+//		vertexcolor
+//	}
+//	//{
+//	//	blend			gl_dst_alpha , gl_one
+//	//	map				textures/sfx/hellhole_endflame1d2
+//	//	rgb				fireballtable[ time * .15 ]
+//	//	scale			1,2
+//	//	translate		time * -.1 , time * 2
+//	//}
+//}
+
+textures/sfx/seneca_vptest
+{
+	qer_editorimage	textures/editor/dontuse.tga
+		nonsolid
+		translucent
+        {
+                vertexProgram           heatHazeWithMask.vfp
+                vertexParm              0       time * 0.1 , time * 0.5 // texture scrolling
+                vertexParm              1       1.5           // magnitude of the distortion
+                fragmentProgram			heatHazeWithMask.vfp
+                fragmentMap             0       _currentRender
+                fragmentMap             1       textures/sfx/vp1.tga   // the normal map for distortion
+                fragmentMap             2       textures/sfx/vp1_alpha.tga   // the distortion blend map
+        }
+}
+
+
+textures/sfx/s_lightning2b
+{
+	translucent
+	twosided
+	noshadows
+	nonsolid
+	{
+		blend		add
+		map			textures/sfx/s_lightning2
+		red			s_lightningtable [(time*.5)+(.66+parm4)] * parm0
+		green		s_lightningtable [(time*.5)+(.66+parm4)] * parm1
+		blue		s_lightningtable [(time*.5)+(.66+parm4)] * parm2
+		centerscale	s_lightningtable2[time*4], s_lightningtable2[time*4]
+		zeroclamp
+	}
+}
+
+textures/sfx/s_lightning2a
+{
+	translucent
+	twosided
+	noshadows
+	nonsolid
+	{
+		blend		add
+		map			textures/sfx/s_lightning2
+		red			s_lightningtable [(time*.5)+(.33+parm4)] * parm0
+		green		s_lightningtable [(time*.5)+(.33+parm4)] * parm1
+		blue		s_lightningtable [(time*.5)+(.33+parm4)] * parm2
+		centerscale	s_lightningtable2[time*4], s_lightningtable2[time*4]
+		zeroclamp
+	}
+}
+
+textures/sfx/s_lightning2
+{
+	translucent
+	twosided
+	noshadows
+	nonsolid
+	{
+		blend		add
+		map			textures/sfx/s_lightning2
+		red			s_lightningtable [(time*.5)+parm4] * parm0
+		green		s_lightningtable [(time*.5)+parm4] * parm1
+		blue		s_lightningtable [(time*.5)+parm4] * parm2
+		centerscale	s_lightningtable2[time*4], s_lightningtable2[time*4]
+		zeroclamp
+	}
+}
+
+textures/sfx/s_lightning1b
+{
+	translucent
+	twosided
+	noshadows
+	nonsolid
+	{
+		blend		add
+		map			textures/sfx/s_lightning1
+		translate	1,time*1.5
+		red			s_lightningtable [(time*.5)+(.66+parm4)] * parm0
+		green		s_lightningtable [(time*.5)+(.66+parm4)] * parm1
+		blue		s_lightningtable [(time*.5)+(.66+parm4)] * parm2
+		scale		1,ember1 [time*1.5]
+	}
+}
+
+textures/sfx/s_lightning1a
+{
+	translucent
+	twosided
+	noshadows
+	nonsolid
+	{
+		blend		add
+		map			textures/sfx/s_lightning1
+		translate	1,time*3
+		red			s_lightningtable [(time*.5)+(.33+parm4)] * parm0
+		green		s_lightningtable [(time*.5)+(.33+parm4)] * parm1
+		blue		s_lightningtable [(time*.5)+(.33+parm4)] * parm2
+		scale		1,ember1 [time*.75]
+	}
+}
+
+textures/sfx/s_lightning1
+{
+	translucent
+	twosided
+	noshadows
+	nonsolid
+	{
+		blend		add
+		map			textures/sfx/s_lightning1
+		translate	1,time*2
+		red			s_lightningtable [(time*.5)+parm4] * parm0
+		green		s_lightningtable [(time*.5)+parm4] * parm1
+		blue		s_lightningtable [(time*.5)+parm4] * parm2
+		scale		1,ember1 [time]
+	}
+}
+
+//textures/sfx/techglass1dark
+//{
+//	translucent
+//	twosided
+//	noshadows
+//	qer_editorimage	textures/sfx/techglass1.tga
+//	{
+//		blend		add
+//		cubeMap		env/bland
+//		texgen		reflect
+//	}
+//	{
+//	 	blend		add
+//		map			textures/sfx/techglass1_d.tga
+//		
+//		rgb			.2
+//		scale		8 , 8
+//	}
+//}
+
+textures/sfx/enprotubeglass
+{
+	qer_editorimage	textures/sfx/enprotubeglass
+	translucent
+	{
+		blend		diffusemap
+		map			textures/sfx/enprotubeglass
+	}
+	specularmap		textures/sfx/enprotubeglass_s
+	{
+        blend 		gl_zero,gl_one_minus_src_color
+		map			textures/sfx/enprotubeglass_filter
+		translate	1,(time*parm3) + parm4
+		colored
+	}
+	{
+        blend 		gl_zero,gl_one_minus_src_color
+		map			textures/sfx/enprotubeglass_filter2
+		colored
+	}
+}
+
+textures/sfx/act1glass3_dirt
+{
+	qer_editorimage	textures/sfx/act1glass3a
+	nonsolid
+	translucent
+	{
+		blend		add
+		cubeMap		env/act1
+		texgen		reflect
+		red			parm0
+		green		parm1
+		blue		parm2
+	}
+	{
+		blend		filter
+		map			textures/sfx/act1glass3a
+	}
+}
+
+
+//textures/sfx/dustcloud
+//{
+//	qer_editorimage		textures/sfx/dustcloud
+//	nonsolid
+//	translucent
+//	{
+//		blend			add
+//		map				textures/sfx/dustcloud
+//		colored
+//	}
+//}
+
+textures/sfx/watersplash2
+{
+	qer_editorimage		textures/editor/watersplash2
+	nonsolid
+	translucent
+	{
+		blend			bumpmap
+		map				textures/sfx/watersplash2_local
+		scale			1,1.5
+		translate		1,time*-0.35
+	}
+	{
+		blend			diffusemap
+		map				_white //textures/sfx/watersplash2_d
+		rgb				0
+	}
+	{
+		blend			specularmap
+		map				textures/sfx/watersplash2_s
+		rgb				.7
+	}
+}
+
+//textures/sfx/s_blooddrip2
+//{
+//	qer_editorimage		textures/sfx/s_blooddrip2
+//	nonsolid
+//	twosided
+//	{
+//		blend			bumpmap
+//		map				heightmap (textures/sfx/untitled001.tga, 4) 
+////		scale			1,0.5
+//		translate		1,time*-0.6
+//	}
+//	{
+//		blend			diffusemap
+//		map				textures/sfx/s_blooddrip2
+//		alphatest		.8
+//		translate		1,time*-1
+////		scale			1,0.25
+//	}
+//	{
+//		blend			specularmap
+//		map				_white
+//		rgb				.4
+//	}
+//}
+
+//textures/sfx/s_blooddrip
+//{
+//	qer_editorimage		textures/sfx/s_blooddrip
+//	nonsolid
+//	translucent
+//	twosided
+//	{
+//		blend			filter
+//		map				textures/sfx/s_blooddrip
+//		translate		1,time*-0.15
+//		scale			1,0.25
+//	}
+//}
+
+table snapTen { snap { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 } }
+table snapFive { snap { 1, 0, 0, 0, 0 } }
+table lerp2Table { { 0, 1 } }
+
+//
+// This shader features a cross-faded, animating bump map, which is tedious to set up.
+// Bump maps can't really be blended, so it selects one bump map and blends the diffuse
+// and specular maps, then selects an adjacent bump map and inverse blends the diffuse
+// and specular maps.  There must be an even number of frames, with the odd numbered
+// frames going in the first pass, and the even numbered frames going in the second.
+//
+// It is probably easiest to just ask John to set these up.
+//
+
+textures/sfx/waterbump
+{
+	qer_editorimage textures\decals\bloodpool01_jim
+	nonsolid
+	//
+	// first part of the crossfade
+	//
+	{
+		if snapFive[ time * Parm3 * 0.5 + Parm4 + 0.0 / 5 ]
+		blend 	bumpmap
+		map	heightmap (textures/sfx/untitled001, 4)
+		rgb	elevenstage [ time * Parm3 + Parm4 + 10.0 / 11 ]
+	}
+	{
+		if snapFive[ time * Parm3 * 0.5 + Parm4 + 1.0 / 5 ]
+		blend 	bumpmap
+		map	heightmap (textures/sfx/untitled003, 4)
+	}
+	{
+		if snapFive[ time * Parm3 * 0.5 + Parm4 + 2.0 / 5 ]
+		blend 	bumpmap
+		map	heightmap (textures/sfx/untitled005, 4)
+	}
+	{
+		if snapFive[ time * Parm3 * 0.5 + Parm4 + 3.0 / 5 ]
+		blend 	bumpmap
+		map	heightmap (textures/sfx/untitled007, 4)
+	}
+	{
+		if snapFive[ time * Parm3 * 0.5 + Parm4 + 4.0 / 5 ]
+		blend 	bumpmap
+		map	heightmap (textures/sfx/untitled009, 4)
+	}
+	{
+		blend	diffusemap
+		rgb		lerp2Table[ ( time * Parm3 * 0.5 + Parm4 ) * 5  ]
+		map		textures\decals\bloodpool01_jim
+	}
+	{
+		blend	specularmap
+		rgb		lerp2Table[ ( time * Parm3 * 0.5 + Parm4 ) * 5  ]
+//		map		textures\decals\bloodrun01_s
+		map		_white
+	}
+	
+
+	//
+	// second part of the crossfade
+	//
+	{
+		if snapFive[ time * Parm3 * 0.5 + Parm4 + 0.5 / 5 ]
+		blend 	bumpmap
+		map	heightmap (textures/sfx/untitled002, 4)
+	}
+	{
+		if snapFive[ time * Parm3 * 0.5 + Parm4 + 1.5 / 5 ]
+		blend 	bumpmap
+		map	heightmap (textures/sfx/untitled004, 4)
+	}
+	{
+		if snapFive[ time * Parm3 * 0.5 + Parm4 + 2.5 / 5 ]
+		blend 	bumpmap
+		map	heightmap (textures/sfx/untitled006, 4)
+	}
+	{
+		if snapFive[ time * Parm3 * 0.5 + Parm4 + 3.5 / 5 ]
+		blend 	bumpmap
+		map	heightmap (textures/sfx/untitled008, 4)
+	}
+	{
+		if snapFive[ time * Parm3 * 0.5 + Parm4 + 4.5 / 5 ]
+		blend 	bumpmap
+		map	heightmap (textures/sfx/untitled010, 4)
+	}
+	{
+		blend	diffusemap
+		rgb		1.0 - lerp2Table[ ( time * Parm3 * 0.5 + Parm4 ) * 5  ]
+		map		textures\decals\bloodpool01_jim
+	}
+	{
+		blend	specularmap
+		rgb		1.0 - lerp2Table[ ( time * Parm3 * 0.5 + Parm4 ) * 5  ]
+//		map		textures\decals\bloodrun01_s
+		map		_white
+	}
+
+}
+
+//textures/sfx/pustulefilter
+//{
+//	qer_editorimage	textures/sfx/pustulefilter
+//	translucent
+//	noshadows
+//	twosided
+//	{
+//		blend		bumpmap
+//		map			textures/hell/hellanustube2_local.tga
+//	
+//		translate	1,time*-.1
+//	}
+//	{
+//		blend		gl_dst_color,gl_src_color
+//		map			textures/sfx/pustulefilter
+//		rotate		time*-.02
+//	}
+//	{
+//		blend		specularmap		
+//		map			textures/hell/stitches1_s
+//		rgb			.3
+//	}
+//}
+
+//textures/sfx/reddot
+//{
+//	translucent
+//	noshadows
+//	{
+//		blend		add
+//		map			textures/sfx/reddot
+//		colored
+//		//vertexcolor
+//	}
+//}
+
+//This material does not render when applied to a brush or patch
+textures/sfx/dm_spectrum
+{
+	qer_editorimage	textures/sfx/dm_spectrum.tga
+	DECAL_MACRO
+	noShadows
+	nonsolid
+	noimpact
+	translucent
+	spectrum 2
+	{       
+      	blend	diffusemap
+		map		textures/sfx/dm_spectrum.tga
+		//red		(fireballtable[ time * .2]) * parm0
+		//green	(fireballtable[ time * .2]) * parm1
+		//blue	(fireballtable[ time * .2]) * parm2
+	}
+//	{       
+//      	blend	specularmap
+//		map		textures/decals/symbol06.tga
+//	}
+}
+
+
+//textures/sfx/dm_cylinder_teleport
+//{
+//	qer_editorimage		textures/sfx/dm_cylinder_teleport
+//	{
+//		blend 	blend
+//		cubeMap	env/reactor 
+//		texgen	reflect
+//	}
+//	{
+//		blend			add
+//		map				textures/sfx/dm_cylinder_teleport2
+//		clamp
+//		centerScale 	.95, .95
+//		
+//	}
+//}
+
+textures/sfx/clearreflect
+{
+	qer_editorimage			textures/common/qer_mirror.tga
+	sort				nearest
+	{
+		mirrorRenderMap		256	256		
+		blend	add
+		//red		0.3
+		//green	0.3
+		//blue	0.1
+		alpha	1
+		translate			0.5 , 0.5 
+		scale				0.5 , 0.5
+
+	}
+}
+
+//textures/sfx/enprolongflare
+//{
+//	translucent
+//	noshadows
+//	deform	tube
+//	{
+//		blend		add
+//		map			textures/sfx/enprolongflare
+//	}
+//}
+
+//textures/sfx/encylglass
+//{
+//	translucent
+//	twosided
+//	noshadows
+//	qer_editorimage	env/encyl_nx.tga
+//	{
+//		blend 	add
+//		cubeMap	env/encyl
+//		texgen	reflect
+//	}
+//}
+
+//textures/sfx/longbeam
+//{
+//	translucent
+//	nonsolid
+//	deform			tube
+//	noshadows
+//	{
+//		blend		add
+//		map			textures/sfx/longbeam
+//		colored
+//	}
+//}
+
+//textures/sfx/senedust
+//{
+//	noshadows
+//	{
+//		blend		blend
+//		map			textures/sfx/senedust
+//		colored
+//	}
+//}
+
+textures/sfx/web4
+{
+	qer_editorimage	textures/sfx/web4.tga
+	translucent
+	noshadows
+	twosided
+	nonsolid
+	flesh
+	sort	5
+	bumpmap			heightmap (textures/sfx/web4.tga, 2)
+    diffusemap		textures/sfx/web4.tga
+	{
+		blend		specularmap	
+		map			textures/sfx/web4.tga
+		red			.25
+		green		.25
+		blue		.2
+	}
+}
+
+textures/sfx/web3a
+{
+	nonsolid
+	twosided
+	flesh
+	sort	farthest
+	{
+		blend		blend
+		map			textures/sfx/web2.tga
+		rgb			.5
+	}
+}
+
+textures/sfx/web3
+{
+	nonsolid
+	twosided
+	flesh
+	sort	farthest
+	{
+		blend		blend
+		map			textures/sfx/web1.tga
+		rgb			.7
+	}
+}
+
+textures/sfx/web2
+{
+	qer_editorimage	textures/sfx/web2.tga
+	translucent
+	noshadows
+	flesh
+	bumpmap			heightmap (textures/sfx/web2.tga, 4)
+	diffusemap		textures/sfx/web2.tga
+	{
+		blend		specularmap	
+		map			textures/sfx/web2.tga
+		red			.25
+		green		.25
+		blue		.2
+	}
+}
+
+textures/sfx/web1nonsolid
+{
+	qer_editorimage	textures/sfx/web1.tga
+	translucent
+	noshadows
+	flesh
+	nonsolid
+	bumpmap			heightmap (textures/sfx/web1.tga, 4)
+	diffusemap		textures/sfx/web1.tga
+	{
+		blend		specularmap	
+		map			textures/sfx/web1.tga
+		red			.25
+		green		.25
+		blue		.2
+	}
+}
+
+textures/sfx/web1
+{
+	qer_editorimage	textures/sfx/web1.tga
+	translucent
+	noshadows
+	flesh
+	bumpmap			heightmap (textures/sfx/web1.tga, 4)
+	diffusemap		textures/sfx/web1.tga
+	{
+		blend		specularmap	
+		map			textures/sfx/web1.tga
+		red			.25
+		green		.25
+		blue		.2
+	}
+}
+
+//textures/sfx/secureclear
+//{
+//	translucent
+//	nonsolid
+//	noshadows
+//	qer_editorimage	textures/sfx/secureclear.tga
+//	{
+//		blend		add
+//		map			textures/sfx/secureclear
+//		rgb  		sintable [time] + 2.5
+//	}
+//}
+
+//textures/sfx/nogreyinvert
+//{
+//	translucent
+//	nonsolid
+//	noshadows
+//	qer_editorimage		textures/sfx/inverttest.tga
+//	{
+//		blend			gl_one_minus_dst_color,gl_one_minus_src_color
+//		map				textures/sfx/inverttest.tga
+//	}
+//}
+
+//textures/sfx/overlay
+//{
+//	translucent
+//	nonsolid
+//	noshadows
+//	qer_editorimage		textures/sfx/inverttest.tga
+//	{
+//		blend			gl_dst_color,gl_src_color
+//		map				textures/sfx/inverttest.tga
+//	}
+//}
+
+//textures/sfx/colortest
+//{
+//	translucent
+//	nonsolid
+//	noshadows
+//	qer_editorimage		textures/sfx/inverttest.tga
+//	{
+//		blend			gl_one_minus_dst_color,gl_one_minus_src_color
+//		map				textures/sfx/inverttest.tga
+//	}		
+//}
+
+textures/sfx/xrayblend
+{
+	translucent
+	nonsolid
+	noshadows
+	qer_editorimage	textures/sfx/xrayblend
+	sort				nearest
+	{
+		blend		gl_one_minus_dst_color,gl_zero
+		map			textures/sfx/xrayblend
+	}
+}
+
+//textures/sfx/inverttest
+//{
+//	translucent
+//	nonsolid
+//	noshadows
+//	qer_editorimage		textures/sfx/inverttest.tga
+//	{
+//		blend		gl_one_minus_dst_color,gl_zero
+//		map			textures/sfx/inverttest.tga
+//	}
+//}
+
+//textures/sfx/smokescreen
+//{
+//	translucent
+//	nonsolid
+//	noshadows
+//	qer_editorimage			textures/sfx/smokescreen.tga
+//	{
+//		blend			add
+//		map			textures/sfx/smokescreen.tga
+//		translate		time, time * .1
+//	
+//	}
+//	{
+//		blend			add
+//		map			textures/sfx/smokescreen.tga
+//		translate		time * .5 , time * -0.1
+//	}
+//	{
+//		blend			filter
+//		map			textures/sfx/smokescreen2.tga
+//		translate		time * .25 , time * -0.02
+//	}
+//}
+	
+
+//textures/sfx/teenysmoke2
+//{
+//	translucent
+//	nonsolid
+//	noshadows
+//	qer_editorimage		textures/sfx/teenysmoke.tga
+//	{
+//		blend			gl_zero,gl_one_minus_src_color
+//		map			textures/sfx/teenysmoke.tga
+//		vertexColor
+//	}
+//}
+
+//textures/sfx/teenysmoke
+//{
+//	translucent
+//	nonsolid
+//	noshadows
+//	qer_editorimage		textures/sfx/teenysmoke.tga
+//	{
+//		blend		add
+//		map		textures/sfx/teenysmoke.tga
+//		vertexColor
+//	}
+//}
+
+textures/sfx/mac_glow
+{
+	translucent
+	nonsolid
+	noshadows
+	qer_editorimage		textures/sfx/mac_glow.tga
+	{
+		blend		add
+		map		textures/sfx/mac_glow.tga
+		rgb		3
+	}
+}
+
+textures/sfx/outsidedustpass1
+{
+	qer_editorimage		textures/sfx/outsidedustpass1
+	translucent
+	noshadows
+	{
+		blend		add
+		map		textures/sfx/outsidedustpass1.tga
+		translate 	time * .17, 0
+		colored
+	}
+	{
+		blend		add
+		map		textures/sfx/outsidedustpass1.tga
+		translate 	time * 0.07, 0.1
+		colored
+	}
+}		
+
+//textures\sfx\waveteststrip
+//{
+//	qer_editorimage textures\sfx\waveteststrip
+//	translucent
+//	nonsolid
+//	deform sprite
+//	{
+//		blend		add
+//		map			textures\sfx\waveteststrip
+//		scale		0.0625, 1
+//		translate	stripAnim16table[time], 0
+//	}
+//}
+
+//textures/sfx/smsmoke
+//{
+//	qer_editorimage textures\sfx\smsmoke.tga
+//	translucent
+//	noshadows
+//	nonsolid
+//	{
+//		blend 	add
+//		map	textures\sfx\smsmoke1.tga
+//		rgb	elevenstage [ time * Parm3 + Parm4 + 10.0 / 11 ]
+//	}
+//	{
+//		blend 	add
+//		map	textures\sfx\smsmoke2.tga
+//		rgb	elevenstage [ time * Parm3 + Parm4 + 9.0 / 11 ]
+//	}
+//	{
+//		blend 	add
+//		map	textures\sfx\smsmoke3.tga
+//		rgb	elevenstage [ time * Parm3 + Parm4 + 8.0 / 11 ]
+//	}
+//	{
+//		blend 	add
+//		map	textures\sfx\smsmoke4.tga
+//		rgb	elevenstage [ time * Parm3 + Parm4 + 7.0 / 11 ]
+//	}
+//	{
+//		blend 	add
+//		map	textures\sfx\smsmoke5.tga
+//		rgb	elevenstage [ time * Parm3 + Parm4 + 6.0 / 11 ]
+//	}
+//	{
+//		blend 	add
+//		map	textures\sfx\smsmoke6.tga
+//		rgb	elevenstage [ time * Parm3 + Parm4 + 5.0 / 11 ]
+//	}
+//	{
+//		blend 	add
+//		map	textures\sfx\smsmoke7.tga
+//		rgb	elevenstage [ time * Parm3 + Parm4 + 4.0 / 11 ]
+//	}
+//	{
+//		blend 	add
+//		map	textures\sfx\smsmoke8.tga
+//		rgb	elevenstage [ time * Parm3 + Parm4 + 3.0 / 11 ]
+//	}
+//	{
+//		blend 	add
+//		map	textures\sfx\smsmoke9.tga
+//		rgb	elevenstage [ time * Parm3 + Parm4 + 2.0 / 11 ]
+//	}
+//	{
+//		blend 	add
+//		map	textures\sfx\smsmoke10.tga
+//		rgb	elevenstage [ time * Parm3 + Parm4 + 1.0 / 11 ]
+//	}
+//	{
+//		blend 	add
+//		map	textures\sfx\smsmoke11.tga
+//		rgb	elevenstage [ time * Parm3 + Parm4 ]
+//	}
+//}
+
+
+
+//textures/sfx/spotlight
+//{
+//	qer_editorimage		textures/sfx/spotlight.tga
+//	translucent
+//	noshadows
+//	{
+//		blend		add
+//		map		textures/sfx/spotlight
+//		colored
+//	}
+//}
+
+//textures/sfx/smallglow
+//{
+//	qer_editorimage 	textures/sfx/smallglow
+//	translucent
+//	noshadows
+//	deform sprite
+//	{
+//		blend		add
+//		map		textures/sfx/smallglow.tga
+//		colored
+//	}
+//}
+//textures/sfx/desertdust
+//{
+//	translucent
+//	noshadows
+//	{
+//		//blend gl_dst_color,gl_zero
+//		blend add
+//		map textures/sfx/desertdust.tga
+//		rotate	( time * -0.1 )
+//		clamp
+//	}	
+//}
+
+//textures/sfx/watersplash
+//{
+//	discrete
+//	translucent
+//	qer_editorimage		textures/sfx/watersplash_local.tga
+//	{
+//		blend		bumpmap
+//		map		textures/sfx/watersplash_local.tga
+//		centerScale 	1 + 9 * (1-faststart_zero_one [2*time])*(1-faststart_zero_one [2*time]), 1 + 9 * (1-faststart_zero_one [2*time])*(1-faststart_zero_one [2*time])
+//		clamp
+//	}
+//	{
+//		blend		specularmap
+//		map		textures/sfx/watersplash_d.tga
+//		centerScale 	1 + 9 * (1-faststart_zero_one [2*time])*(1-faststart_zero_one [2*time]), 1 + 9 * (1-faststart_zero_one [2*time])*(1-faststart_zero_one [2*time])
+//		rgb		watersplashrgbtable [2*time]
+//		zeroClamp
+//	}
+//}
+
+
+textures/sfx/redskyglass
+{
+	translucent
+	twosided
+	noshadows
+	qer_editorimage	env/desert2_nx.tga
+	{
+		blend 	add
+		cubeMap	env/desert2
+		texgen	reflect
+	}
+}
+
+//textures/sfx/redskyenv
+//{
+//	translucent
+//	noshadows
+//	qer_editorimage	textures/sfx/techglass1.tga
+//	{
+//		cubeMap	env/redskyenv
+//		texgen	reflect
+//	}
+//}
+
+
+//textures/sfx/techglassadd
+//{
+//	translucent
+//	twosided
+//	noshadows
+//	qer_editorimage	textures/sfx/techglass1.tga
+//	{
+//		blend 	add
+//		cubeMap	env/sk7
+//		texgen	reflect
+//	}
+//	{
+//		blend		add
+//		map 		textures/sfx/techglass1_d.tga
+//		scale		8 , 8
+//	}
+//}
+
+//textures/sfx/tramwall2env
+//{
+//	qer_editorimage	textures/base_wall/tramwall2_alpha.tga
+//	noShadows
+//
+//	{
+//		blend bumpmap
+//		map	textures/base_wall/tramwall2_local.tga
+//	}
+//	{
+//		blend diffusemap
+//		map	textures/base_wall/tramwall2_d.tga
+//	}
+//	{
+//		blend 	add
+//		cubeMap	env/tramenv
+//		texgen	reflect
+//	}
+//	{
+//		blend gl_zero,gl_one
+//		map textures/base_wall/tramwall2_alpha.tga
+//		alphatest .55
+//	}
+//}
+
+//textures/sfx/firetest
+//{
+//	qer_editorimage textures\sfx\firetest.tga
+//	translucent
+//	noshadows
+////	deform sprite
+//	nonsolid
+//	{
+//		blend add
+//		map	textures\sfx\work\firetest\firetest2_1.tga
+//		rgb	threestage [ time * Parm3 + Parm4 + 13.0 / 14 ]
+//	}
+//	{
+//		blend add
+//		map	textures\sfx\work\firetest\firetest2_2.tga
+//		rgb	threestage [ time * Parm3 + Parm4 + 12.0 / 14 ]
+//	}
+//	{
+//		blend add
+//		map	textures\sfx\work\firetest\firetest2_3.tga
+//		rgb	threestage [ time * Parm3 + Parm4 + 11.0 / 14 ]
+//	}
+//	{
+//		blend add
+//		map	textures\sfx\work\firetest\firetest2_4.tga
+//		rgb	threestage [ time * Parm3 + Parm4 + 10.0 / 14 ]
+//	}
+//	{
+//		blend add
+//		map	textures\sfx\work\firetest\firetest2_5.tga
+//		rgb	threestage [ time * Parm3 + Parm4 + 9.0 / 14 ]
+//
+//	}
+//	{
+//		blend add
+//		map	textures\sfx\work\firetest\firetest2_6.tga
+//		rgb	threestage [ time * Parm3 + Parm4 + 8.0 / 14 ]
+//	}
+//	{
+//		blend add
+//		map	textures\sfx\work\firetest\firetest2_7.tga
+//		rgb	threestage [ time * Parm3 + Parm4 + 7.0 / 14 ]
+//	}
+//	{
+//		blend add
+//		map	textures\sfx\work\firetest\firetest2_8.tga
+//		rgb	threestage [ time * Parm3 + Parm4 + 6.0 / 14 ]
+//	}
+//	{
+//		blend add
+//		map	textures\sfx\work\firetest\firetest2_9.tga
+//		rgb	threestage [ time * Parm3 + Parm4 + 5.0 / 14 ]
+//	}
+//	{
+//		blend add
+//		map	textures\sfx\work\firetest\firetest2_10.tga
+//		rgb	threestage [ time * Parm3 + Parm4 + 4.0 / 14 ]
+//	}
+//	{
+//		blend add
+//		map	textures\sfx\work\firetest\firetest2_11.tga
+//		rgb	threestage [ time * Parm3 + Parm4 + 3.0 / 14 ]
+//	}
+//	{
+//		blend add
+//		map	textures\sfx\work\firetest\firetest2_12.tga
+//		rgb	threestage [ time * Parm3 + Parm4 + 2.0 / 14 ]
+//	}
+//	{
+//		blend add
+//		map	textures\sfx\work\firetest\firetest2_13.tga
+//		rgb	threestage [ time * Parm3 + Parm4 + 1.0 / 14 ]
+//	}
+//	{
+//		blend add
+//		map	textures\sfx\work\firetest\firetest2_14.tga
+//		rgb	threestage [ time * Parm3 + Parm4 ]
+//	}
+//
+//}
+
+
+textures/sfx/defaultflare
+{
+	qer_editorimage textures/sfx/defaultflare.tga
+	noShadows
+	deform sprite
+	discrete
+	nonsolid
+	noimpact
+	{       
+		blend	add
+		map		textures/sfx/defaultflare.tga
+		red		parm0
+		green	parm1
+		blue	parm2
+	}
+ }
+
+//textures/sfx/reactorflare
+//{
+//	qer_editorimage textures/sfx/reactorflare.tga
+//	translucent
+//	noShadows
+//	deform sprite
+//	{
+//		blend add
+//		map textures/sfx/reactorflare.tga
+//		rgb  sintable [time] + 2.5
+//	}
+//}
+
+//textures/sfx/reactorflare_tube
+//{
+//	qer_editorimage textures/sfx/reactorflare.tga
+//	translucent
+//	nonsolid
+//	noShadows
+//	deform tube
+//	{
+//		blend add
+//		map textures/sfx/reactorflare.tga
+//		//rgb  sintable [time] + 2.5
+//		colored
+//	}
+//}
+
+
+
+textures/sfx/flamesparks
+{
+	sort far		// usually happens right in front of a wall, so make sure it draws behind gun smoke
+	{
+		blend add
+		map textures/sfx/firesparks.tga
+//		rgb  sintable [time] + 2.5
+//		centerScale (1.25 + 0.25 * sintable[time]), (1.25 + 0.25 * sintable[time])
+		zeroClamp
+//		translate sintable[time], 0
+	}
+}
+
+//textures/sfx/reactorreflectadd
+//{
+//	qer_editorimage textures/sfx/reactorreflect.tga
+//	translucent
+//	noShadows
+//	{
+//		blend gl_one,gl_one
+//		cubeMap		env/reactor
+//		texgen		reflect
+//	}
+//}
+
+//textures/sfx/tramenv
+//{
+//	qer_editorimage textures/sfx/tramenv.tga
+//	{
+//		cubeMap		env/tramenv
+//		texgen		reflect
+//	}
+//}
+
+//textures/sfx/reactorreflect
+//{
+//	qer_editorimage textures/sfx/reactorreflect.tga
+//	{
+//		cubeMap		env/reactor
+//		texgen		reflect
+//	}
+//}
+
+textures/sfx/bluefog
+{
+	translucent
+	noShadows
+	{
+		blend gl_one,gl_one
+		map textures/sfx/bluefog.tga
+	}
+}
+
+//*****************************************************Moved from senetemp.mtr - end*****************************************
+
+
+//*****************************************************Moved from sfx_multiplayer.mtr - start*****************************************
+
+
+//textures/sfx/mp_d3dm1_glass
+//{
+//	translucent
+//	twoSided
+//	noshadows
+//	
+//	qer_editorimage	textures/sfx/blueglass.tga
+//
+//	{
+//		blend add
+//		cubeMap		env/d3dm1
+//		texgen		reflect
+//		vertexcolor
+//	}
+//	
+//}
+
+//textures/sfx/mp_d3dm3_glass
+//{
+//	translucent
+//	twoSided
+//	noshadows
+//	
+//	qer_editorimage	textures/sfx/chiglass1blue.tga
+//	{
+//		blend add
+//		cubeMap		env/d3dm3
+//		texgen		reflect
+//	}
+//	
+//	{
+//	 	 blend	diffuseMap
+//		map textures/sfx/chiglass1blue_d.tga
+//		scale	 16 , 16
+//	}	
+//	
+//}
+
+//textures/sfx/mp_d3dm3_glass_small
+//{
+//	translucent
+//	twoSided
+//	noshadows
+//	
+//	qer_editorimage	textures/sfx/chiglass1blue.tga
+//	{
+//		blend add
+//		cubeMap		env/d3dm3small
+//		texgen		reflect
+//	}
+//	
+//	{
+//	 	 blend	diffuseMap
+//		map textures/sfx/chiglass1blue_d.tga
+//		scale	 16 , 16
+//	}	
+//	
+//}
+
+//textures/sfx/mp_d3dm5_glass
+//{
+//	translucent
+//	twoSided
+//	noshadows
+//	
+//	qer_editorimage	textures/sfx/blueglass.tga
+//
+//	{
+//		blend add
+//		cubeMap		env/d3dm5
+//		texgen		reflect
+//		vertexcolor
+//	}
+//	
+//}
+
+
+//*****************************************************Moved from sfx_multiplayer.mtr - end*****************************************
+
+
+//*****************************************************Moved from tim.mtr - start*****************************************
+
+
+//chrome texture for mals room
+textures/sfx/chrome_mal_pipe
+{
+	qer_editorimage	env/mal_pipe_px.tga
+	forceopaque
+	{
+		blend add
+		cubeMap		env/mal_pipe
+//		texgen		normal
+		texgen		reflect
+	}
+}
+
+//textures/sfx/lab_glass
+//{
+//	translucent
+//
+//	noshadows
+//	
+//	qer_editorimage	textures/sfx/lab_glass_ed.tga
+//	//diffusemap 		textures <none>
+//	bumpmap		heightmap (textures/sfx/lab_glass_bmp, 0.5)
+//	specularmap		textures/sfx/lab_glass_spec.tga
+//	{
+//	 	blend	diffuseMap
+//		map textures/sfx/lab_glass_ed.tga
+//	}
+//}
+
+//textures/sfx/lab_glass_reflective
+//{
+//	discrete
+//	translucent
+//	//twoSided
+//	noshadows
+//	
+//	qer_editorimage	textures/sfx/chiglass1blue.tga
+//
+//	bumpmap		heightmap (textures/sfx/lab_glass_bmp, 0.2)
+//	//specularmap		textures/sfx/lab_glass_spec.tga
+//
+//	//{
+//	//	blend add
+//	//	cubeMap		env/bland
+//	//	texgen		reflect
+//	//}
+//	
+//	{
+//	 	blend	diffuseMap
+//		map textures/sfx/lab_glass_ed_lt.tga
+//		scale	 16 , 16
+//	}
+//	{
+//		mirrorRenderMap		512	256		// size of the texture to draw the mirror view in
+//		blend	blend
+//
+//		// give it a greenish tint
+//		red		0.3
+//		green	0.3
+//		blue	0.1
+//
+//		// opacity
+//		alpha	0.7
+//
+//		// these may not be necessary when I finish the code
+//		translate	0.5 , 0.5
+//		scale	0.5 , 0.5
+//	}
+//
+//
+//}
+
+
+//*****************************************************Moved from tim.mtr - end*****************************************
+
+
+
+//*****************************************************Moved from vp_materials.mtr - start*****************************************
+
+
+//===============================//
+//       VP Materials sfx's      //
+//===============================//
+
+//textures/sfx/vpstatic
+//{
+//		nonsolid
+//		translucent
+//
+//
+//        {
+//                vertexProgram           heatHaze.vfp
+//                vertexParm              0       time * 0.1 , time * 0.5 // texture scrolling
+//                vertexParm              1       .2          // magnitude of the distortion
+//                fragmentProgram			heatHaze.vfp
+//                fragmentMap             0       _currentRender
+//                fragmentMap             1       textures/sfx/vpstatic.tga   // the normal map for distortion
+//        }
+//			{
+//
+//	    blend		add
+//		scale .01, 1
+//		translate time * 40, time * 0.5
+//
+//		map    textures/sfx/vpstatic_add.tga
+//
+//	}
+//
+//
+//}
+
+
+textures/sfx/vpring1
+{
+	qer_editorimage textures/editor/dontuse.tga
+		translucent
+        {
+                program         heatHazeWithMaskAndVertex.vfp
+                vertexParm              0               0                               // texture scrolling
+                vertexParm              1               2                             // magnitude of the distortion
+                fragmentMap             0               _currentRender
+                fragmentMap     		1       textures/particles/vpring1  // the normal map for distortion
+                fragmentMap             2       textures/particles/vpring1_alpha.tga   // the distortion blend map
+        }
+
+
+}
+
+textures/sfx/vpring2
+{
+	qer_editorimage textures/editor/dontuse.tga
+		translucent
+        {
+                program         heatHazeWithMaskAndVertex.vfp
+                vertexParm              0               0                               // texture scrolling
+                vertexParm              1               6                             // magnitude of the distortion
+                fragmentMap             0               _currentRender
+                fragmentMap     		1       textures/particles/vpring2  // the normal map for distortion
+                fragmentMap             2       textures/particles/vpring1_alpha.tga   // the distortion blend map
+        }
+
+
+}
+
+
+textures/sfx/vpring3
+{
+	qer_editorimage textures/editor/dontuse.tga
+		translucent
+        {
+                program         heatHazeWithMaskAndVertex.vfp
+                vertexParm              0               0                               // texture scrolling
+                vertexParm              1               10                             // magnitude of the distortion
+                fragmentMap             0               _currentRender
+                fragmentMap     		1       textures/particles/vpring2  // the normal map for distortion
+                fragmentMap             2       textures/particles/vpring1_alpha.tga   // the distortion blend map
+        }
+
+
+}
+
+textures/sfx/vpsphere
+{
+	qer_editorimage textures/editor/dontuse.tga
+		translucent
+        {
+                Program           heatHazeWithMaskAndVertex.vfp
+                vertexParm              0       time * 0 , time * 0 // texture scrolling
+                vertexParm              1       2            // magnitude of the distortion
+                fragmentProgram			heatHazeWithMask.vfp
+                fragmentMap             0       _currentRender
+                fragmentMap             1       textures/particles/vpsphere   // the normal map for distortion
+                fragmentMap             2       textures/particles/vpring1_alpha.tga   // the distortion blend map
+        }
+
+
+}
+
+//textures/sfx/vpsphereb
+//{
+//		translucent
+//        {
+//                program         heatHazeWithMaskAndVertex.vfp
+//                vertexParm              0               0                               // texture scrolling
+//                vertexParm              1               2                             // magnitude of the distortion
+//                fragmentMap             0               _currentRender
+//                fragmentMap     		1       textures/particles/vpshpere // the normal map for distortion
+//                fragmentMap             2       textures/particles/vpring1_alpha.tga   // the distortion blend map
+//        }
+//
+//
+//}
+
+
+textures/sfx/vptelesphere
+{
+	qer_editorimage textures/editor/dontuse.tga
+		translucent
+        {
+                program         heatHazeWithMaskAndVertex.vfp
+                vertexParm              0               0                               // texture scrolling
+                vertexParm              1               5                             // magnitude of the distortion
+                fragmentMap             0               _currentRender
+                fragmentMap     		1       textures/particles/vpring1  // the normal map for distortion
+                fragmentMap             2       textures/particles/vpring1_alpha.tga   // the distortion blend map
+        }
+
+
+}
+
+//textures/sfx/vpfan
+//{
+//		translucent
+//        {
+//                program         heatHazeWithMaskAndVertex.vfp
+//                vertexParm              0               0                               // texture scrolling
+//                vertexParm              1               2                             // magnitude of the distortion
+//                fragmentMap             0               _currentRender
+//                fragmentMap     		1       textures/particles/vpring1  // the normal map for distortion
+//                fragmentMap             2       textures/particles/vpfan_alpha.tga   // the distortion blend map
+//        }
+//
+//
+//}
+
+
+
+
+textures/sfx/vppinch_bfgbolt
+{
+	qer_editorimage textures/editor/dontuse.tga
+		deform sprite
+		translucent
+        {
+                program         heatHazeWithMaskAndVertex.vfp
+                vertexParm              0       time * 0 , time * 0 // texture scrolling
+                vertexParm              1       3            // magnitude of the distortion
+                fragmentProgram			heatHazeWithMask.vfp
+                fragmentMap             0       _currentRender
+                fragmentMap             1       textures/particles/vppinch.tga   // the normal map for distortion
+                fragmentMap             2       textures/particles/vpring2_alpha.tga   // the distortion blend map
+        }
+
+
+}
+
+textures/sfx/vppinch
+{
+	qer_editorimage textures/editor/dontuse.tga
+		//deform sprite
+		translucent
+        {
+                vertexProgram           heatHazeWithMask.vfp
+                vertexParm              0       time * 0 , time * 0 // texture scrolling
+                vertexParm              1       1            // magnitude of the distortion
+                fragmentProgram			heatHazeWithMask.vfp
+                fragmentMap             0       _currentRender
+                fragmentMap             1       textures/particles/vppinch.tga   // the normal map for distortion
+                fragmentMap             2       textures/particles/vpring1_alpha.tga   // the distortion blend map
+        }
+
+
+}
+
+
+textures/sfx/vp1ghost
+{
+	qer_editorimage textures/editor/dontuse.tga
+		deform sprite
+		translucent
+        {
+                vertexProgram           heatHazeWithMask.vfp
+                vertexParm              0       time * 0.1 , time * 0.5 // texture scrolling
+                vertexParm              1       1            // magnitude of the distortion
+                fragmentProgram			heatHazeWithMask.vfp
+                fragmentMap             0       _currentRender
+                fragmentMap             1       textures/sfx/vp1.tga   // the normal map for distortion
+                fragmentMap             2       textures/particles/vpring2_alpha.tga   // the distortion blend map
+        }
+
+
+}
+
+textures/sfx/vp1
+{
+	qer_editorimage textures/editor/dontuse.tga
+		deform sprite
+		nonsolid
+		translucent
+        {
+                vertexProgram           heatHazeWithMask.vfp
+                vertexParm              0       time * 0.1 , time * 0.5 // texture scrolling
+                vertexParm              1       0.9            // magnitude of the distortion
+                fragmentProgram			heatHazeWithMask.vfp
+                fragmentMap             0       _currentRender
+                fragmentMap             1       textures/sfx/vp1.tga   // the normal map for distortion
+                fragmentMap             2       textures/sfx/vp1_alpha.tga   // the distortion blend map
+        }
+
+
+}
+
+textures/sfx/vp3
+{
+	qer_editorimage textures/editor/dontuse.tga
+		deform sprite
+		nonsolid
+		translucent
+        {
+                vertexProgram           heatHazeWithMask.vfp
+                vertexParm              0       time * 0.1 , time * 0.5 // texture scrolling
+                vertexParm              1       0.4            // magnitude of the distortion
+                fragmentProgram			heatHazeWithMask.vfp
+                fragmentMap             0       _currentRender
+                fragmentMap             1       textures/sfx/vp1.tga   // the normal map for distortion
+                fragmentMap             2       textures/sfx/vp1_alpha.tga   // the distortion blend map
+        }
+
+
+}
+
+
+textures/sfx/vp1particle
+{
+	qer_editorimage textures/editor/dontuse.tga
+	
+		nonsolid
+		translucent
+        {
+                vertexProgram           heatHazeWithMask.vfp
+                vertexParm              0       time * 0.8 , time * 0.5 // texture scrolling
+                vertexParm              1       4            // magnitude of the distortion
+                fragmentProgram			heatHazeWithMask.vfp
+                fragmentMap             0       _currentRender
+                fragmentMap             1       textures/sfx/vp1.tga   // the normal map for distortion
+                fragmentMap             2       textures/sfx/vp1_alpha.tga   // the distortion blend map
+        }
+
+
+}
+
+textures/sfx/vp1particle2
+{
+	qer_editorimage textures/editor/dontuse.tga
+	
+		nonsolid
+		translucent
+        {
+                vertexProgram           heatHazeWithMask.vfp
+                vertexParm              0       time * 0.8 , time * 0.5 // texture scrolling
+                vertexParm              1       1            // magnitude of the distortion
+                fragmentProgram			heatHazeWithMask.vfp
+                fragmentMap             0       _currentRender
+                fragmentMap             1       textures/sfx/vp1.tga   // the normal map for distortion
+                fragmentMap             2       textures/sfx/vp1_alpha.tga   // the distortion blend map
+        }
+
+
+}
+
+
+textures/sfx/vpfridge1glass
+{
+	qer_editorimage textures/editor/dontuse.tga
+	
+		nonsolid
+		translucent
+        {
+                Program           heatHaze.vfp
+                vertexParm              0       time * 0 , time * 0 // texture scrolling
+                vertexParm              1       .9          // magnitude of the distortion
+                fragmentProgram			heatHaze.vfp
+                fragmentMap             0       _currentRender
+                fragmentMap             1       textures/sfx/vp1    //vpcurve_y   // the normal map for distortion
+             
+        }
+
+
+}
+
+textures/sfx/vppuzzglass
+{
+	qer_editorimage textures/editor/dontuse.tga
+	
+		nonsolid
+		translucent
+        {
+                vertexProgram           heatHazeWithMask.vfp
+                vertexParm              0       time * 0 , time * 0 // texture scrolling
+                vertexParm              1       1.2           // magnitude of the distortion
+                fragmentProgram			heatHazeWithMask.vfp
+                fragmentMap             0       _currentRender
+                fragmentMap             1       textures/particles/vpsphere   // the normal map for distortion
+             
+        }
+
+
+}
+
+textures/sfx/vpalphaglass
+{
+	qer_editorimage textures/editor/dontuse.tga
+	
+		
+		twosided
+		translucent
+        {
+                vertexProgram           heatHazeWithMask.vfp
+                vertexParm              0       time * 0 , time * 0 // texture scrolling
+                vertexParm              1       .4         // magnitude of the distortion
+                fragmentProgram			heatHazeWithMask.vfp
+                fragmentMap             0       _currentRender
+                fragmentMap             1       textures/sfx/vp1   // the normal map for distortion
+             
+        }
+
+
+}
+
+
+textures/sfx/vp1band
+{
+	qer_editorimage textures/editor/dontuse.tga
+
+		nonsolid
+		translucent
+        {
+                vertexProgram           heatHazeWithMask.vfp
+                vertexParm              0       time * 0.0 , time * 0.1 // texture scrolling
+                vertexParm              1       1.2            // magnitude of the distortion
+                fragmentProgram			heatHazeWithMask.vfp
+                fragmentMap             0       _currentRender
+                fragmentMap             1       textures/hell/lava1.tga   // the normal map for distortion
+                fragmentMap             2       textures/sfx/vp1tilehoriz_alpha.tga   // the distortion blend map
+        }
+
+
+}
+
+textures/sfx/vp2
+{
+	qer_editorimage textures/editor/dontuse.tga
+		deform sprite
+		nonsolid
+		translucent
+        {
+                vertexProgram           heatHazeWithMask.vfp
+                vertexParm              0       time * 0.1 , time * 0.5*Parm3 // texture scrolling
+                vertexParm              1       5           // magnitude of the distortion
+                fragmentProgram			heatHazeWithMask.vfp
+                fragmentMap             0       _currentRender
+                fragmentMap             1       textures/sfx/vp1.tga   // the normal map for distortion
+                fragmentMap             2       textures/sfx/vp1_alpha.tga   // the distortion blend map
+        }
+
+
+}
+
+
+//*****************************************************Moved from vp_materials.mtr - end*****************************************
+
+//*****************************************************Moved from weapons.mtr - start*****************************************
+
+textures/sfx/plasmapuff
+{
+	qer_editorimage	textures/editor/dontuse.tga
+	{
+      	blend		add
+		map textures/particles/blacksmokepuff.tga
+		vertexColor
+	}
+}
+
+//*****************************************************Moved from weapons.mtr - end*****************************************
+
+//**********************************Moved from updated andy.mtr in game patch 1.1- start*****************************************
+
+
+textures/sfx/lag
+{
+
+	qer_editorimage textures/sfx/lag.tga
+	noShadows
+	nonsolid
+	noimpact
+	twoSided
+	translucent
+	{  
+	 colored     
+      	 blend	add  
+	 map	textures/sfx/lag.tga
+	}
+}
+
+textures/sfx/lagsprite
+{
+    qer_editorimage textures/sfx/lag.tga
+    noShadows
+    nonsolid
+    noimpact
+    translucent
+    deform sprite
+    {
+        colored
+            blend add
+            map textures/sfx/lag.tga
+    }
+}
+
+textures/sfx/chatsprite
+{
+    qer_editorimage textures/sfx/chat.tga
+    noShadows
+    nonsolid
+    noimpact
+    translucent
+    deform sprite
+    {
+        colored
+            blend add
+            map textures/sfx/chat.tga
+    }
+}
+
+
+//**********************************Moved from updated andy.mtr in game patch 1.1- end*****************************************
+
+//Verified good complete by Eutectic - Oct 1-04

@@ -1,0 +1,26 @@
+error_01a {
+	minDistance	3
+	maxDistance	15
+	volume		0
+	no_occlusion
+
+	sound/xian/beeps/error_01a.wav
+}
+
+loop_alarm_03a {
+	minDistance 1
+	maxDistance 10
+	looping
+	volume 0.5
+	sound/alarms_buzzers/loop_alarm_03a.wav
+}
+
+loop_alarm_08
+{
+	minDistance 1
+	maxDistance 10
+	looping
+	volume 0.5
+
+	sound/alarms_buzzers/loop_alarm_08.wav
+}

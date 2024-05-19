@@ -1,0 +1,181 @@
+////////////////////////
+// D3MP SOUND SHADERS //
+////////////////////////
+
+
+////////////////////
+// GENERAL SOUNDS //
+////////////////////
+
+sound_powerup_berserk {
+
+	volume -5
+
+	looping
+	leadin
+	sound/levels/berserk_spawn.wav
+	sound/levels/berserk.wav
+}
+
+
+///////////
+// D3DM1 //
+///////////
+
+
+///////////
+// D3DM2 //
+///////////
+
+d3dm2_ambience {
+
+	global
+	looping
+
+	sound/ambient/loop_machineroom_01.wav
+}
+
+
+///////////
+// D3DM3 //
+///////////
+
+fragchamber_core_stop {
+	shakes 0.03
+
+	sound/levels/fragchamber/core_stop.wav
+}
+
+fragchamber_core_shake {
+	shakes 0.2
+
+	sound/levels/fragchamber/core_stop.wav
+}
+
+fragchamber_sound_berserk {
+	volume -12
+	looping
+
+	sound/levels/berserk.wav
+}
+
+fragchamber_sound_berserk_spawn {
+	volume 15
+	//shakes 0.08
+
+	sound/levels/fragchamber/berserk_spawn.wav
+}
+
+fragchamber_klaxon {
+	sound/levels/fragchamber/klaxon.wav
+}
+
+fragchamber_lights_hum {
+	looping
+
+	sound/lights/loop_hum_01.wav
+}
+
+fragchamber_lights_flicker {
+	looping
+
+	sound/lights/loop_broken_10.wav
+}
+
+fragchamber_generator_steam {
+
+	volume -6
+
+	looping
+
+	sound/ambient/steam/loop_steam_06.wav
+}
+
+fragchamber_secret_steam_01 {
+	volume -6
+	looping
+
+	sound/ambient/steam/loop_steam_04.wav
+}
+
+fragchamber_secret_steam_02 {
+	volume -6
+	looping
+
+	sound/ambient/steam/loop_steam_05.wav
+}
+
+fragchamber_pressure_01 {
+	volume -10
+	looping
+
+	sound/levels/fragchamber/pressure_01.wav
+}
+
+fragchamber_pressure_02 {
+	volume -10
+	looping
+
+	sound/levels/fragchamber/pressure_02.wav
+}
+
+
+///////////
+// D3DM4 //
+///////////
+
+theedge2_berserk {
+	volume -20
+	looping
+
+	sound/levels/berserk.wav
+}
+
+theedge2_steamblasts {
+	sound/ambient/steam/1shot_steamblast_01.wav
+	sound/ambient/steam/1shot_steamblast_02.wav
+	sound/ambient/steam/1shot_steamblast_03.wav
+	sound/ambient/steam/1shot_steamblast_04.wav
+}
+
+theedge2_waterdrops {
+	sound/ambient/water/1shot_drip_01.wav
+	sound/ambient/water/1shot_drip_02.wav
+	sound/ambient/water/1shot_drip_03.wav
+}
+
+///////////
+// D3DM5 //
+///////////
+
+d3dm5_generator_on {
+	looping
+	leadin
+
+	sound/levels/d3dm5/gen_on.wav
+	sound/levels/d3dm5/gen_loop.wav
+}
+
+d3dm5_generator_off {
+	sound/levels/d3dm5/gen_off.wav
+}
+
+d3dm5_waterdrops {
+	sound/ambient/water/1shot_drip_01.wav
+	sound/ambient/water/1shot_drip_02.wav
+	sound/ambient/water/1shot_drip_03.wav
+}
+
+d3dm5_shutter {
+	volume -10
+	maxDistance 20
+
+	sound/levels/d3dm5/shutters.wav
+}
+
+d3dm5_wind {
+	looping
+
+	sound/outdoors/wind/tonal_wind_01.wav
+	sound/outdoors/wind/tonal_wind_02.wav
+}

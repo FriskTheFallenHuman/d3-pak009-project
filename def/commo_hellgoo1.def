@@ -1,0 +1,15 @@
+model commoutside_hellgoo1 {
+	mesh							models/md5/cinematics/commoutside/goo.md5mesh
+	anim dooropen					models/md5/cinematics/commoutside/goo.md5anim
+}
+
+entityDef commoutside_hellgoo1 {
+	"editor_color"					"1 .5 0"
+	"editor_mins"					"-16 -16 0"
+	"editor_maxs"					"16 16 64"
+
+	"spawnclass"					"idAnimated"
+	"model"							"commoutside_hellgoo1"
+	"editor_usage"					"Hell goo model used in the commoutside map"
+}
+

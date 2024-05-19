@@ -1,0 +1,13 @@
+//***
+// Bathroom scene stuff below...
+//***
+
+// Fred's Pipe Scene Stuff
+
+e3_metalbash_01 {
+	minDistance	2
+	maxDistance	35
+	volume		0
+
+	sound/e3/1shot_metalbash_06.wav
+}

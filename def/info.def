@@ -1,0 +1,52 @@
+/***********************************************************************
+
+ info
+
+***********************************************************************/
+
+entityDef info_player_deathmatch {
+	"editor_color"			"1 0 1"
+	"editor_mins"			"-16 -16 0"
+	"editor_maxs"			"16 16 64"
+	"editor_showangle"		"1"
+
+	"editor_usage"			"Potential spawning position for deathmatch games. The first time players enter the game, they will be at a spot with the 'initial' key set to 1."
+	"editor_var target"		"targets to fire when someone spawns in this spot."
+	"editor_var initial"		"set to 1 to make this an initial spawn spot"
+
+	"spawnclass"			"idPlayerStart"
+}
+
+entityDef info_player_start {
+	"editor_color"			"1 0 0"
+	"editor_mins"			"-16 -16 0"
+	"editor_maxs"			"16 16 64"
+	"editor_showangle"		"1"
+
+	"editor_usage"			"Potential spawning position for single player games."
+	"editor_var useEffect"		"show teleportation effect for useEffect seconds.. 0 is instant"
+	"editor_var skin"		"skin to use for player model"
+
+	"spawnclass"			"idPlayerStart"
+}
+
+entityDef info_player_teleport {
+	"editor_color"				"1 0 0"
+	"editor_mins"				"-16 -16 0"
+	"editor_maxs"				"16 16 64"
+	"editor_showangle"			"1"
+
+	"editor_usage"			"Teleport destination. When triggered, player will be teleported to this location. Can be used as a full featured telporter or as a player spawning position for cinematics."
+	"editor_var push"		"How much of a push to give to the player after he is teleported."
+	"editor_var visualView"		"Name of camera entity to set player's view to when he is teleported."
+	"editor_var visualEffect"	"How long (in seconds) to show the view from the camera 'visualView' points to."
+	"editor_var teleportDelay"	"Delay in seconds from when this entity is triggered to when the player's view is set to the camera 'visualView' points to. Used for the 'wind-up' phase of teleportation."
+	"editor_var mtr_teleportFx"	"Shader material to superimpose on player's view during the 'wind-up' phase of teleportation for visual effects."
+	"editor_var visualFx"		"Set to 1 to enable the 'wind-up' phase of teleportation and accompanying visual effects (default is 0)."
+
+	"spawnclass"				"idPlayerStart"
+
+	"push"					"300"
+	"visualEffect"				"0"
+	"visualView"				""
+}

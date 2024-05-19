@@ -1,0 +1,93 @@
+table testytable { { 0, 1 } }
+table embertable { clamp { 1, 0 } }
+
+models/particles/shrapnel/shrapnel
+{
+        noSelfShadow
+	    noshadows
+		twosided
+		{       
+      		 blend	diffusemap
+			 map	models/particles/shrapnel/shrapnel.tga
+			 alphaTest 0.5
+		}	
+
+		//bumpmap	   heightmap(models/particles/shrapnel/shrapnel_h.tga , 4 )
+		{
+				blend add
+				map     models/particles/shrapnel/shrapnel_fx.tga
+				rgb		embertable[ (time + parm4) * 0.5 ]
+
+		}
+        	
+}
+
+
+
+
+
+
+//
+////  lost
+//
+//unnamed
+//
+//{
+//	qer_editorimage map	textures\sfx\black_2
+//	DECAL_MACRO
+//	noShadows
+//	twoSided
+//	nonsolid
+//	noimpact
+//	translucent
+//
+//
+//	{
+//		colored       
+//      		blend	add 
+//	    map	textures\sfx\black_2
+//	}
+//
+//
+//}
+//
+//s2
+//{
+//	qer_editorimage map	textures\sfx\black_2
+//	DECAL_MACRO
+//	noShadows
+//	twoSided
+//	nonsolid
+//	noimpact
+//	translucent
+//
+//
+//	{
+//		colored       
+//      		blend	add 
+//	    map	textures\sfx\black_2
+//	}
+//
+//
+//}
+
+//textures/dynamic/camera1
+//{
+//	qer_editorimage	map	textures\sfx\black_2
+//	DECAL_MACRO
+//	noShadows
+//	twoSided
+//	nonsolid
+//	noimpact
+//	translucent
+//
+//
+//	{
+//		colored       
+//      		blend	add 
+//	    map	textures\sfx\black_2
+//	}
+//
+//
+//}
+

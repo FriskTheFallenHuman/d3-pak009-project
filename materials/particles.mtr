@@ -1,0 +1,4369 @@
+//================textures/particles shader stats========================================
+//
+// Total # of shaders : 212
+// Working shaders: 29
+// Broken/CommentedOut shaders: 103
+// Unwisely named shaders which can't be used for map texturing and kept by necessity: 80
+// (IOW, all materials with a vertexcolor parameter can only be used by game models)
+//=======================================================================================
+
+
+table hangarblinktable { { 0,0,0,1,1,1,1,1,.5,.25, 0 } }
+
+textures/particles/bug_goo4
+{
+	noSelfShadow
+	noshadows
+	translucent
+	discrete
+	twosided
+	nonsolid
+	noimpact
+
+	qer_editorimage		textures/editor/dontuse.tga
+
+	{
+	    blend  blend
+	    map    textures/particles/bug_goo4.tga
+            vertexcolor
+           
+		//clamp
+		//rotate	( time * -.2 )
+
+	}
+	
+
+}
+
+
+textures/particles/bug_goo3
+{
+	noSelfShadow
+	noshadows
+	translucent
+	discrete
+	twosided
+	nonsolid
+	noimpact
+
+	qer_editorimage		textures/editor/dontuse.tga
+
+	{
+	    blend  blend
+	    map    textures/particles/bug_goo3.tga
+            vertexcolor
+           
+		//clamp
+		//rotate	( time * -.2 )
+
+	}
+	
+
+}
+
+
+textures/particles/murkycloud
+ {
+	noSelfShadow
+	noshadows
+	twosided
+	translucent
+	nonsolid
+	noimpact
+
+
+	qer_editorimage textures/editor/dontuse.tga
+
+	{
+		blend	blend //gl_dst_color,gl_zero
+		map	textures/particles/murkycloud
+		vertexcolor
+	}
+		
+}
+
+textures/particles/bioscansmoke
+{
+ qer_editorimage textures/editor/dontuse.tga
+ 	
+	noSelfShadow
+	noshadows
+	twosided
+	translucent
+	nonsolid
+	noimpact
+
+
+ 	{
+ 	blend add
+ 	map textures/particles/bioscansmoke.tga
+ 	vertexcolor
+ 	}
+ 
+}
+
+//textures/particles/caco_ball
+//{
+//	qer_editorimage textures/particles/fball2.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	deform sprite
+//	sort		5
+//	
+//	{
+//		blend add
+//		map textures/particles/fball2.tga
+//		rotate	( time * -.9 )
+//		zeroclamp
+//	}
+//
+//
+//}
+
+textures/particles/wraithwarp1
+{
+	qer_editorimage textures/editor/dontuse.tga
+	noShadows
+	discrete
+	nonsolid
+	twosided
+	noimpact
+
+	{       
+       blend	add
+	 map	textures/particles/wraithwarp1
+     vertexcolor
+	}
+
+
+ }
+
+textures/particles/preamble
+{
+	qer_editorimage textures/editor/dontuse.tga
+	noShadows
+	discrete
+	nonsolid
+	twosided
+	noimpact
+
+	{       
+       blend	add
+	 map	textures/particles/preamble
+     vertexcolor
+	}
+
+
+ }
+
+
+//textures/particles/bumpsmoke
+//{
+//	noSelfShadow
+//	noshadows
+//	translucent
+//	discrete
+//	twosided
+//	nonsolid
+//	noimpact
+//
+//	qer_editorimage		textures/particles/cloudnormal.tga
+//
+//	{
+//	    blend  diffusemap
+//	    map    textures/particles/cloudnormal_d
+//            vertexcolor
+//			rotate	time * .02
+//            //colored
+//	}
+//	{
+//	    blend  bumpmap
+//	    map    textures/particles/cloudnormal.tga
+//		vertexcolor
+//
+//	}
+//
+//	
+//}
+
+textures/particles/bfgballblast
+
+{
+	qer_editorimage textures/editor/dontuse.tga
+    noselfShadow
+    noshadows	
+	translucent
+	discrete
+	nonsolid
+	noimpact
+	twosided
+
+
+	{ 
+      
+      	blend add
+	    map	textures/particles/bfgballblast
+		vertexcolor
+
+
+						
+	}
+
+}
+
+//textures/particles/billow3_glowalpha
+//
+//{
+//    noselfShadow
+//    noshadows	
+//	translucent
+//	discrete
+//	nonsolid
+//	noimpact
+//	twosided
+//
+//
+//	{ 
+//      
+//      	blend blend
+//	    map	textures/particles/billow3_glowalpha
+//		vertexcolor
+//						
+//	}
+//
+//}
+
+textures/particles/plasmablast
+
+{
+	qer_editorimage textures/editor/dontuse.tga
+    noselfShadow
+    noshadows	
+	translucent
+	discrete
+	nonsolid
+	noimpact
+	twosided
+
+
+	{ 
+      
+      	blend blend
+	    map	textures/particles/plasmablast
+		vertexcolor
+						
+	}
+
+}
+
+textures/particles/plasmablast2
+
+{
+	qer_editorimage textures/editor/dontuse.tga
+    noselfShadow
+    noshadows	
+	translucent
+	discrete
+	nonsolid
+	noimpact
+	twosided
+
+
+	{ 
+      
+      	blend add
+	    map	textures/particles/plasmablast
+		vertexcolor
+						
+	}
+
+}
+
+textures/particles/boomboom4
+
+{
+	qer_editorimage textures/editor/dontuse.tga
+    noselfShadow
+    noshadows	
+	translucent
+	discrete
+	nonsolid
+	noimpact
+
+
+	{ 
+      
+      	blend add
+	    map	textures/particles/boomboom4
+		vertexcolor
+
+
+						
+	}
+
+}
+
+textures/particles/boomboom3
+
+{
+	qer_editorimage textures/editor/dontuse.tga
+    noselfShadow
+    noshadows	
+	translucent
+	discrete
+	nonsolid
+	noimpact
+
+
+	{ 
+      
+      	blend add
+	    map	textures/particles/boomboom3
+		vertexcolor
+
+
+						
+	}
+
+}
+
+textures/particles/boomboom
+
+{
+	qer_editorimage textures/editor/dontuse.tga
+    noselfShadow
+    noshadows	
+	translucent
+	discrete
+	nonsolid
+	noimpact
+
+
+	{ 
+      
+      	blend add
+	    map	textures/particles/boomboom
+		vertexcolor
+
+
+						
+	}
+
+}
+
+textures/particles/boomboom2_sort10
+
+{
+	qer_editorimage textures/editor/dontuse.tga
+    noselfShadow
+    noshadows	
+	translucent
+	discrete
+	nonsolid
+	noimpact
+	sort 10
+
+	{ 
+      
+      	blend add
+	    map	textures/particles/boomboom2
+		vertexcolor
+					
+	}
+
+}
+
+textures/particles/boomboom2
+
+{
+	qer_editorimage textures/editor/dontuse.tga
+    noselfShadow
+    noshadows	
+	translucent
+	discrete
+	nonsolid
+	noimpact
+	//decal_macro
+
+	{ 
+      
+      	blend add
+	    map	textures/particles/boomboom2
+		vertexcolor
+					
+	}
+
+}
+
+textures/particles/duffyboltfade
+{
+    noselfShadow
+    noshadows	
+	nonsolid
+	noimpact
+	translucent
+	//twosided
+
+	qer_editorimage  textures/editor/dontuse.tga
+
+	{
+		maskcolor
+		map makealpha(textures/particles/bfgboltarcmask.tga)
+		vertexcolor
+	
+	
+	}
+
+	{ 
+		blend gl_dst_alpha, gl_one
+	    maskalpha
+	 	map		textures/particles/bfgboltarc2.tga
+		translate	time * -0.8 + parm5, 0
+		scale 1.3, 1
+		vertexcolor
+
+	}
+	{ 
+		blend gl_dst_alpha, gl_one
+	    maskalpha
+	 	map		textures/particles/bfgboltarc2.tga
+		translate	time * -1.4 + parm5, 0
+		vertexcolor
+	}
+}
+
+
+textures/particles/duffybolt
+{
+    noselfShadow
+    noshadows	
+	nonsolid
+	noimpact
+	translucent
+	//twosided
+
+	qer_editorimage  textures/particles/bfgboltarc.tga
+
+	{
+		maskcolor
+		map makealpha(textures/particles/bfgboltarcmask.tga)
+		//vertexcolor
+		//clamp
+	
+	}
+
+	{ 
+		blend gl_dst_alpha, gl_one
+	    maskalpha
+	 	map		textures/particles/bfgboltarc2.tga
+		translate	time * -0.8 + parm5, 0
+		scale 1.3, 1
+		//vertexcolor
+
+	}
+	{ 
+		blend gl_dst_alpha, gl_one
+	    maskalpha
+	 	map		textures/particles/bfgboltarc2.tga
+		translate	time * -1.4 + parm5, 0
+		//vertexcolor
+	}
+}
+
+textures/particles/bfgballsacarc
+
+{
+    noselfShadow
+    noshadows	
+	deform tube
+	translucent
+	discrete
+	nonsolid
+	noimpact
+	
+
+	{ 
+      
+      	blend add
+	 
+	 		map	textures/particles/bfgballsacarc.tga
+			rgb		mgtable[ time * 1 ]
+			 scale roachLegs[ time * .4 ] , 1 
+	
+		
+			
+	}
+
+
+
+}
+textures/particles/bfgballsacarc2
+
+{
+    noselfShadow
+    noshadows	
+	deform tube
+	translucent
+	discrete
+	nonsolid
+	noimpact
+
+
+	{ 
+      
+      	blend add
+	 
+	 		
+	 		map	textures/particles/bfgballsacarc.tga
+			rgb		mgtable[ time * .6 ]
+			 scale roachLegs[ time * .5 ] , 1 
+			
+			
+	}
+
+
+
+}
+textures/particles/bfgballsacarc3
+
+{
+    noselfShadow
+    noshadows	
+	deform tube
+	translucent
+	discrete
+	nonsolid
+	noimpact
+
+
+	{ 
+      
+      	blend add
+	 
+	 		map	textures/particles/bfgballsacarc.tga
+			rgb		mgtable[ time * .7 ]
+			 scale roachLegs[ time * .8 ] , 1 
+						
+	}
+
+}
+textures/particles/bfgballsacarc4
+
+{
+    noselfShadow
+    noshadows	
+	deform tube
+	translucent
+	discrete
+	nonsolid
+	noimpact
+
+
+	{ 
+      
+      	blend add
+	 
+	 		map	textures/particles/bfgballsacarc.tga
+			rgb		mgtable[ time * .6 ]
+			scale roachLegs[ time * 1 ] , 1 
+			
+			
+	}
+
+
+
+}
+textures/particles/bfgballsacarc5
+
+{
+    noselfShadow
+    noshadows	
+	deform tube
+	translucent
+	discrete
+	nonsolid
+	noimpact
+
+
+	{ 
+      
+      	blend add
+	 
+	 		map	textures/particles/bfgballsacarc.tga
+			rgb		mgtable[ time * 1.2 ]
+			 scale roachLegs[ time * .9 ] , 1 
+			
+			
+	}
+
+
+
+}textures/particles/bfgballsacarc6
+
+{
+    noselfShadow
+    noshadows	
+	deform tube
+	translucent
+	discrete
+	nonsolid
+	noimpact
+
+
+	{ 
+      
+      	blend add
+	 
+	 		map	textures/particles/bfgballsacarc.tga
+			rgb		mgtable[ time * 1.1 ]
+			scale roachLegs[ time * .5 ] , 1 
+			
+			
+	}
+
+
+
+}textures/particles/bfgballsacarc7
+
+{
+    noselfShadow
+    noshadows	
+	deform tube
+	translucent
+	discrete
+	nonsolid
+	noimpact
+
+
+	{ 
+      
+      	blend add
+	 
+	 		map	textures/particles/bfgballsacarc.tga
+			rgb		mgtable[ time * .87 ]
+			scale roachLegs[ time * .7 ] , 1 
+			
+			
+	}
+
+
+
+}textures/particles/bfgballsacarc8
+
+{
+    noselfShadow
+    noshadows	
+	deform tube
+	translucent
+	discrete
+	nonsolid
+	noimpact
+
+
+	{ 
+      
+      	blend add
+	 
+	 		map	textures/particles/bfgballsacarc.tga
+			rgb		mgtable[ time * .9 ]
+			 scale roachLegs[ time * 1 ] , 1 
+			
+	
+	}
+
+
+
+}
+
+textures/particles/bfgballsacglo
+
+{
+    noselfShadow
+    noshadows	
+	deform sprite
+	translucent
+	discrete
+	nonsolid
+	noimpact
+
+
+	{ 
+      
+      	blend add
+	 
+	 		map	textures/particles/bfgballsacglo.tga
+			rotate	time * .02
+			zeroClamp
+			
+	}
+
+
+}
+
+
+textures/particles/bfgballsac
+
+{
+    noselfShadow
+    noshadows	
+	deform sprite
+	translucent
+	discrete
+	nonsolid
+	noimpact
+
+
+	{ 
+      
+      	blend add
+	 
+	 		map	textures/particles/bfgballsac.tga
+			rotate	time * .2
+			zeroClamp
+			
+	}
+	{ 
+      
+      	blend add
+	   
+	 		map	textures/particles/bfgballsac.tga
+			rotate	time * -.1
+			zeroClamp
+			
+	}
+
+
+}
+
+//textures/particles/bfgballsac2
+//
+//{
+//    noselfShadow
+//    noshadows	
+//	translucent
+//	discrete
+//	nonsolid
+//	noimpact
+//
+//	{ 
+//      
+//      		 blend	add
+//	 		map	textures/particles/bfgballsac2.tga
+//			translate	time * 0.2 , time * 0.1
+//			rotate	time * .2
+//	}
+//	{ 
+//      
+//      		 blend	add
+//	 		map	textures/particles/bfgballsac2.tga
+//			translate	time * 0.27 , time * 0.08
+//			rotate	time * -.5
+//	}
+//
+//
+//}
+
+
+textures/particles/hellmaggot
+{
+	noSelfShadow
+	noshadows
+	translucent
+	discrete
+	twosided
+	nonsolid
+	noimpact
+
+	qer_editorimage		textures/editor/dontuse.tga
+
+	{
+	    blend  diffusemap
+	    map    textures/particles/hellmaggot.tga
+          vertexcolor
+	}
+	{
+	    blend  bumpmap
+	    map    textures/particles/hellmaggot_local.tga
+		vertexcolor
+
+	}
+	{
+	    blend  specularmap
+	    map    textures/particles/hellmaggot_s.tga
+		vertexcolor
+
+	}
+	
+}
+
+textures/particles/hellmaggotsolid
+{
+	noSelfShadow
+	noshadows
+	nonsolid
+	noimpact
+
+	qer_editorimage		textures/editor/dontuse.tga
+
+	{
+	    blend  diffusemap
+	    map    textures/particles/hellmaggot.tga
+		alphaTest 0.05 
+		clamp
+         vertexcolor
+	}
+	{
+	    blend  bumpmap
+	    map    textures/particles/hellmaggot_local.tga
+		clamp
+		vertexcolor
+
+	}
+	{
+	    blend  specularmap
+	    map    textures/particles/hellmaggot_s.tga
+		clamp
+		vertexcolor
+
+	}
+	
+}
+
+
+textures/particles/soul4
+{
+	noSelfShadow
+	noshadows
+	translucent
+	discrete
+	twosided
+	nonsolid
+	noimpact
+
+	qer_editorimage		textures/editor/dontuse.tga
+
+	{
+	    blend  diffusemap
+	    map    textures/particles/soul4.tga
+          vertexcolor
+	}
+	{
+	    blend  bumpmap
+	    map    textures/particles/soul4_local.tga
+		vertexcolor
+
+	}
+	{
+	    blend  specularmap
+	    map    textures/particles/soul4_s.tga
+		vertexcolor
+
+	}
+	
+}
+
+
+textures/particles/soul3
+{
+	noSelfShadow
+	noshadows
+	translucent
+	discrete
+	twosided
+	nonsolid
+	noimpact
+
+	qer_editorimage		textures/editor/dontuse.tga
+
+	{
+	    blend  diffusemap
+	    map    textures/particles/soul3.tga
+            vertexcolor
+	}
+	{
+	    blend  bumpmap
+	    map    textures/particles/soul3_local.tga
+		vertexcolor
+
+	}
+	{
+	    blend  specularmap
+	    map    textures/particles/soul3_s.tga
+		vertexcolor
+
+	}
+	
+}
+
+
+textures/particles/soul
+{
+	noSelfShadow
+	noshadows
+	translucent
+	discrete
+	twosided
+	nonsolid
+	noimpact
+
+	qer_editorimage		textures/editor/dontuse.tga
+
+	{
+	    blend  diffusemap
+	    map    textures/particles/soul.tga
+          vertexcolor
+	}
+	{
+	    blend  bumpmap
+	    map    textures/particles/soul_local.tga
+		vertexcolor
+
+	}
+	{
+	    blend  specularmap
+	    map    textures/particles/soul_s.tga
+		vertexcolor
+
+	}
+	
+
+
+
+}
+
+
+//textures/particles/burst_strip_small
+//{
+//	qer_editorimage textures/particles/hkball_strip.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	deform sprite
+//	sort		5
+//	
+//	{
+//		blend add
+//		map textures/particles/burst_strip_small.tga
+//		red			1
+//		green		1
+//		blue		1
+//		scale 1 / 32 , 1
+//		scroll table32[ time * 1.4 ] , 0
+//		//rotate	( time * -.2 )
+//		//zeroclamp
+//	}
+//
+//
+//}
+
+textures/particles/dim_disk
+{
+	noSelfShadow
+	noshadows
+	translucent
+	discrete
+	twosided
+	nonsolid
+	noimpact
+
+	qer_editorimage		textures/particles/dim_disk.tga
+
+	{
+	blend  add
+	map    lights/spot01.tga
+	red		Parm0
+	green		Parm1
+	blue		Parm2
+
+	}
+	
+
+}
+
+
+
+textures/particles/dust2
+{
+	noSelfShadow
+	noshadows
+	translucent
+	discrete
+	twosided
+	nonsolid
+	noimpact
+
+	qer_editorimage		textures/editor/dontuse.tga
+
+	{
+	    blend  blend
+		map    textures/particles/dust2.tga
+        vertexcolor
+        colored
+	
+
+	}
+	
+
+}
+textures/particles/dust2bits
+{
+	noSelfShadow
+	noshadows
+	translucent
+	discrete
+	twosided
+	nonsolid
+	noimpact
+
+	qer_editorimage		textures/editor/dontuse.tga
+
+	{
+	    blend  blend
+		map    textures/particles/dust2bits.tga
+        vertexcolor
+        colored
+	//
+
+	}
+	
+
+}
+
+textures/particles/bloodspray4
+{
+	noSelfShadow
+	noshadows
+	translucent
+	discrete
+	twosided
+	nonsolid
+	noimpact
+
+	qer_editorimage		textures/editor/dontuse.tga
+
+	{
+	    blend  blend
+	    map    textures/particles/bloodspray4.tga
+            vertexcolor
+            colored
+		//clamp
+		//rotate	( time * -.2 )
+
+	}
+	
+
+}
+
+
+textures/particles/bloodspray3
+{
+	noSelfShadow
+	noshadows
+	translucent
+	discrete
+	twosided
+	nonsolid
+	noimpact
+
+	qer_editorimage		textures/editor/dontuse.tga
+
+	{
+	    blend  blend
+	    map    textures/particles/bloodspray3.tga
+            vertexcolor
+            colored
+		//clamp
+		//rotate	( time * -.2 )
+
+	}
+	
+
+}
+
+
+
+textures/particles/bloodspray2
+{
+	noSelfShadow
+	noshadows
+	translucent
+	discrete
+	twosided
+	nonsolid
+	noimpact
+
+	qer_editorimage		textures/editor/dontuse.tga
+
+	{
+	    blend  blend
+	    map    textures/particles/bloodspray2.tga
+            vertexcolor
+            colored
+		//clamp
+		//rotate	( time * -.2 )
+
+	}
+	
+
+}
+
+textures/particles/bloodspray1
+{
+	noSelfShadow
+	noshadows
+	translucent
+	discrete
+	twosided
+	nonsolid
+	noimpact
+
+	qer_editorimage		textures/editor/dontuse.tga
+
+	{
+	    blend  blend
+	    map    textures/particles/bloodspray1.tga
+            vertexcolor
+            colored
+		//clamp
+		//rotate	( time * -.2 )
+
+	}
+	
+
+}
+
+
+
+
+
+
+//textures/particles/fly
+//
+//{
+//	
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	//deform sprite
+//	{
+//		blend add
+//		map textures/particles/fly.tga
+//		vertexcolor
+//		clamp
+//	}
+//
+//
+//}
+
+textures/particles/fbeam
+
+{
+	
+	qer_editorimage		textures/editor/dontuse.tga
+	noSelfShadow
+	translucent
+	noShadows
+	twosided
+	//deform sprite
+	{
+		blend add
+		map textures/particles/fbeam.tga
+		vertexcolor
+		clamp
+	}
+
+
+}
+
+textures/particles/fbeam2
+
+{
+	
+	qer_editorimage		textures/editor/dontuse.tga
+	noSelfShadow
+	translucent
+	noShadows
+	twosided
+	//deform sprite
+	{
+		blend add
+		map lights/flashlight5.tga
+		vertexcolor
+		clamp
+	}
+
+
+}
+
+//textures/particles/pfiretiny1
+//
+//{
+//	
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	//deform sprite
+//	{
+//		blend add
+//		map textures/particles/pfiretiny1.tga
+//		vertexcolor
+//		clamp
+//	}
+//
+//
+//}
+
+textures/particles/pfiresmall2
+
+{
+	
+	qer_editorimage		textures/editor/dontuse.tga
+	noSelfShadow
+	translucent
+	noShadows
+	twosided
+	//deform sprite
+	{
+		blend add
+		map textures/particles/pfiresmall2.tga
+		vertexcolor
+		clamp
+	}
+
+
+}
+
+textures/particles/pfiresmall
+
+{
+	
+	qer_editorimage		textures/editor/dontuse.tga
+	noSelfShadow
+	translucent
+	noShadows
+	twosided
+	//deform sprite
+	{
+		blend add
+		map textures/particles/pfiresmall.tga
+		vertexcolor
+		clamp
+	}
+
+
+}
+
+textures/particles/pfirebig2
+{
+	
+	qer_editorimage		textures/editor/dontuse.tga
+	noSelfShadow
+	translucent
+	noShadows
+	twosided
+	//deform sprite
+	{
+		blend add
+		map textures/particles/pfirebig2.tga
+		vertexcolor
+		clamp
+	}
+}
+
+textures/particles/pfirebig2_sort10
+{
+	qer_editorimage		textures/editor/dontuse.tga
+	noSelfShadow
+	translucent
+	noShadows
+	twosided
+	sort 10
+	
+	//deform sprite
+	{
+		blend add
+		map textures/particles/pfirebig2.tga
+		vertexcolor
+		clamp
+	}
+}
+
+textures/particles/pfirebig_grey
+
+{
+	
+	qer_editorimage		textures/editor/dontuse.tga
+	noSelfShadow
+	translucent
+	noShadows
+	twosided
+	//deform sprite
+	{
+		blend add
+		map textures/particles/pfirebig.tga
+		vertexcolor
+		clamp
+	}
+
+
+}
+
+
+textures/particles/pfirebig
+
+{
+	
+	qer_editorimage		textures/editor/dontuse.tga
+	noSelfShadow
+	translucent
+	noShadows
+	twosided
+	//deform sprite
+	{
+		blend add
+		map textures/particles/pfirebig.tga
+		vertexcolor
+		clamp
+	}
+
+
+}
+
+
+
+
+
+models/particles/tracer/tracer1
+
+{
+	
+	noSelfShadow
+	translucent
+	noShadows
+	twosided
+	deform tube
+	{
+		blend add
+		map models/particles/tracer/tracer1.tga
+		red		.7
+		green		.7
+		blue		.7
+		// centerscale	1 -.2*sinTable[time * 1 ], 1
+		zeroclamp
+	}
+
+
+}
+
+/*
+models/particles/tracer/tracer2
+
+{
+	
+	noSelfShadow
+	translucent
+	noShadows
+	twosided
+	deform sprite
+	{
+		blend add
+		map models/particles/tracer/tracer2.tga
+		
+		zeroclamp
+	}
+
+
+}
+*/
+
+
+//textures/particles/hkball
+//{
+//	qer_editorimage textures/particles/hkball_strip.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	deform sprite
+//	sort		5
+//	
+//	{
+//		blend blend
+//		map textures/particles/hkball_strip.tga
+//		red			1
+//		green		1
+//		blue		1
+//		scale 1 / 32 , 1
+//		scroll table32[ time * 1.4 ] , 0
+//		//rotate	( time * -.2 )
+//		//zeroclamp
+//	}
+//
+//
+//}
+
+//textures/particles/hkbillow
+//{
+//	qer_editorimage textures/particles/flame2_strip.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	deform sprite
+//	//sort		4
+//	{
+//		blend blend
+//		map textures/particles/billow_strip.tga
+//		red			0
+//	    green		.7
+//		blue		.7
+//		scale 1 / 32 , 1
+//		//scale 1, 1
+//		scroll table32[ time * 1 ] , 0
+//		//colored
+//		//vertexcolor
+//		//rotate	( time * -.2 )
+//		//zeroclamp
+//	}
+//
+//
+//}
+
+
+textures/particles/dust
+{
+	noSelfShadow
+	noshadows
+	translucent
+	discrete
+	twosided
+	nonsolid
+	noimpact
+
+	qer_editorimage		textures/editor/dontuse.tga
+
+	{
+	    blend  blend
+	    map    textures/particles/dust2.tga
+            vertexcolor
+            colored
+
+	}
+}
+
+textures/particles/dust_sort10
+{
+	noSelfShadow
+	noshadows
+	translucent
+	discrete
+	twosided
+	nonsolid
+	noimpact
+	sort	10
+
+	qer_editorimage		textures/editor/dontuse.tga
+
+	{
+	    blend  blend
+	    map    textures/particles/dust2.tga
+            vertexcolor
+            colored
+
+	}
+}
+
+
+//textures/particles/blood
+//{
+//	noSelfShadow
+//	noshadows
+//	translucent
+//	discrete
+//	twosided
+//	nonsolid
+//	noimpact
+//
+//	qer_editorimage		textures/particles/blood.tga
+//
+//	{
+//	    blend  diffusemap
+//	    map    textures/particles/blood.tga
+//            vertexcolor
+//            colored
+//
+//	}
+//	{
+//	    blend  bumpmap
+//	    map    textures/particles/blood_local.tga
+//            vertexcolor
+//
+//	}
+//
+//}
+//textures/particles/hotness
+//{
+//	qer_editorimage textures/particles/hotness.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	deform sprite
+//	{
+//		blend add
+//		map textures/particles/hotness.tga
+//		red			1
+//		green		1
+//		blue		1
+//		scale 1 , 1
+//		rotate	( time * -.12 )
+//		rgb		fireballtable[ time * .5 ]
+//		zeroclamp
+//	}
+//
+//
+//}
+
+//textures/particles/billow_sprite
+//{
+//	qer_editorimage textures/particles/billow_sprite.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	deform sprite
+//	sort		3
+//	{
+//		blend blend
+//		map textures/particles/billow_sprite.tga
+//		red			1
+//		green		1
+//		blue		1
+//		scale 1 , 1
+//		//rotate	( time * -.12 )
+//		//zeroclamp
+//	}
+//
+//
+//}
+
+//textures/particles/billow
+//{
+//	qer_editorimage textures/particles/flame2_strip.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	//deform sprite
+//	//sort		4
+//	{
+//		blend blend
+//		map textures/particles/billow_strip.tga
+//		//red			1
+//		//green		1
+//		//blue		1
+//		//scale 1 / 32 , 1
+//		//scale 1, 1
+//		//scroll table32[ time * 1 ] , 0
+//		//colored
+//		vertexcolor
+//		//rotate	( time * -.2 )
+//		//zeroclamp
+//	}
+//
+//
+//}
+
+//textures/particles/fball
+//{
+//	qer_editorimage textures/particles/flame2_strip.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	deform sprite
+//	sort		5
+//	
+//	{
+//		blend blend
+//		map textures/particles/fball2_strip.tga
+//		red			1
+//		green		1
+//		blue		1
+//		scale 1 / 16 , 1
+//		scroll table16[ time * 2.5 ] , 0
+//		//rotate	( time * -.2 )
+//		//zeroclamp
+//	}
+//
+//
+//}
+
+textures/particles/tracer
+{
+	qer_editorimage textures/particles/tracer.tga
+	noSelfShadow
+	translucent
+	noShadows
+	{
+		blend add
+		map textures/particles/tracer.tga
+		clamp
+		colored
+	}
+}
+
+
+//textures/particles/bflame1
+//{
+//	qer_editorimage textures/particles/flame_strip.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	deform tube
+//	{
+//		maskcolor
+//		map makealpha(textures/sfx/fmask.tga)
+//		//	scroll	time * 3 , time * 0	
+//		//clamp
+//	
+//	
+//	}
+//	{
+//		blend gl_dst_alpha, gl_one
+//	    maskalpha
+//		map textures/particles/flame2_strip.tga
+//		red			1
+//		green		0
+//		blue		0
+//		scale 1 / 32 , 1
+//		scroll table32[ time * .7 ] , 0
+//		clamp
+//	}
+//}
+
+//textures/particles/manfire1
+//{
+//	qer_editorimage textures/particles/flame2_strip.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	deform tube
+//	{
+//		maskcolor
+//		map makealpha(textures/sfx/fmask.tga)
+//		//	scroll	time * 3 , time * 0	
+//		//clamp
+//	
+//	}
+//	{
+//		blend gl_dst_alpha, gl_one
+//	    maskalpha
+//		map textures/particles/flame2_strip.tga
+//		scale 1 / 32 , 1
+//		scroll table32[ time * .7 ] , 0
+//		clamp
+//	}
+//}
+
+
+
+//textures/particles/bloodfoopstrip2
+//{
+//	qer_editorimage textures/particles/bloodfoopstrip2.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	//deform tube
+//	{
+//		blend blend
+//		map textures/particles/bloodfoopstrip2.tga
+//		//scale 1 / 16 , 1
+//		//scroll table16[ time * 3 ] , 0
+//		//clamp
+//	}
+//}
+
+
+textures/particles/flame1
+{
+	qer_editorimage textures/editor/flame_strip.tga
+	noSelfShadow
+	translucent
+	noShadows
+	twosided
+	deform tube
+	{
+		blend add
+		map textures/particles/flame_strip.tga
+		scale 1 / 32 , 1
+		scroll table32[ time * .6 ] , 0
+		clamp
+	}
+}
+
+//textures/particles/flame2
+//{
+//	qer_editorimage textures/particles/flame2_strip.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	deform tube
+//	{
+//		blend add
+//		map textures/particles/flame2_strip.tga
+//		scale 1 / 32 , 1
+//		scroll table32[ time * .8 ] , 0
+//		clamp
+//	}
+//}
+
+textures/particles/flame3
+{
+	qer_editorimage textures/particles/flame3_strip.tga
+	noSelfShadow
+	translucent
+	noShadows
+	twosided
+	deform tube
+	{
+		blend add
+		map textures/particles/flame3_strip.tga
+		scale 1 / 32 , 1
+		scroll table32[ time * .8 ] , 0
+		clamp
+	}
+}
+
+//textures/particles/flame4
+//{
+//	qer_editorimage textures/particles/flame4_strip.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	//deform tube
+//	{
+//		blend add
+//		map textures/particles/flame4_strip.tga
+//		scale 1 / 32 , 1
+//		scroll table32[ time * .8 ] , 0
+//		clamp
+//	}
+//}
+//
+//textures/particles/flame5
+//{
+//	qer_editorimage textures/particles/flame5_strip.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	deform tube
+//	{
+//		blend add
+//		map textures/particles/flame5_strip.tga
+//		scale 1 / 32 , 1
+//		scroll table32[ time * .8 ] , 0
+//		clamp
+//	}
+//}
+
+//textures/particles/flamebase
+//{
+//	qer_editorimage textures/particles/flamebase1_strip.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//
+//		{
+//		maskcolor
+//		map makealpha(textures/particles/flamebase1_mask.tga)
+//		//rotate	( time * -0.01 )
+//		clamp
+//	
+//	}
+//	{
+//	    blend gl_dst_alpha, gl_one
+//	    maskalpha
+//		map textures/particles/flamebase1_strip.tga
+//		scale 1 / 32 , 1
+//		scroll table32[ time * .6 ] , 0
+//		clamp
+//	}
+//}
+
+
+textures/particles/burst
+{
+	qer_editorimage textures/particles/burst_strip.tga
+	noSelfShadow
+	translucent
+	noShadows
+	twosided
+	deform sprite
+	{
+		blend add
+		map textures/particles/burst_strip.tga
+		scale 1 / 32 , 1
+		scroll table32[ time * .8 ] , 0
+		clamp
+	}
+}
+
+
+
+
+
+textures/particles/plasma_impact1
+{
+	qer_editorimage textures/editor/plasmaflame_strip.tga
+	noSelfShadow
+	translucent
+	noShadows
+	twosided
+	deform tube
+	{
+		blend add
+		map textures/particles/plasmaflame_strip.tga
+		scale 1 / 32 , 1
+ 		scroll table32[ time * .9 ] , 0
+		colored
+	}
+}
+
+//textures/particles/plasma_impact2
+//{
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	//deform tube
+//	{
+//		blend add
+//		map textures/particles/plasma_impact2.tga
+//		//scale 1 / 32 , 1
+//		//scroll table32[ time * .6 ] , 0
+//		clamp
+//		colored
+//	}
+//}
+
+//textures/particles/plasma_impact2b
+//{
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	deform sprite
+//	{
+//		blend add
+//		map textures/particles/plasma_impact2.tga
+//		//scale 1 / 32 , 1
+//		//scroll table32[ time * .6 ] , 0
+//		clamp
+//		colored
+//	}
+//}
+
+textures/particles/lostflame1
+{
+	qer_editorimage textures/editor/flame_strip.tga
+	noSelfShadow
+	translucent
+	noShadows
+	twosided
+	deform tube
+	{
+		blend add
+		map textures/particles/flame_strip.tga
+		scale 1 / 32 , 1
+		scroll table32[ time * .7 ] , 0
+	}
+}
+
+//textures/particles/lostflame2
+//{
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	deform tube
+//	{
+//		blend add
+//		map textures/particles/flame2_strip.tga
+//		scale 1 / 32 , 1
+//		scroll table32[ time * .6 ] , 0
+//		clamp
+//	}
+//}
+
+textures/particles/lostflame1b
+{
+	qer_editorimage textures/editor/flame_strip.tga
+	noSelfShadow
+	translucent
+	noShadows
+	twosided
+	deform tube
+	{
+		blend add
+		map textures/particles/flame_strip.tga
+		scale 1 / 32 , 1
+		scroll table32[ time * .6 ] , 0
+		clamp
+	}
+}
+
+textures/particles/lostflame3
+{
+	qer_editorimage textures/particles/flame3_strip.tga
+	noSelfShadow
+	translucent
+	noShadows
+	twosided
+	deform tube
+	{
+		blend add
+		map textures/particles/flame3_strip.tga
+		scale 1 / 32 , 1
+		scroll table32[ time * .8 ] , 0
+		clamp
+	}
+}
+
+textures/particles/lostflame3b
+{
+	qer_editorimage textures/particles/flame3_strip.tga
+	noSelfShadow
+	translucent
+	noShadows
+	twosided
+	deform tube
+	{
+		blend add
+		map textures/particles/flame3_strip.tga
+		scale 1 / 32 , 1
+		scroll table32[ time * .9 ] , 0
+		clamp
+	}
+}
+
+textures/particles/teststrip32
+{
+	qer_editorimage textures/editor/flame_strip.tga
+	noSelfShadow
+	translucent
+	noShadows
+	twosided
+	//deform tube
+	{
+		blend add
+		map textures/particles/flame_strip.tga
+		scale 1 / 32 , 1
+		scroll table32[ time * .8 ] , 0
+		clamp
+	}
+}
+
+//textures/particles/rocketstrip
+//{
+//	qer_editorimage textures/particles/rocketstrip.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	sort		10		// sort very late, so no translucent objects in the world draws over it
+//	{
+//		blend add
+//		map textures/particles/rocketstrip.tga
+//		vertexColor
+//		clamp
+//	}
+//}
+//
+//
+//textures/particles/plasmapop_strip_full
+//{
+//	qer_editorimage textures/particles/plasmapop_strip_full.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	sort		10		// sort very late, so no translucent objects in the world draws over it
+//	{
+//		blend add
+//		map textures/particles/plasmapop_strip_full.tga
+//		vertexColor
+//		clamp
+//	}
+//}
+//
+//textures/particles/plasmapop_strip
+//{
+//	qer_editorimage textures/particles/plasmapop_strip.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	sort		10		// sort very late, so no translucent objects in the world draws over it
+//	{
+//		blend add
+//		map textures/particles/plasmapop_strip.tga
+//		vertexColor
+//		clamp
+//	}
+//}
+
+
+
+textures/particles/flame3_strip
+{
+	qer_editorimage textures/editor/dontuse.tga
+	noSelfShadow
+	translucent
+	noShadows
+	sort		10		// sort very late, so no translucent objects in the world draws over it
+	{
+		blend add
+		map textures/particles/flame3_strip.tga
+		vertexColor
+		clamp
+	}
+}
+
+
+//textures/particles/flame2_strip
+//{
+//	qer_editorimage textures/particles/flame2_strip.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	sort		10		// sort very late, so no translucent objects in the world draws over it
+//	{
+//		blend add
+//		map textures/particles/flame2_strip.tga
+//		vertexColor
+//		clamp
+//	}
+//}
+
+textures/particles/flame_strip
+{
+	qer_editorimage textures/editor/dontuse.tga
+	noSelfShadow
+	translucent
+	noShadows
+	sort		10		// sort very late, so no translucent objects in the world draws over it
+	{
+		blend add
+		map textures/particles/flame_strip.tga
+		vertexColor
+		clamp
+	}
+}
+
+textures/particles/plasmaflame_strip
+{
+	qer_editorimage textures/editor/dontuse.tga
+	noSelfShadow
+	translucent
+	noShadows
+	sort		10		// sort very late, so no translucent objects in the world draws over it
+	{
+		blend add
+		map textures/particles/plasmaflame_strip.tga
+		vertexColor
+	}
+}
+
+//textures/particles/plasmaflame2_strip
+//{
+//	qer_editorimage textures/particles/flame2_strip.tga
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	sort		10		// sort very late, so no translucent objects in the world draws over it
+//	{
+//		blend add
+//		map textures/particles/plasmaflame2_strip.tga
+//		vertexColor
+//		clamp
+//	}
+//}
+
+//textures/particles/spark6
+//{
+//	noSelfShadow
+//	noshadows
+//	translucent
+//	discrete
+//	nonsolid
+//	noimpact
+//
+//	qer_editorimage		textures/particles/spark6.tga
+//
+//	{
+//	    blend  add  
+//		map    textures/particles/spark6.tga
+//        vertexcolor
+//		//clamp
+//
+//	}
+//}
+
+
+
+textures/particles/spark4
+{
+	noSelfShadow
+	noshadows
+	translucent
+	discrete
+	nonsolid
+	noimpact
+	//deform tube
+
+	qer_editorimage		textures/editor/dontuse.tga
+
+	{
+	    blend  add  
+		map    textures/particles/spark4.tga
+        vertexcolor
+		//clamp
+
+	}
+	
+
+}
+
+
+
+textures/particles/spark3
+{
+	noSelfShadow
+	noshadows
+	translucent
+	discrete
+	nonsolid
+	noimpact
+	//deform tube
+
+	qer_editorimage		textures/editor/dontuse.tga
+
+	{
+	    blend  add  
+		map    textures/particles/spark3.tga
+        vertexcolor
+        colored
+		//clamp
+
+	}
+	
+
+}
+
+
+
+
+//textures/particles/spark2
+//{
+//	noSelfShadow
+//	noshadows
+//	translucent
+//	discrete
+//	nonsolid
+//	noimpact
+//	deform tube
+//
+//	qer_editorimage		textures/particles/spark2.tga
+//
+//	{
+//	    blend  add  
+//		map    textures/particles/spark2.tga
+//        colored 
+//		clamp
+//
+//	}
+//	
+//
+//}
+
+
+//textures/particles/plasmadot
+//{
+//	noSelfShadow
+//	noshadows
+//	translucent
+//	discrete
+//	nonsolid
+//	noimpact
+//
+//	qer_editorimage		textures/particles/spark.tga
+//
+//	{
+//	    blend  add  
+//		map    textures/particles/spark.tga
+//        colored 
+//		clamp
+//
+//	}
+//	
+//
+//}
+
+
+textures/particles/plasma2
+{
+	noSelfShadow
+	noshadows
+	//twosided
+	translucent
+	discrete
+	nonsolid
+	noimpact
+	deform sprite
+
+	qer_editorimage		textures/particles/plasma2.tga
+
+	{
+	    blend  add   // GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+		map    textures/particles/plasma2.tga
+		rotate	parm5 * time
+		rgb		bathroom2table[ time * 3 ] 
+		clamp
+
+	}
+	
+
+}
+
+
+
+textures/particles/plasma
+{
+	noSelfShadow
+	noshadows
+	//twosided
+	translucent
+	discrete
+	nonsolid
+	noimpact
+	deform sprite
+
+	qer_editorimage		textures/particles/plasma.tga
+
+	{
+	    blend  add   // GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+		map    textures/particles/plasma.tga
+		rgb		bathroom2table[ time * 3 ] 
+		rotate	parm5
+		clamp
+
+	}
+	{
+	    blend  add   // GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+		map    textures/particles/plasma.tga
+		rgb		bathroom2table[ time * 3 ] 
+		rotate	parm5
+		clamp
+
+	}
+	
+
+}
+
+
+
+
+armorViewEffect
+{
+	{
+		blend blend
+		map makealpha(textures/sfx/armorViewEffect2.tga)
+		clamp
+		red 1.0
+		green 0.0
+		blue 0.0
+		alpha parm3
+	}
+}
+
+//*********************************************Moved from aaduffyTest.mtr - start***********************************************
+
+table refract { { .7, 1, .5, .7, 0, .6, 1, .8, .6, 0, .7, 1, .6, 1, 1, .6, .7, .8, 0, .6, 1, .5, .7, 1 } }
+
+
+//textures/particles/duffybolt3
+//{
+//    noselfShadow
+//    noshadows	
+//	nonsolid
+//	noimpact
+//	twosided
+//
+//	qer_editorimage  textures/particles/duffybolt3.tga
+//
+//	{ 
+//		blend	add
+//	 	map		textures/particles/duffybolt3.tga
+//		translate	time * 0.8, 0
+//		vertexcolor
+//	}
+//	{ 
+//		blend	add
+//	 	map		textures/particles/duffybolt3.tga
+//		translate	time * 0.4, 0
+//		vertexcolor
+//	}
+//}
+
+
+//textures/particles/blood2
+//{
+//	noSelfShadow
+//	noshadows
+//	//translucent
+//	discrete
+//	twosided
+//	nonsolid
+//	noimpact
+//	qer_editorimage		textures/particles/blood2.tga
+//	{
+//		blend diffusemap
+//		map textures/particles/blood2.tga
+//		vertexcolor
+//		colored
+//	}
+//	{
+//		blend bumpmap
+//		map textures/particles/blood_local2.tga
+//		vertexcolor
+//	}
+//}
+
+//textures/particles/bloodstream4
+//{
+//	noSelfShadow
+//	noshadows
+//	//translucent
+//	//discrete
+//	twosided
+//	nonsolid
+//	noimpact
+//	qer_editorimage		textures/particles/bloodspray2.tga
+//	{
+//		blend blend
+//		map textures/particles/bloodstream4.tga
+//		vertexcolor
+//		translate	0, time * -0.4
+//	}
+//
+//	/*	
+//	{
+//		blend bumpmap
+//		map textures/particles/blood2_local.tga
+//		vertexcolor
+//		translate	0, time * -0.4
+//	}
+//*/	
+//
+//}
+
+//textures/particles/bfgball
+//{
+//    noselfShadow
+//    noshadows	
+//	nonsolid
+//	noimpact
+//	nomipmaps
+//	qer_editorimage  textures/particles/bfgball.tga
+//
+//	{ 
+//		blend	add
+//	 	map		textures/particles/bfgball.tga
+//		//translate	time * 0.8, 0
+//		vertexcolor
+//	}
+//}
+
+
+
+textures/particles/duffybolt_white
+{
+    noselfShadow
+    noshadows	
+	nonsolid
+	noimpact
+	twosided
+
+	qer_editorimage  textures/editor/dontuse.tga
+
+	{ 
+		blend	add
+	 	map		textures/particles/duffybolt2_white.tga
+		translate	time * -1.0, 0
+		vertexcolor
+	}
+	{ 
+		blend	add
+	 	map		textures/particles/duffybolt2_white.tga
+		translate	time * -0.8, 0
+		vertexcolor
+	}
+	{ 
+		blend	add
+	 	map		textures/particles/duffybolt_white.tga
+		translate	time * -0.6, 0
+		vertexcolor
+	}
+/*	
+	{
+		blend		add
+		map			textures/particles/duffybeam.tga
+		translate	time * 0.5, 0
+		vertexcolor
+	}	
+*/	
+}
+
+//textures/particles/duffyboltvert_white
+//{
+//    noselfShadow
+//    noshadows	
+//	nonsolid
+//	noimpact
+//	twosided
+//
+//	qer_editorimage  textures/particles/duffyboltvert_white.tga
+//
+//	{ 
+//		blend	add
+//	 	map		textures/particles/duffyboltvert_white.tga
+//		translate	time * -0.8, 0
+//		vertexcolor
+//	}
+//	{ 
+//		blend	add
+//	 	map		textures/particles/duffyboltvert_white.tga
+//		translate	time * -0.4, 0
+//		vertexcolor
+//	}
+//}
+//
+//textures/particles/duffyboltball
+//{
+//    noselfShadow
+//    noshadows	
+//	nonsolid
+//	noimpact
+//	twosided
+//
+//	qer_editorimage  textures/particles/duffyboltball.tga
+//
+//	{ 
+//		blend	add
+//	 	map		textures/particles/duffyboltball.tga
+//		translate	time * 0.8, 0
+//		vertexcolor
+//	}
+//	{ 
+//		blend	add
+//	 	map		textures/particles/duffyboltball.tga
+//		translate	time * 0.4, 0
+//		vertexcolor
+//	}
+//}
+
+
+textures/particles/bloodspray
+{
+	qer_editorimage textures/editor/dontuse.tga
+	translucent
+	noShadows
+	{
+		blend 	gl_zero,gl_one_minus_src_color
+		map		textures/decals/duffysplat.tga
+		vertexColor
+
+		//blend blend
+		//map textures/particles/bloodparticle.tga
+		//rgb		Parm3
+	}
+}
+
+//textures/particles/bloodpuff
+//{
+//	qer_editorimage textures/particles/bloodpuff.tga
+//	translucent
+//	noShadows
+//	{
+//		blend blend
+//		map textures/particles/bloodpuff.tga
+//		vertexColor
+//	}
+//}
+
+//textures/particles/teleportsparks
+//{
+//	qer_editorimage textures/particles/spawn1.tga
+//	translucent
+//	noShadows
+//	{
+//		blend add
+//		map textures/particles/spawn1.tga
+//		zeroClamp
+//	}
+//}
+
+//textures/particles/teleportsparks2
+//{
+//	qer_editorimage textures/particles/spawn2.tga
+//	translucent
+//	noShadows
+//	{
+//		blend add
+//		map textures/particles/spawn2.tga
+//		zeroClamp
+//	}
+//}
+
+//textures/particles/sparkstrip
+//{
+//	qer_editorimage textures/particles/sparkstrip.tga
+//	translucent
+//	noShadows
+//	{
+//		blend add
+//		map textures/particles/sparkstrip.tga
+//		zeroClamp
+//	}
+//}
+
+//textures/particles/bluesparks
+//{
+//	qer_editorimage textures/particles/spark.tga
+//	translucent
+//	noShadows
+//	{
+//		blend add
+//		map textures/particles/spark.tga
+////		rgb  sintable [time] + 2.5
+////		centerScale (1.25 + 0.25 * sintable[time]), (1.25 + 0.25 * sintable[time])
+//		zeroClamp
+////		translate sintable[time], 0
+////		colored
+////		vertexColor
+//	}
+//}
+
+//textures/particles/redteleportsparks
+//{
+//	qer_editorimage textures/particles/redspawn.tga
+//	translucent
+//	noShadows
+//	{
+//		blend add
+//		map textures/particles/redspawn.tga
+//		zeroClamp
+//		colored
+//	}
+//}
+
+//textures/particles/redteleportsmoke
+//{
+//	qer_editorimage textures/particles/hellsmoke.tga
+//	translucent
+//	noShadows
+//	{
+//		blend add
+//		map textures/particles/hellsmoke.tga
+//		//zeroClamp
+//		colored
+//	}
+//}
+
+//textures/particles/debris
+//{
+//	qer_editorimage textures/sfx/debris.tga
+//	//translucent
+//	noShadows
+//	{
+//		blend blend
+//		map textures/sfx/debris.tga
+//		//zeroClamp
+//		//rotate	time * 3
+//		//colored
+//		vertexcolor
+//	}
+//}
+
+//textures/particles/debrislight
+//{
+//	qer_editorimage textures/sfx/debrislight.tga
+//	//translucent
+//	noShadows
+//	{
+//		blend blend
+//		map textures/sfx/debrislight.tga
+//		//zeroClamp
+//		//rotate	time * 3
+//		//colored
+//		vertexcolor
+//	}
+//}
+
+//*****************************************Moved from aaduffyTest.mtr - end*************************************************
+
+
+//*****************************************Moved from andy.mtr - start******************************************************
+
+
+textures/particles/droppuddle
+{
+	noSelfShadow
+	noshadows
+	twosided
+	translucent
+	nonsolid
+	noimpact
+	qer_editorimage		textures/editor/dontuse.tga
+	{
+		blend		add
+		map		textures/particles/droppuddle.tga
+		vertexcolor
+	}
+}
+
+//textures/particles/droppuddleblood
+//{
+//	noSelfShadow
+//	noshadows
+//	twosided
+//	translucent
+//	nonsolid
+//	noimpact
+//	qer_editorimage		textures/particles/droppuddleblood.tga
+//	{
+//		blend		blend
+//		map		textures/particles/droppuddleblood.tga
+//		vertexcolor
+//	}
+//}
+
+textures/particles/drop2
+{
+	noSelfShadow
+	noshadows
+	twosided
+	translucent
+	nonsolid
+	noimpact
+	qer_editorimage		textures/editor/dontuse.tga
+	{
+		blend		add
+		map		textures/particles/drop2.tga
+		vertexcolor
+	}
+}
+
+textures/particles/drop3
+{
+	noSelfShadow
+	noshadows
+	twosided
+	translucent
+	nonsolid
+	noimpact
+	qer_editorimage		textures/editor/dontuse.tga
+	{
+		blend		add
+		map		textures/particles/drop3.tga
+		vertexcolor
+	}
+}
+
+
+//textures/particles/drop2blood
+//{
+//	noSelfShadow
+//	noshadows
+//	twosided
+//	translucent
+//	nonsolid
+//	noimpact
+//	qer_editorimage		textures/particles/drop2blood.tga
+//	{
+//		blend		blend
+//		map		textures/particles/drop2blood.tga
+//		vertexcolor
+//	}
+//}
+
+textures/particles/s_lightning2_whi
+{
+	qer_editorimage	textures/editor/dontuse.tga
+	nonsolid
+	noshadows
+	{
+		blend		add
+		map		textures/sfx/s_lightning2_whi.tga
+		centerscale	s_lightningtable2[time*4], s_lightningtable2[time*4]
+		zeroclamp
+		vertexColor
+	}
+}
+
+textures/particles/s_lightning_whi
+
+{
+	qer_editorimage	textures/editor/dontuse.tga
+	nonsolid
+	noshadows
+	{
+		blend		add
+		map		textures/sfx/s_lightning1_whi.tga
+		translate	1,time*2
+		scale		1,ember1 [time]
+		vertexColor
+	}
+}
+
+
+
+//*****************************************Moved from andy.mtr - end******************************************************
+
+
+//*****************************************************Moved from kentest.mtr - start*****************************************
+
+table shattertable1 { clamp { 0, 0, 1, 0 } }
+table shattertable2 { clamp { 0, 0, 0, 1 } }
+
+
+textures/particles/barrelpoof_sort
+{
+	nonsolid
+	noshadows
+	sort		1
+	qer_editorimage		textures/editor/dontuse.tga
+    {
+		blend			blend
+		map				textures/particles/barrelpoof
+		vertexColor
+	}
+}
+
+//textures/particles/barrel_flame
+//{
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	//deform tube
+//	//sort		5
+//	
+//	{
+//		blend blend
+//		map textures/particles/flame3_stripsmall.tga
+//		red		1
+//	        green		1
+//		blue		1
+//		scale 1 / 32 , 1
+//		scroll table32[ time * 1 ] , 0
+//		//rotate	( time * -.2 )
+//		//zeroclamp
+//	}
+//
+//
+//}
+
+
+//textures/particles/barrel_explosion1
+//{
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	//deform sprite
+//	//sort		5
+//	
+//	{
+//		blend blend
+//		map textures/particles/rocketstripsmall.tga
+//		red		.8
+//	    green		1
+//		blue		1
+//		//scale 1 / 32 , 1
+//		//scroll table32[ time * 1.0 ] , 0
+//		//rotate	( time * -.2 )
+//		//zeroclamp
+//	}
+//
+//
+//}
+//
+//textures/particles/barrel_explosion2
+//{
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	//deform sprite
+//	//sort		5
+//	
+//	{
+//		blend blend
+//		map textures/particles/rocketstripsmall.tga
+//		red		1
+//	    green		1
+//		blue		1
+//		//scale 1 / 32 , 1
+//		//scroll table32[ time * 1.2 ] , 0
+//		//rotate	( time * -.2 )
+//		//zeroclamp
+//	}
+//
+//
+//}
+//
+//textures/particles/barrel_explosion3
+//{
+//	noSelfShadow
+//	translucent
+//	noShadows
+//	twosided
+//	//deform sprite
+//	//sort		5
+//	
+//	{
+//		blend blend
+//		map textures/particles/rocketstripsmall.tga
+//		red		1
+//	        green		1
+//		blue		.8
+//		//scale 1 / 32 , 1
+//		//scroll table32[ time * 1.4 ] , 0
+//		//rotate	( time * -.2 )
+//		//zeroclamp
+//	}
+//
+//
+//}
+
+
+//textures/particles/sonic2
+//{
+//	qer_editorimage textures/particles/sonic.tga
+//        noSelfShadow
+//		noshadows
+//	    nonsolid
+//		twosided
+//		translucent
+//
+//			{
+//				blend	specularmap
+//               	map textures/particles/sonic.tga
+//				rotate time * -1
+//				//centerscale	1+0.05*sinTable[time], 1+0.05*sinTable[time]
+//				clamp
+//			}
+//
+//			{
+//				blend	bumpmap
+//               	map heightmap(textures/particles/sonic_h.tga , 4)
+//				rotate time * 1
+//				centerscale	1+.4*sinTable[time -.5], 1+.4*sinTable[time -.5]
+//				clamp
+//			}
+//   
+//		
+//
+//
+//}
+  
+//textures/particles/sonic
+//{
+//	qer_editorimage textures/particles/sonic.tga
+//        noSelfShadow
+//		noshadows
+//	    nonsolid
+//		twosided
+//		translucent
+//
+//			{
+//				blend	specularmap
+//               	map textures/particles/sonic.tga
+//				rotate time * 1
+//				//centerscale	1+0.05*sinTable[time], 1+0.05*sinTable[time]
+//				clamp
+//			}
+//
+//			{
+//				blend	bumpmap
+//               	map heightmap(textures/particles/sonic_h.tga , 4)
+//				rotate time * -.1
+//				centerscale	1+.4*sinTable[time], 1+.4*sinTable[time]
+//				clamp
+//			}
+//   
+//		
+//
+//
+//}
+
+//textures/particles/bloodstream3
+//{
+//	qer_editorimage textures/particles/bloodstream3.tga
+//	 noSelfShadow
+//	    noshadows
+//		sort		8
+//	{
+//      	blend		blend
+//		map textures/particles/bloodstream3.tga
+//		clamp		// we don't want it to tile if the projection extends past the bounds
+//		vertexColor	// oblique projections will be slightly faded down
+//	}
+//}
+
+//textures/particles/blooddrop3
+//{
+//	qer_editorimage textures/particles/blooddrop2.tga
+//	 noSelfShadow
+//	    noshadows
+//		sort		8
+//	{
+//      	blend		blend
+//		map textures/particles/blooddrop3.tga
+//		clamp		// we don't want it to tile if the projection extends past the bounds
+//		vertexColor	// oblique projections will be slightly faded down
+//	}
+//}
+
+
+//textures/particles/spawnarc4
+//
+//{
+//    noselfShadow
+//    noshadows	
+//	translucent
+//	discrete
+//	nonsolid
+//	noimpact
+//
+//	qer_editorimage  textures/particles/spawnarc4.tga 
+//
+//		{ 
+//      
+//      		 blend	add
+//	 		map	textures/particles/spawnarc4.tga
+//			translate	time * 3 , time * 0
+//	}
+//	               	
+//
+//}
+//
+//textures/particles/spawnarc3
+//
+//{
+//    noselfShadow
+//    noshadows	
+//	translucent
+//	discrete
+//	nonsolid
+//	noimpact
+//
+//	qer_editorimage  textures/particles/spawnarc3.tga 
+//
+//		{ 
+//      
+//      		 blend	add
+//	 		map	textures/particles/spawnarc3.tga
+//			translate	time * 3 , time * 0
+//	}
+//	               	
+//
+//}
+
+//*****************************************************Moved from kentest.mtr - end*****************************************
+
+
+//*****************************************************Moved from patricktest.mtr - start*****************************************
+
+
+table ptfullfade 	{ { .2, .1 , .002 , .0 ,.3, .1, .2, .8 ,.6 , .5 } }
+table lightning 	{ { .2, 0 , 1 , 1 , 1, 0 ,0 ,0 ,0 ,0 ,.5,0 ,0 ,0  } }
+table lightning2 	{ { .2, .3 , 0, 0.1, 0, .2 , .3 ,.2 , 0 , 0 , 0 , 0.02 , 0 , 0.02 , 0 , 0.02 , .05 , .08 , .02, 0 , 0 , 0 , 0, .2, 0 , 0 , .1  } }
+
+
+textures/particles/p_lightning6
+{
+	qer_editorimage textures/editor/dontuse.tga
+	translucent
+	twosided
+	noshadows
+	nonsolid
+
+	{
+		maskcolor
+		map makealpha(textures/particles/lightningmask.tga)
+		vertexcolor
+	
+	
+	}
+	{ 
+		blend gl_dst_alpha, gl_one
+	    	maskalpha
+		blend		add
+		map			textures/particles/p_lightning6
+		red			s_lightningtable [(time*.5)+(.66+parm4)] * parm0
+		green		s_lightningtable [(time*.5)+(.66+parm4)] * parm1
+		blue		s_lightningtable [(time*.5)+(.66+parm4)] * parm2
+		centerscale	s_lightningtable2[time*4], s_lightningtable2[time*4]
+		zeroclamp
+		vertexcolor
+	}
+}
+
+//textures/particles/flame7
+//{
+// qer_editorimage textures/particles/flame7.tga
+// 	
+//	noSelfShadow
+//	noshadows
+//	translucent
+//	nonsolid
+//	noimpact
+//	twosided
+//
+//
+//
+// 	{
+// 		blend add
+// 		map textures/particles/flame7.tga
+// 		vertexcolor
+//		zeroclamp
+//
+// 	}
+// 
+//}
+//
+//textures/particles/flame6
+//{
+// qer_editorimage textures/particles/flame6.tga
+// 	
+//	noSelfShadow
+//	noshadows
+//	translucent
+//	nonsolid
+//	noimpact
+//	twosided
+//
+//
+//
+// 	{
+// 		blend add
+// 		map textures/particles/flame6.tga
+// 		vertexcolor
+//		zeroclamp
+//
+// 	}
+// 
+//}
+
+//textures/particles/ring_blue
+//{
+// qer_editorimage textures/particles/ring_blue.tga
+// 	
+//	noSelfShadow
+//	noshadows
+//	translucent
+//	nonsolid
+//	noimpact
+//	twosided
+//
+//
+//
+// 	{
+// 		blend add
+// 		map textures/particles/ring_blue.tga
+// 		vertexcolor
+//		zeroclamp
+//
+// 	}
+// 
+//}
+//
+//textures/particles/ring_2
+//{
+// qer_editorimage textures/particles/ring_2.tga
+// 	
+//	noSelfShadow
+//	noshadows
+//	translucent
+//	nonsolid
+//	noimpact
+//	twosided
+//
+//
+//
+// 	{
+// 		blend add
+// 		map textures/particles/ring_2.tga
+// 		vertexcolor
+//		zeroclamp
+//
+// 	}
+// 
+//}
+
+
+//textures/particles/crack_02
+//{
+// qer_editorimage textures/particles/crack_03.tga
+// 	
+//	noSelfShadow
+//	noshadows
+//	translucent
+//	nonsolid
+//	noimpact
+//	twosided
+//
+//
+// 	{
+// 	blend add
+// 	map textures/particles/crack_03.tga
+// 	vertexcolor
+// 	}
+// 
+//}
+
+//textures/particles/fredo
+//{
+// qer_editorimage textures/particles/fredo.tga
+// 	
+//	noSelfShadow
+//	noshadows
+//	translucent
+//	nonsolid
+//	noimpact
+//	twosided
+//
+//
+// 	{
+// 	blend add
+// 	map textures/particles/fredo.tga
+// 	vertexcolor
+// 	}
+// 
+//}
+
+//textures/particles/fredo2
+//{
+// qer_editorimage textures/particles/fredo2.tga
+// 	
+//	noSelfShadow
+//	noshadows
+//	translucent
+//	nonsolid
+//	noimpact
+//	twosided
+//
+//
+// 	{
+// 	blend add
+// 	map textures/particles/fredo2.tga
+// 	vertexcolor
+// 	}
+// 
+//}
+
+
+//textures/particles/smokepuff4
+//{
+// qer_editorimage textures/particles/smokepuff4.tga
+// 	
+//	noSelfShadow
+//	noshadows
+//	translucent
+//	nonsolid
+//	noimpact
+//	twosided
+//
+//
+// 	{
+// 	blend add
+// 	map textures/particles/smokepuff4.tga
+// 	vertexcolor
+// 	}
+// 
+//}
+//textures/particles/smokepuff3
+//{
+// qer_editorimage textures/particles/smokepuff3.tga
+// 	
+//	noSelfShadow
+//	noshadows
+//	translucent
+//	nonsolid
+//	noimpact
+//	twosided
+//
+//
+// 	{
+// 	blend add
+// 	map textures/particles/smokepuff3.tga
+// 	vertexcolor
+// 	}
+// 
+//}
+//textures/particles/smokepuff2
+//{
+// qer_editorimage textures/particles/smokepuff2.tga
+// 	
+//	noSelfShadow
+//	noshadows
+//	translucent
+//	nonsolid
+//	noimpact
+//	twosided
+//
+//
+// 	{
+// 	blend add
+// 	map textures/particles/smokepuff2.tga
+// 	vertexcolor
+// 	}
+// 
+//}
+
+
+textures/particles/snowball
+{
+ qer_editorimage textures/editor/dontuse.tga
+ 	
+	noSelfShadow
+	noshadows
+	translucent
+	nonsolid
+	noimpact
+	twosided
+
+
+ 	{
+ 	blend add
+ 	map textures/particles/snowball.tga
+ 	vertexcolor
+ 	}
+ 
+}
+
+
+//textures/particles/strip_turq
+//{
+// qer_editorimage textures/particles/strip_turq.tga
+// 	
+//	noSelfShadow
+//	noshadows
+//	translucent
+//	nonsolid
+//	noimpact
+//	twosided
+//
+//
+// 	{
+// 	blend add
+// 	map textures/particles/strip_turq.tga
+// 	vertexcolor
+// 	}
+// 
+//}
+
+textures/particles/lightball
+{
+ qer_editorimage textures/editor/dontuse.tga
+ 	
+	noSelfShadow
+	noshadows
+	//translucent
+	nonsolid
+	noimpact
+	twosided
+
+
+ 	{
+ 	blend add
+ 	map textures/particles/lightball.tga
+ 	vertexcolor
+ 	}
+ 
+}
+
+
+
+textures/particles/duffyboltver3_white
+{
+ qer_editorimage textures/editor/dontuse.tga
+ 	
+	noSelfShadow
+	noshadows
+	//translucent
+	nonsolid
+	noimpact
+	twosided
+
+
+ 	{
+ 	blend add
+ 	map textures/particles/duffyboltver3_white.tga
+ 	vertexcolor
+ 	}
+ 
+}
+
+
+
+
+//textures/particles/rock
+//
+// {
+// qer_editorimage textures/particles/rock_d.tga
+//
+// noSelfShadow
+// noShadows
+//	
+//
+//		   {
+//				blend	 diffusemap	
+//				map	 textures/particles/rock_d.tga
+//		   		alphaTest 0.5
+//		   }
+//			bumpmap			addnormals( textures/particles/rock_local.tga, heightmap (textures/particles/rock_h.tga, 10 ) )
+//			specularmap	    	textures/particles/rock_s.tga
+//		
+//
+//
+//}
+
+textures/particles/billow3_glow
+{
+ qer_editorimage textures/editor/dontuse.tga
+ 	
+	noSelfShadow
+	noshadows
+	//translucent
+	nonsolid
+	noimpact
+	twosided
+
+
+ 	{
+ 	blend add
+ 	map textures/particles/billow3_glow.tga
+ 	vertexcolor
+ 	}
+ 
+}
+
+
+textures/particles/billow_glow
+{
+ qer_editorimage textures/editor/dontuse.tga
+ 	
+	noSelfShadow
+	noshadows
+	//translucent
+	nonsolid
+	noimpact
+	twosided
+
+
+ 	{
+ 	blend add
+ 	map textures/particles/billow_glow.tga
+ 	vertexcolor
+ 	}
+ 
+}
+
+//textures/particles/billow2_glow
+//{
+// qer_editorimage textures/particles/billow2_glow.tga
+// 	
+//	noSelfShadow
+//	noshadows
+//	//translucent
+//	nonsolid
+//	noimpact
+//	twosided
+//
+//
+// 	{
+// 	blend add
+// 	map textures/particles/billow2_glow.tga
+// 	vertexcolor
+// 	}
+// 
+//}
+
+//textures/particles/bloodwater
+//{
+// qer_editorimage textures/particles/bloodwater.tga
+// noSelfShadow
+// noShadows
+// 
+// 
+// 	{
+// 	blend filter
+// 	map textures/particles/bloodwater.tga
+// 	scale 1 / 16 , 1
+// 	scroll table16[ time * .6 ] , 0
+// 
+// 	}
+// 
+//}
+
+
+
+
+//textures/particles/fluid_a
+//
+//{
+// qer_editorimage textures/particles/fluid_a.tga
+//
+// noSelfShadow
+// noShadows
+//  
+// 
+// 
+// 	{
+// 		blend blend
+// 		map 		textures/particles/fluid_a.tga
+//		
+// 		//scale 1 / 16 , 1
+// 		//scroll table16[ time * .6 ] , 0
+//		vertexcolor
+//
+// 	}
+// 
+// }
+
+//textures/particles/dust_a
+//{
+// noSelfShadow
+// noShadows
+//  
+//	{
+//	blend	 diffusemap
+//	map 		textures/sfx/shard00.tga
+//	alphaTest 0.55
+//	}	
+//}
+//
+//
+//
+//
+//textures/particles/dust_b
+//{
+//
+// noSelfShadow
+// noShadows
+//  
+//	{
+//	blend	 diffusemap
+// 	map 	textures/sfx/shard01.tga
+//	alphatest 0.5	
+//	}
+//}
+//
+//
+//
+//
+//textures/particles/dust_c
+//{
+// noSelfShadow
+// noShadows
+//  
+//	{
+//	blend	 diffusemap
+// 	map 	textures/sfx/shard02.tga
+//	alphatest 0.5	
+//	}
+//}
+
+
+
+
+
+//textures/particles/lightning1
+//{
+//    noselfShadow
+//    noshadows	
+//	nonsolid
+//	noimpact
+//	translucent
+//	twosided
+//
+//	qer_editorimage  textures/particles/lightning1.tga
+//
+//	{
+//		maskcolor
+//		map makealpha(textures/particles/guardboltarcmask.tga)
+//		vertexcolor
+//	
+//	
+//	}
+//
+//	{ 
+//		blend gl_dst_alpha, gl_one
+//	    maskalpha
+//	 	map		textures/particles/guardboltarc.tga
+//		translate	time * -0.8 + parm5, 0
+//		scale 1.3, 1
+//		vertexcolor
+//		rgb		 lightning [ time * 1.1 ]
+//	}
+//
+//}
+
+
+textures/particles/candlefire
+{
+ qer_editorimage textures/particles/candlefire.tga
+ noSelfShadow
+ noShadows
+ twosided
+ deform sprite
+
+ 	{
+ 	blend add
+ 	map textures/particles/candlefire.tga
+ 	scale 1 / 16 , 1
+	scroll table16[ time * 6 ] , 0
+ 	}
+ 
+}
+
+
+//*****************************************************Moved from patricktest.mtr - end*****************************************
+
+
+//*****************************************************Moved from senetemp.mtr - start*****************************************
+
+
+table ember1 { { .7, 1, .5, .7, .6, 1, .8, .6, .7, 1, .6, 1, 1, .6, .7, .8, .6, 1, .5, .7, 1 } }
+table stripAnim16table { snap { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 } }
+
+table threestage { { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } }
+table elevenstage { { .5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } }
+table sixstage { { 1, 0, 0, 0, 0, 0 } }
+
+table slowstart_one_zero { { 1.000000, 0.999699, 0.998795, 0.997290, 0.995185, 0.992480, 0.989177, 0.985278, 
+0.980785, 0.975702, 0.970031, 0.963776, 0.956940, 0.949528, 0.941544, 0.932993, 
+0.923880, 0.914210, 0.903989, 0.893224, 0.881921, 0.870087, 0.857729, 0.844854, 
+0.831470, 0.817585, 0.803208, 0.788346, 0.773010, 0.757209, 0.740951, 0.724247, 
+0.707107, 0.689541, 0.671559, 0.653173, 0.634393, 0.615232, 0.595699, 0.575808, 
+0.555570, 0.534998, 0.514103, 0.492898, 0.471397, 0.449611, 0.427555, 0.405241, 
+0.382683, 0.359895, 0.336890, 0.313682, 0.290285, 0.266713, 0.242980, 0.219101, 
+0.195090, 0.170962, 0.146730, 0.122411, 0.098017, 0.073565, 0.049068, 0.024541
+} }
+
+table faststart_zero_one { { 0.024541, 0.049068, 0.073565, 0.098017, 0.122411, 0.146730, 0.170962, 
+0.195090, 0.219101, 0.242980, 0.266713, 0.290285, 0.313682, 0.336890, 0.359895, 
+0.382683, 0.405241, 0.427555, 0.449611, 0.471397, 0.492898, 0.514103, 0.534998, 
+0.555570, 0.575808, 0.595699, 0.615232, 0.634393, 0.653173, 0.671559, 0.689541, 
+0.707107, 0.724247, 0.740951, 0.757209, 0.773010, 0.788346, 0.803208, 0.817585, 
+0.831470, 0.844854, 0.857729, 0.870087, 0.881921, 0.893224, 0.903989, 0.914210, 
+0.923880, 0.932993, 0.941544, 0.949528, 0.956940, 0.963776, 0.970031, 0.975702, 
+0.980785, 0.985278, 0.989177, 0.992480, 0.995185, 0.997290, 0.998795, 0.999699, 
+1.000000 } }
+
+table watersplashscaletable { { 0.024541, 0.049068, 0.073565, 0.098017, 0.122411, 0.146730, 0.170962, 
+0.195090, 0.219101, 0.242980, 0.266713, 0.290285, 0.313682, 0.336890, 0.359895, 
+0.382683, 0.405241, 0.427555, 0.449611, 0.471397, 0.492898, 0.514103, 0.534998, 
+0.555570, 0.575808, 0.595699, 0.615232, 0.634393, 0.653173, 0.671559, 0.689541, 
+0.707107, 0.724247, 0.740951, 0.757209, 0.773010, 0.788346, 0.803208, 0.817585, 
+0.831470, 0.844854, 0.857729, 0.870087, 0.881921, 0.893224, 0.903989, 0.914210, 
+0.923880, 0.932993, 0.941544, 0.949528, 0.956940, 0.963776, 0.970031, 0.975702, 
+0.980785, 0.985278, 0.989177, 0.992480, 0.995185, 0.997290, 0.998795, 0.999699, 
+1.000000 } }
+
+
+table watersplashrgbtable { { 0, 1, 1, 1, .8, .6, .4, .2, .1, .05, 0 } }
+table s_lightningtable { { 1, .5, 1, 0, 0, 0, 0, 1, 1, 0, .5, 1, 0, 1, .5, 0, 0, 0, 0, 0, 0, 0} }
+table s_lightningtable2 { { 1, 2, 1, 3 } }
+
+table snapTen { snap { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 } }
+table snapFive { snap { 1, 0, 0, 0, 0 } }
+table lerp2Table { { 0, 1 } }
+
+//
+// This shader features a cross-faded, animating bump map, which is tedious to set up.
+// Bump maps can't really be blended, so it selects one bump map and blends the diffuse
+// and specular maps, then selects an adjacent bump map and inverse blends the diffuse
+// and specular maps.  There must be an even number of frames, with the odd numbered
+// frames going in the first pass, and the even numbered frames going in the second.
+//
+// It is probably easiest to just ask John to set these up.
+//
+
+textures/particles/sparks_multi
+{
+	qer_editorimage	textures/editor/dontuse.tga
+	nonsolid
+	noshadows
+	{
+		blend		add
+		map			textures/particles/sparks_multi
+		vertexColor
+	}
+}
+
+
+textures/particles/hellhole_fire
+{
+	qer_editorimage	textures/editor/dontuse.tga
+	nonsolid
+	noshadows
+	{
+		blend		add
+		map			textures/particles/hellholefire
+		vertexColor
+	}
+}
+
+textures/particles/caco_shot2
+{
+	qer_editorimage	textures/editor/dontuse.tga
+	nonsolid
+	noshadows
+	twosided
+	{
+		blend		add
+		map			textures/particles/caco_shot2
+		vertexColor
+	}
+}
+
+textures/particles/spark_colorme
+{
+	qer_editorimage	textures/editor/dontuse.tga
+	nonsolid
+	noshadows
+	{
+		blend		add
+		map			textures/particles/spark_white
+		vertexColor
+	}
+}
+
+//textures/particles/dot_hard
+//{
+//	qer_editorimage	textures/particles/dot_hard
+//	nonsolid
+//	noshadows
+//	{
+//		blend		add
+//		map			textures/particles/dot_hard
+//		vertexColor
+//	}
+//}
+
+textures/particles/dot
+{
+	qer_editorimage	textures/editor/dontuse.tga
+	nonsolid
+	noshadows
+	{
+		blend		add
+		map			textures/particles/dot
+		vertexColor
+	}
+}
+
+textures/particles/s_lightning2
+{
+	qer_editorimage	textures/editor/dontuse.tga
+	nonsolid
+	noshadows
+	{
+		blend		add
+		map			textures/sfx/s_lightning2
+		centerscale	s_lightningtable2[time*4], s_lightningtable2[time*4]
+		zeroclamp
+		vertexColor
+	}
+}
+
+textures/particles/s_lightning_masked
+{
+	qer_editorimage	textures/editor/dontuse.tga
+	nonsolid
+	noshadows
+	//{
+	//	maskcolor
+	//	map			makealpha(models/weapons/bfg/bfgblast1_mask)
+	//}
+	{
+		blend 		gl_one, gl_one
+		//maskalpha
+		map			textures/sfx/s_lightning1_whi
+		translate	1,time*2
+		scale		1,ember1 [time]
+		vertexColor
+	}
+}
+
+
+textures/particles/s_lightning
+{
+	qer_editorimage	textures/editor/dontuse.tga
+	nonsolid
+	noshadows
+	{
+		blend		add
+		map			textures/sfx/s_lightning1
+		translate	1,time*2
+		scale		1,ember1 [time]
+		vertexColor
+	}
+}
+
+textures/particles/rocketbacklit
+{
+	qer_editorimage	textures/editor/dontuse.tga
+	nonsolid
+	noshadows
+	{
+		blend		add
+		map			textures/particles/rocketbacklit
+		vertexColor
+	}
+}
+
+
+textures/particles/barrelpoof
+{
+	nonsolid
+	noshadows
+	qer_editorimage		textures/editor/dontuse.tga
+    {
+		blend			blend
+		map				textures/particles/barrelpoof
+		vertexColor
+	}
+}
+
+textures/particles/barrelexpbase1
+{
+	qer_editorimage		textures/editor/dontuse.tga
+	nonsolid
+	noshadows
+	translucent
+	twosided
+	{
+		map				textures/particles/barrelexpbase1
+		maskcolor
+	}
+	{
+		blend		gl_dst_alpha , gl_one
+		map			textures/particles/barrelexpbase1
+		rotate		time*.5
+		vertexColor
+	}
+	//{
+	//	blend		gl_dst_alpha , gl_one
+	//	map			textures/hell/lava1fx.tga
+	//	rotate		time*.2
+	//	vertexColor
+	//}
+}
+
+
+textures/particles/barrelexpsmall
+{
+	qer_editorimage	textures/editor/dontuse.tga
+	nonsolid
+	noshadows
+	{
+		blend		add
+		map			textures/particles/barrelexpsmall
+		vertexColor
+	}
+}
+
+textures/particles/round001
+{
+	qer_editorimage	textures/editor/dontuse.tga
+	translucent
+	nonsolid
+	noshadows
+	{
+		blend		add
+		map			textures/particles/round001
+		vertexColor
+	}
+}
+
+//textures/particles/hell_blood_splash
+//{
+//	qer_editorimage		textures/particles/hell_blood_splash
+//	nonsolid
+//	noshadows
+//	{
+//		blend			blend
+//		map				textures/particles/hell_blood_splash
+//		vertexColor
+//	}
+//}
+
+//textures/particles/hell_blood_drip
+//{
+//	qer_editorimage		textures/particles/hell_blood_drip
+//	nonsolid
+//	noshadows
+//	{
+//		blend			blend
+//		map				textures/particles/hell_blood_drip
+//		vertexColor
+//	}
+//}
+
+
+
+textures/particles/dustcloud_opaque
+{
+	qer_editorimage		textures/editor/dontuse.tga
+	nonsolid
+	noshadows
+	{
+		blend			blend
+		map				textures/particles/dustcloud_opaque
+		vertexColor
+	}
+}
+
+textures/particles/dustcloud
+{
+	qer_editorimage		textures/editor/dontuse.tga
+	translucent
+	nonsolid
+	noshadows
+	{
+		blend			add
+		map				textures/particles/dustcloud
+		vertexColor
+	}
+}
+
+
+
+//*****************************************************Moved from senetemp.mtr - end*****************************************
+
+
+//*****************************************************Moved from weapons.mtr - start*****************************************
+
+/*
+==================================================================================================
+
+WEAPON PARTICLE MATERIALS
+
+==================================================================================================
+*/
+
+textures/particles/blacksmokepuff
+{
+	qer_editorimage		textures/editor/dontuse.tga
+	sort 2
+	{
+      	blend		gl_zero, gl_one_minus_src_color
+		map textures/particles/blacksmokepuff.tga
+		vertexColor
+	}
+}
+
+textures/particles/blacksmokepuff_sort10
+{
+	qer_editorimage		textures/editor/dontuse.tga
+	sort 10
+	{
+      	blend		gl_zero, gl_one_minus_src_color
+		map textures/particles/blacksmokepuff.tga
+		vertexColor
+	}
+}
+
+textures/particles/blacksmokepuff_far
+{
+	qer_editorimage		textures/editor/dontuse.tga
+	sort far		// usually happens right in front of a wall, so make sure it draws behind gun smoke
+	{
+      	blend		gl_zero, gl_one_minus_src_color
+		map textures/particles/blacksmokepuff.tga
+		vertexColor
+		colored
+	}
+}
+
+textures/particles/soulknifetex
+{
+	qer_editorimage		textures/editor/soulknifetex.tga
+        noselfShadow
+		noshadows
+
+ 	    {
+			blend diffusemap	
+			map models/weapons/soulcube/soulknifetex
+			alphaTest .5 
+		} 
+ 			bumpmap       models/weapons/soulcube/soulknifetex_local
+	        specularmap	  models/weapons/soulcube/soulknifetex_s
+}
+
+
+textures/particles/soulring
+{
+	qer_editorimage		textures/editor/soulring.tga
+       noShadows
+       noselfShadow	
+	{       
+      	 blend	diffuseMap 
+		 map	            models/weapons/soulcube/soulring
+		 alphaTest .5
+
+		 clamp
+	}
+	{       
+      	 blend	bumpmap
+		 map	            models/weapons/soulcube/soulring_local
+
+	}
+	{       
+      	 blend	specularmap
+		 map	            models/weapons/soulcube/soulring_s
+	}
+
+
+}
+
+
+//*****************************************************Moved from weapons.mtr - end*****************************************
+
+
+//*****************************************************Moved from zgraeme.mtr - start*****************************************
+
+
+textures/particles/smokepuff
+{
+	qer_editorimage textures/editor/dontuse.tga
+	translucent
+	noShadows
+	sort		10		// sort very late, so no translucent objects in the world draws over it
+	{
+		blend add
+		map textures/particles/smokepuff.tga
+		vertexColor
+		//colored
+	}
+}
+
+textures/particles/ember_mid
+{
+	qer_editorimage textures/editor/dontuse.tga
+	translucent
+	noShadows
+	sort		10		// sort very late, so no translucent objects in the world draws over it
+	{
+		blend add
+		map textures/particles/ember_mid.tga
+		vertexColor
+	}
+}
+
+//textures/particles/spike
+//{
+//	qer_editorimage textures/particles/spike.tga
+//	translucent
+//	noShadows
+//	sort		10		// sort very late, so no translucent objects in the world draws over it
+//	{
+//		blend add
+//		map textures/particles/spike.tga
+//		vertexColor
+//	}
+//}
+
+//textures/particles/gember_small
+//{
+//	qer_editorimage textures/particles/gember_small.tga
+//	translucent
+//	noShadows
+//	sort		10		// sort very late, so no translucent objects in the world draws over it
+//	{
+//		blend add
+//		map textures/particles/gember_small.tga
+//		vertexColor
+//	}
+//}
+
+textures/particles/ember_small
+{
+	qer_editorimage textures/editor/dontuse.tga
+	translucent
+	noShadows
+	sort		10		// sort very late, so no translucent objects in the world draws over it
+	{
+		blend add
+		map textures/particles/ember_small.tga
+		vertexColor
+	}
+}
+
+textures/particles/smokepuffalpha
+{
+	qer_editorimage textures/editor/dontuse.tga
+	translucent
+	noShadows
+	{
+		blend gl_one,gl_one
+//		blend add
+		map textures/particles/smokepuffalpha.tga
+		vertexColor
+	}
+}
+
+//textures/particles/muzzleflash
+//{
+//	qer_editorimage textures/particles/muzzleflash.tga
+//	translucent
+//	noShadows
+//	sort		10		// sort very late, so no translucent objects in the world draws over it
+//	{
+//		blend add
+//		map textures/particles/muzzleflash.tga
+//		vertexColor
+//	}
+//}
+
+//textures/particles/mgmuzzleflash
+//{
+//	qer_editorimage textures/particles/machinegun.tga
+//	translucent
+//	noShadows
+//	sort		10		// sort very late, so no translucent objects in the world draws over it
+//	{
+//		blend add
+//		map textures/particles/machinegun.tga
+//		vertexColor
+//	}
+//}
+
+
+//textures/particles/spawnpuff
+//{
+//	qer_editorimage models/monsters/spawn/demonspawnpuff.tga
+//	translucent
+//	noShadows
+//	sort		10		// sort very late, so no translucent objects in the world draws over it
+//	{
+//		blend add
+//		map models/monsters/spawn/demonspawnpuff.tga
+//		vertexColor
+//	}
+//}
+
+//textures/particles/plasmapuff
+//{
+//	qer_editorimage textures/particles/plasmapuff.tga
+//	translucent
+//	noShadows						 
+//	{
+//      	blend		gl_zero, gl_one_minus_src_color
+//		map textures/particles/plasmapuff.tga
+//		vertexColor
+//	}
+//}
+
+//textures/particles/orangespark
+//{
+//	qer_editorimage textures/particles/orangespark.tga
+//	translucent
+//	noShadows						 
+//	{
+//		blend add
+//		map textures/particles/orangespark.tga
+//		vertexColor
+//	}
+//}
+
+textures/particles/firestrip
+{
+	qer_editorimage textures/editor/dontuse.tga
+	translucent
+	noShadows
+	sort		10		// sort very late, so no translucent objects in the world draws over it
+	{
+		blend add
+		map textures/sfx/fire_strip.tga
+		vertexColor
+	}
+}
+
+//textures/particles/bamstrip
+//{
+//	qer_editorimage textures/particles/bamstrip.tga
+//	translucent
+//	noShadows
+//	{
+//		blend add
+//		map textures/particles/bamstrip.tga
+//		vertexColor
+//	}
+//}
+
+//textures/particles/spawnstrip
+//{
+//	qer_editorimage textures/particles/spawnstrip.tga
+//	translucent
+//	noShadows
+//	sort 10
+//	{
+//		blend add
+//		map textures/particles/spawnstrip.tga
+//		vertexColor
+//	}
+//}
+
+//textures/particles/foopstrip
+//{
+//	qer_editorimage textures/particles/foopstrip.tga
+//	translucent
+//	noShadows
+//	{
+//		blend add
+//		map textures/particles/foopstrip.tga
+//		vertexColor
+//	}
+//}
+
+//textures/particles/popstrip
+//{
+//	qer_editorimage textures/particles/popstrip.tga
+//	translucent
+//	noShadows
+//	{
+//		blend add
+//		map textures/particles/popstrip.tga
+//		vertexColor
+//	}
+//}
+
+//textures/particles/video
+//{
+//	qer_editorimage	textures/editor/video.tga
+//	translucent
+//	noShadows
+//	{
+//		blend add
+//		videoMap	video/test.roq
+//		vertexColor
+//	}
+//}
+
+//textures/particles/pixel
+//{
+//	qer_editorimage textures/particles/pixel.tga
+//	translucent
+//	noShadows						 
+//	{
+//		blend add
+//		map textures/particles/pixel.tga
+//		vertexColor
+//	}
+//}
+
+//textures/particles/lightning
+//{
+//	qer_editorimage textures\zaphod\crackle1.tga
+//	translucent
+//	noshadows
+//	{
+//		if ( ( time * 8 ) % 8 == 0 )
+//		blend 	add
+//		map	textures\zaphod\crackle1.tga
+//		vertexColor
+//	}
+//	{
+//		if ( ( time * 8 ) % 8 == 1 )
+//		blend 	add
+//		map	textures\zaphod\crackle2.tga
+//		vertexColor
+//	}
+//	{
+//		if ( ( time * 8 ) % 8 == 2 )
+//		blend 	add
+//		map	textures\zaphod\crackle3.tga
+//		vertexColor
+//	}
+//	{
+//		if ( ( time * 8 ) % 8 == 3 )
+//		blend 	add
+//		map	textures\zaphod\crackle4.tga
+//		vertexColor
+//	}
+//	{
+//		if ( ( time * 8 ) % 8 == 4 )
+//		blend 	add
+//		map	textures\zaphod\crackle5.tga
+//		vertexColor
+//	}
+//	{
+//		if ( ( time * 8 ) % 8 == 5 )
+//		blend 	add
+//		map	textures\zaphod\crackle6.tga
+//		vertexColor
+//	}
+//	{
+//		if ( ( time * 8 ) % 8 == 6 )
+//		blend 	add
+//		map	textures\zaphod\crackle7.tga
+//		vertexColor
+//	}
+//	{
+//		if ( ( time * 8 ) % 8 == 7 )
+//		blend 	add
+//		map	textures\zaphod\crackle8.tga
+//		vertexColor
+//	}
+//}
+
+//textures/particles/blooddrip
+//{
+//	qer_editorimage textures/decals/bloodpool01.tga
+//	translucent
+//	noShadows
+//	sort		10		// sort very late, so no translucent objects in the world draws over it
+//	{
+//		blend add
+//		map textures/decals/bloodpool01.tga
+//		vertexColor
+//	}
+//}
+
+//textures/particles/bloodwound
+//{
+//	qer_editorimage textures/particles/bloodcolor.tga
+//	translucent
+//	noShadows
+//	{
+//		blend add
+//		map textures/particles/bloodcolor.tga
+//		vertexColor
+//	}
+//}
+//
+//textures/particles/bloodstream
+//{
+//	qer_editorimage textures/particles/bloodstream.tga
+//	translucent
+//	noShadows
+//	{
+//		blend blend
+//		map textures/particles/bloodstream.tga
+//		vertexColor
+//	}
+//}
+
+textures/particles/bloodcloud
+{
+	qer_editorimage textures/editor/dontuse.tga
+	translucent
+	noShadows
+	{
+		blend blend
+		map textures/particles/blooddrop.tga
+		vertexColor
+	}
+}
+
+//textures/particles/bloodstream2
+//{
+//	qer_editorimage textures/particles/bloodstream2.tga
+//	{
+//      	blend		gl_zero, gl_one_minus_src_color
+//		map textures/particles/bloodstream2.tga
+//		clamp		// we don't want it to tile if the projection extends past the bounds
+//		vertexColor	// oblique projections will be slightly faded down
+//	}
+//}
+
+//textures/particles/blooddrop2
+//{
+//	qer_editorimage textures/particles/blooddrop2.tga
+//	{
+//      	blend		gl_zero, gl_one_minus_src_color
+//		map textures/particles/blooddrop2.tga
+//		clamp		// we don't want it to tile if the projection extends past the bounds
+//		vertexColor	// oblique projections will be slightly faded down
+//	}
+//}
+
+//textures/particles/bloodfoopstrip
+//{
+//	qer_editorimage textures/particles/bloodfoopstrip.tga
+//	translucent
+//	noShadows
+//	sort		10		// sort very late, so no translucent objects in the world draws over it
+//	{
+//		blend blend
+//		map textures/particles/bloodfoopstrip.tga
+//		vertexColor
+//	}
+//}
+
+//textures/particles/teststrip
+//{
+//	qer_editorimage textures/particles/fireball_strip.tga
+//	translucent
+//	noShadows
+//	{
+//		blend add
+//		map textures/particles/fireball_strip.tga
+//		vertexColor
+//	}
+//}
+
+textures/particles/testvideo
+{
+	qer_editorimage	textures/editor/dontuse.tga
+	translucent
+	noShadows
+	{
+		blend add
+		videoMap	video/fireball.roq
+		vertexColor
+	}
+}
+
+//textures/particles/firefly
+//{
+//	qer_editorimage textures/particles/fireplume.tga
+//	translucent
+//	noShadows
+//	{
+//		blend add
+//		map textures/particles/fireplume.tga
+//		vertexColor
+//	}
+//}
+
+
+//*****************************************************Moved from zgraeme.mtr - end*****************************************
+
+//Verified good complete by Eutectic - Nov 23-04

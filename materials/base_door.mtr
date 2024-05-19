@@ -1,0 +1,416 @@
+textures/base_door/stedoorframe2_trim
+{
+	qer_editorimage	textures/base_door/stedoorframe2_trim.tga
+	bumpmap			textures/base_door/stedoorframe2_trim_local.tga
+	diffusemap		textures/base_door/stedoorframe2_trim_d.tga
+	specularmap		textures/base_door/stedoorframe2_trim_s.tga
+}
+
+textures/base_door/smalldoortexdirty
+{
+	qer_editorimage		textures/base_door/smalldoortexdirty.tga
+	//bumpmap		textures/base_door/smalldoortex_local.tga
+	diffusemap		textures/base_door/smalldoortexdirty_d.tga
+	bumpmap			addnormals( textures/base_door/smalldoortex_local.tga	, heightmap( textures/base_door/smalldoortexdirty_b.tga, 1 ) )
+	specularmap		textures/base_door/smalldoortexdirty_s.tga
+}
+
+textures/base_door/leftframe2
+{
+	qer_editorimage textures/base_door/leftframe2.tga
+	diffusemap	textures/base_door/leftframe2_d.tga
+	specularmap	textures/base_door/leftframe2_s.tga
+	bumpmap		textures/base_door/leftframe2_local.tga
+}
+
+textures/base_door/nobbydoor
+{
+	qer_editorimage textures/base_door/nobbydoor.tga
+//			discrete
+//	flarepic		textures/base_door/nobbydoor_flare.tga
+	bumpmap			addnormals( textures/base_door/nobbydoor_local.tga  , heightmap( textures/base_door/nobbydoor_h.tga, 7 ) )
+	diffusemap		textures/base_door/nobbydoor_d.tga
+	specularmap		textures/base_door/nobbydoor_s.tga
+}
+
+textures/base_door/stor_door
+{
+	qer_editorimage textures/base_door/stor_door.tga
+	diffusemap	textures/base_wall/squarepanel_d.tga
+	specularmap	textures/base_wall/squarepanel_s.tga
+	bumpmap		addnormals( textures/base_wall/squarepanel_local.tga  , heightmap( textures/base_wall/squarepanel_h.tga, 3 ) )
+}
+
+textures/base_door/a_delelev1_d03
+{
+	qer_editorimage		textures/base_door/a_delelev1_d03.tga
+	bumpmap 		textures/base_door/a_delelev1_local02.tga
+	diffusemap		textures/base_door/a_delelev1_d03.tga
+	specularmap		textures/base_door/a_delelev1_s03.tga
+}
+
+textures/base_door/doorlight_grn
+{
+	//noShadows
+	qer_editorimage	textures/base_door/doorlight_grn.tga
+	bumpmap		textures/base_door/doorlight_local.tga
+	   	diffusemap	textures/base_door/doorlight_grn.tga
+	{
+		blend 	add
+		map		textures/base_door/doorlight_grn.tga
+		colored
+	}
+}
+
+textures/base_door/airwheel
+{
+	qer_editorimage		textures/editor/airwheel.tga
+	bumpmap			textures/base_door/airwheel_local.tga
+	diffusemap		textures/base_door/airwheel_d.tga
+	specularmap		textures/base_door/airwheel_s.tga
+}
+
+textures/base_door/airdoor
+{
+	qer_editorimage		textures/base_door/airdoor.tga
+	bumpmap			addnormals (textures/base_door/airdoor_local.tga, heightmap (textures/base_door/airdoor_bmp.tga, 3 ))
+	diffusemap		textures/base_door/airdoor_d.tga
+	specularmap		textures/base_door/airdoor_s.tga
+}
+
+textures/base_door/airdoorfrm
+{
+	qer_editorimage		textures/base_door/airdoorfrm.tga
+	bumpmap			textures/base_door/airdoorfrm_local.tga
+	diffusemap		textures/base_door/airdoorfrm_d.tga
+	specularmap		textures/base_door/airdoorfrm_s.tga
+}
+
+textures/base_door/jumbofrm
+{
+	qer_editorimage		textures/editor/jumbofrm.tga
+	bumpmap			textures/base_door/jumbofrm_local.tga
+	diffusemap		textures/base_door/jumbofrm_d.tga
+	specularmap		textures/base_door/jumbofrm_s.tga
+}
+
+
+textures/base_door/jumbodoorguts
+{
+	qer_editorimage		textures/editor/jumbodoorguts.tga
+	bumpmap			textures/base_door/jumbodoorguts_local.tga
+	diffusemap		textures/base_door/jumbodoorguts_d.tga
+	specularmap		textures/base_door/jumbodoorguts_s.tga
+}
+
+textures/base_door/jumbodoor
+{
+	qer_editorimage		textures/base_door/jumbodoor_d.tga
+	bumpmap			addnormals (textures/base_door/jumbodoor_local.tga, heightmap (textures/base_door/jumbodoor_bmp.tga, 3 ))
+	diffusemap		textures/base_door/jumbodoor_d.tga
+	specularmap		textures/base_door/jumbodoor_s.tga
+}
+
+textures/base_door/delelev1
+{
+	qer_editorimage		textures/base_door/delelev1_d.tga
+	bumpmap 		textures/base_door/delelev1_local.tga
+	diffusemap		textures/base_door/delelev1_d.tga
+	specularmap		textures/base_door/delelev1_s.tga
+}
+
+textures/base_door/delelev2
+{
+	qer_editorimage		textures/base_door/delelev2_d.tga
+	bumpmap 		textures/base_door/delelev2_local.tga
+	diffusemap		textures/base_door/delelev2_d.tga
+	specularmap		textures/base_door/delelev2_s.tga
+}
+
+textures/base_door/deldoorgutter
+{
+	qer_editorimage		textures/base_door/deldoorgutter.tga
+	bumpmap 		textures/base_door/deldoorgutter_local.tga
+	diffusemap		textures/base_door/deldoorgutter_d.tga
+	specularmap		textures/base_door/deldoorgutter_s.tga
+}
+
+textures/base_door/deldoorgutter2
+{
+	qer_editorimage		textures/base_door/deldoorgutter2.tga
+	bumpmap 		textures/base_door/deldoorgutter_local.tga
+	diffusemap		textures/base_door/deldoorgutter2_d.tga
+	specularmap		textures/base_door/deldoorgutter_s.tga
+}
+
+textures/base_door/deldoor1frm
+{
+	qer_editorimage		textures/editor/deldoor1frm.tga
+	bumpmap 		textures/base_door/deldoor1frm_local.tga
+	diffusemap		textures/base_door/deldoor1frm_d.tga
+	specularmap		textures/base_door/deldoor1frm_s.tga
+}
+
+textures/base_door/deldoor1
+{
+	qer_editorimage		textures/editor/deldoor1.tga
+	bumpmap 		textures/base_door/deldoor1_local.tga
+	diffusemap		textures/base_door/deldoor1_d.tga
+	specularmap		textures/base_door/deldoor1_s.tga
+}
+
+textures/base_door/deldoor1vert
+{
+	qer_editorimage		textures/editor/deldoor1vert.tga
+	bumpmap 		textures/base_door/deldoor1vert_local.tga
+	diffusemap		textures/base_door/deldoor1vert_d.tga
+	specularmap		textures/base_door/deldoor1vert_s.tga
+}
+
+textures/base_door/deldoor2frm
+{
+	qer_editorimage		textures/editor/deldoor2frm.tga
+	bumpmap 		textures/base_door/deldoor2frm_local.tga
+	diffusemap		textures/base_door/deldoor2frm_d.tga
+	specularmap		textures/base_door/deldoor2frm_s.tga
+}
+
+textures/base_door/deldoor2combo
+{
+	qer_editorimage		textures/editor/deldoor2combo.tga
+	bumpmap 		textures/base_door/deldoor2combo_local.tga
+	diffusemap		textures/base_door/deldoor2combo_d.tga
+	specularmap		textures/base_door/deldoor2combo_s.tga
+}
+
+textures/base_door/doorlamp
+{
+	qer_editorimage		textures/base_door/doorlamp.tga
+	bumpmap			textures/base_door/doorlight_local.tga
+	diffusemap		textures/base_door/doorlamp.tga
+	specularmap		textures/base_door/doorlight_s.tga
+	{
+		blend 	add
+		map		textures/base_door/doorlamp.tga
+		rgb		5
+	}
+}
+
+textures/base_door/doorlamp2
+{
+	qer_editorimage		textures/base_door/doorlamp2_add.tga
+	bumpmap			textures/base_door/doorlamp2_local.tga
+	diffusemap		textures/base_door/doorlamp2_d.tga
+	specularmap		textures/base_door/doorlamp2_s.tga
+	{
+		blend 	add
+		map		textures/base_door/doorlamp2_add.tga
+		rgb		5
+	}
+}
+
+textures/base_door/gothatch2
+{
+	qer_editorimage	textures/base_door/gothatch2.tga
+	bumpmap		addnormals (textures/base_door/gothatch2_local.tga, heightmap (textures/base_door/gothatch2_bmp.tga, 4))
+	diffusemap		textures/base_door/gothatch2_d.tga
+	specularmap		textures/base_door/gothatch2_s.tga
+}
+
+textures/base_door/stedoorpanel1
+{
+	qer_editorimage	textures/base_door/stedoorpanel1.tga
+	bumpmap		textures/base_door/stedoorpanel1_local.tga
+	diffusemap		textures/base_door/stedoorpanel1_d.tga
+	specularmap		textures/base_door/stedoorpanel1_s.tga
+	{
+		blend 	add
+		map		textures/base_door/stedoorpanel1_add.tga
+		rgb		5
+	}
+}
+
+textures/base_door/stedoorgromit
+{
+	qer_editorimage	textures/base_door/stedoorgromit.tga
+	bumpmap		textures/base_door/stedoorgromit_local.tga
+	diffusemap		textures/base_door/stedoorgromit_d.tga
+	specularmap		textures/base_door/stedoorgromit_s.tga
+}
+
+textures/base_door/stedoorframe2
+{
+	qer_editorimage	textures/base_door/stedoorframe2.tga
+	bumpmap		textures/base_door/stedoorframe2_local.tga
+	diffusemap		textures/base_door/stedoorframe2_d.tga
+	specularmap		textures/base_door/stedoorframe2_s.tga
+}
+
+textures/base_door/stedoortrim
+{
+	qer_editorimage	textures/base_door/stedoortrim.tga
+	bumpmap		textures/base_door/stedoortrim_local.tga
+	diffusemap		textures/base_door/stedoortrim_d.tga
+	specularmap		textures/base_door/stedoortrim_s.tga
+}
+
+textures/base_door/stegreenswatch
+{
+	qer_editorimage	textures/base_door/stegreenswatch_d.tga
+	bumpmap		textures/base_door/flatswatch.tga
+	diffusemap		textures/base_door/stegreenswatch_d.tga
+
+}
+
+textures/base_door/doorlightdel
+{
+	qer_editorimage	textures/editor/doorlightdel.tga
+	bumpmap		textures/base_door/doorlightdel_local.tga
+	diffusemap	textures/base_door/doorlightdel_d.tga
+	{
+		blend 	add
+		map		textures/base_door/doorlightdel_add.tga
+		colored
+	}
+}
+
+textures/base_door/doorlight
+{
+	//noShadows
+	qer_editorimage	textures/base_door/doorlight_red.tga
+	bumpmap		textures/base_door/doorlight_local.tga
+	   	diffusemap	textures/base_door/doorlight_red.tga
+	{
+		if ( parm7 == 0 )
+		blend 	add
+		map		textures/base_door/doorlight_red.tga
+		colored
+	}
+	{
+		if ( parm7 == 1 )
+		blend 	add
+		map		textures/base_door/doorlight_grn.tga
+		colored
+	}
+}
+
+textures/base_door/doorlightcav
+{
+ 	//noShadows
+	qer_editorimage	textures/base_door/doorlightcav.tga
+	bumpmap		textures/base_door/doorlightcav_local.tga
+	diffusemap	textures/base_door/doorlightcav_d.tga
+	specularmap	textures/base_door/doorlightcav_s.tga
+	{
+		blend 	add
+		map		textures/base_door/doorlightcav_yel_add.tga
+		rgb		5
+	}
+}
+
+textures/base_door/doorlight_red_to_green
+{
+	qer_editorimage	textures/base_door/doorlight_red.tga
+	bumpmap		textures/base_door/doorlight_local.tga
+	diffusemap	textures/base_door/doorlight_red.tga
+	{
+		if ( parm7 == 1 )
+		blend 	add
+		map		textures/base_door/doorlight_red.tga
+		rgb		5
+	}
+	{
+		if ( parm7 == 0 )
+		blend 	add
+		map		textures/base_door/doorlight_grn.tga
+		rgb		5
+	}
+}
+
+textures/base_door/cpubossdoor
+{
+	qer_editorimage	textures/base_door/cpubossdoor
+	bumpmap			textures/base_door/cpubossdoor_local
+	diffusemap		textures/base_door/cpubossdoor
+	specularmap		textures/base_door/cpubossdoor_s
+}
+
+textures/base_door/smdoor1b
+{
+	qer_editorimage	textures/base_door/smdoor1b
+	bumpmap			addnormals (textures/base_door/smdoor1a_local, heightmap (textures/base_door/smdoor1b_bmp.tga,4) )
+	diffusemap		textures/base_door/smdoor1b
+	specularmap		textures/base_door/smdoor1b_s
+}
+
+textures/base_door/smdoor1a
+{
+	qer_editorimage	textures/base_door/smdoor1a
+	bumpmap			textures/base_door/smdoor1a_local
+	diffusemap		textures/base_door/smdoor1a
+	specularmap		textures/base_door/smdoor1a_s
+}
+
+textures/base_door/airwheel_enpro
+{
+	qer_editorimage	textures/base_door/airwheel_enpro
+	bumpmap			textures/base_door/airwheel_local
+	diffusemap		textures/base_door/airwheel_enpro
+	specularmap		textures/base_door/airwheel_enpro_s
+}
+
+textures/base_door/deldoorgutter2_enpro
+{
+	qer_editorimage	textures/base_door/deldoorgutter2_enpro
+	bumpmap		textures/base_door/deldoorgutter_local
+	diffusemap	textures/base_door/deldoorgutter2_enpro
+	specularmap	textures/base_door/deldoorgutter2_enpro_s
+}
+
+textures/base_door/airdoorfrm_enpro
+{
+	qer_editorimage	textures/base_door/airdoorfrm_enpro
+	bumpmap		textures/base_door/airdoorfrm_local
+	diffusemap	textures/base_door/airdoorfrm_enpro
+	specularmap	textures/base_door/airdoorfrm_enpro_s
+}
+
+textures/base_door/airdoor_enpro
+{
+	qer_editorimage	textures/base_door/airdoor_enpro
+	bumpmap		addnormals (textures/base_door/airdoor_local, heightmap (textures/base_door/airdoor_bmp, 4) )
+	diffusemap	textures/base_door/airdoor_enpro
+	specularmap	textures/base_door/airdoor_enpro_s
+}
+
+textures/base_door/bighangardoors
+{
+	qer_editorimage		textures/base_door/bighangardoors
+	bumpmap				textures/base_door/bighangardoors_local
+	diffusemap			textures/base_door/bighangardoors
+	specularmap			textures/base_door/bighangardoors_s
+}
+
+textures/base_door/jumbofrm_hangar
+{
+	qer_editorimage		textures/base_door/jumbofrm_hangar
+	bumpmap				textures/base_door/jumbofrm_local
+	diffusemap			textures/base_door/jumbofrm_hangar
+	specularmap			textures/base_door/jumbofrm_hangar_s
+}
+
+textures/base_door/jumbodoor_hangar
+{
+	qer_editorimage		textures/base_door/jumbodoor_hangar
+	bumpmap				addnormals (textures/base_door/jumbodoor_local.tga, heightmap (textures/base_door/jumbodoor_bmp.tga, 3 ))
+	diffusemap			textures/base_door/jumbodoor_hangar
+	specularmap			textures/base_door/jumbodoor_hangar_s
+}
+
+textures/base_door/smalldoortex
+{
+	qer_editorimage		textures/base_door/smalldoortex_d.tga
+	bumpmap			textures/base_door/smalldoortex_local.tga
+	diffusemap		textures/base_door/smalldoortex_d.tga
+	specularmap		textures/base_door/smalldoortex_s.tga
+}

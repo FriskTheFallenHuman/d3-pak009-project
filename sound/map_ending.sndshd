@@ -1,0 +1,50 @@
+
+end_edit {
+	minDistance	5
+	maxDistance	15
+
+	sound/vo/end/end_edit.wav
+}
+
+end_radio1 {
+	minDistance	5
+	maxDistance	15
+
+	sound/vo/end/01_tc.wav
+}
+
+end_radio16 {
+	minDistance	5
+	maxDistance	15
+
+	sound/vo/end/16_tc.wav
+}
+
+end_radio17 {
+	minDistance	5
+	maxDistance	15
+
+	sound/vo/end/17_m1.wav
+}
+
+end_ship_flyby {
+	minDistance	50
+	maxDistance	100
+	volume		0
+	
+	sound/cinematics/mars_city1/ship_flyby.wav
+}
+
+end_vidin {
+	minDistance	5
+	maxDistance	15
+
+	sound/misc/video_in.wav
+}
+
+end_vidout {
+	minDistance	5
+	maxDistance	15
+
+	sound/misc/video_out.wav
+}
