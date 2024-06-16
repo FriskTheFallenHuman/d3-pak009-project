@@ -1,17 +1,10 @@
-//================textures/rock shader stats================
-//
-// Total # of shaders : 46
-// Working shaders: 26
-// Broken/CommentedOut shaders: 20
-//================================================================
-
 textures/rock/sharprock_dark_ns
 {
 	qer_editorimage		textures/rock/sharprock_dark
 	stone
 	noshadows
 	noselfshadow
-	bumpmap				addnormals (textures/rock/sharprock_local, heightmap (textures/rock/newdarkrock_bmp.tga, 10) ) 
+	bumpmap				addnormals (textures/rock/sharprock_local, heightmap (textures/rock/newdarkrock_bmp.tga, 10) )
 	diffusemap			textures/rock/sharprock_dark
 	specularmap			textures/rock/sharprock_dark_s
 }
@@ -21,11 +14,10 @@ textures/rock/dirt03
 	noSelfShadow
 	stone
 	qer_editorimage		textures/rock/dirt03.tga
-	    diffusemap		textures/rock/dirt03.tga
-		bumpmap		    addnormals( textures/hell/dirt02_local.tga, heightmap( textures/hell/dirt02_h.tga, 8 ) )
-		specularmap	    textures/rock/dirt03_s.tga
+	diffusemap		textures/rock/dirt03.tga
+	bumpmap		    addnormals( textures/hell/dirt02_local.tga, heightmap( textures/hell/dirt02_h.tga, 8 ) )
+	specularmap	    textures/rock/dirt03_s.tga
 }
-
 
 textures/rock/lanrock1
 {
@@ -33,122 +25,26 @@ textures/rock/lanrock1
 	noshadows
 	stone
 	qer_editorimage		textures/rock/lanrock1_d.tga
-
-	    diffusemap		textures/rock/lanrock1_d.tga
-	     bumpmap		addnormals( textures/rock/lanrock1_local.tga, heightmap( textures/rock/lanrock1_h.tga, 8 ) )
-		specularmap	    textures/rock/lanrock1_s.tga
+	diffusemap		textures/rock/lanrock1_d.tga
+	bumpmap		addnormals( textures/rock/lanrock1_local.tga, heightmap( textures/rock/lanrock1_h.tga, 8 ) )
+	specularmap	    textures/rock/lanrock1_s.tga
 }
-//textures/rock/lanrock2
-//{
-//	
-//	qer_editorimage		textures/rock/lanrock2.tga
-//	stone
-//
-//	    diffusemap		textures/rock/lanrock2_d.tga
-//	     bumpmap		addnormals( textures/rock/lanrock1_local.tga, heightmap( textures/rock/lanrock1_h.tga, 8 ) )
-//		specularmap	    textures/rock/lanrock1_s.tga
-//}
-
 
 textures/rock/sharprock3
 {
 	//noSelfShadow
 	qer_editorimage		textures/rock/sharprock3.tga
 	stone
-
-	    diffusemap		textures/rock/sharprock3.tga
-	     bumpmap		addnormals( textures/hell/sharprock2_local.tga, heightmap( textures/hell/sharprock2_h.tga, 8 ) )
-		specularmap	    textures/rock/sharprock3_s.tga
+	diffusemap		textures/rock/sharprock3.tga
+	bumpmap		addnormals( textures/hell/sharprock2_local.tga, heightmap( textures/hell/sharprock2_h.tga, 8 ) )
+	specularmap	    textures/rock/sharprock3_s.tga
 }
-
-
-//textures/rock/skysand2b
-//{
-//	qer_editorimage	textures/rock/skysand2.tga
-//	stone
-//	bumpmap			addnormals (textures/rock/skysand3_local.tga, heightmap (textures/rock/skysand2_bmp.tga, 4))
-//	diffusemap		textures/rock/skysand2.tga
-//}
-
-
-//textures/rock/rock03_skysand1
-//{
-//	stone
-//        
-//	{
-//		blend 		bumpmap
-//		map		heightmap (textures/rock/skysand1_bmp.tga, 4)
-//	}
-//	{
-//		blend 		diffusemap
-//		map		textures/rock/skysand1_d.tga
-//		inverseVertexColor
-//	}
-//	{
-//		blend		specularmap
-//		map		textures/rock/skysand1_s.tga
-//		inverseVertexColor
-//	}
-//	{
-//		blend		bumpmap
-//		map		addnormals( textures/rock/rock04_local.tga, heightmap( textures/rock/rock04_h.tga, 8 ) )
-//		
-//	}
-//	{
-//		blend		diffusemap
-//		map		textures/rock/rock03_d.tga
-//		VertexColor
-//	}
-//	{
-//		blend 		specularmap
-//		map		textures/rock/rock03_s.tga
-//		VertexColor
-//	}
-//}
-
-
-//textures/rock/lanrock2_skysand2b
-//
-//{
-////             noSelfShadow
-//	stone
-//        
-//	{
-//		blend 		bumpmap
-//		map		heightmap (textures/rock/skysand2_bmp.tga, 4)
-//	}
-//	{
-//		blend 		diffusemap
-//		map		textures/rock/skysand2.tga
-//		inverseVertexColor
-//	}
-//	{
-//		blend		specularmap
-//		map		textures/rock/skysand2_s.tga
-//		inverseVertexColor
-//	}
-//	{
-//		blend		bumpmap
-//		map		addnormals( textures/rock/lanrock1_local.tga, heightmap( textures/rock/lanrock1_h.tga, 8 ) )
-//		
-//	}
-//	{
-//		blend		diffusemap
-//		map		textures/rock/lanrock2_d.tga
-//		VertexColor
-//	}
-//	{
-//		blend 		specularmap
-//		map		textures/rock/lanrock2_s.tga
-//		VertexColor
-//	}
-//}
 
 textures/rock/dirt03_sharprock3
 {
 //             noSelfShadow
 	stone
-         qer_editorimage textures/rock/dirt03_sharprock3.tga  
+	qer_editorimage textures/rock/dirt03_sharprock3.tga
 	{
 		blend 		bumpmap
 		map		    addnormals( textures/hell/dirt02_local.tga, heightmap( textures/hell/dirt02_h.tga, 8 ) )
@@ -179,136 +75,14 @@ textures/rock/dirt03_sharprock3
 	}
 }
 
-
-//textures/rock/skysand1_sharprock2
-//{
-//             noSelfShadow
-//    stone
-//         qer_editorimage textures/rock/skysand1_sharprock2.tga       
-//	{
-//		blend 		bumpmap
-//		map		heightmap (textures/rock/skysand1_bmp.tga, 4)
-//	}
-//	{
-//		blend 		diffusemap
-//		map		textures/rock/skysand1_d.tga
-//		vertexColor
-//	}
-//	{
-//		blend		specularmap
-//		map		textures/rock/skysand1_s.tga
-//		vertexColor
-//	}
-//	{
-//		blend		bumpmap
-//		map		addnormals( textures/hell/sharprock2_local.tga, heightmap( textures/hell/sharprock2_h.tga, 8 ) )
-//	}
-//	{
-//		blend		diffusemap
-//		map		textures/hell/sharprock2.tga
-//		inverseVertexColor
-//	}
-//	{
-//		blend 		specularmap
-//		map		textures/hell/sharprock2_s.tga
-//		inverseVertexColor
-//	}
-//}
-
-//textures/rock/skysand1_rock04
-//{
-//           noSelfShadow
-//    stone
-//	{
-//		blend 		bumpmap
-//		map		heightmap (textures/rock/skysand1_bmp.tga, 4)
-//	}
-//	{
-//		blend 		diffusemap
-//		map		textures/rock/skysand1_d.tga
-//		vertexColor
-//	}
-//	{
-//		blend		specularmap
-//		map		textures/rock/skysand1_s.tga
-//		vertexColor
-//	}
-//	{
-//		blend		bumpmap
-//		map		addnormals (textures/rock/rock04_local.tga,heightmap (textures/rock/rock04_h.tga, 4))
-//	}
-//	{
-//		blend		diffusemap
-//		map		textures/rock/rock04_d.tga
-//		inverseVertexColor
-//	}
-//	{
-//		blend 		specularmap
-//		map		textures/rock/rock04_s.tga
-//		inverseVertexColor
-//	}
-//}
-//
-//textures/rock/skysand1_hillside1
-//{
-//	stone        
-//	{
-//		blend 		bumpmap
-//		map		heightmap (textures/rock/skysand1_bmp.tga, 4)
-//	}
-//	{
-//		blend 		diffusemap
-//		map		textures/rock/skysand1_d.tga
-//		vertexColor
-//	}
-//	{
-//		blend		specularmap
-//		map		textures/rock/skysand1_s.tga
-//		vertexColor
-//	}
-//	{
-//		blend		bumpmap
-//		map		addnormals (textures/rock/hillside1_local.tga, heightmap (textures/rock/hillside1_b.tga, 8))
-//	}
-//	{
-//		blend		diffusemap
-//		map		textures/rock/hillside1_d.tga
-//		inverseVertexColor
-//	}
-//	{
-//		blend 		specularmap
-//		map		textures/rock/hillside1_s.tga
-//		inverseVertexColor
-//	}
-//}
-//
-//textures/rock/rock04
-//{
-//	qer_editorimage textures/rock/rock04.tga
-//	stone
-//	diffusemap	textures/rock/rock04_d.tga
-//	specularmap	textures/rock/rock04_s.tga
-//        bumpmap	        addnormals (textures/rock/rock04_local.tga,heightmap (textures/rock/rock04_h.tga, 4))
-//}
-
-//textures/rock/rock03
-//{
-//	qer_editorimage textures/rock/rock03_d.tga
-//	stone
-//	diffusemap	textures/rock/rock03_d.tga
-//	specularmap	textures/rock/rock03_s.tga
-//        bumpmap	        addnormals (textures/rock/rock04_local.tga,heightmap (textures/rock/rock04_h.tga, 4))
-//}
-
 textures/rock/rock02
 {
 	qer_editorimage textures/rock/rock02.tga
 	stone
 	diffusemap	textures/rock/rock02_d.tga
 	specularmap	textures/rock/rock02_s.tga
-        bumpmap	        heightmap (textures/rock/rock02_h.tga, 24)
+	bumpmap	        heightmap (textures/rock/rock02_h.tga, 24)
 }
-
 
 textures/rock/rock01
 {
@@ -319,28 +93,14 @@ textures/rock/rock01
 	specularmap			textures/rock/rock01_s.tga
 }
 
-//textures/rock/hillside1
-//{
-//	qer_editorimage textures/rock/hillside1.tga
-//	stone
-//	diffusemap	textures/rock/hillside1_d.tga
-//	specularmap	textures/rock/hillside1_s.tga
-//        bumpmap	        addnormals (textures/rock/hillside1_local.tga, heightmap (textures/rock/hillside1_b.tga, 8))
-//}
-
-
-//*************************************************Moved from hell.mtr - start*******************************************************
-
-
 textures/rock/sharprock_dark_lavascroll_ns
 {
 	qer_editorimage		textures/hell/lavascroll.tga
-		noSelfShadow
-	    noshadows
-
+	noSelfShadow
+	noshadows
 	{
 		blend 		bumpmap
-		map			addnormals (textures/rock/sharprock_local, heightmap (textures/rock/newdarkrock_bmp.tga, 10) ) 
+		map			addnormals (textures/rock/sharprock_local, heightmap (textures/rock/newdarkrock_bmp.tga, 10) )
 	}
 	{
 		blend 		diffusemap
@@ -374,7 +134,7 @@ textures/rock/sharprock_dark_lavascroll_ns
 		scale		2,2
 		translate	time * .02 , time * -0.05
 		inverseVertexColor
-	}   
+	}
 	{
 		blend		gl_dst_alpha , gl_one
 		map			textures/hell/lava1fx.tga
@@ -393,160 +153,15 @@ textures/rock/sharprock_dark_lavascroll_ns
 	}
 }
 
-
-//*************************************************Moved from hell.mtr - end*******************************************************
-
-
-
-//**************************************************Moved from mal.mtr - start*****************************************************
-
-
-//textures/rock/rockblend
-//{
-//		noshadows
-//		stone
-//// blended part
-//	{
-//		blend 		bumpmap
-//		map		heightmap (textures/rock/rock02_h.tga, 24)
-//	}
-//	{
-//		blend 		diffusemap
-//		map		textures/rock/rock02_d.tga
-//		vertexColor
-//	}
-//	{
-//		blend		specularmap
-//		map		textures/rock/rock02_s.tga
-//		vertexColor
-//	}
-//// inverse blended part
-//	{
-//		blend		bumpmap
-//		map		heightmap (textures/rock/skysand1_bmp.tga, 4)
-//	}
-//	{
-//		blend		diffusemap
-//		map		textures/rock/skysand1_d.tga
-//		inverseVertexColor
-//	}
-//	{
-//		blend 		specularmap
-//		map		textures/rock/skysand1_s.tga
-//		inverseVertexColor
-//	}
-//}
-
-
-
-//**************************************************Moved from mal.mtr - end*****************************************************
-
-
-//*****************************************************Moved from patricktest.mtr - start*****************************************
-
-
-//textures/rock/cliffwall
-//
-// {
-// qer_editorimage textures/rock/cliffwall.tga
-//
-// noSelfShadow
-// noShadows
-//	
-//
-//		   {
-//				blend	 diffusemap	
-//				map	 textures/rock/cliffwall.tga
-//		   		
-//		   }
-//			bumpmap			addnormals( textures/rock/cliffwall_local.tga, heightmap (textures/rock/cliffwall_h.tga, 10 ) )
-//			specularmap	    	textures/rock/cliffwall_s.tga
-//		
-//
-//
-//}
-
-
-//textures/rock/hellrock
-//
-// {
-// qer_editorimage textures/rock/hellrock.tga
-//
-// noSelfShadow
-// noShadows
-//	
-//
-//		   {
-//				blend	 diffusemap	
-//				map	 textures/rock/hellrock.tga
-//		   		
-//		   }
-//			bumpmap			addnormals( textures/rock/hellrock_local.tga, heightmap (textures/rock/hellrock_h.tga, 10 ) )
-//			specularmap	    	textures/rock/hellrock_s.tga
-//		
-//
-//
-//}
-
-//textures/rock/sharprock_sand_d
-//{
-//	noShadows
-//        noselfShadow
-//	
-//	qer_editorimage textures/rock/sharprock_sand_d.tga
-//
-//		diffusemap		textures/rock/sharprock_sand_d.tga
-//		bumpmap			textures/rock/sharprock_sand_local.tga	
-//		specularmap	    	textures/rock/sharprock_sand_s.tga
-//
-//
-//		
-//}
-
-//textures/rock/skyrock3
-//{
-//	noShadows
-//        noselfShadow
-//	
-//	qer_editorimage textures/rock/skyrock3_d.tga
-//
-//		diffusemap		textures/rock/skyrock3_d.tga
-//		bumpmap			textures/rock/skyrock3_local.tga	
-//		specularmap	    	textures/rock/skyrock3_s.tga
-//		
-//}
-
-//textures/rock/skysand3
-//{
-//	noShadows
-//        noselfShadow
-//	
-//	qer_editorimage textures/rock/skysand3.tga
-//
-//		diffusemap		textures/rock/skysand3.tga
-//		bumpmap			textures/rock/skysand3_local.tga	
-//		specularmap	    	textures/rock/skysand3_s.tga
-//		
-//}
-
-
-//*****************************************************Moved from patricktest.mtr - end*****************************************
-
-
-//*****************************************************Moved from senetemp.mtr - start*****************************************
-
-
 table ember1 { { .7, 1, .5, .7, .6, 1, .8, .6, .7, 1, .6, 1, 1, .6, .7, .8, .6, 1, .5, .7, 1 } }
-
 
 textures/rock/sharprock_dark_cracked1
 {
 	qer_editorimage		textures/editor/sharprock_dark_cracked1
 	stone
-
 	{
 		blend 		bumpmap
-		map			addnormals (textures/rock/sharprock_local, heightmap (textures/rock/newdarkrock_bmp.tga, 10) ) 
+		map			addnormals (textures/rock/sharprock_local, heightmap (textures/rock/newdarkrock_bmp.tga, 10) )
 	}
 	{
 		blend 		diffusemap
@@ -558,7 +173,8 @@ textures/rock/sharprock_dark_cracked1
 		map			textures/rock/sharprock_dark_s
 		vertexColor
 	}
-	{//black verts
+	{
+		//black verts
 		blend 		bumpmap
 		map			addnormals( textures/hell/cracked1_local.tga, heightmap( textures/hell/cracked1_h.tga, 6 ) )
 		scale		2,2
@@ -581,7 +197,6 @@ textures/rock/greenrocks2_rockbase
 {
 	qer_editorimage		textures/hell/rockbase.tga
 	stone
-
 	{
 		blend 		bumpmap
 		map			addnormals (textures/hell/greenrocks_local, heightmap (textures/hell/greenrocks_bmp.tga,8) )
@@ -615,7 +230,6 @@ textures/rock/greenrocks2_rockbase
 textures/rock/greenrocks2_lavascroll
 {
 	qer_editorimage		textures/hell/lavascroll.tga
-
 	{
 		blend 			bumpmap
 		map				addnormals (textures/hell/greenrocks_local, heightmap (textures/hell/greenrocks_bmp.tga,8) )
@@ -652,7 +266,7 @@ textures/rock/greenrocks2_lavascroll
 		scale		2,2
 		translate	time * .02 , time * -0.05
 		inverseVertexColor
-	}   
+	}
 	{
 		blend		gl_dst_alpha , gl_one
 		map			textures/hell/lava1fx.tga
@@ -675,27 +289,24 @@ textures/rock/greenrocks2_lavascroll
 	}
 }
 
-
 textures/rock/zbtest
 {
 	qer_editorimage		textures/rock/zbtest
 	stone
 	{
-		blend			bumpmap				
+		blend			bumpmap
 		map				textures/rock/zbtest_local
 		//map				heightmap (textures/rock/zbtest, 30)
-		
 	}
 	{
-		blend			diffusemap			
+		blend			diffusemap
 		map				textures/rock/zbtest
 	}
 	{
-		blend			specularmap		
+		blend			specularmap
 		map				textures/rock/zbtest_s
 	}
 }
-
 
 textures/rock/sharprocklava
 {
@@ -728,12 +339,10 @@ textures/rock/sharprock_dark_dirt02noshadow
 {
 	qer_editorimage		textures/rock/sharprock_dark
 	stone
-
 	{
 		blend 		bumpmap
 		map			addnormals( textures/hell/dirt02_local.tga, heightmap( textures/hell/dirt02_h.tga, 8 ) )
 		scale		2,2
-
 	}
 	{
 		blend 		diffusemap
@@ -749,7 +358,7 @@ textures/rock/sharprock_dark_dirt02noshadow
 	}
 	{
 		blend		bumpmap
-		map			addnormals (textures/rock/sharprock_local, heightmap (textures/rock/newdarkrock_bmp.tga, 10) ) 
+		map			addnormals (textures/rock/sharprock_local, heightmap (textures/rock/newdarkrock_bmp.tga, 10) )
 	}
 	{
 		blend		diffusemap
@@ -760,7 +369,7 @@ textures/rock/sharprock_dark_dirt02noshadow
 		blend 		specularmap
 		map			textures/rock/sharprock_dark_s
 		inverseVertexColor
-	}   
+	}
 }
 
 textures/rock/sharprock_dark_lavascroll
@@ -769,7 +378,7 @@ textures/rock/sharprock_dark_lavascroll
 	stone
 	{
 		blend 		bumpmap
-		map			addnormals (textures/rock/sharprock_local, heightmap (textures/rock/newdarkrock_bmp.tga, 10) ) 
+		map			addnormals (textures/rock/sharprock_local, heightmap (textures/rock/newdarkrock_bmp.tga, 10) )
 	}
 	{
 		blend 		diffusemap
@@ -803,7 +412,7 @@ textures/rock/sharprock_dark_lavascroll
 		scale		2,2
 		translate	time * .02 , time * -0.05
 		inverseVertexColor
-	}   
+	}
 	{
 		blend		gl_dst_alpha , gl_one
 		map			textures/hell/lava1fx.tga
@@ -826,7 +435,7 @@ textures/rock/sharprock_dark
 {
 	qer_editorimage		textures/rock/sharprock_dark
 	stone
-	bumpmap				addnormals (textures/rock/sharprock_local, heightmap (textures/rock/newdarkrock_bmp.tga, 10) ) 
+	bumpmap				addnormals (textures/rock/sharprock_local, heightmap (textures/rock/newdarkrock_bmp.tga, 10) )
 	diffusemap			textures/rock/sharprock_dark
 	specularmap			textures/rock/sharprock_dark_s
 }
@@ -836,7 +445,7 @@ textures/rock/sharprock
 //	noselfshadow
 	qer_editorimage		textures/rock/sharprock
 	stone
-	bumpmap				addnormals (textures/rock/sharprock_local, heightmap (textures/rock/newdarkrock_bmp.tga, 10) ) 
+	bumpmap				addnormals (textures/rock/sharprock_local, heightmap (textures/rock/newdarkrock_bmp.tga, 10) )
 	diffusemap			textures/rock/sharprock
 	specularmap			textures/rock/sharprock_s
 }
@@ -968,7 +577,7 @@ textures/rock/newdarkrock //new rock texture (zoo rock walls)
 
 textures/rock/skysandnew_newdarkrock //new rock texture(zoo rock) that blends into new sand
 {
-	qer_editorimage	textures/rock/newdarkrock 
+	qer_editorimage	textures/rock/newdarkrock
 	stone
 	{
 		blend 		bumpmap
@@ -1024,70 +633,6 @@ textures/rock/newdarkrockblend //new rock texture that blends into sand
 	}
 }
 
-//textures/rock/skysandnew_oldrock
-//{
-//	qer_editorimage	textures/rock/skysandnew_oldrock
-//	stone
-//	{
-//		blend 		bumpmap
-//		map			addnormals (textures/rock/skysand1_local.tga, heightmap (textures/rock/skysand2_bmp.tga, 4))
-//	}
-//	{
-//		blend 		diffusemap
-//		map			textures/rock/skysand2.tga
-//		vertexColor
-//	}
-//	{
-//		blend		bumpmap
-//		map			heightmap (textures/rock/skyrock1_bmp.tga, 4)
-//	}
-//	{
-//		blend		diffusemap
-//		map			textures/rock/skyrock1_d.tga
-//		inverseVertexColor
-//	}
-//}
-
-//textures/rock/sandblend
-//{
-//	qer_editorimage	textures/rock/sandblend
-//	stone
-//	{
-//		blend 		bumpmap
-//		map			heightmap (textures/rock/skysand1_bmp.tga, 4)
-//	}
-//	{
-//		blend 		diffusemap
-//		map			textures/rock/skysand1_d.tga
-//		vertexColor
-//	}
-//	{
-//		blend		bumpmap
-//		map			heightmap (textures/rock/skyrock1_bmp.tga, 4)
-//	}
-//	{
-//		blend		diffusemap
-//		map			textures/rock/skyrock1_d.tga
-//		inverseVertexColor
-//	}
-//}
-
-//textures/rock/skyrock1
-//{	
-//	qer_editorimage	textures/rock/skyrock1.tga
-//	stone
-///*	{
-//		blend		bumpmap			
-//		//map			addnormals (textures/outside/rocks_local.tga, heightmap (textures/rock/skyrock1_bmp.tga, 12) ) 
-//		map			textures/outside/rocks_local.tga
-//		scale		.5,.5
-//	}
-//	*/
-//	bumpmap			heightmap (textures/rock/skyrock1_bmp.tga, 30)
-//	diffusemap		textures/rock/skyrock1_d.tga
-////	specularmap		textures/rock/skyrock1_s.tga
-//}
-
 textures/rock/skysandnew
 {
 	qer_editorimage	textures/rock/skysandnew.tga
@@ -1103,19 +648,3 @@ textures/rock/skysand1
 	bumpmap			addnormals (textures/rock/skysand1_local.tga, heightmap (textures/rock/skysand1_bmp.tga, 4))
 	diffusemap		textures/rock/skysand1_d.tga
 }
-
-//textures/rock/skysand1ns
-//{
-//	noshadows
-//	qer_editorimage	textures/rock/skysand1.tga
-//	stone
-//	bumpmap			heightmap (textures/rock/skysand1_bmp.tga, 4)
-//	diffusemap		textures/rock/skysand1_d.tga
-//	specularmap		textures/rock/skysand1_s.tga
-//}
-
-
-
-//*****************************************************Moved from senetemp.mtr - end*****************************************
-
-//Verified good complete by Eutectic - Sep 12-04

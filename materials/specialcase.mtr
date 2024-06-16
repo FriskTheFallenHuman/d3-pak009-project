@@ -1,13 +1,11 @@
 table acceleratorflashtable { clamp { 3, 2.5, 1.5, 1, 1, 1, 1, 1, 1, .17, .17, .17, .17  } }
 table acceleratortextable { clamp { 3, 2.5, 1.5, 1, 1, 1, 1, 1, 1, .001, .001, .001, .001  } }
 
-
 //parm 3=flicker speed	parm 4=offset
 
 //**************************************************************************************************
-//	 D	E	L	T	A		1 
+//	 D	E	L	T	A		1
 //**************************************************************************************************
-
 specialcase/delta1/squarelight1
 {
 	{
@@ -90,83 +88,6 @@ specialcase/delta1/xiantex1
 		rgb ( (.3 * sintable [.15 + time * .5 ]) +.7 ) * ( acceleratortextable [ ( time - global1 ) / 7 ] )
 	}
 }
-
-/*
-specialcase/delta1/newlabtex1a
-{
-	qer_editorimage 	textures/lab/newlabtex1a.tga
-	bumpmap 		models/seneca/labtex/newlabtex1_local.tga
-	diffusemap		models/seneca/labtex/newlabtex1a_d.tga
-	{	
-		if (global0 == 0 )
-		blend gl_one,gl_one
-		map models/seneca/labtex/newlabtex1a_add.tga
-		rgb (.3 * sintable [.15 + time ]) +.7
-	}
-	{
-		if (global0 != 0 )
-		blend gl_one,gl_one
-		map models/seneca/labtex/newlabtex1a_add.tga
-		rgb ( (.3 * sintable [.15 + time ]) +.7 ) * ( acceleratortextable[ ( time - global1 ) / 7 ] )
-	}
-}	
-
-specialcase/delta1/newlabtex2
-{
-	qer_editorimage 	textures/lab/newlabtex2.tga
-	bumpmap 		models/seneca/labtex/newlabtex2_local.tga
-	diffusemap		models/seneca/labtex/newlabtex2_d.tga
-	{
-		if ( global0 == 0 )
-		blend gl_one,gl_one
-		map models/seneca/labtex/newlabtex2_add.tga
-		rgb (.3 * sintable [.15 + time ]) +.7
-	}
-	{
-		if ( global0 != 0 )
-		blend gl_one,gl_one
-		map models/seneca/labtex/newlabtex2_add.tga
-		rgb ( (.3 * sintable [.15 + time ]) +.7 ) * ( acceleratortextable[ ( time - global1 ) / 7 ] )
-	}
-}	
-
-specialcase/delta1/labwall1d
-{
-	qer_editorimage 	textures/lab/labwall1d.tga
-	bumpmap 		models/seneca/labtex/labwall1d_local.tga
-	diffusemap		models/seneca/labtex/labwall1d_d.tga
-	{
-		if (global0 == 0 )
-		blend gl_one,gl_one
-		map models/seneca/labtex/labwall1d_add.tga
-		rgb (.3 * sintable [.15 + time ]) +.7
-	}
-	{
-		if (global0 != 0 )
-		blend gl_one,gl_one
-		map models/seneca/labtex/labwall1d_add.tga
-		rgb ((.3 * sintable [.15 + time ]) +.7) * ( acceleratortextable[ ( time - global1 ) / 7 ] )
-	}
-}	
-
-specialcase/delta1/labwall1e
-{
-	qer_editorimage 	textures/lab/labwall1e.tga
-	bumpmap 		models/seneca/labtex/labwall1e_local.tga
-	diffusemap		models/seneca/labtex/labwall1e_d.tga
-	{
-		if (global0 == 0 )
-		blend gl_one,gl_one
-		map models/seneca/labtex/labwall1e_add.tga
-	}
-	{
-		if (global0 != 0 )
-		blend gl_one,gl_one
-		map models/seneca/labtex/labwall1e_add.tga
-		rgb		acceleratortextable[ ( time - global1 ) / 7 ]
-	}
-}	
-*/
 
 specialcase/delta1/striplight_ed_noflare
 {
@@ -281,10 +202,9 @@ specialcase/delta1/reactorlight1
 specialcase/delta1/trimlight
 {
 	qer_editorimage textures/base_light/trimlight.tga
-
 	diffusemap	textures/base_light/trimlight_d.tga
 	specularmap	textures/base_light/trimlight_s.tga
-        bumpmap	        textures/base_light/trimlight_local.tga
+		bumpmap	        textures/base_light/trimlight_local.tga
 	{
 		if (global0 == 0 )
 		blend gl_one,gl_one
@@ -298,6 +218,3 @@ specialcase/delta1/trimlight
 		rgb		( blamptable[ time * 5 ] ) * ( acceleratortextable[ ( time - global1 ) / 7 ] )
 	}
 }
-
-
-//Verified good complete by Eutectic - Nov 23-04

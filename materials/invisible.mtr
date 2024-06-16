@@ -1,11 +1,3 @@
-//================textures/common & textures/editor shader stats================
-//
-// Total # of shaders : 43
-// Working shaders: 42
-// Broken/CommentedOut shaders: 1
-//==============================================================================
-
-
 // none of the surfaces in this file generate visible drawing,
 // they are just for modifying the game and utility behavior
 
@@ -18,18 +10,20 @@
 // interactive, use this surface for the view screen and place
 // a "gui" key containing the gui file, like "guis/mainmenu.gui"
 // on the entity
-textures/common/pda_gui {
+textures/common/pda_gui
+{
 	qer_editorimage	textures/editor/entityGui.tga
 	discrete
 	guiSurf	guis/lvlmaps/genericmap.gui
-	
+
 }
 
 // when gui surfaces are placed on an entity to allow them to be
 // interactive, use this surface for the view screen and place
 // a "gui" key containing the gui file, like "guis/mainmenu.gui"
 // on the entity
-textures/common/entityGui {
+textures/common/entityGui
+{
 	qer_editorimage	textures/editor/entityGui.tga
 	discrete
 	playerclip
@@ -40,7 +34,8 @@ textures/common/entityGui {
 // interactive, use this surface for the view screen and place
 // a "gui" key containing the gui file, like "guis/mainmenu.gui"
 // on the entity
-textures/common/entityGui2 {
+textures/common/entityGui2
+{
 	qer_editorimage	textures/editor/entityGui2.tga
 	discrete
 	playerclip
@@ -51,7 +46,8 @@ textures/common/entityGui2 {
 // interactive, use this surface for the view screen and place
 // a "gui" key containing the gui file, like "guis/mainmenu.gui"
 // on the entity
-textures/common/entityGui3 {
+textures/common/entityGui3
+{
 	qer_editorimage	textures/editor/entityGui3.tga
 	discrete
 	guiSurf	entity3
@@ -268,7 +264,6 @@ textures/common/trigflashlight
 	flashlight_trigger
 }
 
-// 
 textures/common/clip_plusmovables
 {
 	qer_editorimage textures/common/clipplus.tga
@@ -276,7 +271,7 @@ textures/common/clip_plusmovables
 	nonsolid
 	monsterclip
 	playerclip
-	moveableclip 
+	moveableclip
 	noshadows
 }
 
@@ -415,35 +410,15 @@ textures/common/particle
 	noshadows
 }
 
-//textures/common/overdrawtest
-//{
-//    noselfShadow
-//    noshadows	
-//	translucent
-//	               
-//	{
-//		blend	filter
-//		map		textures/common/overdraw.tga
-//	}
-//}
-
 textures/common/moveableclipmodel
 {
 	qer_editorimage textures/common/clip.tga
 	noshadows
 }
 
-
-//*****************************************************Moved from aaduffyTest.mtr - start*****************************************
-
-
 textures/common/npc_pda
-{	
+{
 	qer_editorimage	textures/editor/entityGui.tga
 	guiSurf guis/pda/pda_world.gui
 	discrete
 }
-
-//*****************************************************Moved from aaduffyTest.mtr - end*****************************************
-
-//Verified good complete by Eutectic - Sep 15-04

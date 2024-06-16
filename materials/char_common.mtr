@@ -4,19 +4,12 @@ models/characters/common/rightpoppy
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/blue.tga
-		centerScale	0.4, 0.4	
+		centerScale	0.4, 0.4
 	}
-
-
-
-
-
 }
-
 
 models/characters/common/leftpoppy
 {
@@ -24,18 +17,12 @@ models/characters/common/leftpoppy
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/blue.tga
-		centerScale	0.4, 0.4	
+		centerScale	0.4, 0.4
 	}
-	
-
-
-
 }
-
 
 models/characters/common/rightzsarge
 {
@@ -43,17 +30,12 @@ models/characters/common/rightzsarge
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/bet2.tga
-		centerScale	0.5, 0.5	
-	}	
-	
-
-
+		centerScale	0.5, 0.5
+	}
 }
-
 
 models/characters/common/leftzsarge
 {
@@ -61,266 +43,225 @@ models/characters/common/leftzsarge
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/bet2.tga
-		centerScale	0.5, 0.5	
-	}	
-	
-
-
+		centerScale	0.5, 0.5
+	}
 }
-
-
 
 models/characters/common/teethdeadb
 {
-        noShadows
-		noselfshadow
-		unsmoothedTangents
-		renderbump  -size 128 128  -colorMap -aa 2  models/characters/common/teeth_local.tga models/characters/common/teeth_hi.lwo
-		{       
-      			 blend	diffusemap
-			 map	models/characters/common/teethdeadb.tga
-			 alphaTest 0.2
-		}
-		bumpmap	   models/characters/common/teeth_local.tga
-
-		specularmap models/characters/common/teeth_s.tga
-        	
+	noShadows
+	noselfshadow
+	unsmoothedTangents
+	renderbump  -size 128 128  -colorMap -aa 2  models/characters/common/teeth_local.tga models/characters/common/teeth_hi.lwo
+	{
+		blend	diffusemap
+		map	models/characters/common/teethdeadb.tga
+		alphaTest 0.2
+	}
+	bumpmap	   models/characters/common/teeth_local.tga
+	specularmap models/characters/common/teeth_s.tga
 }
-
-
-
-
 
 models/characters/common/teethdead
 {
-        noShadows
-		noselfshadow
-		unsmoothedTangents
-		renderbump  -size 128 128  -colorMap -aa 2  models/characters/common/teeth_local.tga models/characters/common/teeth_hi.lwo
-		{       
-      			 blend	diffusemap
-			 map	models/characters/common/teethdead.tga
-			 alphaTest 0.2
-		}
-		bumpmap	   models/characters/common/teeth_local.tga
-
-		specularmap models/characters/common/teeth_s.tga
-        	
+	noShadows
+	noselfshadow
+	unsmoothedTangents
+	renderbump  -size 128 128  -colorMap -aa 2  models/characters/common/teeth_local.tga models/characters/common/teeth_hi.lwo
+	{
+		blend	diffusemap
+		map	models/characters/common/teethdead.tga
+		alphaTest 0.2
+	}
+	bumpmap	   models/characters/common/teeth_local.tga
+	specularmap models/characters/common/teeth_s.tga
 }
 
 models/characters/common/teethhead01
 {
-        noShadows
-		noselfshadow
-		unsmoothedTangents
-		renderbump  -size 128 128  -colorMap -aa 2  models/characters/common/teeth_local.tga models/characters/common/teeth_hi.lwo
-		{       
-      			 blend	diffusemap
-			 map	models/characters/common/teeth.tga
-			 alphaTest 0.2
-		}
-		bumpmap	   models/characters/common/teeth_local.tga
-
-		specularmap models/characters/common/teeth_s.tga
-        	
+	noShadows
+	noselfshadow
+	unsmoothedTangents
+	renderbump  -size 128 128  -colorMap -aa 2  models/characters/common/teeth_local.tga models/characters/common/teeth_hi.lwo
+	{
+		blend	diffusemap
+		map	models/characters/common/teeth.tga
+		alphaTest 0.2
+	}
+	bumpmap	   models/characters/common/teeth_local.tga
+	specularmap models/characters/common/teeth_s.tga
 }
 
 models/characters/common/teethhead02
 {
-        noShadows
-		//noselfshadow
-		unsmoothedTangents
-		{       
-      			 blend	diffusemap
-			 map	models/characters/common/teeth.tga
-			 alphaTest 0.2
-		}
-		bumpmap	   models/characters/common/teeth_local.tga
-
-		specularmap models/characters/common/teeth_s.tga
-        	
+	noShadows
+	//noselfshadow
+	unsmoothedTangents
+	{
+		blend	diffusemap
+		map	models/characters/common/teeth.tga
+		alphaTest 0.2
+	}
+	bumpmap	   models/characters/common/teeth_local.tga
+	specularmap models/characters/common/teeth_s.tga
 }
 
 models/characters/common/teethhead03
 {
-        noShadows
-		//noselfshadow
-		unsmoothedTangents
-		{       
-      			 blend	diffusemap
-			 map	models/characters/common/teeth.tga
-			 alphaTest 0.2
-		}
-		bumpmap	   models/characters/common/teeth_local.tga
-
-		specularmap models/characters/common/teeth_s.tga
-        	
+	noShadows
+	//noselfshadow
+	unsmoothedTangents
+	{
+		blend	diffusemap
+		map	models/characters/common/teeth.tga
+		alphaTest 0.2
+	}
+	bumpmap	   models/characters/common/teeth_local.tga
+	specularmap models/characters/common/teeth_s.tga
 }
 
 models/characters/common/teethhead04
 {
-        noShadows
-		noselfshadow
-		unsmoothedTangents
-		{       
-      			 blend	diffusemap
-			 map	models/characters/common/teeth.tga
-			 alphaTest 0.2
-		}
-		bumpmap	   models/characters/common/teeth_local.tga
-
-		specularmap models/characters/common/teeth_s.tga
-        	
+	noShadows
+	noselfshadow
+	unsmoothedTangents
+	{
+		blend	diffusemap
+		map	models/characters/common/teeth.tga
+		alphaTest 0.2
+	}
+	bumpmap	   models/characters/common/teeth_local.tga
+	specularmap models/characters/common/teeth_s.tga
 }
 
 models/characters/common/teethhead05
 {
-        noShadows
-		noselfshadow
-		unsmoothedTangents
-		{       
-      			 blend	diffusemap
-			 map	models/characters/common/teeth.tga
-			 alphaTest 0.2
-		}
-		bumpmap	   models/characters/common/teeth_local.tga
-
-		specularmap models/characters/common/teeth_s.tga
-        	
+	noShadows
+	noselfshadow
+	unsmoothedTangents
+	{
+		blend	diffusemap
+		map	models/characters/common/teeth.tga
+		alphaTest 0.2
+	}
+	bumpmap	   models/characters/common/teeth_local.tga
+	specularmap models/characters/common/teeth_s.tga
 }
 
 models/characters/common/teethpoppy
 {
-        noShadows
-		noselfshadow
-		unsmoothedTangents
-		{       
-      			 blend	diffusemap
-			 map	models/characters/common/teeth.tga
-			 alphaTest 0.2
-		}
-		bumpmap	   models/characters/common/teeth_local.tga
-
-		specularmap models/characters/common/teeth_s.tga
-        	
+	noShadows
+	noselfshadow
+	unsmoothedTangents
+	{
+		blend	diffusemap
+		map	models/characters/common/teeth.tga
+		alphaTest 0.2
+	}
+	bumpmap	   models/characters/common/teeth_local.tga
+	specularmap models/characters/common/teeth_s.tga
 }
 
 
 models/characters/common/teethhead06
 {
-        noShadows
-		noselfshadow
-		unsmoothedTangents
-		{       
-      			 blend	diffusemap
-			 map	models/characters/common/teeth.tga
-			 alphaTest 0.2
-		}
-		bumpmap	   models/characters/common/teeth_local.tga
-
-		specularmap models/characters/common/teeth_s.tga
-        	
+	noShadows
+	noselfshadow
+	unsmoothedTangents
+	{
+		blend	diffusemap
+		map	models/characters/common/teeth.tga
+		alphaTest 0.2
+	}
+	bumpmap	   models/characters/common/teeth_local.tga
+	specularmap models/characters/common/teeth_s.tga
 }
 
 models/characters/common/teethplayer
 {
-        noShadows
-		noselfshadow
-		unsmoothedTangents
-		{       
-      			 blend	diffusemap
-			 map	models/characters/common/teeth.tga
-			 alphaTest 0.2
-		}
-		bumpmap	   models/characters/common/teeth_local.tga
-
-		specularmap models/characters/common/teeth_s.tga
-        	
+	noShadows
+	noselfshadow
+	unsmoothedTangents
+	{
+		blend	diffusemap
+		map	models/characters/common/teeth.tga
+		alphaTest 0.2
+	}
+	bumpmap	   models/characters/common/teeth_local.tga
+	specularmap models/characters/common/teeth_s.tga
 }
-
 
 models/characters/common/teethbet
 {
-        noShadows
-		noselfshadow
-		unsmoothedTangents
-		{       
-      			 blend	diffusemap
-			 map	models/characters/common/teeth.tga
-			 alphaTest 0.2
-		}
-		bumpmap	   models/characters/common/teeth_local.tga
-
-		specularmap models/characters/common/teeth_s.tga
-        	
+	noShadows
+	noselfshadow
+	unsmoothedTangents
+	{
+		blend	diffusemap
+		map	models/characters/common/teeth.tga
+		alphaTest 0.2
+	}
+	bumpmap	   models/characters/common/teeth_local.tga
+	specularmap models/characters/common/teeth_s.tga
 }
 
 models/characters/common/teethswann
 {
-        noShadows
-		noselfshadow
-		unsmoothedTangents
-		{       
-      			 blend	diffusemap
-			 map	models/characters/common/teeth.tga
-			 alphaTest 0.2
-		}
-		bumpmap	   models/characters/common/teeth_local.tga
-
-		specularmap models/characters/common/teeth_s.tga
-        	
+	noShadows
+	noselfshadow
+	unsmoothedTangents
+	{
+		blend	diffusemap
+		map	models/characters/common/teeth.tga
+		alphaTest 0.2
+	}
+	bumpmap	   models/characters/common/teeth_local.tga
+	specularmap models/characters/common/teeth_s.tga
 }
 
 models/characters/common/teethsarge
 {
-        noShadows
-		noselfshadow
-		unsmoothedTangents
-		{       
-      			 blend	diffusemap
-			 map	models/characters/common/teeth.tga
-			 alphaTest 0.2
-		}
-		bumpmap	   models/characters/common/teeth_local.tga
-
-		specularmap models/characters/common/teeth_s.tga
-        	
+	noShadows
+	noselfshadow
+	unsmoothedTangents
+	{
+		blend	diffusemap
+		map	models/characters/common/teeth.tga
+		alphaTest 0.2
+	}
+	bumpmap	   models/characters/common/teeth_local.tga
+	specularmap models/characters/common/teeth_s.tga
 }
 
 models/characters/common/teethsecurity
 {
-        noShadows
-		noselfshadow
-		unsmoothedTangents
-		{       
-      			 blend	diffusemap
-			 map	models/characters/common/teeth.tga
-			 alphaTest 0.2
-		}
-		bumpmap	   models/characters/common/teeth_local.tga
-
-		specularmap models/characters/common/teeth_s.tga
-        	
+	noShadows
+	noselfshadow
+	unsmoothedTangents
+	{
+		blend	diffusemap
+		map	models/characters/common/teeth.tga
+		alphaTest 0.2
+	}
+	bumpmap	   models/characters/common/teeth_local.tga
+	specularmap models/characters/common/teeth_s.tga
 }
 
 models/characters/common/teethcampbell
 {
-        noShadows
-		noselfshadow
-		unsmoothedTangents
-		{       
-      			 blend	diffusemap
-			 map	models/characters/common/teeth.tga
-			 alphaTest 0.2
-		}
-		bumpmap	   models/characters/common/teeth_local.tga
-
-		specularmap models/characters/common/teeth_s.tga
-        	
+	noShadows
+	noselfshadow
+	unsmoothedTangents
+	{
+		blend	diffusemap
+		map	models/characters/common/teeth.tga
+		alphaTest 0.2
+	}
+	bumpmap	   models/characters/common/teeth_local.tga
+	specularmap models/characters/common/teeth_s.tga
 }
 
 models/characters/common/rightcampbell
@@ -329,19 +270,12 @@ models/characters/common/rightcampbell
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/blue.tga
-		centerScale	0.4, 0.4	
+		centerScale	0.4, 0.4
 	}
-
-
-
-
-
 }
-
 
 models/characters/common/leftcampbell
 {
@@ -349,16 +283,11 @@ models/characters/common/leftcampbell
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/blue.tga
-		centerScale	0.4, 0.4	
+		centerScale	0.4, 0.4
 	}
-	
-
-
-
 }
 
 models/characters/common/rightsecurity
@@ -367,16 +296,12 @@ models/characters/common/rightsecurity
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/green.tga
-		centerScale	0.5, 0.5	
-	}	
-
-
+		centerScale	0.5, 0.5
+	}
 }
-
 
 models/characters/common/leftsecurity
 {
@@ -384,18 +309,12 @@ models/characters/common/leftsecurity
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/green.tga
-		centerScale	0.5, 0.5	
-	}	
-	
-
-
+		centerScale	0.5, 0.5
+	}
 }
-
-
 
 models/characters/common/rightplayer
 {
@@ -403,16 +322,12 @@ models/characters/common/rightplayer
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/green.tga
-		centerScale	0.5, 0.5	
-	}	
-
-
+		centerScale	0.5, 0.5
+	}
 }
-
 
 models/characters/common/leftplayer
 {
@@ -420,18 +335,12 @@ models/characters/common/leftplayer
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/green.tga
-		centerScale	0.5, 0.5	
-	}	
-	
-
-
+		centerScale	0.5, 0.5
+	}
 }
-
-
 
 models/characters/common/rightsarge
 {
@@ -439,17 +348,12 @@ models/characters/common/rightsarge
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/bet.tga
-		centerScale	0.6, 0.6	
-	}	
-	
-
-
+		centerScale	0.6, 0.6
+	}
 }
-
 
 models/characters/common/leftsarge
 {
@@ -457,17 +361,12 @@ models/characters/common/leftsarge
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/bet.tga
-		centerScale	0.6, 0.6	
-	}	
-	
-
-
+		centerScale	0.6, 0.6
+	}
 }
-
 
 models/characters/common/rightbet
 {
@@ -475,14 +374,11 @@ models/characters/common/rightbet
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/bet2.tga
-		centerScale	0.5, 0.5	
-	}	
-
-
+		centerScale	0.5, 0.5
+	}
 }
 
 models/characters/common/leftbet
@@ -491,14 +387,11 @@ models/characters/common/leftbet
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/bet.tga
-		centerScale	0.5, 0.5	
-	}	
-
-
+		centerScale	0.5, 0.5
+	}
 }
 
 models/characters/common/rightmaledict
@@ -507,14 +400,11 @@ models/characters/common/rightmaledict
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/bet2.tga
-		centerScale	.25, .25	
-	}	
-
-
+		centerScale	.25, .25
+	}
 }
 
 models/characters/common/leftmaledict
@@ -523,19 +413,12 @@ models/characters/common/leftmaledict
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/bet.tga
 		centerScale	.25, .25
-	}	
-
-
+	}
 }
-
-
-
-
 
 models/characters/common/rightswann
 {
@@ -543,17 +426,12 @@ models/characters/common/rightswann
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/bet.tga
-		centerScale	0.5, 0.5	
-	}	
-	
-
-
+		centerScale	0.5, 0.5
+	}
 }
-
 
 models/characters/common/leftswann
 {
@@ -561,17 +439,12 @@ models/characters/common/leftswann
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/bet.tga
-		centerScale	0.5, 0.5	
-	}	
-	 
-
-
+		centerScale	0.5, 0.5
+	}
 }
-
 
 models/characters/common/righthead01
 {
@@ -579,15 +452,12 @@ models/characters/common/righthead01
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/bet.tga
-		centerScale	0.5, 0.5	
-	}	
-
+		centerScale	0.5, 0.5
+	}
 }
-
 
 models/characters/common/lefthead01
 {
@@ -595,14 +465,11 @@ models/characters/common/lefthead01
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/bet.tga
-		centerScale	0.5, 0.5	
-	}	
-
-
+		centerScale	0.5, 0.5
+	}
 }
 
 models/characters/common/righthead02
@@ -611,26 +478,22 @@ models/characters/common/righthead02
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/green.tga
-		centerScale	0.5, 0.5	
-	}	
+		centerScale	0.5, 0.5
+	}
 	//{
 	//	blend bumpmap
 	//	map models/characters/common/eye_local.tga
-	//	centerScale	0.7, 0.7	
+	//	centerScale	0.7, 0.7
 	//}
 	//{
 	//	blend specularmap
 	//	map models/characters/common/eye_s.tga
-	//	centerScale	0.7, 0.7	
+	//	centerScale	0.7, 0.7
 	//}
-
-
 }
-
 
 models/characters/common/lefthead02
 {
@@ -642,17 +505,17 @@ models/characters/common/lefthead02
 	{
 		blend filter
 		map models/characters/common/green.tga
-		centerScale	0.5, 0.5	
-	}	
+		centerScale	0.5, 0.5
+	}
 	//{
 	//	blend bumpmap
 	//	map models/characters/common/eye_local.tga
-	//	centerScale	0.7, 0.7	
+	//	centerScale	0.7, 0.7
 	//}
 	//{
 	//	blend specularmap
 	//	map models/characters/common/eye_s.tga
-	//	centerScale	0.7, 0.7	
+	//	centerScale	0.7, 0.7
 	// }
 }
 
@@ -662,21 +525,20 @@ models/characters/common/righthead03
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/bet.tga
-		centerScale	0.5, 0.5	
-	}	
+		centerScale	0.5, 0.5
+	}
 	//{
 	//	blend bumpmap
 	//	map models/characters/common/eye_local.tga
-	//	centerScale	0.7, 0.7	
+	//	centerScale	0.7, 0.7
 	//}
 	//{
 	//	blend specularmap
 	//	map models/characters/common/eye_s.tga
-	//	centerScale	0.7, 0.7	
+	//	centerScale	0.7, 0.7
 	//}
 }
 
@@ -686,21 +548,20 @@ models/characters/common/lefthead03
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/bet.tga
-		centerScale	0.5, 0.5	
-	}	
+		centerScale	0.5, 0.5
+	}
 	//{
 	//	blend bumpmap
 	//	map models/characters/common/eye_local.tga
-	//	centerScale	0.7, 0.7	
+	//	centerScale	0.7, 0.7
 	//}
 	//{
 	//	blend specularmap
 	//	map models/characters/common/eye_s.tga
-	//	centerScale	0.7, 0.7	
+	//	centerScale	0.7, 0.7
 	//}
 }
 
@@ -710,16 +571,12 @@ models/characters/common/righthead04
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/bet.tga
-		centerScale	0.5, 0.5	
-	}	
-
-
+		centerScale	0.5, 0.5
+	}
 }
-
 
 models/characters/common/lefthead04
 {
@@ -727,13 +584,11 @@ models/characters/common/lefthead04
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/bet.tga
-		centerScale	0.5, 0.5	
-	}	
-
+		centerScale	0.5, 0.5
+	}
 }
 
 models/characters/common/righthead05
@@ -742,15 +597,12 @@ models/characters/common/righthead05
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/bet.tga
-		centerScale	0.5, 0.5	
-	}	
-
+		centerScale	0.5, 0.5
+	}
 }
-
 
 models/characters/common/lefthead05
 {
@@ -758,13 +610,11 @@ models/characters/common/lefthead05
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/bet.tga
-		centerScale	0.5, 0.5	
-	}	
-
+		centerScale	0.5, 0.5
+	}
 }
 
 models/characters/common/righthead06
@@ -773,15 +623,12 @@ models/characters/common/righthead06
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/bet.tga
-		centerScale	0.5, 0.5	
-	}	
-
+		centerScale	0.5, 0.5
+	}
 }
-
 
 models/characters/common/lefthead06
 {
@@ -789,31 +636,23 @@ models/characters/common/lefthead06
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/bet.tga
-		centerScale	0.5, 0.5	
-	}	
-
+		centerScale	0.5, 0.5
+	}
 }
 
 models/characters/common/tongue
-
 {
-    noselfShadow
+	noselfShadow
 	noshadows
 	unsmoothedTangents
 	renderbump  -size 128 256 -trace 0.1 -colorMap -aa 2  models/characters/common/tongue_local.tga models/characters/common/tongue_hi.lwo
- 	
-	    diffusemap	    models/characters/common/tongue.tga
-		bumpmap		addnormals(models/characters/common/tongue_local.tga, heightmap(models/characters/common/tongue_h.tga, 4 ) )
-		specularmap		models/characters/common/tongue_s.tga
-
+	diffusemap	    models/characters/common/tongue.tga
+	bumpmap		addnormals(models/characters/common/tongue_local.tga, heightmap(models/characters/common/tongue_h.tga, 4 ) )
+	specularmap		models/characters/common/tongue_s.tga
 }
-
-
-
 
 models/characters/common/rightdead3
 {
@@ -821,16 +660,12 @@ models/characters/common/rightdead3
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend add
 		map models/characters/common/dead3.tga
-		centerScale	0.6, 0.6	
-	}	
-
-
+		centerScale	0.6, 0.6
+	}
 }
-
 
 models/characters/common/leftdead3
 {
@@ -838,17 +673,12 @@ models/characters/common/leftdead3
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend add
 		map models/characters/common/dead3.tga
-		centerScale	0.6, 0.6	
-	}	
-
-
+		centerScale	0.6, 0.6
+	}
 }
-
-
 
 models/characters/common/rightdead2
 {
@@ -856,16 +686,12 @@ models/characters/common/rightdead2
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend add
 		map models/characters/common/dead2.tga
-		centerScale	0.6, 0.6	
-	}	
-
-
+		centerScale	0.6, 0.6
+	}
 }
-
 
 models/characters/common/leftdead2
 {
@@ -873,17 +699,12 @@ models/characters/common/leftdead2
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend add
 		map models/characters/common/dead2.tga
-		centerScale	0.6, 0.6	
-	}	
-
-
+		centerScale	0.6, 0.6
+	}
 }
-
-
 
 models/characters/common/rightgreen
 {
@@ -891,17 +712,12 @@ models/characters/common/rightgreen
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/green.tga
-		centerScale	0.6, 0.6	
-	}	
-
-
-
+		centerScale	0.6, 0.6
+	}
 }
-
 
 models/characters/common/leftgreen
 {
@@ -909,12 +725,11 @@ models/characters/common/leftgreen
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/green.tga
-		centerScale	0.6, 0.6	
-	}	
+		centerScale	0.6, 0.6
+	}
 }
 
 models/characters/common/rightbrown2
@@ -923,16 +738,12 @@ models/characters/common/rightbrown2
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/brown.tga
-		centerScale	0.6, 0.6	
-	}	
-
-
+		centerScale	0.6, 0.6
+	}
 }
-
 
 models/characters/common/leftbrown2
 {
@@ -940,16 +751,12 @@ models/characters/common/leftbrown2
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/brown.tga
-		centerScale	0.6, 0.6	
-	}	
-
-
+		centerScale	0.6, 0.6
+	}
 }
-
 
 models/characters/common/rightbrown
 {
@@ -957,17 +764,12 @@ models/characters/common/rightbrown
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/brown.tga
-		centerScale	0.6, 0.6	
-	}	
-
-
-
+		centerScale	0.6, 0.6
+	}
 }
-
 
 models/characters/common/leftbrown
 {
@@ -975,15 +777,11 @@ models/characters/common/leftbrown
 	noshadows
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/brown.tga
-		centerScale	0.6, 0.6	
-	}	
-
-
-
+		centerScale	0.6, 0.6
+	}
 }
 
 models/characters/common/rightblue2
@@ -993,15 +791,12 @@ models/characters/common/rightblue2
 	noselfshadow
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/blue.tga
-		centerScale	0.4, 0.4	
-	}	
-
+		centerScale	0.4, 0.4
+	}
 }
-
 
 models/characters/common/leftblue2
 {
@@ -1010,18 +805,12 @@ models/characters/common/leftblue2
 	noselfshadow
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/blue.tga
-		centerScale	0.4, 0.4	
+		centerScale	0.4, 0.4
 	}
-
-
-
 }
-
-
 
 models/characters/common/rightblue
 {
@@ -1030,13 +819,11 @@ models/characters/common/rightblue
 	noselfshadow
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/blue.tga
-		centerScale	0.4, 0.4	
+		centerScale	0.4, 0.4
 	}
-
 }
 
 
@@ -1047,47 +834,9 @@ models/characters/common/leftblue
 	noselfshadow
 	deform	eyeBall
 	sort decal
-
 	{
 		blend filter
 		map models/characters/common/blue.tga
-		centerScale	0.4, 0.4	
+		centerScale	0.4, 0.4
 	}
-
 }
-
-/*
-models/characters/common/rightdead
-{
-	translucent
-	noshadows
-	deform	eyeBall
-	sort decal
-
-	{
-		blend filter
-		map models/characters/common/dead.tga
-		centerScale	0.6, 0.6	
-	}	
-
-
-}
-
-models/characters/common/leftdead
-{
-	translucent
-	noshadows
-	deform	eyeBall
-	sort decal
-
-	{
-		blend filter
-		map models/characters/common/dead.tga
-		centerScale	0.6, 0.6	
-	}	
-
-
-}
-*/
-
-//Verified good complete by Eutectic - Nov 29-04

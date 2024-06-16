@@ -1,14 +1,3 @@
-//================textures/enpro shader stats================
-//
-// Total # of shaders : 81
-// Working shaders: 65
-// Broken/CommentedOut shaders: 16
-//================================================================
-
-
-//*****************************************************Moved from senetemp.mtr - start*****************************************
-
-
 textures/enpro/minpanel1cut2a
 {
 	qer_editorimage		textures/enpro/minpanel1cut2a
@@ -41,7 +30,6 @@ textures/enpro/minpanel1cut1
 	specularmap			textures/enpro/minpanel1cut1_s
 }
 
-
 textures/enpro/encyl10_glow
 {
 	qer_editorimage		textures/editor/encyl10_glow
@@ -52,7 +40,6 @@ textures/enpro/encyl10_glow
 		blend			add
 		map				textures/enpro/encyl10_add
 		colored
-		
 	}
 }
 
@@ -68,7 +55,6 @@ textures/enpro/encyl10_glow_global
 		red				parm0
 		green			parm1 * global1
 		blue			parm2 * global1
-		
 	}
 }
 
@@ -120,11 +106,9 @@ textures/enpro/encyl5
 {
 	qer_editorimage		textures/enpro/encyl5
 	{
-		blend			bumpmap				
+		blend			bumpmap
 		map				textures/enpro/encyl5_local
-		
 	}
-
 	diffusemap			textures/enpro/encyl5
 	specularmap			textures/enpro/encyl5_s
 }
@@ -144,7 +128,7 @@ textures/enpro/encyl3
 	twosided
 	bumpmap				textures/enpro/encyl3_local
 	{
-		blend			diffusemap			
+		blend			diffusemap
 		map				textures/enpro/encyl3
 		alphatest		.65
 	}
@@ -207,14 +191,6 @@ textures/enpro/enwall22d
 	specularmap			textures/enpro/enwall22_s
 }
 
-//textures/enpro/enwall22c
-//{
-//	qer_editorimage		textures/enpro/enwall22c
-//	bumpmap				textures/base_wall/snpanel18_local
-//	diffusemap			textures/enpro/enwall22c
-//	specularmap			textures/enpro/enwall22a_s
-//}
-
 textures/enpro/enwall22b
 {
 	qer_editorimage		textures/enpro/enwall22b
@@ -222,14 +198,6 @@ textures/enpro/enwall22b
 	diffusemap			textures/enpro/enwall22b
 	specularmap			textures/enpro/enwall22a_s
 }
-
-//textures/enpro/enwall22a
-//{
-//	qer_editorimage		textures/enpro/enwall22a
-//	bumpmap				textures/base_wall/snpanel18_local
-//	diffusemap			textures/enpro/enwall22a
-//	specularmap			textures/enpro/enwall22a_s
-//}
 
 textures/enpro/enwall22
 {
@@ -246,14 +214,6 @@ textures/enpro/enwall21c
 	diffusemap			textures/enpro/enwall21c
 	specularmap			textures/enpro/enwall21c_s
 }
-
-//textures/enpro/enwall21b
-//{
-//	qer_editorimage		textures/enpro/enwall21b
-//	bumpmap				textures/base_wall/snpanel17_local
-//	diffusemap			textures/enpro/enwall21b
-//	specularmap			textures/enpro/enwall21_s
-//}
 
 textures/enpro/enwall21a
 {
@@ -279,14 +239,6 @@ textures/enpro/enwall20f
 	specularmap			textures/enpro/enwall20f_s
 }
 
-//textures/enpro/enwall20e
-//{
-//	qer_editorimage		textures/enpro/enwall20e
-//	bumpmap				textures/enpro/enwall20_local
-//	diffusemap			textures/enpro/enwall20e
-//	specularmap			textures/enpro/enwall20a_s
-//}
-
 textures/enpro/enwall20d
 {
 	qer_editorimage		textures/enpro/enwall20d
@@ -294,22 +246,6 @@ textures/enpro/enwall20d
 	diffusemap			textures/enpro/enwall20d
 	specularmap			textures/enpro/enwall20a_s
 }
-
-//textures/enpro/enwall20c
-//{
-//	qer_editorimage		textures/enpro/enwall20c
-//	bumpmap				textures/enpro/enwall20_local
-//	diffusemap			textures/enpro/enwall20c
-//	specularmap			textures/enpro/enwall20a_s
-//}
-
-//textures/enpro/enwall20b
-//{
-//	qer_editorimage		textures/enpro/enwall20b
-//	bumpmap				textures/enpro/enwall20_local
-//	diffusemap			textures/enpro/enwall20b
-//	specularmap			textures/enpro/enwall20a_s
-//}
 
 textures/enpro/enwall20a
 {
@@ -334,14 +270,6 @@ textures/enpro/enwall19f
 	diffusemap			textures/enpro/enwall19f
 	specularmap			textures/enpro/enwall19_s
 }
-
-//textures/enpro/enwall19e
-//{
-//	qer_editorimage		textures/enpro/enwall19e
-//	bumpmap				textures/base_wall/stepanel5_local
-//	diffusemap			textures/enpro/enwall19e
-//	specularmap			textures/enpro/enwall19_s
-//}
 
 textures/enpro/enwall19d
 {
@@ -375,14 +303,6 @@ textures/enpro/enwall19a
 	specularmap			textures/enpro/enwall19_s
 }
 
-//textures/enpro/enwall19
-//{
-//	qer_editorimage		textures/enpro/enwall19
-//	bumpmap				textures/base_wall/stepanel5_local
-//	diffusemap			textures/enpro/enwall19
-//	specularmap			textures/enpro/enwall19_s
-//}
-
 textures/enpro/enwall18e
 {
 	qer_editorimage		textures/enpro/enwall18e
@@ -398,22 +318,6 @@ textures/enpro/enwall18d
 	diffusemap			textures/enpro/enwall18d
 	specularmap			textures/enpro/enwall18_s
 }
-
-//textures/enpro/enwall18c
-//{
-//	qer_editorimage		textures/enpro/enwall18c
-//	bumpmap				textures/enpro/enwall18_local
-//	diffusemap			textures/enpro/enwall18c
-//	specularmap			textures/enpro/enwall18_s
-//}
-
-//textures/enpro/enwall18b
-//{
-//	qer_editorimage		textures/enpro/enwall18b
-//	bumpmap				textures/enpro/enwall18_local
-//	diffusemap			textures/enpro/enwall18b
-//	specularmap			textures/enpro/enwall18b_s
-//}
 
 textures/enpro/enwall18a
 {
@@ -439,68 +343,23 @@ textures/enpro/enwall17a
 	specularmap			textures/enpro/enwall17_s
 }
 
-//textures/enpro/enwall17
-//{
-//	qer_editorimage		textures/enpro/enwall17
-//	bumpmap				textures/enpro/enwall17_local
-//	{
-//		blend			diffusemap			
-//		map				textures/enpro/enwall17_d
-//		scale			0.5,1
-//	}
-//	specularmap			textures/enpro/enwall17_s
-//}
-
-//textures/enpro/enwall16d
-//{
-//	qer_editorimage		textures/enpro/enwall16d
-//	{
-//		blend			bumpmap				
-//		map				addnormals (textures/enpro/enwall16_local, heightmap (textures/enpro/enwall16_bmp.tga, 4) ) 
-//	}
-//	diffusemap			textures/enpro/enwall16d
-//	specularmap			textures/enpro/enwall16_s
-//}
-
 textures/enpro/enwall16c
 {
 	qer_editorimage		textures/enpro/enwall16c
 	{
-		blend			bumpmap				
-		map				addnormals (textures/enpro/enwall16_local, heightmap (textures/enpro/enwall16_bmp.tga, 4) ) 
+		blend			bumpmap
+		map				addnormals (textures/enpro/enwall16_local, heightmap (textures/enpro/enwall16_bmp.tga, 4) )
 	}
 	diffusemap			textures/enpro/enwall16c
 	specularmap			textures/enpro/enwall16_s
 }
 
-//textures/enpro/enwall16b
-//{
-//	qer_editorimage		textures/enpro/enwall16b
-//	{
-//		blend			bumpmap				
-//		map				addnormals (textures/enpro/enwall16_local, heightmap (textures/enpro/enwall16_bmp.tga, 4) ) 
-//	}
-//	diffusemap			textures/enpro/enwall16b
-//	specularmap			textures/enpro/enwall16_s
-//}
-
-//textures/enpro/enwall16a
-//{
-//	qer_editorimage		textures/enpro/enwall16a
-//	{
-//		blend			bumpmap				
-//		map				addnormals (textures/enpro/enwall16_local, heightmap (textures/enpro/enwall16_bmp.tga, 4) ) 
-//	}
-//	diffusemap			textures/enpro/enwall16a
-//	specularmap			textures/enpro/enwall16_s
-//}
-
 textures/enpro/enwall16
 {
 	qer_editorimage		textures/enpro/enwall16
 	{
-		blend			bumpmap				
-		map				addnormals (textures/enpro/enwall16_local, heightmap (textures/enpro/enwall16_bmp.tga, 4) ) 
+		blend			bumpmap
+		map				addnormals (textures/enpro/enwall16_local, heightmap (textures/enpro/enwall16_bmp.tga, 4) )
 	}
 	diffusemap			textures/enpro/enwall16
 	specularmap			textures/enpro/enwall16_s
@@ -526,7 +385,7 @@ textures/enpro/enwall14
 {
 	qer_editorimage		textures/enpro/enwall14
 	{
-		blend			bumpmap				
+		blend			bumpmap
 		map				addnormals (textures/enpro/enwall14_local, heightmap (textures/enpro/enwall14_bmp, 3) )
 	}
 	diffusemap			textures/enpro/enwall14
@@ -585,19 +444,16 @@ textures/enpro/enwall10
 {
 	qer_editorimage		textures/enpro/enwall10
 	{
-		blend			bumpmap				
+		blend			bumpmap
 		map				textures/enpro/enwall10_local
-		
 	}
 	{
-		blend			diffusemap			
+		blend			diffusemap
 		map				textures/enpro/enwall10
-	//	
 	}
 	{
-		blend			specularmap			
+		blend			specularmap
 		map				textures/enpro/enwall10_s
-	//	
 	}
 }
 
@@ -608,31 +464,7 @@ textures/enpro/enwall9
 	diffusemap			textures/enpro/enwall9
 	specularmap			textures/enpro/enwall9_s
 }
-/**
-textures/enpro/enwall8a6
-{
-	qer_editorimage		textures/enpro/enwall8a6
-	bumpmap				textures/enpro/enwall8a_local
-	{
-		blend			diffusemap			
-		map				textures/enpro/enwall8a6
-		scale			0.5,1
-	}
-	{
-		blend			specularmap			
-		map				textures/enpro/enwall8a6_s
-		scale			0.5,1
-	}
-}
 
-textures/enpro/enwall8a5
-{
-	qer_editorimage		textures/enpro/enwall8a5
-	bumpmap				textures/enpro/enwall8_local
-	diffusemap			textures/enpro/enwall8a5
-	specularmap			textures/enpro/enwall8a5_s
-}
-**/
 textures/enpro/enwall8a4
 {
 	qer_editorimage		textures/enpro/enwall8a4
@@ -725,7 +557,7 @@ textures/enpro/enwall2
 {
 	qer_editorimage		textures/enpro/enwall2
 	{
-		blend			bumpmap				
+		blend			bumpmap
 		map				addnormals (textures/enpro/enwall2_local, heightmap (textures/enpro/enwall2_bmp, 4) )
 	}
 	diffusemap			textures/enpro/enwall2
@@ -747,11 +579,3 @@ textures/enpro/enwall1
 	diffusemap			textures/enpro/enwall1
 	specularmap			textures/enpro/enwall1_s
 }
-
-
-
-
-//*****************************************************Moved from senetemp.mtr - end*****************************************
-
-
-//Verified good complete by Eutectic - Sep 05-04

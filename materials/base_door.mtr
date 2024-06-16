@@ -54,7 +54,7 @@ textures/base_door/doorlight_grn
 	//noShadows
 	qer_editorimage	textures/base_door/doorlight_grn.tga
 	bumpmap		textures/base_door/doorlight_local.tga
-	   	diffusemap	textures/base_door/doorlight_grn.tga
+	diffusemap	textures/base_door/doorlight_grn.tga
 	{
 		blend 	add
 		map		textures/base_door/doorlight_grn.tga
@@ -93,7 +93,6 @@ textures/base_door/jumbofrm
 	diffusemap		textures/base_door/jumbofrm_d.tga
 	specularmap		textures/base_door/jumbofrm_s.tga
 }
-
 
 textures/base_door/jumbodoorguts
 {
@@ -279,7 +278,7 @@ textures/base_door/doorlight
 	//noShadows
 	qer_editorimage	textures/base_door/doorlight_red.tga
 	bumpmap		textures/base_door/doorlight_local.tga
-	   	diffusemap	textures/base_door/doorlight_red.tga
+	diffusemap	textures/base_door/doorlight_red.tga
 	{
 		if ( parm7 == 0 )
 		blend 	add

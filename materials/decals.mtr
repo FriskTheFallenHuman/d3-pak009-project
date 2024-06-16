@@ -1,13 +1,3 @@
-//================textures/decals shader stats===========================================
-//
-// Total # of shaders : 372
-// Working shaders: 212
-// Broken/CommentedOut shaders: 139
-// Unwisely named shaders which can't be used for map texturing and kept by necessity: 21
-// (IOW, all materials with a vertexcolor parameter can only be used by game models)
-//=======================================================================================
-
-
 // this will be full intensity for 90% of the time, then fade to 0
 // parm3 is set to the time the mark is spawned
 // parm4 is set to the time the mark will be removed
@@ -19,15 +9,12 @@ table woundFade { clamp { 1, 0 } }
 table bugwings  { snap { -1, 1 } }
 table telemars  {{ 1, .5, .1, .05, .2, .4, .7, .8 }}
 
-
-
 textures/decals/bloodyfilmred
 {
 	noshadows
 	translucent
-
 	qer_editorimage		textures/editor/bloodyfilm1.tga
-	
+
 		{
 		program	colorProcess.vfp
 		vertexParm		0	  1   // sinTable[ time * 0.5 ]	// 0.0 = source color, 1.0 = target color
@@ -35,45 +22,32 @@ textures/decals/bloodyfilmred
 		fragmentMap		0		_currentRender
 	}
 	{
-
-	    blend		add
+		blend		add
 		scale 2,2
 		translate time * staticatable[ time * 10 ], time *staticatable[ time * 10 ]
 		rotate time * 7
 		map    textures/decals/greystatica.tga
-
 	}
-
 	{
-
-	    blend		filter
+		blend		filter
 		scale 2,2
 		translate time * staticatable[ time * 20 ],time * staticatable[ time * 20 ]
 		rotate time * 6
 		map    textures/decals/oldfilm.tga
-
 	}
 	{
-
-	    blend		filter
+		blend		filter
 		scale 1, .007
 		translate time * 0, time * -40
-
 		map    textures/decals/oldfilm3.tga
-
 	}
 }
 
 textures/decals/telemars
-
-
 {
-	
-
 	noShadows
 	twoSided
 	qer_editorimage textures/decals/telemars.tga
-
 	{
 		blend	diffuseMap
   		map     textures/decals/telemars.tga
@@ -83,78 +57,36 @@ textures/decals/telemars
 		blend	add
   		map     textures/decals/telemars_add.tga
 		rgb		telemars[ time * 1 ]
-
-	}     
-      	{
+	}
+	{
 		blend	add
   		map     textures/decals/telemars_b_add.tga
 		rgb		telemars[ time * .3 ]
-		
 		rotate time * .025
-
-	} 
+	}
    	{
 		blend	add
   		map     textures/decals/telemars_c_add.tga
 		rgb		telemars[ time * .1 ]
-		
 		rotate time * -.035
-
-	} 			
-	 	bumpmap	textures/decals/telemars_local.tga
-        	specularmap	textures/decals/telemars_s.tga
-        
-
-
+	}
+	bumpmap	textures/decals/telemars_local.tga
+	specularmap	textures/decals/telemars_s.tga
 }
-
-
 
 textures/decals/bloodspray
-
-
 {
 	qer_editorimage textures/decals/bloodspray.tga
-
 	noShadows
 	twoSided
-	
-
-
 	{
-		colored       
-      		blend	diffuseMap  
+		colored
+		blend	diffuseMap
 		map	textures/decals/bloodspray.tga
 	}
-
-
 }
 
-//textures/decals/uacdec2_s
-//
-//
-//{
-//	qer_editorimage map	textures\sfx\black_2
-//	DECAL_MACRO
-//	noShadows
-//	twoSided
-//	nonsolid
-//	noimpact
-//	translucent
-//
-//
-//	{
-//		colored       
-//      		blend	add 
-//		map	textures\sfx\black_2
-//	}
-//
-//
-//}
-
 textures/decals/frosty
-
-
 {
 	qer_editorimage textures/decals/frosty.tga
 	DECAL_MACRO
@@ -163,20 +95,15 @@ textures/decals/frosty
 	nonsolid
 	noimpact
 	translucent
-
-
 	{
-		colored       
-      		blend	diffuseMap  
+		colored
+		blend	diffuseMap
 		map	textures/decals/frosty.tga
 	}
-
-
 }
 
 textures/decals/schmutz
 {
-
 	qer_editorimage textures/decals/schmutz.tga
 	DECAL_MACRO
 	noShadows
@@ -184,141 +111,38 @@ textures/decals/schmutz
 	noimpact
 	//twoSided
 	translucent
-
-
 	{
-	
-      	blend	filter
+	  	blend	filter
 		map textures/decals/schmutz.tga
 	}
-
-
 }
-
-
-
-//textures/decals/junebug
-//{
-//        noSelfShadow
-//	noshadows
-//	nonsolid
-//	twosided
-//
-//	qer_editorimage textures/decals/junebug.tga
-//
-//        {       
-//      	 blend	diffusemap
-//	 map	textures/decals/junebug.tga
-//	 scale  bugwings[ time *10 ],1
-//	 alphaTest 0.5
-//	 
-//	}
-//	{       
-//      	 blend	bumpmap	
-//	 map	textures/decals/junebug_local.tga
-//   
-//	}
-//	{       
-//      	 blend	specularmap
-//	 map	textures/decals/junebug_s.tga
-//	 scale  bugwings[ time *10 ],1
-//        
-//	}
-//	{       
-//      	 blend	add
-//	 map	textures/decals/junebug_s.tga
-//	 scale  bugwings[ time *10 ],1
-//        
-//	}
-//	
-//
-//}
-
-//textures/decals/lava_trim
-//{
-//	translucent
-//	nonsolid
-//	noshadows
-//	qer_editorimage textures/decals/lava_trim.tga
-//
-//	{       
-//      		blend		add
-//		map		textures/decals/lava_trim
-//		//rgb		mgTable[ time * .1 ]
-//	}
-//}
 
 textures/decals/spawndecal
 {
 	qer_editorimage textures/editor/dontuse.tga
 	noselfShadow
-    noshadows	
+	noshadows
 	translucent
 	discrete
 	nonsolid
 	noimpact
 	twosided
-
 	DECAL_MACRO
 	decalInfo 0.75 10 ( 1 1 1 10 ) ( -5 -5 -5 0 )
-	
-	{       
-		
-      	blend		gl_zero, gl_one_minus_src_alpha
+	{
+	  	blend		gl_zero, gl_one_minus_src_alpha
 		map			makealpha(textures/decals/spawndecal_burn)
 		clamp		// we don't want it to tile if the projection extends past the bounds
 		//rgb			decalFade[(time - Parm3)/(parm4 - parm3)]
 		vertexColor	// oblique projections will be slightly faded down
 	}
-
 	{
-      	blend	add  
+	  	blend	add
 		map		textures/decals/spawndecal
 		//rgb		fireballtable[ time * .5 ]
 		vertexColor	// oblique projections will be slightly faded down
 	}
 }
-
-//textures/decals/hotpatch
-//{
-//	translucent
-//	nonsolid
-//	noshadows
-//	qer_editorimage textures/decals/hotpatch.tga
-//
-//	{       
-//      		blend		add
-//		map		textures/decals/hotpatch
-//		//rgb		mgTable[ time * .1 ]
-//	}
-//}
-
-
-
-//textures/decals/hellwind
-//{
-//
-//	qer_editorimage		textures/decals/hellwind
-//
-//	
-//	{	
-//		maskcolor			
-//		map textures/decals/hellwind.tga
-//		translate	time * 0, 2
-//		colored
-//		clamp
-//	}
-//		
-//	{
-//		blend  gl_dst_alpha, gl_one_minus_dst_alpha
-//      	scale		1, -1
-//		map			_scratch
-//		bugwings
-//	}
-//
-//
-//}
-
 
 textures/decals/symbol_letters_31e
 {
@@ -328,15 +152,10 @@ textures/decals/symbol_letters_31e
 	noimpact
 	translucent
 	qer_editorimage textures/decals/symbol_letters_31e
-
-	{       
-      		blend		gl_dst_color,gl_zero
+	{
+		blend		gl_dst_color,gl_zero
 		map		textures/decals/symbol_letters_31e
-		
 	}
-
-
-
 }
 
 textures/decals/alphabet_bloody_d01b
@@ -347,15 +166,10 @@ textures/decals/alphabet_bloody_d01b
 	noimpact
 	translucent
 	qer_editorimage textures/decals/alphabet_bloody_d01b
-
-	{       
-      		blend		gl_dst_color,gl_zero
+	{
+		blend		gl_dst_color,gl_zero
 		map		textures/decals/alphabet_bloody_d01b
-		
 	}
-
-
-
 }
 
 textures/decals/alphabet_bloody_d02b
@@ -366,136 +180,73 @@ textures/decals/alphabet_bloody_d02b
 	noimpact
 	translucent
 	qer_editorimage textures/decals/alphabet_bloody_d02b
-
-	{       
-      		blend		gl_dst_color,gl_zero
+	{
+		blend		gl_dst_color,gl_zero
 		map		textures/decals/alphabet_bloody_d02b
-		
 	}
-
-
 }
-
-//textures/decals/maggot
-//{
-//        noSelfShadow
-//	noshadows
-//	nonsolid
-//	qer_editorimage textures/decals/maggot.tga
-//
-//        {       
-//      	 blend	diffusemap
-//	 map	textures/decals/maggot.tga
-//	 alphaTest 0.5
-//	  scale 1 , wormTable[ time * .4 ]
-//	 clamp
-//	}
-//	{       
-//      	 blend	bumpmap	
-//	 map	textures/decals/maggot_local.tga
-//	  scale 1 , wormTable[ time * .4 ]
-//	 clamp
-//	}
-//	{       
-//      	 blend	specularmap
-//	 map	textures/decals/roach_s.tga
-//	 scale 1 , wormTable[ time * .4 ]
-//	 clamp
-//	}
-//
-//}
-
 
 textures/decals/deadroach
 {
-        noSelfShadow
+		noSelfShadow
 	noshadows
 	nonsolid
 	qer_editorimage textures/editor/deadroach.tga
-
-        {       
-      	 blend	diffusemap
-	 map	textures/decals/roach.tga
-	 alphaTest 0.3
+	{
+		blend	diffusemap
+		map	textures/decals/roach.tga
+		alphaTest 0.3
 	}
-	{       
-      	 blend	bumpmap	
-	 map	textures/decals/roach_local.tga
+	{
+		blend	bumpmap
+		map	textures/decals/roach_local.tga
 	}
-	{       
-      	 blend	specularmap
-	 map	textures/decals/roach_s.tga
+	{
+		blend	specularmap
+		map	textures/decals/roach_s.tga
 	}
-
 }
-
 
 textures/decals/roach
 {
-        noSelfShadow
+	noSelfShadow
 	noshadows
 	nonsolid
 	qer_editorimage textures/editor/roach.tga
-
-        {       
-      	 blend	diffusemap
-	 map	textures/decals/roach.tga
-	 alphaTest 0.3
-	 scale 1, -1 
+	{
+		blend	diffusemap
+		map	textures/decals/roach.tga
+		alphaTest 0.3
+		scale 1, -1
 	}
-	{       
-      	 blend	bumpmap	
-	 map	textures/decals/roach_local.tga
-         scale 1 , -1 
+	{
+		blend	bumpmap
+		map	textures/decals/roach_local.tga
+		scale 1 , -1
 	}
-	{       
-      	 blend	specularmap
-	 map	textures/decals/roach_s.tga
-         scale 1 , -1 
+	{
+		blend	specularmap
+		map	textures/decals/roach_s.tga
+		scale 1 , -1
 	}
-
 }
-
-
 
 textures/decals/sentry_spot
 {
 	qer_editorimage textures/decals/sentry_spot.tga
-        noSelfShadow
+	noSelfShadow
 	noshadows
 	nonsolid
-        twosided
+	twosided
 	translucent
-        {
-
-		blend diffusemap	
+	{
+		blend diffusemap
 		map textures/decals/sentry_spot.tga
-        	red		Parm0
+		red		Parm0
 		green		Parm1
 		blue		Parm2
-        }
-
+	}
 }
-
-//textures/decals/sentry_spot2
-//{
-//	qer_editorimage textures/decals/sentry_spot2.tga
-//        noSelfShadow
-//	noshadows
-//	nonsolid
-//        twosided
-//	translucent
-//
-//	{
-//
-//		blend diffusemap	
-//		map textures/decals/sentry_spot2.tga
-//        	red		Parm0
-//		green		Parm1
-//		blue		Parm2
-//        }
-//}
-
 
 textures/decals/scorch2
 {
@@ -504,13 +255,10 @@ textures/decals/scorch2
 	noshadows
 	sort 1
 	qer_editorimage textures/decals/scorch2.tga
-
-	{       
-      		blend		gl_dst_color,gl_zero
-		map		textures/decals/scorch2	
-		
+	{
+		blend		gl_dst_color,gl_zero
+		map		textures/decals/scorch2
 	}
-
 }
 
 textures/decals/scorch
@@ -520,10 +268,9 @@ textures/decals/scorch
 	noshadows
 	sort 1
 	qer_editorimage textures/decals/scorch.tga
-
-	{       
-      		blend		gl_dst_color,gl_zero
-		map		textures/decals/scorch	
+	{
+		blend		gl_dst_color,gl_zero
+		map		textures/decals/scorch
 	}
 }
 
@@ -535,7 +282,6 @@ textures/decals/irblend
 	qer_editorimage	textures/sfx/xrayblend
 	{
 		blend		gl_one_minus_dst_color,gl_zero
-		
 		map			textures/sfx/xrayblend
 	}
 }
@@ -544,22 +290,20 @@ textures/decals/irblend
 textures/decals/webdangle
 {
 	qer_editorimage textures/decals/webdangle.tga
-        noSelfShadow
-		noshadows
-	    nonsolid
-		twosided
-		translucent
-
-		diffusemap	textures/decals/webdangle.tga
-
+	noSelfShadow
+	noshadows
+	nonsolid
+	twosided
+	translucent
+	diffusemap	textures/decals/webdangle.tga
 }
 
 textures/decals/webstrand
 {
 	qer_editorimage textures/decals/webstrand.tga
-        noSelfShadow
+		noSelfShadow
 		noshadows
-	    nonsolid
+		nonsolid
 		twosided
 		translucent
 
@@ -570,9 +314,9 @@ textures/decals/webstrand
 textures/decals/webtile
 {
 	qer_editorimage textures/decals/webtile.tga
-        noSelfShadow
+		noSelfShadow
 		noshadows
-	    nonsolid
+		nonsolid
 		twosided
 		translucent
 
@@ -583,9 +327,9 @@ textures/decals/webtile
 textures/decals/websquare
 {
 	qer_editorimage models/mapobjects/webs/websquare.tga
-        noSelfShadow
+		noSelfShadow
 		noshadows
-	    nonsolid
+		nonsolid
 		twosided
 		translucent
 
@@ -599,9 +343,9 @@ textures/decals/websquare
 textures/decals/webcorner
 {
 	qer_editorimage models/mapobjects/webs/corner.tga
-        noSelfShadow
+		noSelfShadow
 		noshadows
-	    nonsolid
+		nonsolid
 		twosided
 		translucent
 
@@ -620,7 +364,7 @@ textures/decals/berserk
 
 	qer_editorimage		textures/editor/dontuse.tga
 
-	
+
 	{	// write alpha test values to destination alpha
 		maskcolor				// write only to the alpha channel
 		map textures/decals/berserk2.tga
@@ -630,11 +374,11 @@ textures/decals/berserk
 		clamp
 		translate 0.1, 0.1
 	}
-	
+
 	{
 		blend  gl_dst_alpha, gl_one_minus_dst_alpha
-      	scale		1, -1
-      	translate	0, -1
+	  	scale		1, -1
+	  	translate	0, -1
 		map			_scratch
 		centerscale	0.97, 0.97
 	}
@@ -650,7 +394,7 @@ textures/decals/influence2
 	qer_editorimage		textures/editor/teleport.tga
 	{
 		alpha		0.35
-	    blend		blend
+		blend		blend
 		//centerscale	0.65+0.05*sinTable[time], 0.65+0.05*sinTable[time]
 		translate time * 3, 0
 		map    textures/decals/teleport.tga
@@ -658,7 +402,7 @@ textures/decals/influence2
 	}
 	{
 		alpha		0.35
-	    blend		blend
+		blend		blend
 		//centerscale	0.65+0.05*sinTable[time], 0.65+0.05*sinTable[time]
 		translate time * 0, -2
 		map    textures/decals/teleport.tga
@@ -674,7 +418,7 @@ textures/decals/influence3
 	qer_editorimage		textures/editor/teleport.tga
 	{
 		alpha		0.5 //parm4 * 1
-	    blend		blend
+		blend		blend
 		//centerscale	0.65+0.05*sinTable[time], 0.65+0.05*sinTable[time]
 		translate time * 3, 0
 		map    textures/decals/teleport.tga
@@ -682,7 +426,7 @@ textures/decals/influence3
 	}
 	{
 		alpha		0.5
-	    blend		blend
+		blend		blend
 		//centerscale	0.65+0.05*sinTable[time], 0.65+0.05*sinTable[time]
 		translate time * 0, -2
 		map    textures/decals/teleport.tga
@@ -698,7 +442,7 @@ textures/decals/teleport
 	qer_editorimage		textures/editor/teleport.tga
 	{
 		alpha		0.55
-	    blend		blend
+		blend		blend
 		//centerscale	0.65+0.05*sinTable[time], 0.65+0.05*sinTable[time]
 		translate time * 3, 0
 		map    textures/decals/teleport.tga
@@ -706,7 +450,7 @@ textures/decals/teleport
 	}
 	{
 		alpha		0.55
-	    blend		blend
+		blend		blend
 		//centerscale	0.65+0.05*sinTable[time], 0.65+0.05*sinTable[time]
 		translate time * 0, -2
 		map    textures/decals/teleport.tga
@@ -737,7 +481,7 @@ textures/decals/tunnel
 
 	{
 		alpha		tunnelVisionSolidAlpha[ parm3 ] - (time-parm0)*0.25
-	    blend		blend
+		blend		blend
 		centerscale	0.65+0.05*sinTable[time], 0.65+0.05*sinTable[time]
 		rotate time * -.01
 		map    textures/decals/tunnel.tga
@@ -746,7 +490,7 @@ textures/decals/tunnel
 
 	{
 		alpha		tunnelVisionSolidAlpha[ parm3 ] - (time-parm0)*0.25
-	    blend		blend
+		blend		blend
 		centerscale	0.65+0.05*sinTable[time], 0.65+0.05*sinTable[time]
 		rotate time * .006
 		map    textures/decals/tunnel.tga
@@ -764,7 +508,7 @@ textures/decals/bfgvision
 
 	{
 		alpha		0.15
-	    blend		blend
+		blend		blend
 		//centerscale	0.65+0.05*sinTable[time], 0.65+0.05*sinTable[time]
 		rotate time * -.21
 		map    textures/decals/bfgtunnel.tga
@@ -773,7 +517,7 @@ textures/decals/bfgvision
 
 	{
 		alpha		0.15
-	    blend		blend
+		blend		blend
 		//centerscale	0.65+0.05*sinTable[time], 0.65+0.05*sinTable[time]
 		rotate time * .2
 		map    textures/decals/bfgtunnel.tga
@@ -799,7 +543,7 @@ textures/decals/bfgvision
 //		alpha	0
 //		//centerscale	0.55+0.005*sinTable[time], 0.55+0.005*sinTable[time]
 //	}
-//	
+//
 //	{	// write alpha test values to destination alpha
 //		maskcolor				// write only to the alpha channel
 //		//map makealpha(textures/decals/berserk2.tga)
@@ -807,7 +551,7 @@ textures/decals/bfgvision
 //		//blend	blend
 //		alphaTest 0.5 // - parm3
 //		//centerscale	0.55+0.005*sinTable[time], 0.55+0.005*sinTable[time]
-//		//centerscale 0.1, 
+//		//centerscale 0.1,
 //		//colored
 //	}
 //
@@ -826,7 +570,7 @@ textures/decals/bfgvision
 //		centerscale	0.95+0.005*sinTable[time], 0.95+0.005*sinTable[time]
 //		//colored
 //	}
-///*	
+///*
 //	{	// blend over the tunnel effect
 //		alpha		parm3
 //	    blend		blend
@@ -843,7 +587,7 @@ textures/decals/bfgvision
 //		map    textures/decals/berserk.tga
 //		clamp
 //	}
-//*/	
+//*/
 //
 //}
 
@@ -854,16 +598,16 @@ textures/decals/disposalarea
 	noshadows
 	qer_editorimage	textures/decals/disposalarea.tga
 
-	{       
-      		 blend	diffusemap
+	{
+	  		 blend	diffusemap
 			 map	textures/decals/disposalarea_d.tga
 	   		 alphaTest 0.5
 	}
-	 
-     specularMap textures/decals/disposalarea_s.tga
-	
-	bumpmap	heightmap(textures/decals/disposalarea_b.tga, 1 ) 
-	
+
+	 specularMap textures/decals/disposalarea_s.tga
+
+	bumpmap	heightmap(textures/decals/disposalarea_b.tga, 1 )
+
 }
 
 
@@ -873,14 +617,14 @@ textures/decals/ballburn_plasma
 
 	DECAL_MACRO
 	decalInfo 0.5 10 ( 1 1 1 10 ) ( -5 -5 -5 0 )		// fade rgb down fast (clamps to 0), but leave alpha clamped at 1 for the first nine seconds
-	{       
-      	blend		gl_zero, gl_one_minus_src_alpha
+	{
+	  	blend		gl_zero, gl_one_minus_src_alpha
 		map			makealpha(textures/decals/plasma_burn.tga)
 		clamp		// we don't want it to tile if the projection extends past the bounds
 		vertexColor
 	}
 	{
-      	blend	add  
+	  	blend	add
 		map		textures/decals/plasma_burnfx.tga
 		//blue	fireballtable[ time * .2 ]		// all marks will be flickering the same, unfortunately
 		//green	fireballtable[ time * .2 ]
@@ -900,7 +644,7 @@ textures/decals/ballburn_plasma
 //	twoSided
 //	translucent
 //	qer_editorimage	textures/decals/glass1.tga
-//	
+//
 //	{
 //		blend diffuseMap
 //		map textures/decals/glass1.tga
@@ -919,7 +663,7 @@ textures/decals/ballburn_plasma
 //	twoSided
 //	translucent
 //	qer_editorimage	textures/decals/glass2.tga
-//	
+//
 //	{
 //		blend diffuseMap
 //		map textures/decals/glass2.tga
@@ -939,7 +683,7 @@ textures/decals/shot_glass
 	twoSided
 	translucent
 	qer_editorimage	textures/decals/shot_glass.tga
-	
+
 	{
 		blend diffuseMap
 		map textures/decals/shot_glass.tga
@@ -961,7 +705,7 @@ textures/decals/shot_glass
 //	translucent
 //
 //
-//	{       
+//	{
 //      	blend	add
 //		map		textures/decals/glyphbet02_d.tga
 //		red		(fireballtable[ time * .2]) * parm0
@@ -983,7 +727,7 @@ textures/decals/shot_glass
 //	translucent
 //
 //
-//	{       
+//	{
 //      	blend	add
 //		map		textures/decals/glyphbet01_d.tga
 //		red		(fireballtable[ time * .2]) * parm0
@@ -1005,8 +749,8 @@ textures/decals/symbol06
 	translucent
 
 
-	{       
-      	blend	add
+	{
+	  	blend	add
 		map		textures/decals/symbol06.tga
 		red		(fireballtable[ time * .2]) * parm0
 		green	(fireballtable[ time * .2]) * parm1
@@ -1014,7 +758,7 @@ textures/decals/symbol06
 		colored
 	}
 
-       
+
 
 }
 
@@ -1030,8 +774,8 @@ textures/decals/symbol05
 	translucent
 
 
-	{       
-      	blend	add
+	{
+	  	blend	add
 		map		textures/decals/symbol05.tga
 		red		(fireballtable[ time * .2]) * parm0
 		green	(fireballtable[ time * .2]) * parm1
@@ -1052,8 +796,8 @@ textures/decals/symbol04
 	translucent
 
 
-	{       
-      	blend	add
+	{
+	  	blend	add
 		map		textures/decals/symbol04.tga
 		red		(fireballtable[ time * .2]) * parm0
 		green	(fireballtable[ time * .2]) * parm1
@@ -1074,8 +818,8 @@ textures/decals/symbol03
 	translucent
 
 
-	{       
-      	blend	add
+	{
+	  	blend	add
 		map		textures/decals/symbol03.tga
 		red		(fireballtable[ time * .2]) * parm0
 		green	(fireballtable[ time * .2]) * parm1
@@ -1097,8 +841,8 @@ textures/decals/symbol_letters_31d
 	translucent
 
 
-	{       
-      	blend	add
+	{
+	  	blend	add
 		map		textures/decals/symbol_letters_31d.tga
 		red		(fireballtable[ time * .2]) * parm0
 		green	(fireballtable[ time * .2]) * parm1
@@ -1118,8 +862,8 @@ textures/decals/symbol_letters_32d
 	translucent
 
 
-	{       
-      	blend	add
+	{
+	  	blend	add
 		map		textures/decals/symbol_letters_32d.tga
 		red		(fireballtable[ time * .2]) * parm0
 		green	(fireballtable[ time * .2]) * parm1
@@ -1136,7 +880,7 @@ textures/decals/urine_stain
 	twoSided
 	noshadows
 	qer_editorimage	textures/editor/urine_stain.tga
-	
+
 	{
 		blend diffuseMap
 		map textures/decals/urine_stain.tga
@@ -1246,7 +990,7 @@ textures/decals/urine_stain
 //
 //	{
 //		//colored
-//      	blend	diffuseMap  
+//      	blend	diffuseMap
 //		map textures/decals/random01.tga
 //	}
 //
@@ -1260,14 +1004,14 @@ textures/decals/ballburn01
 
 	DECAL_MACRO
 	decalInfo 0.5 10 ( 1 1 1 10 ) ( -5 -5 -5 0 )		// fade rgb down fast (clamps to 0), but leave alpha clamped at 1 for the first nine seconds
-	{       
-      	blend		gl_zero, gl_one_minus_src_alpha
+	{
+	  	blend		gl_zero, gl_one_minus_src_alpha
 		map			makealpha(textures/decals/ballburn01.tga)
 		clamp		// we don't want it to tile if the projection extends past the bounds
 		vertexColor
 	}
 	{
-      	blend	add  
+	  	blend	add
 		map		textures/decals/ballburn01_fx.tga
 		blue	fireballtable[ time * .2 ]		// all marks will be flickering the same, unfortunately
 		green	fireballtable[ time * .2 ]
@@ -1295,7 +1039,7 @@ textures/decals/bullethurt
 //textures/decals/bulleth03
 //{
 //	DECAL_MACRO
-//	{       
+//	{
 //      	blend	gl_zero, gl_one_minus_src_color
 //		map		textures/decals/bulleth03.tga
 //		clamp			// we don't want it to tile if the projection extends past the bounds
@@ -1309,8 +1053,8 @@ textures/decals/chainsawh02
 	qer_editorimage textures/editor/dontuse.tga
 	DECAL_MACRO
 	decalInfo 10 1 ( 1 1 1 1 ) ( 0 0 0 0 )
-	{       
-      	blend	gl_zero, gl_one_minus_src_color
+	{
+	  	blend	gl_zero, gl_one_minus_src_color
 		map		textures/decals/chainsawh02.tga
 		clamp			// we don't want it to tile if the projection extends past the bounds
 		vertexColor		// oblique projections will be slightly faded down
@@ -1324,8 +1068,8 @@ textures/decals/bulleth02
 	qer_editorimage textures/editor/dontuse.tga
 	DECAL_MACRO
 	decalInfo 10 1 ( 1 1 1 1 ) ( 0 0 0 0 )
-	{       
-      	blend	gl_zero, gl_one_minus_src_color
+	{
+	  	blend	gl_zero, gl_one_minus_src_color
 		map		textures/decals/bulleth02.tga
 		clamp			// we don't want it to tile if the projection extends past the bounds
 		vertexColor		// oblique projections will be slightly faded down
@@ -1337,8 +1081,8 @@ textures/decals/testbulletglass1
 	qer_editorimage textures/editor/dontuse.tga
 	DECAL_MACRO
 	decalInfo 10 1 ( 1 1 1 1 ) ( 0 0 0 0 )
-	{       
-      	blend	gl_zero, gl_one_minus_src_color
+	{
+	  	blend	gl_zero, gl_one_minus_src_color
 		map	 textures/decals/bulletglass1_d.tga
 		clamp			// we don't want it to tile if the projection extends past the bounds
 		vertexColor		// oblique projections will be slightly faded down
@@ -1358,8 +1102,8 @@ textures/decals/pentagramfx
 	translucent
 
 
-	{       
-      	blend	add
+	{
+	  	blend	add
 		map		textures/decals/pentagramfx.tga
 		red		(fireballtable[ time * .2]) * parm0
 		green	(fireballtable[ time * .2]) * parm1
@@ -1373,14 +1117,14 @@ textures/decals/pentagramfx
 //{
 //    noselfShadow
 //	DECAL_MACRO
-//    noshadows	
+//    noshadows
 //	deform sprite
 //	translucent
 //	discrete
 //	nonsolid
 //	noimpact
-//	               	
-// 						bumpmap 		textures/decals/gobdrip_local.tga 
+//
+// 						bumpmap 		textures/decals/gobdrip_local.tga
 //						specularmap		textures/decals/gobdrip.tga
 //}
 
@@ -1408,7 +1152,7 @@ textures/decals/bite01
 	qer_editorimage		textures/decals/bite01.tga
 
 	{
-	   blend  blend  
+	   blend  blend
 		map    textures/decals/bite01.tga
 		colored
 	}
@@ -1423,7 +1167,7 @@ textures/decals/bite01
 //	qer_editorimage		textures/decals/slash03.tga
 //
 //	{
-//	   blend  blend  
+//	   blend  blend
 //		map    textures/decals/slash03.tga
 //		colored
 //	}
@@ -1438,7 +1182,7 @@ textures/decals/bite01
 //	qer_editorimage		textures/decals/slash02.tga
 //
 //	{
-//	   blend  blend  
+//	   blend  blend
 //		map    textures/decals/slash02.tga
 //		colored
 //	}
@@ -1453,7 +1197,7 @@ textures/decals/bite01
 //	qer_editorimage		textures/decals/slash01.tga
 //
 //	{
-//	   blend add 
+//	   blend add
 //		map    textures/decals/slash01.tga
 //		colored
 //	}
@@ -1477,7 +1221,7 @@ textures/decals/bloodspray
 	qer_editorimage		textures/decals/bloodspray.tga
 
 	{
-	   blend  blend  
+	   blend  blend
 		map    textures/decals/bloodspray.tga
 		colored
 	}
@@ -1506,7 +1250,7 @@ genericDamage
 	noshadows
 	translucent
 	{
-      	 blend gl_dst_color,gl_zero
+	  	 blend gl_dst_color,gl_zero
 		//blend  blend
 		map    textures/decals/genericdamage.tga
 		colored
@@ -1532,13 +1276,13 @@ leftSlash
 	translucent
 
 /*	{
-                program         heatHazeWithMaskAndVertex.vfp
-                vertexParm              0               0                               // texture scrolling
-                vertexParm              1               .2                             // magnitude of the distortion
-                fragmentMap             0               _currentRender
-                fragmentMap     		1       textures/decals/slash01_vp  // the normal map for distortion
-                fragmentMap             2       textures/decals/slash01_vpalpha.tga   // the distortion blend map
-      }
+				program         heatHazeWithMaskAndVertex.vfp
+				vertexParm              0               0                               // texture scrolling
+				vertexParm              1               .2                             // magnitude of the distortion
+				fragmentMap             0               _currentRender
+				fragmentMap     		1       textures/decals/slash01_vp  // the normal map for distortion
+				fragmentMap             2       textures/decals/slash01_vpalpha.tga   // the distortion blend map
+	  }
 */
 	{
 		blend  blend
@@ -1553,13 +1297,13 @@ rightSlash
 	noshadows
 	translucent
 /*	{
-                program         heatHazeWithMaskAndVertex.vfp
-                vertexParm              0               0                               // texture scrolling
-                vertexParm              1               .2                             // magnitude of the distortion
-                fragmentMap             0               _currentRender
-                fragmentMap     		1       textures/decals/slash01b_vp  // the normal map for distortion
-                fragmentMap             2       textures/decals/slash01b_vpalpha.tga   // the distortion blend map
-    }
+				program         heatHazeWithMaskAndVertex.vfp
+				vertexParm              0               0                               // texture scrolling
+				vertexParm              1               .2                             // magnitude of the distortion
+				fragmentMap             0               _currentRender
+				fragmentMap     		1       textures/decals/slash01b_vp  // the normal map for distortion
+				fragmentMap             2       textures/decals/slash01b_vpalpha.tga   // the distortion blend map
+	}
 */
 	{
 		blend  blend
@@ -1683,16 +1427,16 @@ pinkySlash
 //
 //
 //
-//	{       
+//	{
 //      		 blend	diffusemap
 //			 map	textures/decals/hurt01.tga
 //	   		 alphaTest 0.5
 //	}
 //
-//	specularmap 	textures/decals/hurt01_s.tga		    
-//	bumpmap 	heightmap(textures/decals/hurt01_h.tga, 16 ) 
+//	specularmap 	textures/decals/hurt01_s.tga
+//	bumpmap 	heightmap(textures/decals/hurt01_h.tga, 16 )
 //
-//       
+//
 //}
 
 //textures/decals/hurt05
@@ -1701,12 +1445,12 @@ pinkySlash
 //	qer_editorimage textures/decals/hurt05.tga
 //	DECAL_MACRO
 //
-//	{       
+//	{
 //      	 blend gl_dst_color,gl_zero
 //	 map	textures/decals/hurt05.tga
 //	}
-//	{       
-//      	 blend	add  
+//	{
+//      	 blend	add
 //	 map	textures/decals/hurt05_fx.tga
 //		rgb		fireballtable[ time * .5 ]
 //	}
@@ -1720,7 +1464,7 @@ pinkySlash
 //
 //	qer_editorimage textures/decals/hurt04.tga
 //	DECAL_MACRO
-//	{       
+//	{
 //      	 blend gl_dst_color,gl_zero
 //	 map	textures/decals/hurt04.tga
 //			 clamp
@@ -1737,7 +1481,7 @@ pinkySlash
 //	qer_editorimage textures/decals/hurt03.tga
 //	DECAL_MACRO
 //
-//	{       
+//	{
 //      	 blend gl_dst_color,gl_zero
 //	 map	textures/decals/hurt03.tga
 //			 clamp
@@ -1790,16 +1534,16 @@ textures/decals/hurtmetal
 //
 //
 //
-//	{       
+//	{
 //      	 blend	diffusemap
 //	 map	textures/decals/bulleth01_d.tga
 //	   alphaTest 0.5
 //	}
-//	specularmap 	textures/decals/bulleth01_s.tga	
+//	specularmap 	textures/decals/bulleth01_s.tga
 //	bumpmap 	    textures/decals/bulleth01_local.tga
 //
 //
-//       
+//
 //
 //}
 
@@ -1816,11 +1560,11 @@ textures/decals/hurtmetal
 //	noimpact
 //
 //
-//	{       
+//	{
 //      	 blend	add
 //	 map	textures/decals/blood_drop_d.tga
 //	}
-// 
+//
 // }
 
 textures/decals/blood_drop2
@@ -1831,8 +1575,8 @@ textures/decals/blood_drop2
 	noimpact
 
 
-	{       
-      	 blend	add 
+	{
+	  	 blend	add
 	 map	textures/decals/blood_drop3_d.tga
 	 alphaTest 0.5
 	}
@@ -1846,7 +1590,7 @@ textures/decals/blood_drop2
 //	twoSided
 //	noshadows
 //	qer_editorimage	textures/decals/glass_on_floor.tga
-//	
+//
 //	{
 //		blend diffuseMap
 //		map textures/decals/glass_on_floor.tga
@@ -1866,7 +1610,7 @@ textures/decals/blood_drop2
 //	twoSided
 //	noshadows
 //	qer_editorimage	textures/decals/glass_on_floor2.tga
-//	
+//
 //	{
 //		blend diffuseMap
 //		map textures/decals/glass_on_floor2.tga
@@ -1897,7 +1641,7 @@ textures/decals/stainwall
 	{
 		blend gl_dst_color,gl_zero
 		map textures/decals/stainwall.tga
-	}	
+	}
 }
 
 textures/decals/stainwallfade
@@ -1909,19 +1653,19 @@ textures/decals/stainwallfade
 	{
 		blend gl_dst_color,gl_zero
 		map textures/decals/stainwallfade.tga
-	}	
+	}
 }
 
 //textures/decals/stainwallfade2
 //{
 //
-//	
+//
 //	//polygonOffset
 //	qer_editorimage	textures/decals/stainwallfade2.tga
 //	{
 //		blend  filter
 //		map textures/decals/stainwallfade2.tga
-//	}	
+//	}
 //}
 
 
@@ -1935,7 +1679,7 @@ textures/decals/stainwallred
 		//blend gl_dst_color,gl_zero
 		blend filter
 		map textures/decals/stainwallred.tga
-	}	
+	}
 }
 
 textures/decals/a_stainwallred
@@ -1948,7 +1692,7 @@ textures/decals/a_stainwallred
 		//blend gl_dst_color,gl_zero
 		blend filter
 		map textures/decals/a_stainwallred.tga
-	}	
+	}
 }
 
 textures/decals/stainwallfadered
@@ -1961,7 +1705,7 @@ textures/decals/stainwallfadered
 		//blend gl_dst_color,gl_zero
 		blend filter
 		map textures/decals/stainwallfadered.tga
-	}	
+	}
 }
 
 textures/decals/dirty_frame
@@ -1977,7 +1721,7 @@ textures/decals/dirty_frame
 	{
 		blend gl_dst_color,gl_zero
 		map textures/decals/dirty_frame.tga
-	}	
+	}
 }
 
 
@@ -1994,7 +1738,7 @@ textures/decals/drip2
 	{
 		blend gl_dst_color,gl_zero
 		map textures/decals/drip2_d.tga
-	}	
+	}
 }
 
 //textures/decals/sci_logo
@@ -2010,7 +1754,7 @@ textures/decals/drip2
 //
 //	{
 //		colored
-//      	blend	diffuseMap  
+//      	blend	diffuseMap
 //		map textures/decals/sci_logo.tga
 //	}
 //
@@ -2053,7 +1797,7 @@ textures/decals/ind_logo2
 
 	{
 		colored
-      	blend	add  
+	  	blend	add
 		map textures/decals/ind_logo2.tga
 	}
 
@@ -2068,14 +1812,14 @@ textures/decals/ind_logo2
 //	noShadows
 //	nonsolid
 //	noimpact
-//	
+//
 //twoSided
 //	translucent
 //
 //
 //	{
 //		colored
-//		blend	add  
+//		blend	add
 //		map textures/decals/corp_logo2.tga
 //	}
 //
@@ -2093,8 +1837,8 @@ textures/decals/glass_crack1
 	translucent
 
 
-	{       
-      	 blend	diffuseMap  
+	{
+	  	 blend	diffuseMap
 	 map	textures/decals/glass_crack1.tga
 	}
 
@@ -2111,14 +1855,14 @@ textures/decals/glass_crack1
 //	noimpact
 //
 //
-//	{       
-//      	 blend	diffuseMap 
+//	{
+//      	 blend	diffuseMap
 //	 map	textures/decals/widget.tga
 //	 alphaTest 0.5
 //	}
 //
 //	specularmap	textures/decals/widget_s.tga
-//        	bumpmap		textures/decals/widget_local.tga 
+//        	bumpmap		textures/decals/widget_local.tga
 //
 // }
 
@@ -2135,7 +1879,7 @@ textures/decals/military_logo
 
 	{
 		colored
-      	blend	diffuseMap  
+	  	blend	diffuseMap
 		map textures/decals/military_logo.tga
 	}
 
@@ -2157,7 +1901,7 @@ textures/decals/ind_logo1
 
 	{
 		colored
-      	blend	diffuseMap  
+	  	blend	diffuseMap
 		map textures/decals/ind_logo1.tga
 	}
 
@@ -2177,9 +1921,9 @@ textures/decals/corp_logo1
 	translucent
 
 
-	{       
-      	colored
-		blend diffuseMap 
+	{
+	  	colored
+		blend diffuseMap
 	 map	textures/decals/corp_logo1.tga
 	}
 
@@ -2188,7 +1932,7 @@ textures/decals/corp_logo1
 //textures/decals/alphabet5
 //{
 //	qer_editorimage textures/decals/alphabet5.tga
-//	DECAL_MACRO	
+//	DECAL_MACRO
 //	noShadows
 //	twoSided
 //	nonsolid
@@ -2197,8 +1941,8 @@ textures/decals/corp_logo1
 //
 //
 //	{
-//		colored       
-//      		blend	add  
+//		colored
+//      		blend	add
 //		map textures/decals/alphabet5_d.tga
 //	}
 //
@@ -2217,8 +1961,8 @@ textures/decals/alphabet4
 
 
 	{
-		colored       
-      		blend	diffuseMap  
+		colored
+	  		blend	diffuseMap
 		map	textures/decals/alphabet4_d.tga
 	}
 
@@ -2237,8 +1981,8 @@ textures/decals/alphabet4blk
 
 
 	{
-		colored       
-      		blend	filter  
+		colored
+	  		blend	filter
 		map	textures/decals/alphabet4blk_d.tga
 	}
 
@@ -2257,8 +2001,8 @@ textures/decals/alphabet4blk
 //
 //
 //	{
-//		colored       
-//      		blend	diffuseMap  
+//		colored
+//      		blend	diffuseMap
 //		map	textures/decals/arrow1.tga
 //	}
 //
@@ -2277,8 +2021,8 @@ textures/decals/arrow2
 
 
 	{
-		colored       
-      		blend	diffuseMap  
+		colored
+	  		blend	diffuseMap
 		map	textures/decals/arrow2.tga
 	}
 
@@ -2297,8 +2041,8 @@ textures/decals/alphabet6
 
 
 	{
-		colored       
-      		blend	diffuseMap  
+		colored
+	  		blend	diffuseMap
 		map	textures/decals/alphabet6_d.tga
 	}
 
@@ -2317,8 +2061,8 @@ textures/decals/alphabet6blk
 
 
 	{
-		colored       
-      		blend	filter  
+		colored
+	  		blend	filter
 		map	textures/decals/alphabet6blk_d.tga
 	}
 
@@ -2336,8 +2080,8 @@ textures/decals/alphabet6blk
 //	translucent
 //
 //
-//	{       
-//      	 blend	diffuseMap  
+//	{
+//      	 blend	diffuseMap
 //	 map	textures/decals/whitesquare64.tga
 //	}
 //
@@ -2355,8 +2099,8 @@ textures/decals/whitesquare128
 	translucent
 
 
-	{       
-      	 blend	diffuseMap  
+	{
+	  	 blend	diffuseMap
 	 map	textures/decals/whitesquare128.tga
 	}
 
@@ -2371,7 +2115,7 @@ textures/decals/scannersquare
 	{
 		blend gl_dst_color,gl_zero
 		map textures/decals/scannersquare.tga
-	}	
+	}
 }
 
 textures/decals/step01
@@ -2384,8 +2128,8 @@ textures/decals/step01
 	translucent
 
 
-	{       
-      	 blend	diffuseMap  
+	{
+	  	 blend	diffuseMap
 	 map	textures/decals/step01.tga
 	}
 
@@ -2402,13 +2146,13 @@ textures/decals/glasscrack2
 	noshadows
 	//polygonOffset
 	qer_editorimage	textures/decals/glasscrack2.tga
-	
+
 	{
 	 	blend	diffuseMap
 		map	textures/decals/glasscrack2.tga
 	}
 	//bumpmap 	heightmap(textures/decals/glasscrack2_bmp.tga, 15 )
-	
+
 
 }
 
@@ -2422,12 +2166,12 @@ textures/decals/bulletglass2
 	noshadows
 	//polygonOffset
 	qer_editorimage	textures/decals/bulletglass2.tga
-	
+
 	{
 	 	blend	diffuseMap
 		map	 textures/decals/bulletglass2_d.tga
 		colored
-		
+
 	}
 
 
@@ -2444,12 +2188,12 @@ textures/decals/bulletglass1
 	noshadows
 	//polygonOffset
 	qer_editorimage	textures/decals/bulletglass1.tga
-	
+
 	{
 	 	blend	diffuseMap
 		map	 textures/decals/bulletglass1_d.tga
 		colored
-		
+
 	}
 }
 
@@ -2463,8 +2207,8 @@ textures/decals/floor_stripecrn
 	translucent
 
 
-	{       
-      	 blend	diffuseMap  //GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+	{
+	  	 blend	diffuseMap  //GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
 	 map	textures/decals/floor_stripecrn.tga
 	 //alphaTest 0.5
 	}
@@ -2481,7 +2225,7 @@ textures/decals/floor_stripecrn
 //	translucent
 //
 //
-//	{       
+//	{
 //      	 blend	diffuseMap  //GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
 //	 map	textures/decals/floor_stripetrim.tga
 //	 //alphaTest 0.5
@@ -2500,8 +2244,8 @@ textures/decals/floor_stripetrim2
 	translucent
 
 
-	{       
-      	 blend	diffuseMap  //GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+	{
+	  	 blend	diffuseMap  //GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
 	 map	textures/decals/floor_stripetrim2.tga
 	 //alphaTest 0.5
 	}
@@ -2519,8 +2263,8 @@ textures/decals/floor_stripe
 	translucent
 
 
-	{       
-      	 blend	diffuseMap  //GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+	{
+	  	 blend	diffuseMap  //GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
 	 map	textures/decals/floor_stripe.tga
 	 //alphaTest 0.5
 	}
@@ -2536,35 +2280,35 @@ textures/decals/floor_stripe
 //	noShadows
 //
 //
-//	{       
+//	{
 //      	 blend	diffuseMap //GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
 //	 map	textures/decals/pipevent_d.tga
 //	 alphaTest 0.5
 //	}
 //
 //	specularmap	textures/decals/pipevent_s.tga
-//        bumpmap		textures/decals/pipevent_local.tga 
+//        bumpmap		textures/decals/pipevent_local.tga
 //
 // }
 
 
 textures/decals/flap
 
-{ 	
+{
 	noShadows
 	//polygonOffset
 	nonsolid
 	noimpact
 	qer_editorimage textures/editor/flap.tga
 
-	{       
-      	 blend	diffuseMap //GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+	{
+	  	 blend	diffuseMap //GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
 	 map	textures/decals/flap_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/flap_s.tga
  	bumpmap		addnormals(textures/decals/flap_local.tga  , heightmap( textures/decals/flap_h.tga, 6 ) )
-       
+
 
 }
 
@@ -2583,14 +2327,14 @@ textures/decals/stain01bwet
 	{
 		blend gl_dst_color,gl_zero
 		map textures/decals/stain01b.tga
-	}	
+	}
 
 	specularmap	 textures/decals/stain01b_s.tga
 }
 
 //textures/decals/alphabet1
 //{
-//	qer_editorimage	textures/decals/alphabet1.tga	
+//	qer_editorimage	textures/decals/alphabet1.tga
 //	DECAL_MACRO
 //	noshadows
 //	{
@@ -2603,7 +2347,7 @@ textures/decals/stain01bwet
 
 //textures/decals/alphabet2
 //{
-//	qer_editorimage	textures/decals/alphabet2.tga	
+//	qer_editorimage	textures/decals/alphabet2.tga
 //	DECAL_MACRO
 //	noshadows
 //	translucent
@@ -2616,7 +2360,7 @@ textures/decals/stain01bwet
 
 textures/decals/alphabet3
 {
-	qer_editorimage	textures/decals/alphabet3.tga	
+	qer_editorimage	textures/decals/alphabet3.tga
 	DECAL_MACRO
 	noshadows
 	translucent
@@ -2628,7 +2372,7 @@ textures/decals/alphabet3
 }
 
 //textures/decals/shadow
-//{	
+//{
 //	translucent
 //	DECAL_MACRO
 //	twosided
@@ -2644,8 +2388,8 @@ textures/decals/wheel
 {
 	noShadows
 	qer_editorimage textures/editor/wheel.tga
-	{       
-      	 blend	diffuseMap //GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+	{
+	  	 blend	diffuseMap //GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
 	 map	textures/decals/wheel_d.tga
 	 alphaTest 0.5
 	}
@@ -2653,7 +2397,7 @@ textures/decals/wheel
 	specularmap	textures/decals/wheel_s.tga
 
 	bumpmap		addnormals( textures/decals/wheel_local.tga  , heightmap( textures/decals/wheel_h.tga, 6 ) )
-   	
+
 
  }
 
@@ -2689,19 +2433,19 @@ textures/decals/hangingwires2
 
 textures/decals/spanel
 {
-	
+
 	qer_editorimage textures/editor/spanel.tga
 	noShadows
 
 
-	{       
-      	 blend	diffuseMap //GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+	{
+	  	 blend	diffuseMap //GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
 	 map	textures/base_wall/spanel_d.tga
 	 alphaTest 0.5
 	}
 
 	specularmap	textures/base_wall/spanel_s.tga
-        bumpmap		textures/base_wall/spanel_local.tga 
+		bumpmap		textures/base_wall/spanel_local.tga
 
  }
 
@@ -2715,14 +2459,14 @@ textures/decals/pressurepanel2
 	noimpact
 	qer_editorimage textures/editor/pressurepanel2.tga
 
-	{       
-      	 blend	diffuseMap //GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+	{
+	  	 blend	diffuseMap //GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
 	 map	textures/decals/pressurepanel2_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/pressurepanel2_s.tga
- 	bumpmap	        textures/decals/pressurepanel2_local.tga  
-       
+ 	bumpmap	        textures/decals/pressurepanel2_local.tga
+
 
 }
 
@@ -2732,7 +2476,7 @@ textures/decals/pressurepanel_a
 	qer_editorimage 	textures/editor/pressurepanel_a.tga
 	nonsolid
 	bumpmap			addnormals( textures/decals/pressurepanel_local.tga  , heightmap( textures/decals/pressurepanel_h.tga, 6 ) )
-	{       
+	{
 		blend		diffusemap
 		map		textures/decals/pressurepanel_a_d.tga
 		alphaTest 	0.5
@@ -2742,21 +2486,21 @@ textures/decals/pressurepanel_a
 
 textures/decals/pressurepanel
 {
-	//DECAL_MACRO 	
+	//DECAL_MACRO
 	noShadows
 	//polygonOffset
 	nonsolid
 	noimpact
 	qer_editorimage textures/editor/pressurepanel.tga
 
-	{       
-     	 blend	diffuseMap //GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+	{
+	 	 blend	diffuseMap //GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
 	 map		textures/decals/pressurepanel_d.tga
 	 alphaTest 	0.5
 	}
 	specularmap	textures/decals/pressurepanel_s.tga
  	bumpmap		addnormals( textures/decals/pressurepanel_local.tga  , heightmap( textures/decals/pressurepanel_h.tga, 6 ) )
-       
+
 
 }
 
@@ -2770,14 +2514,14 @@ textures/decals/pressurepanel
 //	noimpact
 //	qer_editorimage textures/decals/vent01.tga
 //
-//	{       
+//	{
 //      	 blend	diffuseMap //GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
 //	 map	textures/decals/vent01_d.tga
 //	 alphaTest 0.5
 //	}
 //	specularmap	textures/decals/vent01_s.tga
 //	bumpmap 	textures/decals/vent01_local.tga
-//       
+//
 //
 //}
 
@@ -2796,7 +2540,7 @@ textures/decals/skid_tilecap2
 	{
 		blend gl_dst_color,gl_zero
 		map textures/decals/skid_tilecap2.tga
-	}	
+	}
 }
 
 //textures/decals/skid_tilecap1
@@ -2812,7 +2556,7 @@ textures/decals/skid_tilecap2
 //	{
 //		blend gl_dst_color,gl_zero
 //		map textures/decals/skid_tilecap1.tga
-//	}	
+//	}
 //}
 
 
@@ -2829,7 +2573,7 @@ textures/decals/skid_turn
 	{
 		blend gl_dst_color,gl_zero
 		map textures/decals/skid_turn_d.tga
-	}	
+	}
 }
 
 
@@ -2847,7 +2591,7 @@ textures/decals/skid_tile
 	{
 		blend gl_dst_color,gl_zero
 		map textures/decals/skid_tile.tga
-	}	
+	}
 }
 
 
@@ -2866,7 +2610,7 @@ textures/decals/skid
 	{
 		blend gl_dst_color,gl_zero
 		map textures/decals/skid.tga
-	}	
+	}
 }
 
 
@@ -2881,14 +2625,14 @@ textures/decals/cam_base
 	noimpact
 	qer_editorimage textures/editor/cam_base.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/cam_base_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/cam_base_s.tga
 	bumpmap 	textures/decals/cam_base_local.tga
-       
+
 
 }
 
@@ -2900,14 +2644,14 @@ textures/decals/cam_base2
 	noimpact
 	qer_editorimage textures/editor/cam_base2.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/cam_base2_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/cam_base2_s.tga
 	bumpmap 	addnormals (textures/decals/cam_base_local.tga, heightmap (textures/decals/cam_base2_b.tga, 1 ))
-       
+
 
 }
 
@@ -2920,14 +2664,14 @@ textures/decals/floordiv
 	noimpact
 	qer_editorimage textures/editor/floordiv.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/floordiv_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/floordiv_s.tga
 	bumpmap 	textures/decals/floordiv_local.tga
-       
+
 
 }
 
@@ -2941,14 +2685,14 @@ textures/decals/floordiv
 //	noimpact
 //	qer_editorimage textures/decals/wall_wire.tga
 //
-//	{       
+//	{
 //      	 blend	diffusemap
 //	 map	textures/decals/wall_wire_d.tga
 //	 alphaTest 0.5
 //	}
 //	specularmap	textures/decals/wall_wire_s.tga
 //	bumpmap 	textures/decals/wall_wire_local.tga
-//       
+//
 //
 //}
 
@@ -2962,14 +2706,14 @@ textures/decals/floordiv
 //	noimpact
 //	qer_editorimage textures/decals/plugin.tga
 //
-//	{       
+//	{
 //      	 blend	diffusemap
 //	 map	textures/decals/plugin_d.tga
 //	 alphaTest 0.5
 //	}
 //	specularmap	textures/decals/plugin_s.tga
 //	bumpmap 	textures/decals/plugin_local.tga
-//       
+//
 //
 //}
 
@@ -2983,14 +2727,14 @@ textures/decals/floor_drain
 	noimpact
 	qer_editorimage textures/editor/floor_drain.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/floor_drain_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/floor_drain_s.tga
 	bumpmap 	textures/decals/floor_drain_local.tga
-       
+
 
 }
 
@@ -3002,14 +2746,14 @@ textures/decals/floor_drain2
 	noimpact
 	qer_editorimage textures/editor/floor_drain2.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/floor_drain2_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/floor_drain2_s.tga
 	bumpmap 	addnormals (textures/decals/floor_drain_local.tga , heightmap (textures/decals/floor_drain2_b.tga ,2))
-       
+
 
 }
 
@@ -3026,7 +2770,7 @@ textures/decals/achtung
 	{
 		blend gl_dst_color,gl_zero
 		map textures/decals/achtung_d.tga
-	}	
+	}
 }
 
 
@@ -3039,14 +2783,14 @@ textures/decals/pipeterm
 	noimpact
 	qer_editorimage textures/editor/pipeterm.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/pipeterm_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/pipeterm_s.tga
 	bumpmap 	textures/decals/pipeterm_local.tga
-       
+
 
 }
 
@@ -3060,14 +2804,14 @@ textures/decals/pipeterm_rust
 	noimpact
 	qer_editorimage textures/editor/pipeterm_rust.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/pipeterm_rust_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/pipeterm_rust_s.tga
 	bumpmap 	textures/decals/pipeterm_local.tga
-       
+
 
 }
 
@@ -3079,14 +2823,14 @@ textures/decals/pipeterm3
 	noimpact
 	qer_editorimage textures/editor/pipeterm3.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/pipeterm3_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/pipeterm3_s.tga
 	bumpmap 	addnormals (textures/decals/pipeterm_local.tga, heightmap (textures/decals/pipeterm3_b.tga, 1 ))
-       
+
 
 }
 
@@ -3100,14 +2844,14 @@ textures/decals/bcap
 	noimpact
 	qer_editorimage textures/editor/bcap.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/bcap_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/bcap_s.tga
 	bumpmap 	textures/decals/bcap_local.tga
-       
+
 
 }
 
@@ -3115,13 +2859,13 @@ textures/decals/bootprint01
 {
 	qer_editorimage textures/editor/dontuse.tga
 	DECAL_MACRO
-	{       
-      	blend		gl_zero, gl_one_minus_src_color
+	{
+	  	blend		gl_zero, gl_one_minus_src_color
 		map 		textures/decals/bootprint01_d.tga
 		clamp		// we don't want it to tile if the projection extends past the bounds
 		rgb			decalFade[(time - Parm3)/(parm4 - parm3)]
 		vertexColor	// oblique projections will be slightly faded down
-	}	
+	}
 }
 
 
@@ -3132,13 +2876,13 @@ textures/decals/footprint01r
 	nonsolid
 	noimpact
 	DECAL_MACRO
-	{       
-      	blend		gl_zero, gl_one_minus_src_color
+	{
+	  	blend		gl_zero, gl_one_minus_src_color
 		map 		textures/decals/footprint01r_d.tga
 		clamp		// we don't want it to tile if the projection extends past the bounds
 		rgb			decalFade[(time - Parm3)/(parm4 - parm3)]
 		vertexColor	// oblique projections will be slightly faded down
-	}	
+	}
 }
 
 
@@ -3149,13 +2893,13 @@ textures/decals/footprint01
 	nonsolid
 	noimpact
 	DECAL_MACRO
-	{       
-      	blend		gl_zero, gl_one_minus_src_color
+	{
+	  	blend		gl_zero, gl_one_minus_src_color
 		map 		textures/decals/footprint01_d.tga
 		clamp		// we don't want it to tile if the projection extends past the bounds
 		rgb			decalFade[(time - Parm3)/(parm4 - parm3)]
 		vertexColor	// oblique projections will be slightly faded down
-	}	
+	}
 }
 
 textures/decals/handprint02
@@ -3171,7 +2915,7 @@ textures/decals/handprint02
 	{
 		blend gl_dst_color,gl_zero
 		map textures/decals/handprint02_d.tga
-	}	
+	}
 }
 
 textures/decals/smear01
@@ -3188,8 +2932,8 @@ textures/decals/smear01
 	{
 		blend gl_dst_color,gl_zero
 		map textures/decals/smear01_d.tga
-	}	
-	
+	}
+
 }
 
 textures/decals/handprint01
@@ -3205,7 +2949,7 @@ textures/decals/handprint01
 	{
 		blend gl_dst_color,gl_zero
 		map textures/decals/handprint01_d.tga
-	}	
+	}
 }
 
 //textures/decals/smoke01
@@ -3221,7 +2965,7 @@ textures/decals/handprint01
 //		blend gl_dst_color,gl_zero
 //		map textures/decals/smoke01.tga
 //		scroll time * .1 , time * .0
-//	}	
+//	}
 //	{
 //		blend gl_dst_color,gl_zero
 //		map textures/decals/smoke01.tga
@@ -3243,7 +2987,7 @@ textures/decals/handprint01
 //	{
 //		blend gl_dst_color,gl_zero
 //		map textures/decals/drip.tga
-//	}	
+//	}
 //}
 
 textures/decals/stain01
@@ -3259,7 +3003,7 @@ textures/decals/stain01
 	{
 		blend gl_dst_color,gl_zero
 		map textures/decals/stain01.tga
-	}	
+	}
 }
 
 textures/decals/stain03
@@ -3275,7 +3019,7 @@ textures/decals/stain03
 	{
 		blend gl_dst_color,gl_zero
 		map textures/decals/stain03.tga
-	}	
+	}
 }
 textures/decals/stain01b
 {
@@ -3290,7 +3034,7 @@ textures/decals/stain01b
 	{
 		blend gl_dst_color,gl_zero
 		map textures/decals/stain01b.tga
-	}	
+	}
 }
 
 textures/decals/stain02
@@ -3306,7 +3050,7 @@ textures/decals/stain02
 	{
 		blend gl_dst_color,gl_zero
 		map textures/decals/stain02.tga
-	}	
+	}
 }
 
 textures/decals/graffiti2
@@ -3322,7 +3066,7 @@ textures/decals/graffiti2
 	{
 		blend gl_dst_color,gl_zero
 		map textures/decals/graffiti2.tga
-	}	
+	}
 }
 
 
@@ -3339,7 +3083,7 @@ textures/decals/graffiti2
 //	{
 //		blend gl_dst_color,gl_zero
 //		map textures/decals/graffiti.tga
-//	}	
+//	}
 //}
 
 textures/decals/fgrill
@@ -3352,14 +3096,14 @@ textures/decals/fgrill
 	//polygonOffset
 	qer_editorimage textures/decals/fgrill.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/fgrill_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/fgrill_s.tga
 	bumpmap 	textures/decals/fgrill_local.tga
-       
+
 
 }
 textures/decals/fgrill2
@@ -3370,14 +3114,14 @@ textures/decals/fgrill2
 	noimpact
 	qer_editorimage textures/decals/fgrill2.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/fgrill2_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/fgrill2_s.tga
 	bumpmap 	addnormals( textures/decals/fgrill_local.tga , heightmap ( textures/decals/fgrill2_b.tga, 1 ) )
-       
+
 
 }
 //textures/decals/toiletmunge
@@ -3389,14 +3133,14 @@ textures/decals/fgrill2
 //	//polygonOffset
 //	qer_editorimage textures/decals/toiletmunge.tga
 //
-//	{       
+//	{
 //      	 blend diffusemap
 //	 map	textures/decals/toiletmunge_d.tga
 //	 alphaTest 0.5
 //	}
-//	specularmap	textures/decals/toiletmunge.tga	
-//	bumpmap 	heightmap(textures/decals/toiletmunge_b.tga, 7 ) 
-//       
+//	specularmap	textures/decals/toiletmunge.tga
+//	bumpmap 	heightmap(textures/decals/toiletmunge_b.tga, 7 )
+//
 //
 //}
 
@@ -3410,14 +3154,14 @@ textures/decals/bdrain
 	//polygonOffset
 	qer_editorimage textures/editor/bdrain.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/bdrain_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/bdrain_s.tga
 	bumpmap 	textures/decals/bdrain_local.tga
-       
+
 
 }
 
@@ -3431,14 +3175,14 @@ textures/decals/bathpanel
 	//polygonOffset
 	qer_editorimage textures/editor/bathpanel.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/bathpanel_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/bathpanel_s.tga
 	bumpmap 	textures/decals/bathpanel_local.tga
-       
+
 
 }
 
@@ -3452,14 +3196,14 @@ textures/decals/sprinklercap
 	noimpact
 	qer_editorimage textures/editor/sprinklercap.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/sprinklercap_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/sprinklercap_s.tga
 	bumpmap 	textures/decals/sprinklercap_local.tga
-       
+
 
 }
 
@@ -3471,14 +3215,14 @@ textures/decals/hivent03
 	noimpact
 	qer_editorimage textures/editor/hivent03.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/hivent03_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/hivent03_s.tga
 	bumpmap 	addnormals (textures/decals/hivent01_local.tga , heightmap (textures/decals/hivent03_b.tga , 1 ))
-       
+
 }
 
 //textures/decals/hivent02
@@ -3492,14 +3236,14 @@ textures/decals/hivent03
 //	noimpact
 //	qer_editorimage textures/decals/hivent02.tga
 //
-//	{       
+//	{
 //      	 blend	diffusemap
 //	 map	textures/decals/hivent02_d.tga
 //	 alphaTest 0.5
 //	}
 //	specularmap	textures/decals/hivent01_s.tga
 //	bumpmap 	textures/decals/hivent01_local.tga
-//       
+//
 //
 //}
 
@@ -3509,20 +3253,20 @@ textures/decals/hivent01
 {
 
  	noShadows
-        //noselfshadow
+		//noselfshadow
 	//polygonOffset
 	nonsolid
 	noimpact
 	qer_editorimage textures/editor/hivent01.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/hivent01_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/hivent01_s.tga
 	bumpmap 	textures/decals/hivent01_local.tga
-       
+
 
 }
 
@@ -3533,14 +3277,14 @@ textures/decals/snippers
  	noShadows
 	qer_editorimage textures/editor/snippers.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/snippers_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/snippers_s.tga
 	bumpmap 	textures/decals/snippers_local.tga
-       
+
 
 }
 
@@ -3554,14 +3298,14 @@ textures/decals/snippers
 //	//polygonOffset
 //	qer_editorimage textures/decals/drain.tgabl
 //
-//	{       
+//	{
 //      	 blend	diffusemap
 //	 map	textures/decals/drain_d.tga
 //	 alphaTest 0.5
 //	}
 //	specularmap	textures/decals/drain_s.tga
 //	bumpmap 	textures/decals/drain_local.tga
-//       
+//
 //
 //}
 
@@ -3579,16 +3323,16 @@ textures/decals/snippers
 //
 //
 //	{
-//       
+//
 //      	 blend	diffusemap
 //	 map	textures/decals/bloodpool01_d.tga
 //	               alphaTest 0.5
-//	
+//
 //	}
 //
 //	//{
 ////
-////	blend specularmap	
+////	blend specularmap
 ////	map 	textures/decals/bloodpool01_s.tga
 ////	scroll time * .02 , time * .01
 ////
@@ -3596,16 +3340,16 @@ textures/decals/snippers
 //
 //	{
 //
-//	blend bumpmap 	
-//	map	heightmap(textures/decals/bloodpool01_b.tga, 4 ) 
-//	
+//	blend bumpmap
+//	map	heightmap(textures/decals/bloodpool01_b.tga, 4 )
+//
 //	}
 //	{
 //		blend add
 //		cubeMap		env/qcw
 //		texgen		reflect
 //	}
-//       
+//
 //
 //
 //
@@ -3643,27 +3387,27 @@ textures/decals/snippers
 ////	qer_editorimage textures/decals/bloodpool01.tga
 //
 //	{
-//       
+//
 //      	 blend diffuseMap
 //	 map	textures/decals/bloodrun02.tga
 //		alphaTest 0.5
 //	scroll time * .0 , time * -0.07
-//	
+//
 //	}
 //	{
-//       
+//
 //      	blend diffuseMap
 ////	GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
 //	 map	textures/decals/bloodrun01.tga
 //		alphaTest 0.5
 //	scroll time * .0 , time * -0.005
-//	
+//
 //	}
-//	
+//
 //
 //	{
 //
-//	blend specularmap	
+//	blend specularmap
 //	map 	textures/decals/bloodrun01_s.tga
 //	scroll time * .0 , time * -0.01
 //
@@ -3671,10 +3415,10 @@ textures/decals/snippers
 //
 //	{
 //
-//	blend bumpmap 	
-//	map	heightmap(textures/decals/bloodrun01_b.tga, 9 ) 
+//	blend bumpmap
+//	map	heightmap(textures/decals/bloodrun01_b.tga, 9 )
 //	scroll time * .0 , time * -0.02
-//	
+//
 //	}
 //}
 
@@ -3689,14 +3433,14 @@ textures/decals/snippers
 //	noimpact
 //	qer_editorimage textures/decals/caution_hazardous_material.tga
 //
-//	{       
+//	{
 //      blend	diffusemap
 //	 map	textures/decals/caution_hazardous_material_d.tga
 //	 alphaTest 0.5
 //	}
 //	specularmap	textures/decals/caution_hazardous_material_s.tga
-//	bumpmap 	heightmap(textures/decals/caution_hazardous_material_b.tga, 1 ) 
-//       
+//	bumpmap 	heightmap(textures/decals/caution_hazardous_material_b.tga, 1 )
+//
 //
 //}
 
@@ -3708,14 +3452,14 @@ textures/decals/no_smoking
 	//polygonOffset
 	nonsolid
 	noimpact
-	{       
-      blend	diffusemap
+	{
+	  blend	diffusemap
 	 map	textures/decals/no_smoking_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/no_smoking_s.tga
-	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 )
+
 
 }
 
@@ -3728,13 +3472,13 @@ textures/decals/no_smoking
 //	nonsolid
 //	noimpact
 //
-//	{       
+//	{
 //      	 blend		diffusemap
 //	 map		textures/decals/breathingair_d.tga
 //	 alphaTest 0.5
 //	}
-//	
-//	       
+//
+//
 //
 //}
 
@@ -3749,14 +3493,14 @@ textures/decals/high_voltage
 	noimpact
 	qer_editorimage textures/decals/high_voltage.tga
 
-	{       
-      blend	diffusemap
+	{
+	  blend	diffusemap
 	 map	textures/decals/high_voltage_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/high_voltage_s.tga
-	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 )
+
 
 }
 
@@ -3770,14 +3514,14 @@ textures/decals/no_eating
 	noimpact
 	qer_editorimage textures/decals/no_eating.tga
 
-	{       
-      blend	diffusemap
+	{
+	  blend	diffusemap
 	 map	textures/decals/no_eating_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/no_eating_s.tga
-	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 )
+
 
 }
 
@@ -3788,7 +3532,7 @@ textures/decals/danger_atmos
 	nonsolid
 	noimpact
 	qer_editorimage textures/decals/danger_atmos
-	{       
+	{
 		blend		diffusemap
 		map			textures/decals/danger_atmos
 		alphaTest	0.5
@@ -3806,14 +3550,14 @@ textures/decals/danger_author_person
 	noimpact
 	qer_editorimage textures/decals/danger_author_person.tga
 
-	{       
-      blend	diffusemap
+	{
+	  blend	diffusemap
 	 map	textures/decals/danger_author_person_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/danger_author_person_s.tga
-	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 )
+
 
 }
 
@@ -3827,14 +3571,14 @@ textures/decals/report_injuries
 	noimpact
 	qer_editorimage textures/decals/report_injuries.tga
 
-	{       
-      blend	diffusemap
+	{
+	  blend	diffusemap
 	 map	textures/decals/report_injuries_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/report_injuries_s.tga
-	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 )
+
 
 }
 
@@ -3849,14 +3593,14 @@ textures/decals/report_injuries
 //	noimpact
 //	qer_editorimage textures/decals/report_all_spills.tga
 //
-//	{       
+//	{
 //      blend	diffusemap
 //	 map	textures/decals/report_all_spills_d.tga
 //	 alphaTest 0.5
 //	}
 //	specularmap	textures/decals/report_all_spills_s.tga
-//	bumpmap 	heightmap(textures/decals/report_all_spills_b.tga, 1 ) 
-//       
+//	bumpmap 	heightmap(textures/decals/report_all_spills_b.tga, 1 )
+//
 //
 //}
 
@@ -3869,14 +3613,14 @@ textures/decals/first_aid_stat
 	noimpact
 	qer_editorimage textures/decals/first_aid_stat.tga
 
-	{       
-      blend	diffusemap
+	{
+	  blend	diffusemap
 	 map	textures/decals/first_aid_stat_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/first_aid_stat_s.tga
-	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 )
+
 
 }
 
@@ -3889,13 +3633,13 @@ textures/decals/first_aid_stat
 //	noimpact
 //	qer_editorimage textures/decals/one_way.tga
 //
-//	{       
+//	{
 //      blend	diffusemap
 //	 map	textures/decals/one_way_d.tga
 //	 alphaTest 0.5
 //	}
 //	specularmap	textures/decals/one_way_s.tga
-//	bumpmap 	heightmap(textures/decals/one_way_b.tga, 1 ) 
+//	bumpmap 	heightmap(textures/decals/one_way_b.tga, 1 )
 //}
 
 //textures/decals/employee_door_sign
@@ -3908,14 +3652,14 @@ textures/decals/first_aid_stat
 //	noimpact
 //	qer_editorimage textures/decals/employee_door_sign.tga
 //
-//	{       
+//	{
 //      blend	diffusemap
 //	 map	textures/decals/employee_door_sign_d.tga
 //	 alphaTest 0.5
 //	}
 //	specularmap	textures/decals/employee_door_sign_s.tga
-//	bumpmap 	heightmap(textures/decals/employee_door_sign_b.tga, 1 ) 
-//       
+//	bumpmap 	heightmap(textures/decals/employee_door_sign_b.tga, 1 )
+//
 //
 //}
 
@@ -3929,14 +3673,14 @@ textures/decals/first_aid_stat
 //	noimpact
 //	qer_editorimage textures/decals/speed_limit.tga
 //
-//	{       
+//	{
 //      blend	diffusemap
 //	 map	textures/decals/speed_limit_d.tga
 //	 alphaTest 0.5
 //	}
 //	specularmap	textures/decals/speed_limit_s.tga
-//	bumpmap 	heightmap(textures/decals/speed_limit_b.tga, 1 ) 
-//       
+//	bumpmap 	heightmap(textures/decals/speed_limit_b.tga, 1 )
+//
 //
 //}
 
@@ -3950,14 +3694,14 @@ textures/decals/first_aid_stat
 //	noimpact
 //	qer_editorimage textures/decals/do_not_enter.tga
 //
-//	{       
+//	{
 //      blend	diffusemap
 //	 map	textures/decals/do_not_enter_d.tga
 //	 alphaTest 0.5
 //	}
 //	specularmap	textures/decals/do_not_enter_s.tga
-//	bumpmap 	heightmap(textures/decals/do_not_enter_b.tga, 1 ) 
-//       
+//	bumpmap 	heightmap(textures/decals/do_not_enter_b.tga, 1 )
+//
 //
 //}
 
@@ -3970,14 +3714,14 @@ textures/decals/first_aid_stat
 //	noimpact
 //	qer_editorimage textures/decals/forklifts.tga
 //
-//	{       
+//	{
 //      blend	diffusemap
 //	 map	textures/decals/forklifts_d.tga
 //	 alphaTest 0.5
 //	}
 //	specularmap	textures/decals/forklifts_s.tga
-//	bumpmap 	heightmap(textures/decals/forklifts_b.tga, 1 ) 
-//       
+//	bumpmap 	heightmap(textures/decals/forklifts_b.tga, 1 )
+//
 //
 //}
 
@@ -3990,14 +3734,14 @@ textures/decals/biohazard
 	noimpact
 	qer_editorimage textures/decals/biohazard.tga
 
-	{       
-      blend	diffusemap
+	{
+	  blend	diffusemap
 	 map	textures/decals/biohazard_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/biohazard_s.tga
-	bumpmap 	heightmap(textures/decals/biohazard_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/biohazard_b.tga, 1 )
+
 
 }
 
@@ -4012,14 +3756,14 @@ textures/decals/radiation
 	noimpact
 	qer_editorimage textures/decals/radiation.tga
 
-	{       
-      blend	diffusemap
+	{
+	  blend	diffusemap
 	 map	textures/decals/radiation.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/radiation_s.tga
-	bumpmap 	heightmap(textures/decals/biohazard_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/biohazard_b.tga, 1 )
+
 
 }
 
@@ -4033,14 +3777,14 @@ textures/decals/bio_auth_pers
 	noimpact
 	qer_editorimage textures/decals/bio_auth_pers.tga
 
-	{       
-      blend	diffusemap
+	{
+	  blend	diffusemap
 	 map	textures/decals/bio_auth_pers_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/bio_auth_pers_s.tga
-	bumpmap 	heightmap(textures/decals/bio_auth_pers_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/bio_auth_pers_b.tga, 1 )
+
 
 }
 
@@ -4057,14 +3801,14 @@ textures/decals/rad_auth_pers
 	noimpact
 	qer_editorimage textures/decals/rad_auth_pers_d.tga
 
-	{       
-      blend	diffusemap
+	{
+	  blend	diffusemap
 	 map	textures/decals/rad_auth_pers_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/rad_auth_pers_s.tga
-	bumpmap 	heightmap(textures/decals/bio_auth_pers_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/bio_auth_pers_b.tga, 1 )
+
 
 }
 
@@ -4077,14 +3821,14 @@ textures/decals/rad_auth_pers
 //	noimpact
 //	qer_editorimage textures/decals/wrong_way.tga
 //
-//	{       
+//	{
 //      blend	diffusemap
 //	 map	textures/decals/wrong_way_d.tga
 //	 alphaTest 0.5
 //	}
 //	specularmap	textures/decals/wrong_way_s.tga
-//	bumpmap 	heightmap(textures/decals/wrong_way_b.tga, 1 ) 
-//       
+//	bumpmap 	heightmap(textures/decals/wrong_way_b.tga, 1 )
+//
 //
 //}
 
@@ -4098,13 +3842,13 @@ textures/decals/danger_electric_shock
 	noimpact
 	qer_editorimage textures/decals/danger_electric_shock.tga
 
-	{       
-      blend	diffusemap
+	{
+	  blend	diffusemap
 	 map	textures/decals/danger_electric_shock_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/danger_electric_shock_s.tga
-	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 ) 
+	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 )
 }
 
 
@@ -4117,14 +3861,14 @@ textures/decals/danger_high_voltage
 	noimpact
 	qer_editorimage textures/decals/danger_high_voltage.tga
 
-	{       
-      blend	diffusemap
+	{
+	  blend	diffusemap
 	 map	textures/decals/danger_high_voltage_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/danger_high_voltage_s.tga
-	bumpmap 	heightmap(textures/decals/danger_high_voltage_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/danger_high_voltage_b.tga, 1 )
+
 
 }
 
@@ -4139,14 +3883,14 @@ textures/decals/compressedgas
 	noimpact
 	qer_editorimage textures/decals/compressedgas.tga
 
-	{       
-      blend	diffusemap
+	{
+	  blend	diffusemap
 	 map	textures/decals/compressedgas_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/compressedgas_s.tga
-	bumpmap 	heightmap(textures/decals/danger_high_voltage_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/danger_high_voltage_b.tga, 1 )
+
 
 }
 
@@ -4160,13 +3904,13 @@ textures/decals/elevatorshaft
 	noimpact
 	qer_editorimage textures/decals/elevatorshaft.tga
 
-	{       
-      blend	diffusemap
+	{
+	  blend	diffusemap
 	 map	textures/decals/elevatorshaft_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/elevatorshaft_s.tga
-	bumpmap 	heightmap(textures/decals/danger_high_voltage_b.tga, 1 )     
+	bumpmap 	heightmap(textures/decals/danger_high_voltage_b.tga, 1 )
 
 }
 
@@ -4180,13 +3924,13 @@ textures/decals/labcoat
 	noimpact
 	qer_editorimage textures/decals/labcoat.tga
 
-	{       
-      blend	diffusemap
+	{
+	  blend	diffusemap
 	 map	textures/decals/labcoat_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/labcoat_s.tga
-	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 )     
+	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 )
 
 }
 
@@ -4200,13 +3944,13 @@ textures/decals/movingmachine
 	noimpact
 	qer_editorimage textures/decals/movingmachine.tga
 
-	{       
-      blend	diffusemap
+	{
+	  blend	diffusemap
 	 map	textures/decals/movingmachine_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/movingmachine_s.tga
-	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 )     
+	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 )
 
 }
 
@@ -4220,13 +3964,13 @@ textures/decals/oxidizer
 	noimpact
 	qer_editorimage textures/decals/oxidizer.tga
 
-	{       
-      blend	diffusemap
+	{
+	  blend	diffusemap
 	 map	textures/decals/oxidizer_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/oxidizer_s.tga
-	bumpmap 	heightmap(textures/decals/oxidizer_b.tga, 1 )     
+	bumpmap 	heightmap(textures/decals/oxidizer_b.tga, 1 )
 
 }
 
@@ -4239,10 +3983,10 @@ textures/decals/postnote1
 	noimpact
 	qer_editorimage textures/decals/postnote1.tga
 
-	diffusemap 	textures/decals/postnote1.tga		
+	diffusemap 	textures/decals/postnote1.tga
 	specularmap	textures/decals/p_poster_s.tga
-	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 )
+
 }
 
 textures/decals/postnote2
@@ -4254,10 +3998,10 @@ textures/decals/postnote2
 	noimpact
 	qer_editorimage textures/decals/postnote2.tga
 
-	diffusemap 	textures/decals/postnote2.tga		
+	diffusemap 	textures/decals/postnote2.tga
 	specularmap	textures/decals/p_poster_s.tga
-	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 )
+
 }
 
 //textures/decals/p_change
@@ -4269,10 +4013,10 @@ textures/decals/postnote2
 //	noimpact
 //	qer_editorimage textures/decals/p_change.tga
 //
-//	diffusemap textures/decals/p_change.tga		
+//	diffusemap textures/decals/p_change.tga
 //	specularmap	textures/decals/p_poster_s.tga
-//	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 ) 
-//       
+//	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 )
+//
 //}
 
 textures/decals/p_change_face
@@ -4284,11 +4028,11 @@ textures/decals/p_change_face
 	nonsolid
 	noimpact
 	qer_editorimage textures/decals/p_change_face.tga
-     
+
 	diffusemap textures/decals/p_change_face.tga
 	specularmap	textures/decals/p_poster_s.tga
-	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 )
+
 }
 
 //textures/decals/p_destiny
@@ -4303,8 +4047,8 @@ textures/decals/p_change_face
 //
 //	diffusemap textures/decals/p_destiny.tga
 //	specularmap	textures/decals/p_poster_s.tga
-//	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 ) 
-//       
+//	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 )
+//
 //}
 
 textures/decals/p_future
@@ -4319,8 +4063,8 @@ textures/decals/p_future
 
 	diffusemap textures/decals/p_future.tga
 	specularmap	textures/decals/p_poster_s.tga
-	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 )
+
 }
 
 textures/decals/p_inspirational
@@ -4332,11 +4076,11 @@ textures/decals/p_inspirational
 	nonsolid
 	noimpact
 	qer_editorimage textures/decals/p_inspirational.tga
-     
+
 	diffusemap textures/decals/p_inspirational.tga
 	specularmap	textures/decals/p_poster_s.tga
-	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 )
+
 }
 textures/decals/p_oppressive
 
@@ -4347,10 +4091,10 @@ textures/decals/p_oppressive
 	nonsolid
 	noimpact
 	qer_editorimage textures/decals/p_oppressive.tga
-      
+
 	diffusemap textures/decals/p_oppressive.tga
 	specularmap	textures/decals/p_poster_s.tga
-	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 ) 
+	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 )
 
 	{
 		blend add
@@ -4359,7 +4103,7 @@ textures/decals/p_oppressive
 	}
 
 
-       
+
 }
 
 textures/decals/p_oppressive2
@@ -4371,11 +4115,11 @@ textures/decals/p_oppressive2
 	nonsolid
 	noimpact
 	qer_editorimage textures/decals/p_oppressive2.tga
-      
+
 	diffusemap textures/decals/p_oppressive2.tga
 	specularmap	textures/decals/p_poster_s.tga
-	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 )
+
 }
 
 textures/decals/p_oppressive3
@@ -4387,11 +4131,11 @@ textures/decals/p_oppressive3
 	nonsolid
 	noimpact
 	qer_editorimage textures/decals/p_oppressive3.tga
-      
+
 	diffusemap textures/decals/p_oppressive3.tga
 	specularmap	textures/decals/p_poster_s.tga
-	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 )
+
 }
 
 textures/decals/p_time
@@ -4403,11 +4147,11 @@ textures/decals/p_time
 	nonsolid
 	noimpact
 	qer_editorimage textures/decals/p_time.tga
-      
+
 	diffusemap textures/decals/p_time.tga
 	specularmap	textures/decals/p_poster_s.tga
-	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/p_poster_b.tga, 1 )
+
 }
 
 textures/decals/authorizedpersons
@@ -4420,14 +4164,14 @@ textures/decals/authorizedpersons
 	noimpact
 	qer_editorimage textures/decals/authorizedpersons.tga
 
-	{       
-      blend	diffusemap
+	{
+	  blend	diffusemap
 	 map	textures/decals/authorizedpersons_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/authorizedpersons_s.tga
-	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 )
+
 
 }
 
@@ -4441,14 +4185,14 @@ textures/decals/confinedwalkway
 	noimpact
 	qer_editorimage textures/decals/confinedwalkway.tga
 
-	{       
-      blend	diffusemap
+	{
+	  blend	diffusemap
 	 map	textures/decals/confinedwalkway_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/confinedwalkway_s.tga
-	bumpmap 	heightmap(textures/decals/confinedwalkway_b.tga, 1 ) 
-       
+	bumpmap 	heightmap(textures/decals/confinedwalkway_b.tga, 1 )
+
 
 }
 
@@ -4462,13 +4206,13 @@ textures/decals/crane
 	noimpact
 	qer_editorimage textures/decals/crane.tga
 
-	{       
-      blend	diffusemap
+	{
+	  blend	diffusemap
 	 map	textures/decals/crane_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/crane_s.tga
-	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 ) 
+	bumpmap 	heightmap(textures/decals/danger_electric_shock_b.tga, 1 )
 }
 
 //textures/decals/report_office
@@ -4481,34 +4225,34 @@ textures/decals/crane
 //	noimpact
 //	qer_editorimage textures/decals/report_office.tga
 //
-//	{       
+//	{
 //      blend	diffusemap
 //	 map	textures/decals/report_office_d.tga
 //	 alphaTest 0.5
 //	}
 //	specularmap	textures/decals/report_office_s.tga
-//	bumpmap 	heightmap(textures/decals/report_office_b.tga, 1 ) 
-//       
+//	bumpmap 	heightmap(textures/decals/report_office_b.tga, 1 )
+//
 //
 //}
 
 //textures/decals/surveillance
 //{
-////	DECAL_MACRO 	
+////	DECAL_MACRO
 //	noShadows
 //	//polygonOffset
 //	nonsolid
 //	noimpact
 //	qer_editorimage textures/decals/surveillance.tga
 //
-//	{       
+//	{
 //      blend	diffusemap
 //	 map	textures/decals/surveillance_d.tga
 //	 alphaTest 0.5
 //	}
 //	specularmap	textures/decals/surveillance_s.tga
-//	bumpmap 	heightmap(textures/decals/surveillance_b.tga, 1 ) 
-//       
+//	bumpmap 	heightmap(textures/decals/surveillance_b.tga, 1 )
+//
 //
 //}
 //
@@ -4521,14 +4265,14 @@ textures/decals/crane
 //	noimpact
 //	qer_editorimage textures/decals/override_switch_one.tga
 //
-//	{       
+//	{
 //      blend	diffusemap
 //	 map	textures/decals/override_switch_one_d.tga
 //	 alphaTest 0.5
 //	}
 //	specularmap	textures/decals/override_switch_one_s.tga
-//	bumpmap 	heightmap(textures/decals/override_switch_one_b.tga, 1 ) 
-//       
+//	bumpmap 	heightmap(textures/decals/override_switch_one_b.tga, 1 )
+//
 //
 //}
 //
@@ -4541,14 +4285,14 @@ textures/decals/crane
 //	noimpact
 //	qer_editorimage textures/decals/override_switch_two.tga
 //
-//	{       
+//	{
 //      blend	diffusemap
 //	 map	textures/decals/override_switch_two_d.tga
 //	 alphaTest 0.5
 //	}
 //	specularmap	textures/decals/override_switch_two_s.tga
-//	bumpmap 	heightmap(textures/decals/override_switch_two_b.tga, 1 ) 
-//       
+//	bumpmap 	heightmap(textures/decals/override_switch_two_b.tga, 1 )
+//
 //
 //}
 //
@@ -4561,14 +4305,14 @@ textures/decals/crane
 //	noimpact
 //	qer_editorimage textures/decals/override_switch_three.tga
 //
-//	{       
+//	{
 //      blend	diffusemap
 //	 map	textures/decals/override_switch_three_d.tga
 //	 alphaTest 0.5
 //	}
 //	specularmap	textures/decals/override_switch_three_s.tga
-//	bumpmap 	heightmap(textures/decals/override_switch_three_b.tga, 1 ) 
-//       
+//	bumpmap 	heightmap(textures/decals/override_switch_three_b.tga, 1 )
+//
 //
 //}
 //
@@ -4587,7 +4331,7 @@ textures/decals/crane
 //	}
 //
 //	//{
-//	//   blend  add  
+//	//   blend  add
 //	//	map    textures/decals/logofred.tga
 //	//}
 //
@@ -4601,13 +4345,13 @@ textures/decals/crane
 //	qer_editorimage		textures/decals/e3text.tga
 //
 //	//{
-//	//   blend  diffusemap  
+//	//   blend  diffusemap
 //	//	map    textures/decals/e3text.tga
 //	//	alphatest .5
 //	//}
 //
 //	{
-//	   blend  add  
+//	   blend  add
 //		map    textures/decals/e3text.tga
 //	}
 //
@@ -4621,7 +4365,7 @@ textures/decals/crane
 //	qer_editorimage		textures/decals/e3tex2t.tga
 //
 //	{
-//	   blend  add  
+//	   blend  add
 //		map    textures/decals/e3text2.tga
 //	}
 //
@@ -4635,12 +4379,12 @@ textures/decals/crane
 //	qer_editorimage		textures/decals/e3idlogo.tga
 //
 //	{
-//	   blend  add  
+//	   blend  add
 //		map    textures/decals/e3idlogo.tga
-//		rgb		blinktable[ time * .2 +.5 ] 
+//		rgb		blinktable[ time * .2 +.5 ]
 //	}
 //		{
-//	   blend  add  
+//	   blend  add
 //		map    textures/decals/e3idlogob.tga
 //		rgb		blinktable[ time * .2 ]
 //	}
@@ -4653,13 +4397,13 @@ bite
 	noshadows
 	translucent
 /*	    {
-                program         heatHazeWithMaskAndVertex.vfp
-                vertexParm              0               0                               // texture scrolling
-                vertexParm              1               .2                            // magnitude of the distortion
-                fragmentMap             0               _currentRender
-                fragmentMap     		1       textures/decals/bite01_vp  // the normal map for distortion
-                fragmentMap             2       textures/decals/bite01_vpalpha.tga   // the distortion blend map
-      }
+				program         heatHazeWithMaskAndVertex.vfp
+				vertexParm              0               0                               // texture scrolling
+				vertexParm              1               .2                            // magnitude of the distortion
+				fragmentMap             0               _currentRender
+				fragmentMap     		1       textures/decals/bite01_vp  // the normal map for distortion
+				fragmentMap             2       textures/decals/bite01_vpalpha.tga   // the distortion blend map
+	  }
 */
 	{
 		blend  blend
@@ -4675,14 +4419,14 @@ tentacle_smack
 	noshadows
 	translucent
 /*
-	    {
-                program         heatHazeWithMaskAndVertex.vfp
-                vertexParm              0               0                               // texture scrolling
-                vertexParm              1               .2                            // magnitude of the distortion
-                fragmentMap             0               _currentRender
-                fragmentMap     		1       textures/decals/smack01_vp  // the normal map for distortion
-                fragmentMap             2       textures/decals/smack01_vpalpha.tga   // the distortion blend map
-      }
+		{
+				program         heatHazeWithMaskAndVertex.vfp
+				vertexParm              0               0                               // texture scrolling
+				vertexParm              1               .2                            // magnitude of the distortion
+				fragmentMap             0               _currentRender
+				fragmentMap     		1       textures/decals/smack01_vp  // the normal map for distortion
+				fragmentMap             2       textures/decals/smack01_vpalpha.tga   // the distortion blend map
+	  }
 */
 
 	{
@@ -4702,13 +4446,13 @@ leftSmack
 	noshadows
 	translucent
 /*	    {
-                program         heatHazeWithMaskAndVertex.vfp
-                vertexParm              0               0                               // texture scrolling
-                vertexParm              1               .2                            // magnitude of the distortion
-                fragmentMap             0               _currentRender
-                fragmentMap     		1       textures/decals/smack01_vp  // the normal map for distortion
-                fragmentMap             2       textures/decals/smack01_vpalpha.tga   // the distortion blend map
-      }
+				program         heatHazeWithMaskAndVertex.vfp
+				vertexParm              0               0                               // texture scrolling
+				vertexParm              1               .2                            // magnitude of the distortion
+				fragmentMap             0               _currentRender
+				fragmentMap     		1       textures/decals/smack01_vp  // the normal map for distortion
+				fragmentMap             2       textures/decals/smack01_vpalpha.tga   // the distortion blend map
+	  }
 */
 	{
 		blend  blend
@@ -4724,13 +4468,13 @@ rightSmack
 	noshadows
 	translucent
 /*	 {
-                program         heatHazeWithMaskAndVertex.vfp
-                vertexParm              0               0                               // texture scrolling
-                vertexParm              1               .2                            // magnitude of the distortion
-                fragmentMap             0               _currentRender
-                fragmentMap     		1       textures/decals/smack01b_vp  // the normal map for distortion
-                fragmentMap             2       textures/decals/smack01b_vpalpha.tga   // the distortion blend map
-      }
+				program         heatHazeWithMaskAndVertex.vfp
+				vertexParm              0               0                               // texture scrolling
+				vertexParm              1               .2                            // magnitude of the distortion
+				fragmentMap             0               _currentRender
+				fragmentMap     		1       textures/decals/smack01b_vp  // the normal map for distortion
+				fragmentMap             2       textures/decals/smack01b_vpalpha.tga   // the distortion blend map
+	  }
 */
 	{
 		blend  blend
@@ -4868,13 +4612,13 @@ textures/decals/bulleth02
 	noimpact
 	translucent
 	qer_editorimage textures/decals/bulleth02.tga
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 		 map	textures/decals/bulleth02.tga
 	}
-	//specularmap 	textures/decals/bulleth01_s.tga	
+	//specularmap 	textures/decals/bulleth01_s.tga
 	//bumpmap 	    textures/decals/bulleth01_local.tga
-    
+
 
 }
 */
@@ -4906,7 +4650,7 @@ textures/decals/a_fanvent_fin
 //		map		textures/decals/a_flap_d.tga
 //		alphatest	.25
 //	}
-//	
+//
 //}
 
 //textures/decals/a_flap_02
@@ -4927,7 +4671,7 @@ textures/decals/a_fanvent_fin
 
 textures/decals/a_flap_d03
 {
-	
+
 	qer_editorimage		textures/decals/a_flap_d03.tga
 	bumpmap			textures/decals/a_flap_local03.tga
 	diffusemap		textures/decals/a_flap_d03.tga
@@ -4941,7 +4685,7 @@ textures/decals/a_flap_d03
 //	noimpact
 //	qer_editorimage textures/decals/a_pipecap2_d01.tga
 //
-//	{       
+//	{
 //      	 blend	diffusemap
 //	 map	textures/decals/a_pipecap2_d01.tga
 //	 alphaTest 0.5
@@ -4957,7 +4701,7 @@ textures/decals/a_flap_d03
 //	noimpact
 //	qer_editorimage textures/decals/a_pipecap2_d02.tga
 //
-//	{       
+//	{
 //      	 blend	diffusemap
 //	 map	textures/decals/a_pipecap2_d02.tga
 //	 alphaTest 0.5
@@ -4973,8 +4717,8 @@ textures/decals/a_pipecap2a_d
 	noimpact
 	qer_editorimage textures/editor/a_pipecap2a_d.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/a_pipecap2a_d.tga
 	 alphaTest 0.5
 	}
@@ -4989,7 +4733,7 @@ textures/decals/a_pipecap2a_d
 //	noimpact
 //	qer_editorimage textures/decals/a_pipecap3_d01.tga
 //
-//	{       
+//	{
 //      	 blend	diffusemap
 //	 map	textures/decals/a_pipecap3_d01.tga
 //	 alphaTest 0.5
@@ -5005,7 +4749,7 @@ textures/decals/a_pipecap2a_d
 //	noimpact
 //	qer_editorimage textures/decals/a_pipecap3_d02.tga
 //
-//	{       
+//	{
 //      	 blend	diffusemap
 //	 map	textures/decals/a_pipecap3_d01.tga
 //	 alphaTest 0.5
@@ -5021,8 +4765,8 @@ textures/decals/a_pipecap4_d01
 	noimpact
 	qer_editorimage textures/editor/a_pipecap4_d01.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/a_pipecap4_d01.tga
 	 alphaTest 0.5
 	}
@@ -5043,7 +4787,7 @@ textures/decals/a_pipecap4_d01
 //	{
 //		blend gl_dst_color,gl_zero
 //		map textures/decals/a_sofloor1decal_d02c.tga
-//	}	
+//	}
 //
 //	specularmap	 textures/decals/a_sofloor1decal_s02c.tga
 //}
@@ -5062,7 +4806,7 @@ textures/decals/a_stain01_d01a
 	{
 		blend gl_dst_color,gl_zero
 		map textures/decals/a_stain01_d01a.tga
-	}	
+	}
 
 	specularmap	 textures/decals/a_stain01_s01a.tga
 }
@@ -5076,7 +4820,7 @@ textures/decals/a_stain01_d01a
 //	noimpact
 //
 //	qer_editorimage	textures/decals/a_glass_bloody_d06.tga
-//	
+//
 //	{
 //	 	blend	diffuseMap
 //		map	 textures/decals/a_glass_bloody_d06.tga
@@ -5094,10 +4838,10 @@ textures/decals/a_stain01_d01a
 //	//polygonOffset
 //	nonsolid
 //	noimpact
-//	
-//	
+//
+//
 //	qer_editorimage	textures/decals/a_glass_bloody_d07.tga
-//	
+//
 //	{
 //	 	blend	diffuseMap
 //		map	 textures/decals/a_glass_bloody_d07.tga
@@ -5118,13 +4862,13 @@ textures/decals/a_stain01_d01a
 //	TRANSLUCENT
 //	nonsolid
 //	noimpact
-//	
+//
 //
 //
 //	{
-//		 
+//
 //	  	COLORED
-//      		blend	DIFFUSEMAP  
+//      		blend	DIFFUSEMAP
 //		map	textures/decals/alphabet_bloody_d01.tga
 //            //alphaTest 0.5
 //
@@ -5141,13 +4885,13 @@ textures/decals/a_stain01_d01a
 //	TRANSLUCENT
 //	nonsolid
 //	noimpact
-//	
+//
 //
 //
 //	{
-//		
-//	     COLORED    
-//            blend	  DIFFUSEMAP  
+//
+//	     COLORED
+//            blend	  DIFFUSEMAP
 //		map	textures/decals/alphabet_bloody_d02.tga
 //            //alphaTest 0.5
 //	}
@@ -5162,16 +4906,16 @@ textures/decals/a_stain01_d01a
 //      	noselfShadow
 //
 //
-//		
+//
 //	{
-//		blend		diffusemap	 
+//		blend		diffusemap
 //		map		textures/decals/wallsnot.tga
 //		alphaTest 0.5
 //	}
 //		bumpmap		 textures/decals/wallsnot_local.tga
 //		specularmap	 textures/decals/wallsnot_s.tga
-//			
-//	
+//
+//
 //}
 
 //*****************************************************Moved from aaduffyTest.mtr - start***********************************
@@ -5182,13 +4926,13 @@ textures/decals/wallsplat1
 
 	DECAL_MACRO
 	sort
-	{       
-      	blend		gl_zero, gl_one_minus_src_color
+	{
+	  	blend		gl_zero, gl_one_minus_src_color
 		map			textures/decals/splat5.tga
 		clamp		// we don't want it to tile if the projection extends past the bounds
 		rgb			decalFade[(time - Parm3)/(parm4 - parm3)]
 		vertexColor	// oblique projections will be slightly faded down
-	}	
+	}
 }
 
 textures/decals/wallsplat2
@@ -5196,13 +4940,13 @@ textures/decals/wallsplat2
 	qer_editorimage textures/editor/dontuse.tga
 
 	DECAL_MACRO
-	{       
-      	blend		gl_zero, gl_one_minus_src_color
+	{
+	  	blend		gl_zero, gl_one_minus_src_color
 		map			textures/decals/duffysplat.tga
 		clamp		// we don't want it to tile if the projection extends past the bounds
 		rgb			decalFade[(time - Parm3)/(parm4 - parm3)]
 		vertexColor	// oblique projections will be slightly faded down
-	}	
+	}
 }
 
 textures/decals/duffysplat
@@ -5213,13 +4957,13 @@ textures/decals/duffysplat
 	noimpact
 	blood
 	DECAL_MACRO
-	{       
-      	blend		gl_zero, gl_one_minus_src_color
+	{
+	  	blend		gl_zero, gl_one_minus_src_color
 		map			textures/decals/duffysplat.tga
 		clamp		// we don't want it to tile if the projection extends past the bounds
 		rgb			decalFade[(time - Parm3)/(parm4 - parm3)]
 		vertexColor	// oblique projections will be slightly faded down
-	}	
+	}
 }
 
 //textures/decals/duffysplat2
@@ -5230,13 +4974,13 @@ textures/decals/duffysplat
 //	noimpact
 //	blood
 //	DECAL_MACRO
-//	{       
+//	{
 //      	blend		gl_zero, gl_one_minus_src_color
 //		map			textures/decals/duffysplat2.tga
 //		clamp		// we don't want it to tile if the projection extends past the bounds
 //		rgb			decalFade[(time - Parm3)/(parm4 - parm3)]
 //		vertexColor	// oblique projections will be slightly faded down
-//	}	
+//	}
 //}
 
 textures/decals/dsplat2
@@ -5248,12 +4992,12 @@ textures/decals/dsplat2
 	blood
 	DECAL_MACRO
 	decalInfo 10 5 ( 1 1 1 1 ) ( 0 0 0 0 )
-	{       
-      	blend		gl_zero, gl_one_minus_src_color
+	{
+	  	blend		gl_zero, gl_one_minus_src_color
 		map			textures/decals/dsplat2.tga
 		clamp		// we don't want it to tile if the projection extends past the bounds
 		vertexColor	// oblique projections will be slightly faded down
-	}	
+	}
 }
 
 textures/decals/dsplat5
@@ -5265,12 +5009,12 @@ textures/decals/dsplat5
 	blood
 	DECAL_MACRO
 	decalInfo 10 5 ( 1 1 1 1 ) ( 0 0 0 0 )
-	{       
-      	blend		gl_zero, gl_one_minus_src_color
+	{
+	  	blend		gl_zero, gl_one_minus_src_color
 		map			textures/decals/dsplat5.tga
 		clamp		// we don't want it to tile if the projection extends past the bounds
 		vertexColor	// oblique projections will be slightly faded down
-	}	
+	}
 }
 
 textures/decals/dsplat7
@@ -5282,12 +5026,12 @@ textures/decals/dsplat7
 	blood
 	DECAL_MACRO
 	decalInfo 10 5 ( 1 1 1 1 ) ( 0 0 0 0 )
-	{       
-      	blend		gl_zero, gl_one_minus_src_color
+	{
+	  	blend		gl_zero, gl_one_minus_src_color
 		map			textures/decals/dsplat7.tga
 		clamp		// we don't want it to tile if the projection extends past the bounds
 		vertexColor	// oblique projections will be slightly faded down
-	}	
+	}
 }
 
 textures/decals/dsplat11
@@ -5300,12 +5044,12 @@ textures/decals/dsplat11
 	polygonoffset
 	DECAL_MACRO
 	decalInfo 10 5 ( 1 1 1 1 ) ( 0 0 0 0 )
-	{       
-      	blend		gl_zero, gl_one_minus_src_color
+	{
+	  	blend		gl_zero, gl_one_minus_src_color
 		map			textures/decals/dsplat11.tga
 		clamp		// we don't want it to tile if the projection extends past the bounds
 		vertexColor	// oblique projections will be slightly faded down
-	}	
+	}
 }
 
 textures/decals/duffysplatgun
@@ -5313,11 +5057,11 @@ textures/decals/duffysplatgun
 	qer_editorimage textures/editor/dontuse.tga
 
 	DECAL_MACRO
-	{       
+	{
 		blend gl_dst_color,gl_zero
 		map			textures/decals/duffysplat.tga
 		clamp		// we don't want it to tile if the projection extends past the bounds
-	}	
+	}
 }
 
 material textures/decals/influence1
@@ -5331,15 +5075,15 @@ material textures/decals/influence1
 	// deform turbulent        sinTable        0.05    ( time * 0.2 )      100
 	{
 		alpha		parm4 * 0.15
-	    blend		add
-		centerscale	0.65, 0.65 
+		blend		add
+		centerscale	0.65, 0.65
 		rotate time * .02
 		map    "guis/assets/test/faces-comp.tga"
 		clamp
 	}
-	 
-	
-	
+
+
+
 }
 
 //*****************************************************Moved from aaduffyTest.mtr - end*****************************************
@@ -5351,12 +5095,12 @@ material textures/decals/influence1
 textures/decals/mcu_slimestain
 {
 	DECAL_MACRO
-	
+
 	qer_editorimage	textures/decals/mcu_slimestain.tga
 	{
 		blend gl_dst_color,gl_zero
 		map textures/decals/mcu_slimestain.tga
-	}	
+	}
 }
 
 textures/decals/boothspeaker
@@ -5366,8 +5110,8 @@ textures/decals/boothspeaker
 	noimpact
 	qer_editorimage textures/editor/boothspeaker.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/boothspeaker_d.tga
 	 alphaTest 0.5
 	}
@@ -5381,8 +5125,8 @@ textures/decals/pipecap2vent
 	nonsolid
 	noimpact
 	qer_editorimage textures/editor/pipecap2vent.tga
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/pipecap2vent.tga
 	 alphaTest 0.5
 	}
@@ -5401,8 +5145,8 @@ textures/decals/alphabet6bleh
 
 
 	{
-		colored       
-      		blend	diffuseMap  
+		colored
+	  		blend	diffuseMap
 		map	textures/decals/alphabet6_d.tga
 	}
 
@@ -5484,8 +5228,8 @@ textures/decals/pipecap2
 	noimpact
 	qer_editorimage textures/editor/pipecap2.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/pipecap2_d.tga
 	 alphaTest 0.5
 	}
@@ -5501,7 +5245,7 @@ textures/decals/pipecap2
 //	twoSided
 //	qer_editorimage textures/decals/keycircuit_d.tga
 //
-//	{       
+//	{
 //      	 blend	diffusemap
 //	 map	textures/decals/keycircuit_d.tga
 //	 alphaTest 0.5
@@ -5518,8 +5262,8 @@ textures/decals/pipecap2a
 	twoSided
 	qer_editorimage textures/editor/pipecap2a.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/pipecap2a_d.tga
 	 alphaTest 0.5
 	}
@@ -5534,8 +5278,8 @@ textures/decals/pipecap3
 	noimpact
 	qer_editorimage textures/editor/pipecap3.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/pipecap3_d.tga
 	 alphaTest 0.5
 	}
@@ -5550,8 +5294,8 @@ textures/decals/pipecap4
 	noimpact
 	qer_editorimage textures/editor/pipecap4.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/pipecap4_d.tga
 	 alphaTest 0.5
 	}
@@ -5566,8 +5310,8 @@ textures/decals/pipecap4rust
 	noimpact
 	qer_editorimage textures/editor/pipecap4rust.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/pipecap4rust_d.tga
 	 alphaTest 0.5
 	}
@@ -5582,8 +5326,8 @@ textures/decals/pipecapsquare
 	noimpact
 	qer_editorimage textures/editor/pipecapsquare.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 	 map	textures/decals/pipecapsquare_d.tga
 	 alphaTest 0.5
 	}
@@ -5602,7 +5346,7 @@ textures/decals/dirtblast
 		blend 	gl_zero,gl_one_minus_src_color
 		map	textures/decals/dirtblast.tga
 		colored
-	}	
+	}
 }
 
 //textures/decals/paintcorner_white
@@ -5616,8 +5360,8 @@ textures/decals/dirtblast
 //	translucent
 //
 //
-//	{       
-//      	 blend	diffuseMap  
+//	{
+//      	 blend	diffuseMap
 //	 map	textures/decals/paintcorner_white.tga
 //	}
 //
@@ -5636,8 +5380,8 @@ textures/decals/paintline_white1
 	translucent
 
 
-	{       
-      	 blend	diffuseMap  
+	{
+	  	 blend	diffuseMap
 	 map	textures/decals/paintline_white1.tga
 	}
 
@@ -5655,9 +5399,9 @@ textures/decals/paintline_white1
 //	translucent
 //
 //
-//	{  
-//	 colored     
-//      	 blend	filter  
+//	{
+//	 colored
+//      	 blend	filter
 //	 map	textures/decals/redcross.tga
 //	}
 //
@@ -5668,7 +5412,7 @@ textures/decals/fgrill3
 {
 	qer_editorimage		textures/decals/fgrill3_d.tga
 	noshadows
-	bumpmap			addnormals (textures/decals/fgrill3_local.tga, heightmap (textures/decals/fgrill3_bmp.tga, 4))	
+	bumpmap			addnormals (textures/decals/fgrill3_local.tga, heightmap (textures/decals/fgrill3_bmp.tga, 4))
 	{
 		blend		diffusemap
 		map		textures/decals/fgrill3_d.tga
@@ -5694,13 +5438,13 @@ textures/decals/yesno
 	noimpact
 	twoSided
 	translucent
-	{       
-      	blend	add
+	{
+	  	blend	add
 		map textures/decals/yesno.tga
 		//vertexcolor
 
 	}
-     
+
 }
 
 
@@ -5775,7 +5519,7 @@ textures/decals/bloodyfilm1
 	translucent
 
 	qer_editorimage		textures/editor/bloodyfilm1.tga
-	
+
 		{
 		program	colorProcess.vfp
 		vertexParm		0	  1   // sinTable[ time * 0.5 ]	// 0.0 = source color, 1.0 = target color
@@ -5784,7 +5528,7 @@ textures/decals/bloodyfilm1
 	}
 	{
 
-	    blend		add
+		blend		add
 		scale 2,2
 		translate time * staticatable[ time * 10 ], time *staticatable[ time * 10 ]
 		rotate time * 7
@@ -5794,7 +5538,7 @@ textures/decals/bloodyfilm1
 
 	{
 
-	    blend		filter
+		blend		filter
 		scale 2,2
 		translate time * staticatable[ time * 20 ],time * staticatable[ time * 20 ]
 		rotate time * 6
@@ -5803,7 +5547,7 @@ textures/decals/bloodyfilm1
 	}
 	{
 
-	    blend		filter
+		blend		filter
 		scale 1, .007
 		translate time * 0, time * -40
 
@@ -5818,7 +5562,7 @@ textures/decals/bloodyfilm1
 //	translucent
 //
 //	qer_editorimage		textures/decals/greystatica.tga
-//	
+//
 //	{
 //		program	colorProcess.vfp
 //		vertexParm		0	  1   // sinTable[ time * 0.5 ]	// 0.0 = source color, 1.0 = target color
@@ -5869,7 +5613,7 @@ textures/decals/greystatica2x
 	}
 	{
 
-	    blend		add
+		blend		add
 		scale 2 ,2
 		translate time * staticatable[ time * 10 ], time *staticatable[ time * 10 ]
 		rotate time * 7
@@ -5878,7 +5622,7 @@ textures/decals/greystatica2x
 	}
 	{
 
-	    blend		add
+		blend		add
 		scale 2 ,2
 		translate time * staticatable[ time * 20 ],time * staticatable[ time * 20 ]
 		rotate time * 6
@@ -5901,26 +5645,26 @@ textures/decals/greystatica
 	}
 	{
 
-	    blend		add
+		blend		add
 		//scale 2 ,2
 		translate time * staticatable[ time * 10 ], time *staticatable[ time * 10 ]
 		rotate time * 7
 		map    textures/decals/greystatica.tga
 			red		Parm0
-	        green   Parm1
-	        blue	Parm2
+			green   Parm1
+			blue	Parm2
 
 	}
 	{
 
-	    blend		add
+		blend		add
 		//scale 2 ,2
 		translate time * staticatable[ time * 20 ],time * staticatable[ time * 20 ]
 		rotate time * 6
 		map    textures/decals/greystatica.tga
 			red		Parm0
-	        green   Parm1
-	        blue	Parm2
+			green   Parm1
+			blue	Parm2
 
 	}
 }
@@ -5987,7 +5731,7 @@ textures/decals/greystatica
 //	{
 //
 //	    blend		blend
-//		
+//
 //		translate time * staticatable[ time * 10 ], staticatable[ time * 10 ]
 //		rotate time * 7
 //		map    textures/decals/statica.tga
@@ -6006,19 +5750,19 @@ textures/decals/greystatica
 
 textures/decals/fly
 {
-        noSelfShadow
+		noSelfShadow
 	noshadows
 	nonsolid
 	qer_editorimage textures/editor/fly
 
-    {       
-     blend	diffusemap
+	{
+	 blend	diffusemap
 	 map	textures/decals/fly
 	 alphaTest 0.5
-	 
+
 	}
 	bumpmap	textures/decals/fly_local.tga
-  	specularmap	textures/decals/fly_s.tga   
+  	specularmap	textures/decals/fly_s.tga
 
 }
 
@@ -6030,7 +5774,7 @@ textures/decals/spooky
 
 	qer_editorimage textures/editor/dontuse.tga
 
-	
+
 	{	// write alpha test values to destination alpha
 		maskcolor				// write only to the alpha channel
 		map textures/decals/berserk2.tga
@@ -6038,11 +5782,11 @@ textures/decals/spooky
 		colored
 		clamp
 	}
-	
-	
+
+
 	{
 		blend  gl_dst_alpha, gl_one_minus_dst_alpha
-      	        scale		1, -1
+	  			scale		1, -1
 		map			_scratch
 		centerscale	0.97, 0.97
 	}
@@ -6095,14 +5839,14 @@ textures/decals/pressurepanel_ed
 	noimpact
 	qer_editorimage textures/editor/pressurepanel.tga
 
-	{       
-      	 blend	diffuseMap //GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+	{
+	  	 blend	diffuseMap //GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
 	 map	textures/decals/pressurepanel_d.tga
 	 alphaTest 0.5
 	}
 	specularmap	textures/decals/pressurepanel_s.tga
  	bumpmap		addnormals( textures/decals/pressurepanel_local.tga  , heightmap( textures/decals/pressurepanel_h.tga, 6 ) )
-       
+
 
 }
 
@@ -6115,14 +5859,14 @@ textures/decals/sprinklercap_ed
 	noimpact
 	qer_editorimage textures/editor/sprinklercap.tga
 
-	{       
-      	 blend	diffusemap
+	{
+	  	 blend	diffusemap
 		 map	textures/decals/sprinklercap_d.tga
-	     alphaTest 0.5
+		 alphaTest 0.5
 	}
 	specularmap	textures/decals/sprinklercap_s.tga
 	bumpmap 	textures/decals/sprinklercap_local.tga
-       
+
 
 }
 
@@ -6140,14 +5884,14 @@ table candle 		{ { .5 , 1 , .6 , .8 , .5 , 1 , .7 , .62 , .9 , .71 , 1 , .48 , .
 textures/decals/splat18
 {
 	noShadows
-    noselfShadow
+	noselfShadow
 	sort 0
-	
+
 	qer_editorimage textures/decals/splat18.tga
 
-	
-		
-	{	
+
+
+	{
 	blend	filter
 	map	textures/decals/splat18.tga
 
@@ -6158,14 +5902,14 @@ textures/decals/splat18
 textures/decals/splat19
 {
 	noShadows
-        noselfShadow
+		noselfShadow
 	sort 0
 
 	qer_editorimage textures/decals/splat19.tga
 
-	
-		
-	{	
+
+
+	{
 	blend	filter
 	map	textures/decals/splat19.tga
 
@@ -6176,14 +5920,14 @@ textures/decals/splat19
 textures/decals/splat20
 {
 	noShadows
-        noselfShadow
+		noselfShadow
 		sort 0
 
 	qer_editorimage textures/decals/splat20.tga
 
-	
-		
-	{	
+
+
+	{
 	blend	filter
 	map	textures/decals/splat20.tga
 
@@ -6205,7 +5949,7 @@ textures/decals/candleglow
  	map textures/decals/candleglow.tga
 	rgb 	candle[ time * .4 ]
   	}
- 
+
 }
 
 //textures/decals/spawn
@@ -6222,7 +5966,7 @@ textures/decals/candleglow
 // 	map textures/decals/spawn.tga
 //	rgb 	candle[ time * .1 ]
 //  	}
-// 
+//
 //}
 
 //textures/decals/spawn2
@@ -6238,23 +5982,23 @@ textures/decals/candleglow
 // 	blend add
 // 	map textures/decals/spawn2.tga
 //  	}
-// 
+//
 //}
 
 //textures/decals/airlock
 //{
 //	noShadows
 //        noselfShadow
-//	
-//	
+//
+//
 //	qer_editorimage textures/decals/airlock.tga
 //
-//	
-//	
-//		 
+//
+//
+//
 //		diffusemap		textures/decals/airlock.tga
-//	
-//	
+//
+//
 //
 //}
 
@@ -6281,7 +6025,7 @@ textures/decals/bfg_wallmark
 		map			makealpha(models/weapons/bfg/bfg_wallmark_dirt.tga)
 		clamp
 		vertexColor
-    }
+	}
 	{
 		blend		add
 		map			models/weapons/bfg/bfg_wallmark
@@ -6299,7 +6043,7 @@ textures/decals/bfg_wallmark
 //	noimpact
 //	translucent
 //	spectrum 2
-//	{       
+//	{
 //      	blend	diffusemap
 //		map		textures/decals/hellhole_glow
 //		translate	1,time
@@ -6327,7 +6071,7 @@ textures/decals/blood_drip1
 //{
 //	qer_editorimage		textures/decals/crack
 //	noshadows
-//	bumpmap			heightmap (textures/decals/crack_bmp, 4) 
+//	bumpmap			heightmap (textures/decals/crack_bmp, 4)
 //	{
 //		blend			diffusemap
 //		map				textures/decals/crack_d
@@ -6343,7 +6087,7 @@ textures/decals/blood_drip1
 //	noimpact
 //	bumpmap				textures/decals/btest_local
 //	{
-//		blend			diffusemap			
+//		blend			diffusemap
 //		map				textures/decals/btest_d
 //		alphatest		.1
 //	}
@@ -6363,7 +6107,7 @@ textures/decals/blood_drip1
 //	{
 //		blend			filter
 //		map				textures/decals/expmark1
-//		
+//
 //	}
 //}
 
@@ -6410,7 +6154,7 @@ textures/decals/mixom1
 	translucent
 	nonsolid
 	{
-		blend			diffusemap			
+		blend			diffusemap
 		map				textures/decals/mixom1
 		colored
 	}
@@ -6422,7 +6166,7 @@ textures/decals/mixom2
 	translucent
 	nonsolid
 	{
-		blend			diffusemap			
+		blend			diffusemap
 		map				textures/decals/mixom2_d
 		colored
 	}
@@ -6433,12 +6177,12 @@ textures/decals/cpusign1
 	qer_editorimage		textures/decals/cpusign1
 	nonsolid
 	{
-		blend			diffusemap		
+		blend			diffusemap
 		map				textures/decals/cpusign1
 		alphatest		.55
 	}
 	{
-		blend		specularmap		
+		blend		specularmap
 		map			_white
 		rgb			.4
 	}
@@ -6446,12 +6190,12 @@ textures/decals/cpusign1
 
 textures/decals/scratches
 {
-	qer_editorimage		textures/decals/scratches.tga	
+	qer_editorimage		textures/decals/scratches.tga
 	translucent
 			nonsolid
 			noimpact
 	diffusemap		textures/decals/scratches.tga
-}	
+}
 
 //textures/decals/uacosticker2
 //{
@@ -6460,7 +6204,7 @@ textures/decals/scratches
 //			noimpact
 //	translucent
 //	diffusemap		textures/decals/uacosticker2.tga
-//}	
+//}
 
 textures/decals/uacosticker
 {
@@ -6469,7 +6213,7 @@ textures/decals/uacosticker
 			noimpact
 	translucent
 	diffusemap		textures/decals/uacosticker.tga
-}	
+}
 
 //textures/decals/redsticker3
 //{
@@ -6478,7 +6222,7 @@ textures/decals/uacosticker
 //			noimpact
 //	translucent
 //	diffusemap		textures/decals/redsticker3.tga
-//}	
+//}
 //
 //textures/decals/redsticker2
 //{
@@ -6487,7 +6231,7 @@ textures/decals/uacosticker
 //			noimpact
 //	translucent
 //	diffusemap		textures/decals/redsticker2.tga
-//}	
+//}
 //
 //textures/decals/redsticker1
 //{
@@ -6496,16 +6240,16 @@ textures/decals/uacosticker
 //			noimpact
 //	translucent
 //	diffusemap		textures/decals/redsticker1.tga
-//}	
+//}
 
 textures/decals/hangingwires_shadow
 {
 	qer_editorimage		textures/decals/hangingwires_shadow
-	translucent  
+	translucent
 	{
 		blend 			gl_dst_color,gl_zero
 		map				textures/decals/hangingwires_shadow
-	}	
+	}
 }
 
 textures/decals/hangingwires
@@ -6549,7 +6293,7 @@ textures/decals/hangingwires2sided
 //		blend 	gl_zero,gl_one_minus_src_color
 //		map 	textures/decals/bloodpool1.tga
 //		colored
-//	}	
+//	}
 //}
 
 textures/decals/splat17
@@ -6564,7 +6308,7 @@ textures/decals/splat17
 		blend 	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/splat17.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/splat16
@@ -6577,9 +6321,9 @@ textures/decals/splat16
 		blend 	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/splat16.tga
 		colored
-	}	
+	}
 }
-		
+
 textures/decals/splat15
 {
 	DECAL_MACRO
@@ -6590,7 +6334,7 @@ textures/decals/splat15
 		blend 	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/splat15.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/splat14
@@ -6603,7 +6347,7 @@ textures/decals/splat14
 		blend 	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/splat14.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/splat13
@@ -6616,7 +6360,7 @@ textures/decals/splat13
 		blend 	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/splat13.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/splat12
@@ -6629,7 +6373,7 @@ textures/decals/splat12
 		blend 	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/splat12.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/splat11
@@ -6642,7 +6386,7 @@ textures/decals/splat11
 		blend 	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/splat11.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/splat10
@@ -6655,7 +6399,7 @@ textures/decals/splat10
 		blend 	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/splat10.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/splat9
@@ -6668,7 +6412,7 @@ textures/decals/splat9
 		blend 	gl_zero,gl_one_minus_src_color
 		map textures/decals/splat9.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/splat8
@@ -6681,7 +6425,7 @@ textures/decals/splat8
 		blend 	gl_zero,gl_one_minus_src_color
 		map textures/decals/splat8.tga
 		colored
-	}	
+	}
 }
 
 
@@ -6695,7 +6439,7 @@ textures/decals/splat7
 		blend 	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/splat7.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/splat6
@@ -6708,7 +6452,7 @@ textures/decals/splat6
 		blend 	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/splat6.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/splat5
@@ -6721,59 +6465,59 @@ textures/decals/splat5
 		blend 	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/splat5.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/splat4
 {
 	DECAL_MACRO
 	blood
-	
+
 	qer_editorimage	textures/editor/splat4.tga
 	{
 		blend 	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/splat4.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/splat3
 {
 	DECAL_MACRO
 	blood
-	
+
 	qer_editorimage	textures/editor/splat3.tga
 	{
 		blend 	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/splat3.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/splat2
 {
 	DECAL_MACRO
 	blood
-	
+
 	qer_editorimage	textures/editor/splat2.tga
 	{
 		blend 	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/splat2.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/splat1
 {
 	DECAL_MACRO
 	blood
-	
+
 	qer_editorimage	textures/editor/splat1.tga
 	{
 		blend 	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/splat1.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/sdirt12
@@ -6788,7 +6532,7 @@ textures/decals/sdirt12
 		blend 	gl_zero,gl_one_minus_src_color
 		map	textures/decals/sdirt12.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/sdirt11a
@@ -6803,7 +6547,7 @@ textures/decals/sdirt11a
 		blend 	gl_zero,gl_one_minus_src_color
 		map	textures/decals/sdirt11a.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/sdirt11
@@ -6818,7 +6562,7 @@ textures/decals/sdirt11
 		blend 	gl_zero,gl_one_minus_src_color
 		map	textures/decals/sdirt11.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/sdirt10a
@@ -6833,7 +6577,7 @@ textures/decals/sdirt10a
 		blend 	gl_zero,gl_one_minus_src_color
 		map	textures/decals/sdirt10a.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/sdirt10
@@ -6847,8 +6591,8 @@ textures/decals/sdirt10
 	{
 		blend 	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/sdirt10.tga
-		colored	
-	}	
+		colored
+	}
 }
 
 //textures/decals/sdirt9
@@ -6862,8 +6606,8 @@ textures/decals/sdirt10
 //	{
 //		blend 	gl_zero,gl_one_minus_src_color
 //		map 	textures/decals/sdirt9.tga
-//		colored	
-//	}	
+//		colored
+//	}
 //}
 //
 //textures/decals/sdirt8
@@ -6876,9 +6620,9 @@ textures/decals/sdirt10
 //	qer_editorimage	textures/decals/sdirt8.tga
 //	{
 //		blend 	gl_zero,gl_one_minus_src_color
-//		map 	textures/decals/sdirt8.tga	
+//		map 	textures/decals/sdirt8.tga
 //		colored
-//	}	
+//	}
 //}
 
 textures/decals/sdirt7
@@ -6893,7 +6637,7 @@ textures/decals/sdirt7
 		blend 	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/sdirt7.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/sdirt6
@@ -6908,7 +6652,7 @@ textures/decals/sdirt6
 		blend 	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/sdirt6.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/sdirt5
@@ -6923,7 +6667,7 @@ textures/decals/sdirt5
 		blend 	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/sdirt5.tga
 		colored
-	}	
+	}
 }
 
 //textures/decals/sdirt4
@@ -6938,7 +6682,7 @@ textures/decals/sdirt5
 //		blend 	gl_zero,gl_one_minus_src_color
 //		map 	textures/decals/sdirt4.tga
 //		colored
-//	}	
+//	}
 //}
 
 textures/decals/sdirt3
@@ -6953,7 +6697,7 @@ textures/decals/sdirt3
 		blend 	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/sdirt3.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/sdirt2
@@ -6967,8 +6711,8 @@ textures/decals/sdirt2
 	{
 		blend 	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/sdirt2.tga
-		colored	
-	}	
+		colored
+	}
 }
 
 
@@ -6984,7 +6728,7 @@ textures/decals/sdirt1
 		blend  	gl_zero,gl_one_minus_src_color
 		map 	textures/decals/sdirt1.tga
 		colored
-	}	
+	}
 }
 
 textures/decals/mini
@@ -6993,7 +6737,7 @@ textures/decals/mini
 	twoSided
 	noshadows
 	qer_editorimage	textures/decals/mini.tga
-	
+
 	{
 		blend diffuseMap
 		map textures/decals/mini.tga
@@ -7006,7 +6750,7 @@ textures/decals/sulfuric
 	twoSided
 	noshadows
 	qer_editorimage	textures/decals/sulfuric.tga
-	
+
 	{
 		blend diffuseMap
 		map textures/decals/sulfuric.tga
@@ -7019,7 +6763,7 @@ textures/decals/lw65
 	twoSided
 	noshadows
 	qer_editorimage	textures/decals/lw65.tga
-	
+
 	{
 		blend diffuseMap
 		map textures/decals/lw65.tga
@@ -7175,7 +6919,7 @@ textures/decals/screw1
 //		blend gl_one, gl_one
 //		map textures/decals/ember5_add.tga
 //		rgb ( ember1 [ (time * .25) + Parm4 ] ) * 2
-//	}	
+//	}
 //}
 //
 //textures/decals/ember4
@@ -7199,7 +6943,7 @@ textures/decals/screw1
 //		blend gl_one, gl_one
 //		map textures/decals/ember4_add.tga
 //		rgb ( ember1 [ (time * .25) + Parm4 ] ) * 2
-//	}	
+//	}
 //}
 //
 //textures/decals/ember3
@@ -7223,7 +6967,7 @@ textures/decals/screw1
 //		blend gl_one, gl_one
 //		map textures/decals/ember3_add.tga
 //		rgb ( ember1 [ (time * .25) + Parm4 ] ) * 2
-//	}	
+//	}
 //}
 //
 //textures/decals/ember2
@@ -7243,19 +6987,19 @@ textures/decals/screw1
 //		blend gl_one, gl_one
 //		map textures/decals/ember2_add.tga
 //		rgb ( ember1 [ time * .25 ] ) * 2
-//	}	
+//	}
 //	{
 //		ignoreAlphaTest
 //		blend gl_one, gl_one
 //		map textures/decals/ember2_add2.tga
 //		rgb ( ember1 [ (time * .5) + .33 ] ) * 2
-//	}	
+//	}
 //	{
 //		ignoreAlphaTest
 //		blend gl_one, gl_one
 //		map textures/decals/ember2_add3.tga
 //		rgb ( ember1 [ (time * .15) + .66 ] ) * 2
-//	}	
+//	}
 //}
 //
 //textures/decals/ember1
@@ -7276,19 +7020,19 @@ textures/decals/screw1
 //		blend gl_one, gl_one
 //		map textures/decals/ember1_add.tga
 //		rgb ( ember1 [ time * .25 ] ) * 2
-//	}	
+//	}
 //	{
 //		ignoreAlphaTest
 //		blend gl_one, gl_one
 //		map textures/decals/ember1_add2.tga
 //		rgb ( ember1 [ (time * .5) + .33 ] ) * 2
-//	}	
+//	}
 //	{
-//		ignoreAlphaTest	
+//		ignoreAlphaTest
 //		blend gl_one, gl_one
 //		map textures/decals/ember1_add3.tga
 //		rgb ( ember1 [ (time * .15) + .66 ] ) * 2
-//	}	
+//	}
 //}
 
 //textures/decals/pl_tarp
@@ -7418,7 +7162,7 @@ textures/decals/lightgrate
 	qer_editorimage		textures/decals/lightgrate.tga
 	sort 3
 	bumpmap			textures/decals/lightgrate_local.tga
-	
+
 	{
 		blend		diffusemap
 		map		textures/decals/lightgrate_d.tga
@@ -7440,7 +7184,7 @@ textures/decals/lightgrate
 //	qer_editorimage textures/editor/dontuse.tga
 //
 //	DECAL_MACRO
-//	{       
+//	{
 ////		blend		gl_dst_color, gl_zero
 //      	blend		gl_zero, gl_one_minus_src_color
 //		map			textures/decals/ballburn01.tga
@@ -7450,7 +7194,7 @@ textures/decals/lightgrate
 //	}
 //
 //	{
-//      	blend	add  
+//      	blend	add
 //		map		textures/decals/expmark1_add.tga
 //		rgb		fireballtable[ time * .1 ]
 //		vertexColor	// oblique projections will be slightly faded down
